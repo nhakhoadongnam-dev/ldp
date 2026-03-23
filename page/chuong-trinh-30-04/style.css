@@ -149,8 +149,8 @@
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center top;
+    object-fit: contain;
+    object-position: center center;
   }
   .hero-banner-img-placeholder {
     position: absolute;
@@ -336,7 +336,8 @@
   }
   .service-card-img {
     width: 100%; height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: #f8f4ef;
     transition: transform 0.5s ease;
   }
   .service-card:hover .service-card-img { transform: scale(1.05); }
@@ -741,7 +742,7 @@
   .trust-header .section-label { justify-content: flex-start; }
   .trust-header .section-title { margin-left: 0; }
   .trust-img { border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); position: relative; flex: 1; min-height: 300px; }
-  .trust-img img { width: 100%; height: 100%; display: block; object-fit: cover; }
+  .trust-img img { width: 100%; height: 100%; display: block; object-fit: contain; background: #f8f4ef; }
   .trust-img-badge { position: absolute; bottom: 30px; left: -20px; background: var(--gold); color: var(--navy-deep); width: 100px; height: 100px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; text-align: center; border: 4px solid var(--white); box-shadow: var(--shadow-sm); z-index: 2; }
   .trust-img-badge span { font-size: 24px; }
 
