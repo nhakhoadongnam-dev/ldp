@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tri Ân 20 Năm — Nha Khoa Đông Nam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- COUNTDOWN TOPBAR -->
+<div class="topbar" id="topbar">
+  <span class="topbar-text">Ưu đãi tri ân kết thúc sau</span>
+  <div class="countdown" id="countdown">
+    <span class="countdown-unit" id="cd-days">--</span>
+    <span class="countdown-sep">ngày</span>
+    <span class="countdown-unit" id="cd-hours">--</span>
+    <span class="countdown-sep">:</span>
+    <span class="countdown-unit" id="cd-mins">--</span>
+    <span class="countdown-sep">:</span>
+    <span class="countdown-unit" id="cd-secs">--</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo-text">NHA KHOA <span>ĐÔNG NAM</span></div>
+    <a href="#dang-ky" class="header-cta-btn">Đăng ký ưu đãi</a>
+  </div>
+</header>
+
+<!-- HERO BANNER -->
+<!-- HƯỚNG DẪN CHÈN ẢNH:
+     Xóa thẻ div.hero-banner-img-placeholder bên dưới,
+     thay bằng: <img src="TEN_FILE_ANH.jpg" alt="Banner" class="hero-banner-img">
+-->
+<section class="hero-banner">
+  <!-- Khi có ảnh thật: xóa div placeholder, thêm <img src="banner.jpg" alt="Banner" class="hero-banner-img"> -->
+  <div class="hero-banner-img-placeholder">
+    <svg width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+    <span>Chèn ảnh banner tại đây</span>
+    <span style="font-size:11px;opacity:0.6;">Kích thước đề xuất: 1440×580px</span>
+  </div>
+</section>
+
+<!-- PAIN POINT: ĐỪNG ĐỂ NHỮNG NỖI LO RĂNG MIỆNG CẢN TRỞ NIỀM VUI NGÀY LỄ -->
+<section class="pain-point" id="noi-lo">
+  <div class="pain-point-inner">
+    <div class="pain-point-header reveal">
+      <div class="pain-point-label">Giải pháp cho bạn</div>
+      <h2 class="pain-point-title">Đừng để những nỗi lo răng miệng cản trở niềm vui ngày lễ</h2>
+    </div>
+    <p class="pain-point-sub reveal">Nha Khoa Đông Nam cung cấp đa dạng dịch vụ với quy trình nhanh chóng, điều trị trực tiếp cùng bác sĩ chuyên khoa — ưu đãi đặc biệt dịp 30/4:</p>
+
+    <!-- Service card row — 4 cards ngang -->
+    <!-- HƯỚNG DẪN: Thay .service-card-img-placeholder bằng <img src="..." class="service-card-img"> khi có ảnh thật -->
+    <div class="service-cards">
+
+      <!-- Card 1: Mất răng lâu năm -->
+      <div class="service-card reveal" style="transition-delay:0.05s">
+        <div class="service-card-img-wrap">
+          <div class="service-card-img-placeholder">
+            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            <span>Ảnh dịch vụ</span>
+          </div>
+          <div class="service-card-badge">🦷</div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-category">Mất răng lâu năm</div>
+          <div class="service-card-title">Ăn uống khó khăn, tiêu xương hàm khiến gương mặt lão hóa sớm.</div>
+          <a href="#dang-ky" class="service-card-btn">Tìm hiểu thêm →</a>
+        </div>
+      </div>
+
+      <!-- Card 2: Răng sâu, mẻ -->
+      <div class="service-card reveal" style="transition-delay:0.1s">
+        <div class="service-card-img-wrap">
+          <div class="service-card-img-placeholder">
+            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            <span>Ảnh dịch vụ</span>
+          </div>
+          <div class="service-card-badge">😊</div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-category">Răng sâu, mẻ</div>
+          <div class="service-card-title">Đau nhức âm ỉ, mất tự tin khi giao tiếp.</div>
+          <a href="#dang-ky" class="service-card-btn">Tìm hiểu thêm →</a>
+        </div>
+      </div>
+
+      <!-- Card 3: Răng khôn mọc lệch -->
+      <div class="service-card reveal" style="transition-delay:0.15s">
+        <div class="service-card-img-wrap">
+          <div class="service-card-img-placeholder">
+            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            <span>Ảnh dịch vụ</span>
+          </div>
+          <div class="service-card-badge">⚠️</div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-category">Răng khôn mọc lệch</div>
+          <div class="service-card-title">Gây sưng tấy, viêm nhiễm và đe dọa sức khỏe các răng lân cận.</div>
+          <a href="#dang-ky" class="service-card-btn">Tìm hiểu thêm →</a>
+        </div>
+      </div>
+
+      <!-- Card 4: Viêm tủy -->
+      <div class="service-card reveal" style="transition-delay:0.2s">
+        <div class="service-card-img-wrap">
+          <div class="service-card-img-placeholder">
+            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            <span>Ảnh dịch vụ</span>
+          </div>
+          <div class="service-card-badge">🔥</div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-category">Viêm tủy</div>
+          <div class="service-card-title">Những cơn đau dữ dội, ảnh hưởng trực tiếp đến giấc ngủ và hiệu suất công việc.</div>
+          <a href="#dang-ky" class="service-card-btn">Tìm hiểu thêm →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- OFFERS / PRICE TABLE -->
+<section class="section offers" id="uu-dai">
+  <div class="section-inner">
+    <div class="reveal" style="text-align: center;">
+      <div class="section-label">Ưu đãi tri ân dịp đại lễ</div>
+      <h2 class="section-title" style="margin-left: auto; margin-right: auto;">Ưu đãi tri ân khách hàng dịp đại lễ</h2>
+      <p class="section-desc" style="margin-left: auto; margin-right: auto;">Áp dụng từ 01/04 đến 01/05/2026. Đăng ký trước — ưu đãi được giữ đến 15/05.</p>
+    </div>
+
+    <table class="price-table reveal">
+      <thead>
+        <tr>
+          <th>Dịch vụ</th>
+          <th>Giá gốc</th>
+          <th>Giá ưu đãi</th>
+          <th style="text-align: center;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="service-name">Implant ETK</div>
+          </td>
+          <td><span class="price-original">28.200.000 VNĐ</span></td>
+          <td>
+            <span class="price-new">22.560.000 VNĐ</span>
+            <span class="price-save">Tiết kiệm 20%</span>
+          </td>
+          <td class="badge-cell"><span class="badge-limited">Suất có hạn</span></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="service-name">Trám răng</div>
+          </td>
+          <td><span class="price-original">400.000 VNĐ</span></td>
+          <td>
+            <span class="price-new">200.000 VNĐ</span>
+            <span class="price-save">Tiết kiệm 50%</span>
+          </td>
+          <td class="badge-cell"><span class="badge-limited">Suất có hạn</span></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="service-name">Nhổ răng khôn hàm trên</div>
+          </td>
+          <td><span class="price-original">1.500.000 VNĐ</span></td>
+          <td>
+            <span class="price-new">750.000 VNĐ</span>
+            <span class="price-save">Tiết kiệm 50%</span>
+          </td>
+          <td class="badge-cell"><span class="badge-limited">Suất có hạn</span></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="service-name">Nhổ răng khôn hàm dưới</div>
+          </td>
+          <td><span class="price-original">2.500.000 VNĐ</span></td>
+          <td>
+            <span class="price-new">1.250.000 VNĐ</span>
+            <span class="price-save">Tiết kiệm 50%</span>
+          </td>
+          <td class="badge-cell"><span class="badge-limited">Suất có hạn</span></td>
+        </tr>
+        <tr style="background: rgba(201,169,110,0.06);">
+          <td colspan="4" style="padding: 18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+              <span style="font-size:18px;">🎁</span>
+              <span style="font-weight:700; color:var(--navy); font-size:15px; letter-spacing:0.3px;">
+                ĐẶC BIỆT: TẶNG VOUCHER 300.000 VNĐ DÀNH RIÊNG CHO DỊCH VỤ CHỮA TỦY RĂNG
+              </span>
+              <span class="badge-gift" style="margin-left:auto;">Voucher tri ân</span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="offer-cta-row reveal">
+      <a href="#dang-ky" class="btn-navy">Đăng ký nhận ưu đãi này →</a>
+    </div>
+
+    <!-- IMPLANT PRIVILEGE BANNER -->
+    <div class="implant-priv reveal">
+      <!-- Cột trái: Danh sách đặc quyền -->
+      <div class="implant-priv-left">
+        <h3>Đặc quyền khi làm Implant tại Nha Khoa Đông Nam</h3>
+        <div class="implant-priv-list">
+          <div class="implant-priv-item">
+            <div class="implant-priv-check">✓</div>
+            <span>Miễn phí chụp phim khám tư vấn</span>
+          </div>
+          <div class="implant-priv-item">
+            <div class="implant-priv-check">✓</div>
+            <span>Miễn phí ghép xương trong trường hợp bị thiếu xương (tùy trường hợp)</span>
+          </div>
+          <div class="implant-priv-item">
+            <div class="implant-priv-check">✓</div>
+            <span>Tặng răng sứ trên Implant trị giá 2.000.000 đồng</span>
+          </div>
+          <div class="implant-priv-item">
+            <div class="implant-priv-check">✓</div>
+            <span>Hỗ trợ miễn phí khớp nối trị giá 8.300.000 đồng</span>
+          </div>
+          <div class="implant-priv-item">
+            <div class="implant-priv-check">✓</div>
+            <span>Hỗ trợ miễn phí làm răng tạm</span>
+          </div>
+          <div class="implant-priv-item">
+            <div class="implant-priv-check">✓</div>
+            <span>Hỗ trợ đồng hành trọn đời</span>
+          </div>
+        </div>
+        <p class="implant-priv-note">Nha khoa chuyên sâu trồng răng Implant với đội ngũ bác sĩ hơn 20 năm kinh nghiệm.</p>
+      </div>
+
+      <!-- Cột phải: Banner quà tặng -->
+      <div class="implant-gift-banner">
+        <div class="implant-gift-label">Ưu đãi đặc biệt dịp 30/4</div>
+        <div class="implant-gift-title">Quà Tặng Trồng Răng Implant</div>
+        <div class="implant-gift-value">
+          <div class="implant-gift-value-label">LÊN ĐẾN</div>
+          <div class="implant-gift-value-num">10.000.000 VNĐ</div>
+        </div>
+        <div class="implant-gift-grid">
+          <div class="implant-gift-box">Hỗ trợ xe<br>đưa đón tận nơi</div>
+          <div class="implant-gift-box">Miễn phí thăm khám,<br>tư vấn 1:1 cùng Bác sĩ</div>
+          <div class="implant-gift-box">Miễn phí chụp phim 3D;<br>Cone beam CT</div>
+          <div class="implant-gift-box">24h có ngay<br>răng mới thẩm mỹ</div>
+        </div>
+        <div class="implant-gift-footer">*Nha khoa chuyên sâu trồng răng Implant với đội ngũ Bác sĩ 100% tốt nghiệp chuyên ngành Răng Hàm Mặt.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FORM 1 (id: lien-he) — CF7 sẽ được nhúng bên dưới -->
+<section class="form-section" id="lien-he">
+  <div class="form-section-inner">
+    <div class="form-section-text reveal-left">
+      <h2>Đừng bỏ lỡ ưu đãi tri ân 20 năm</h2>
+      <p>Chương trình kết thúc 01/05/2026. Đăng ký ngay để được tư vấn miễn phí và giữ suất ưu đãi.</p>
+      <div class="form-section-contact">
+        <div class="contact-row">
+          <div class="contact-row-icon">📞</div>
+          <div>Tổng đài: <a href="tel:19007141">1900.7141</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-icon">📱</div>
+          <div>Hotline: <a href="tel:0972411411">0972.411.411</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-icon">📍</div>
+          <div style="font-size: 14px; line-height: 1.6;">
+            CS1: 411 Nguyễn Kiệm, P.9, Phú Nhuận<br>
+            CS2: 781/B1 Lê Hồng Phong, P.12, Q.10
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-icon">🕐</div>
+          <div>8:00 — 20:00 (Cả CN & Lễ)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-form-wrapper reveal-right">
+      <div class="form-header">
+        <div class="form-urgency-badge">Suất ưu đãi có hạn</div>
+        <h3>Đăng ký nhận ưu đãi</h3>
+        <p>Tư vấn viên liên hệ xác nhận trong 30 phút</p>
+      </div>
+      <!-- ==========================================
+        KHI DÙNG CONTACT FORM 7: xóa khối DEMO bên dưới
+        và dán vào đây: [contact-form-7 id="ID" title="Form đăng ký ưu đãi"]
+
+        Trước khi xóa DEMO, tạo form CF7 với template:
+          <div class="form-group">
+            <label for="f1-hoten">Họ và tên *</label>
+            [text* your-name id:f1-hoten placeholder "Nhập họ tên"]
+          </div>
+          <div class="form-group">
+            <label for="f1-phone">Số điện thoại *</label>
+            [tel* your-tel id:f1-phone placeholder "0912 345 678"]
+          </div>
+          <div class="form-group">
+            <label for="f1-service">Dịch vụ đăng ký</label>
+            [select your-service id:f1-service first_as_label "— Chọn dịch vụ —" "Trồng răng Implant" "Trám răng" "Nhổ răng khôn" "Chữa tủy răng"]
+          </div>
+          [submit class:form-submit "ĐĂNG KÝ NHẬN ƯU ĐÃI →"]
+          <p class="form-note">Bảo mật thông tin. Tư vấn miễn phí, không ràng buộc.</p>
+      ========================================== -->
+      <!-- DEMO START — xóa khối này khi dùng CF7 -->
+      <div class="form-group">
+        <label for="f1-hoten">Họ và tên *</label>
+        <input id="f1-hoten" type="text" placeholder="Nhập họ tên">
+      </div>
+      <div class="form-group">
+        <label for="f1-phone">Số điện thoại *</label>
+        <input id="f1-phone" type="tel" placeholder="0912 345 678">
+      </div>
+      <div class="form-group">
+        <label for="f1-service">Dịch vụ đăng ký</label>
+        <select id="f1-service">
+          <option value="">— Chọn dịch vụ —</option>
+          <option value="implant">Trồng răng Implant</option>
+          <option value="tram">Trám răng</option>
+          <option value="nho-khon">Nhổ răng khôn</option>
+          <option value="chua-tuy">Chữa tủy răng</option>
+        </select>
+      </div>
+      <button class="form-submit" type="button">ĐĂNG KÝ NHẬN ƯU ĐÃI →</button>
+      <p class="form-note">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Bảo mật thông tin. Tư vấn miễn phí, không ràng buộc.
+      </p>
+      <!-- DEMO END -->
+    </div>
+  </div>
+</section>
+
+<!-- CAROUSEL (HIỆU QUẢ ĐIỀU TRỊ) -->
+<section class="section carousel">
+  <div class="section-inner">
+    <div class="reveal" style="text-align: center; margin-bottom: 20px;">
+      <h2 class="section-title" style="margin-left: auto; margin-right: auto; text-transform: uppercase; color: var(--implant-accent);">HÌNH ẢNH KHÁCH HÀNG TRỒNG RĂNG IMPLANT</h2>
+    </div>
+    
+    <div class="carousel-wrapper reveal" style="transition-delay: 0.1s;">
+      <button class="carousel-btn prev" aria-label="Previous">❮</button>
+      <button class="carousel-btn next" aria-label="Next">❯</button>
+      
+      <div class="carousel-track" id="carouselTrack">
+        <!-- Slide 1 -->
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&h=300&q=80" alt="Khách hàng 1" loading="lazy">
+          <div class="carousel-text">KH. NGUYỄN TỬ HOÀN</div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&h=300&q=80" alt="Khách hàng 2" loading="lazy">
+          <div class="carousel-text">KH. ĐẶNG THỊ PHƯƠNG ANH</div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&h=300&q=80" alt="Khách hàng 3" loading="lazy">
+          <div class="carousel-text">KH. TRẦN ĐỨC VŨ</div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=300&q=80" alt="Khách hàng 4" loading="lazy">
+          <div class="carousel-text">KH. LÊ THỊ MỸ</div>
+        </div>
+        <!-- Slide 5 -->
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&h=300&q=80" alt="Khách hàng 5" loading="lazy">
+          <div class="carousel-text">KH. HOÀNG VĂN TÂM</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="section trust">
+  <div class="section-inner trust-inner">
+    <div class="trust-left reveal-left">
+      <div class="trust-header">
+        <div class="section-label">Vì sao nhiều khách hàng tin chọn Nha Khoa Đông Nam?</div>
+        <h2 class="section-title">Kết quả bền vững — An tâm trọn đời</h2>
+      </div>
+      <div class="trust-img">
+        <img src="https://images.unsplash.com/photo-1579684453401-8c08103cd316?auto=format&fit=crop&w=800&q=80" alt="Đội ngũ bác sĩ Đông Nam" loading="lazy">
+        <div class="trust-img-badge">
+          <span>20+</span> Năm
+        </div>
+      </div>
+    </div>
+    <div class="trust-right reveal-right">
+      <div class="trust-list">
+        <div class="trust-item" style="transition-delay: 0.1s;">
+          <div class="trust-icon">👨‍⚕️</div>
+          <div class="trust-content">
+            <h3>Hơn 20 năm kinh nghiệm trong lĩnh vực nha khoa</h3>
+            <p>Thành lập và phát triển hơn 20 năm, Nha khoa Đông Nam đã thực hiện hơn 10.500 ca cấy ghép Implant, được các trang báo điện tử uy tín (Dân Trí, VnExpress, CafeF...) đánh giá cao.</p>
+          </div>
+        </div>
+        <div class="trust-item" style="transition-delay: 0.2s;">
+          <div class="trust-icon">💖</div>
+          <div class="trust-content">
+            <h3>Đội ngũ bác sĩ giàu kinh nghiệm, tận tâm</h3>
+            <p>Đội ngũ bác sĩ không chỉ giỏi chuyên môn mà còn luôn tận tâm, nhẹ nhàng, giúp cô chú, anh chị yên tâm trong suốt quá trình điều trị.</p>
+          </div>
+        </div>
+        <div class="trust-item" style="transition-delay: 0.4s;">
+          <div class="trust-icon">🛡️</div>
+          <div class="trust-content">
+            <h3>Quy trình vô trùng theo tiêu chuẩn nha khoa</h3>
+            <p>Tuân thủ nghiêm ngặt quy trình vô trùng để đảm bảo an toàn, tránh lây nhiễm, giúp khách hàng thoải mái và an tâm khi điều trị.</p>
+          </div>
+        </div>
+        <div class="trust-item" style="transition-delay: 0.5s;">
+          <div class="trust-icon">📋</div>
+          <div class="trust-content">
+            <h3>Tư vấn rõ ràng, chi phí minh bạch</h3>
+            <p>Bác sĩ tư vấn chi tiết về tình trạng răng, lựa chọn phương án tối ưu. Mọi chi phí đều minh bạch, không phát sinh, phù hợp với nhu cầu tài chính.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO TESTIMONIALS -->
+<section class="section video-testimonials">
+  <div class="section-inner">
+    <div class="reveal" style="text-align: center; margin-bottom: 50px;">
+      <h2 class="section-title" style="margin-left: auto; margin-right: auto; text-transform: uppercase; color: var(--navy);">KHÁCH HÀNG NÓI GÌ SAU KHI ĐIỀU TRỊ TẠI ĐÔNG NAM?</h2>
+    </div>
+    <div class="video-grid reveal">
+      <!-- Video 1 -->
+      <div class="video-item" style="transition-delay: 0.1s;">
+        <iframe src="https://www.youtube.com/embed/PoNe7n2yVEQ" title="Khách hàng 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <!-- Video 2 -->
+      <div class="video-item" style="transition-delay: 0.2s;">
+        <iframe src="https://www.youtube.com/embed/eblVhYpRay8" title="Khách hàng 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <!-- Video 3 -->
+      <div class="video-item" style="transition-delay: 0.3s;">
+        <iframe src="https://www.youtube.com/embed/rQkbBt-CciA" title="Khách hàng 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <!-- Video 4 -->
+      <div class="video-item" style="transition-delay: 0.4s;">
+        <iframe src="https://www.youtube.com/embed/WBPU55A7D0E" title="Khách hàng 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESS SECTION -->
+<section class="section press">
+  <div class="section-inner">
+    <div class="press-header reveal">
+      <h2 class="section-title" style="margin-left: auto; margin-right: auto; text-align: center;">Báo chí nói về dịch vụ tại Nha Khoa Đông Nam</h2>
+      <p style="margin-top: 15px;">Trải qua hơn 20 năm phát triển, Nha khoa Đông Nam không chỉ mang đến dịch vụ nha khoa chất lượng mà còn là địa chỉ cấy ghép Implant hàng đầu, được đông đảo khách hàng tin tưởng và truyền thông đánh giá cao.</p>
+    </div>
+    
+    <div class="press-track reveal">
+      <!-- Báo 1: CafeF -->
+      <a href="https://cafef.vn/nha-khoa-dong-nam-hanh-trinh-khang-dinh-vi-the-trong-nganh-nha-khoa-188240709234717446.chn" target="_blank" class="press-item" style="transition-delay: 0.1s;">
+        <iframe src="https://cafef.vn/nha-khoa-dong-nam-hanh-trinh-khang-dinh-vi-the-trong-nganh-nha-khoa-188240709234717446.chn" scrolling="no"></iframe>
+      </a>
+      
+      <!-- Báo 2: 24h -->
+      <a href="https://www.24h.com.vn/tin-tuc-suc-khoe/nen-chon-implant-etk-active-nobel-active-cho-nguoi-mat-rang-lau-nam-c683a1590040.html" target="_blank" class="press-item" style="transition-delay: 0.2s;">
+        <iframe src="https://www.24h.com.vn/tin-tuc-suc-khoe/nen-chon-implant-etk-active-nobel-active-cho-nguoi-mat-rang-lau-nam-c683a1590040.html" scrolling="no"></iframe>
+      </a>
+      
+      <!-- Báo 3: Dân Trí -->
+      <a href="https://dantri.com.vn/suc-khoe/uu-diem-dot-pha-cua-tru-implant-straumann-20250225191103421.htm" target="_blank" class="press-item" style="transition-delay: 0.3s;">
+        <iframe src="https://dantri.com.vn/suc-khoe/uu-diem-dot-pha-cua-tru-implant-straumann-20250225191103421.htm" scrolling="no"></iframe>
+      </a>
+      
+      <!-- Báo 4: VNExpress -->
+      <a href="https://vnexpress.net/uu-diem-cua-giai-phap-trong-rang-implant-toan-ham-4875056.html" target="_blank" class="press-item" style="transition-delay: 0.4s;">
+        <iframe src="https://vnexpress.net/uu-diem-cua-giai-phap-trong-rang-implant-toan-ham-4875056.html" scrolling="no"></iframe>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="section faq">
+  <div class="section-inner">
+    <div class="faq-header reveal">
+      <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
+    </div>
+    <div class="faq-list reveal">
+      <!-- Cột trái: câu 1–5 -->
+      <div class="faq-col">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+            <span>1. Trồng răng Implant có đau không?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-1">
+            <p>Quá trình cấy ghép Implant được thực hiện dưới gây tê nên khách hàng hầu như không cảm thấy đau. Sau khi điều trị, bác sĩ sẽ hướng dẫn chăm sóc và kê thuốc phù hợp để giúp quá trình hồi phục diễn ra nhẹ nhàng.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+            <span>2. Implant ETK Active của Pháp có ưu điểm gì?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-2">
+            <p>Implant ETK Active là dòng trụ Implant đến từ Pháp, nổi bật với khả năng tích hợp xương tốt, độ ổn định cao, rút ngắn thời gian điều trị trong 3 - 4 tuần, tuổi thọ lâu dài. Đây là một trong những dòng Implant được nhiều bác sĩ lựa chọn trong điều trị mất răng.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+            <span>3. Nhổ răng khôn có nguy hiểm không?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-3">
+            <p>Nhổ răng khôn là một tiểu phẫu phổ biến trong nha khoa. Khi được thực hiện bởi bác sĩ có kinh nghiệm và với sự hỗ trợ của các thiết bị hiện đại, quá trình nhổ răng sẽ diễn ra an toàn và hạn chế đau nhức.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+            <span>4. Trám răng sâu có bền không?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-4">
+            <p>Trám răng bằng vật liệu thẩm mỹ có thể duy trì nhiều năm nếu được thực hiện đúng kỹ thuật và chăm sóc răng miệng tốt. Bác sĩ sẽ lựa chọn vật liệu phù hợp để đảm bảo độ bền và thẩm mỹ.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+            <span>5. Điều trị tủy răng có cần bọc răng sứ không?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-5">
+            <p>Sau khi điều trị tủy, răng thường trở nên giòn hơn. Trong nhiều trường hợp, bác sĩ sẽ khuyến nghị bọc răng sứ để bảo vệ răng và giúp răng hoạt động bền vững hơn khi ăn nhai.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Cột phải: câu 6–10 -->
+      <div class="faq-col">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+            <span>6. Tôi cần bao lâu để hoàn tất trồng răng Implant?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-6">
+            <p>Thời gian điều trị Implant thường kéo dài từ vài tuần đến vài tháng, tùy thuộc vào tình trạng xương hàm và kế hoạch điều trị của từng khách hàng. Bác sĩ sẽ tư vấn lộ trình cụ thể sau khi thăm khám.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-7">
+            <span>7. Chi phí điều trị có phát sinh thêm không?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-7">
+            <p>Tại Nha khoa Đông Nam, khách hàng sẽ được bác sĩ tư vấn chi tiết về tình trạng răng và thông báo chi phí trước khi điều trị. Phòng khám luôn minh bạch về chi phí để khách hàng chủ động lựa chọn.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-8">
+            <span>8. Chương trình ưu đãi dịp 30/4 – 1/5 áp dụng như thế nào?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-8">
+            <p>Chương trình áp dụng cho các dịch vụ trong thời gian khuyến mãi. Khách hàng đăng ký và đặt lịch trong thời gian này sẽ được hưởng mức ưu đãi theo chương trình.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-9">
+            <span>9. Tôi cần đặt lịch trước khi đến khám không?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-9">
+            <p>Khách hàng nên đặt lịch trước để phòng khám sắp xếp thời gian thăm khám và tư vấn thuận tiện nhất.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-10">
+            <span>10. Làm thế nào để đăng ký nhận ưu đãi?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-10">
+            <p>Khách hàng chỉ cần điền thông tin vào form đăng ký trên trang hoặc liên hệ trực tiếp với phòng khám để được tư vấn và giữ suất ưu đãi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM 2 (id: dang-ky) — CF7 sẽ được nhúng bên dưới -->
+<section class="form-section" id="dang-ky">
+  <div class="form-section-inner">
+    <div class="form-section-text reveal-left">
+      <h2>Đừng bỏ lỡ ưu đãi tri ân 20 năm</h2>
+      <p>Chương trình kết thúc 01/05/2026. Đăng ký ngay để được tư vấn miễn phí và giữ suất ưu đãi.</p>
+      <div class="form-section-contact">
+        <div class="contact-row">
+          <div class="contact-row-icon">📞</div>
+          <div>Tổng đài: <a href="tel:19007141">1900.7141</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-icon">📱</div>
+          <div>Hotline: <a href="tel:0972411411">0972.411.411</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-icon">📍</div>
+          <div style="font-size: 14px; line-height: 1.6;">
+            CS1: 411 Nguyễn Kiệm, P.9, Phú Nhuận<br>
+            CS2: 781/B1 Lê Hồng Phong, P.12, Q.10
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-icon">🕐</div>
+          <div>8:00 — 20:00 (Cả CN & Lễ)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-form-wrapper reveal-right">
+      <div class="form-header">
+        <div class="form-urgency-badge">Suất ưu đãi có hạn</div>
+        <h3>Đăng ký nhận ưu đãi</h3>
+        <p>Tư vấn viên liên hệ xác nhận trong 30 phút</p>
+      </div>
+      <!-- ==========================================
+        KHI DÙNG CONTACT FORM 7: xóa khối DEMO bên dưới
+        và dán vào đây: [contact-form-7 id="ID" title="Form đăng ký ưu đãi"]
+
+        Trước khi xóa DEMO, tạo form CF7 với template:
+          <div class="form-group">
+            <label for="f2-hoten">Họ và tên *</label>
+            [text* your-name id:f2-hoten placeholder "Nhập họ tên"]
+          </div>
+          <div class="form-group">
+            <label for="f2-phone">Số điện thoại *</label>
+            [tel* your-tel id:f2-phone placeholder "0912 345 678"]
+          </div>
+          <div class="form-group">
+            <label for="f2-service">Dịch vụ đăng ký</label>
+            [select your-service id:f2-service first_as_label "— Chọn dịch vụ —" "Trồng răng Implant" "Trám răng" "Nhổ răng khôn" "Chữa tủy răng"]
+          </div>
+          [submit class:form-submit "ĐĂNG KÝ NHẬN ƯU ĐÃI →"]
+          <p class="form-note">Bảo mật thông tin. Tư vấn miễn phí, không ràng buộc.</p>
+      ========================================== -->
+      <!-- DEMO START — xóa khối này khi dùng CF7 -->
+      <div class="form-group">
+        <label for="f2-hoten">Họ và tên *</label>
+        <input id="f2-hoten" type="text" placeholder="Nhập họ tên">
+      </div>
+      <div class="form-group">
+        <label for="f2-phone">Số điện thoại *</label>
+        <input id="f2-phone" type="tel" placeholder="0912 345 678">
+      </div>
+      <div class="form-group">
+        <label for="f2-service">Dịch vụ đăng ký</label>
+        <select id="f2-service">
+          <option value="">— Chọn dịch vụ —</option>
+          <option value="implant">Trồng răng Implant</option>
+          <option value="tram">Trám răng</option>
+          <option value="nho-khon">Nhổ răng khôn</option>
+          <option value="chua-tuy">Chữa tủy răng</option>
+        </select>
+      </div>
+      <button class="form-submit" type="button">ĐĂNG KÝ NHẬN ƯU ĐÃI →</button>
+      <p class="form-note">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Bảo mật thông tin. Tư vấn miễn phí, không ràng buộc.
+      </p>
+      <!-- DEMO END -->
+    </div>
+  </div>
+</section>
+
+<!-- ADDRESS / BRANCHES -->
+<section class="section branches">
+  <div class="section-inner">
+    <div class="branches-header reveal">
+      <div class="section-label" style="text-align: center; justify-content: center;">Nha Khoa Đông Nam — 20 năm đồng hành cùng sức khỏe nụ cười</div>
+      <h2 class="branches-header-title">Hệ Thống Chi Nhánh Phục Vụ Tận Tâm</h2>
+      <p>Với 2 chi nhánh tại TP.HCM, chúng tôi luôn sẵn sàng phục vụ bạn và đáp ứng thời gian làm việc linh hoạt</p>
+    </div>
+
+    <div class="branch-grid reveal">
+      <!-- Chi nhánh 1 -->
+      <div class="branch-card main">
+        <div class="branch-badge main">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          TRỤ SỞ CHÍNH
+        </div>
+        <div class="branch-title">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          CHI NHÁNH NGUYỄN KIỆM
+        </div>
+        <div class="branch-address">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></svg>
+          411 Nguyễn Kiệm, Phường 9, Quận Phú Nhuận, TP.HCM
+        </div>
+        
+        <div class="branch-info-group">
+          <div class="branch-info-label">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            LIÊN HỆ TƯ VẤN
+          </div>
+          <div class="branch-info-row">
+            <span>Hotline:</span>
+            <a href="tel:19007141">1900.7141</a>
+          </div>
+          <div class="branch-info-row">
+            <span>Điện thoại:</span>
+            <a href="tel:02873077141">(028) 7307.7141</a>
+          </div>
+          <div class="branch-info-row">
+            <span>Di động:</span>
+            <a href="tel:0972411411">0972.411.411</a>
+          </div>
+        </div>
+
+        <div class="branch-info-group">
+          <div class="branch-info-label">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            GIỜ LÀM VIỆC
+          </div>
+          <div class="branch-info-row">
+            <span>Thứ 2 - Thứ 7:</span>
+            <strong>8:00 - 19:00</strong>
+          </div>
+          <div class="branch-info-row">
+            <span>Chủ nhật:</span>
+            <strong>8:00 - 16:00</strong>
+          </div>
+        </div>
+
+        <div class="branch-actions">
+          <a href="https://maps.google.com/?q=411+Nguyễn+Kiệm,+Phường+9,+Quận+Phú+Nhuận,+TP.HCM" target="_blank" class="btn-map">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+            Chỉ đường Google Maps
+          </a>
+          <a href="tel:19007141" class="btn-call-branch">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Gọi ngay
+          </a>
+        </div>
+      </div>
+
+      <!-- Chi nhánh 2 -->
+      <div class="branch-card sub">
+        <div class="branch-badge sub">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          CHI NHÁNH 2
+        </div>
+        <div class="branch-title">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          CHI NHÁNH LÊ HỒNG PHONG
+        </div>
+        <div class="branch-address">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></svg>
+          614 Lê Hồng Phong, Phường 10, Quận 10, TP.HCM
+        </div>
+        
+        <div class="branch-info-group">
+          <div class="branch-info-label">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            LIÊN HỆ TƯ VẤN
+          </div>
+          <div class="branch-info-row">
+            <span>Hotline:</span>
+            <a href="tel:19007141">1900.7141</a>
+          </div>
+          <div class="branch-info-row">
+            <span>Điện thoại:</span>
+            <a href="tel:02873077141">(028) 7307.7141</a>
+          </div>
+          <div class="branch-info-row">
+            <span>Di động:</span>
+            <a href="tel:0972411411">0972.411.411</a>
+          </div>
+        </div>
+
+        <div class="branch-info-group">
+          <div class="branch-info-label">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            GIỜ LÀM VIỆC
+          </div>
+          <div class="branch-info-row">
+            <span>Thứ 2 - Thứ 7:</span>
+            <strong>8:00 - 19:00</strong>
+          </div>
+          <div class="branch-info-row">
+            <span>Chủ nhật:</span>
+            <strong>8:00 - 16:00</strong>
+          </div>
+        </div>
+
+        <div class="branch-actions">
+          <a href="https://maps.google.com/?q=614+Lê+Hồng+Phong,+Phường+10,+Quận+10,+TP.HCM" target="_blank" class="btn-map">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+            Chỉ đường Google Maps
+          </a>
+          <a href="tel:19007141" class="btn-call-branch">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Gọi ngay
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="company-info reveal" style="padding-bottom: 30px;">
+      <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      GPĐKKD: 0304132304 do Sở KH &amp; ĐT TP.HCM cấp ngày 06/12/2005
+    </div>
+  </div>
+</section>
+
+<div class="footer-bottom">
+  © 2026 Nha Khoa Đông Nam — GP hoạt động: 03708/SYT-GPHĐ & 01672/HCM-GPHĐ
+</div>
+
+<!-- STICKY CTA MOBILE -->
+<div class="sticky-cta">
+  <div class="sticky-cta-inner">
+    <a href="#dang-ky" class="btn-primary">Đăng ký ưu đãi →</a>
+    <a href="tel:19007141" class="btn-call">📞</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
