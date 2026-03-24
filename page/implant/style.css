@@ -922,7 +922,7 @@
 
   /* Left: privilege list */
   .implant-priv-left h3 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       font-size: clamp(18px, 2vw, 24px);
       font-weight: 700;
       color: var(--navy);
