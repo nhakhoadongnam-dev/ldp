@@ -174,19 +174,6 @@
       box-shadow: var(--shadow-gold);
   }
 
-  /* ===== HERO BANNER ===== */
-  .hero-banner {
-      position: relative;
-      background: var(--navy-deep);
-      line-height: 0;
-  }
-
-  .hero-banner-img {
-      display: block;
-      width: 100%;
-      height: auto;
-  }
-
   /* ===== BUTTONS ===== */
   .btn-primary {
       display: inline-block;
@@ -332,18 +319,14 @@
   /* ===== HERO BANNER ===== */
   .hero-banner {
       position: relative;
-      min-height: 580px;
-      overflow: hidden;
       background: var(--navy-deep);
+      line-height: 0;
   }
 
   .hero-banner-img {
-      position: absolute;
-      inset: 0;
+      display: block;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
+      height: auto;
   }
 
   .hero-banner-img-placeholder {
