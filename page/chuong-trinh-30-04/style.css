@@ -513,6 +513,16 @@
   }
   .form-note svg { vertical-align: middle; margin-right: 4px; }
 
+  /* ===== CF7 IFRAME ===== */
+  .cf7-iframe {
+    width: 100%;
+    min-height: 460px;
+    border: none;
+    border-radius: 0 0 24px 24px;
+    display: block;
+    background: var(--white);
+  }
+
   /* ===== OFFERS ===== */
   .offers { background: var(--white); }
 
