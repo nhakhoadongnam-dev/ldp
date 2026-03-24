@@ -1532,6 +1532,10 @@
           grid-template-columns: 1fr;
       }
 
+      .trust-left {
+          height: auto;
+      }
+
       .trust-header {
           text-align: center;
       }
@@ -1547,7 +1551,10 @@
       .trust-img {
           order: -1;
           max-width: 100%;
-          margin: 0 auto 30px;
+          margin: 0 auto 20px;
+          flex: none;
+          min-height: 0;
+          aspect-ratio: 4 / 3;
       }
 
       .trust-img-badge {
