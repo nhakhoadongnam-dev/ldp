@@ -1615,21 +1615,11 @@
       }
   }
 
+  .carousel-slide { cursor: zoom-in; }
   .carousel-slide img {
       width: 100%;
-      aspect-ratio: 3/2;
-      object-fit: cover;
+      height: auto;
       display: block;
-      border-bottom: 3px solid var(--implant-accent);
-  }
-
-  .carousel-text {
-      padding: 16px 12px;
-      font-weight: 700;
-      color: white;
-      background: var(--implant-accent);
-      font-size: 14px;
-      text-transform: uppercase;
   }
 
   /* Carousel Controls */
@@ -2913,4 +2903,87 @@
           font-size: 24px;
           min-width: 38px;
       }
+  }
+
+  /* ===== LIGHTBOX ===== */
+  .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.93);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+  }
+  .lightbox.active { display: flex; }
+  .lightbox-inner {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 90vw;
+      max-height: 90vh;
+  }
+  .lightbox-inner img {
+      max-width: 88vw;
+      max-height: 82vh;
+      object-fit: contain;
+      border-radius: 10px;
+      display: block;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      user-select: none;
+  }
+  .lightbox-counter {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 13px;
+      margin-top: 14px;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      letter-spacing: 0.05em;
+  }
+  .lightbox-close {
+      position: fixed;
+      top: 18px;
+      right: 22px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      font-size: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+  }
+  .lightbox-close:hover { background: rgba(255,255,255,0.28); }
+  .lightbox-prev,
+  .lightbox-next {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      font-size: 20px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      z-index: 10000;
+  }
+  .lightbox-prev { left: 16px; }
+  .lightbox-next { right: 16px; }
+  .lightbox-prev:hover,
+  .lightbox-next:hover { background: rgba(255,255,255,0.28); }
+  @media (max-width: 480px) {
+      .lightbox-prev { left: 6px; }
+      .lightbox-next { right: 6px; }
+      .lightbox-inner img { max-width: 95vw; max-height: 78vh; }
   }
