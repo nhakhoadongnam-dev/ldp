@@ -869,8 +869,7 @@
   @media (max-width: 992px) { .carousel-slide { flex: 0 0 calc(50% - 12px); } }
   @media (max-width: 768px) { .carousel-slide { flex: 0 0 calc(50% - 12px); } .carousel-wrapper { padding: 0 50px; } }
   @media (max-width: 480px) { .carousel-slide { flex: 0 0 calc(100%); } }
-  .carousel-slide img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; border-bottom: 3px solid var(--implant-accent); }
-  .carousel-text { padding: 16px 12px; font-weight: 700; color: white; background: var(--implant-accent); font-size: 14px; text-transform: uppercase; }
+  .carousel-slide img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
 
   /* Carousel Controls */
   .carousel-wrapper { position: relative; max-width: 1200px; margin: 40px auto 0; padding: 0 60px; }
