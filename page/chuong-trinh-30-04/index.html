@@ -911,6 +911,19 @@
   })();
   </script>
 
+  <script>
+  /* Auto-resize CF7 iframes to match content height */
+  document.querySelectorAll('.cf7-iframe').forEach(function(iframe) {
+    function resize() {
+      try {
+        var h = iframe.contentDocument.body.scrollHeight;
+        if (h > 0) iframe.style.height = h + 'px';
+      } catch(e) {}
+    }
+    iframe.addEventListener('load', resize);
+  });
+  </script>
+
 </body>
 
 </html>
