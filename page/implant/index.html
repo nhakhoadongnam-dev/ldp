@@ -415,7 +415,7 @@
                     <h3>Đăng ký nhận ưu đãi</h3>
                     <p>Cô/Chú hãy để lại thông tin để được hỗ trợ trực tiếp</p>
                 </div>
-                [contact-form-7 id="1314978" title="CT-GIO-TO-2026 -GIOTO2026"]
+                <iframe class="cf7-iframe" src="https://nhakhoadongnam.com/trang-30-4/" title="Form đăng ký"></iframe>
             </div>
         </div>
     </section>
@@ -699,7 +699,7 @@
                     <h3>Đăng ký nhận ưu đãi</h3>
                     <p>Cô/Chú hãy để lại thông tin để được hỗ trợ trực tiếp</p>
                 </div>
-                [contact-form-7 id="1314978" title="CT-GIO-TO-2026 -GIOTO2026"]
+                <iframe class="cf7-iframe" src="https://nhakhoadongnam.com/trang-30-4/" title="Form đăng ký"></iframe>
             </div>
         </div>
     </section>
@@ -968,6 +968,19 @@
             if (e.key === 'Escape')     close();
         });
     })();
+    </script>
+
+    <script>
+    /* Auto-resize CF7 iframes to match content height */
+    document.querySelectorAll('.cf7-iframe').forEach(function(iframe) {
+      function resize() {
+        try {
+          var h = iframe.contentDocument.body.scrollHeight;
+          if (h > 0) iframe.style.height = h + 'px';
+        } catch(e) {}
+      }
+      iframe.addEventListener('load', resize);
+    });
     </script>
 
 </body>
