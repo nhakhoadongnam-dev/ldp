@@ -516,7 +516,7 @@
   /* ===== CF7 IFRAME ===== */
   .cf7-iframe {
     width: 100%;
-    min-height: 460px;
+    min-height: 280px;
     border: none;
     border-radius: 0 0 24px 24px;
     display: block;
