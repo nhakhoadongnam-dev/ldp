@@ -683,6 +683,16 @@
       line-height: 1.6;
   }
 
+  /* ===== CF7 IFRAME ===== */
+  .cf7-iframe {
+      width: 100%;
+      min-height: 280px;
+      border: none;
+      border-radius: 0 0 24px 24px;
+      display: block;
+      background: var(--white);
+  }
+
   .form-urgency-badge {
       display: inline-flex;
       align-items: center;
