@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bảng Giá Dịch Vụ 2026 — Nha Khoa Đông Nam</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B2240;
+    --teal: #0D7A6B;
+    --teal-light: #E8F5F3;
+    --teal-mid: #B2DDD8;
+    --gold: #C8973A;
+    --gold-light: #FBF4E8;
+    --red-badge: #D94040;
+    --text: #1A2B3C;
+    --muted: #637085;
+    --border: #E2E8F0;
+    --surface: #F8FAFB;
+    --white: #FFFFFF;
+    --radius: 12px;
+    --shadow: 0 2px 16px rgba(11,34,64,.08);
+    --shadow-hover: 0 8px 32px rgba(11,34,64,.14);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* ── STICKY HEADER NAV ── */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--navy);
+    box-shadow: 0 2px 12px rgba(0,0,0,.25);
+    padding: 0 24px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+  .sticky-nav::-webkit-scrollbar { display:none; }
+  .sticky-nav ul {
+    display: inline-flex;
+    gap: 0;
+    list-style: none;
+    min-width: max-content;
+  }
+  .sticky-nav a {
+    display: block;
+    padding: 14px 18px;
+    color: rgba(255,255,255,.7);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: all .2s;
+  }
+  .sticky-nav a:hover,
+  .sticky-nav a.active { color: #fff; border-bottom-color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #143A5E 60%, #0D7A6B 100%);
+    padding: 60px 24px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 60% at 70% 50%, rgba(13,122,107,.3) 0%, transparent 70%);
+  }
+  .hero-inner { position: relative; max-width: 680px; margin: 0 auto; }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(200,151,58,.15);
+    border: 1px solid rgba(200,151,58,.5);
+    color: #F5C96A;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 99px;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 5vw, 40px);
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    color: rgba(255,255,255,.75);
+    font-size: 15px;
+    max-width: 520px;
+    margin: 0 auto 28px;
+  }
+  .hero-trust {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: rgba(255,255,255,.85);
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .trust-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 13px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all .2s;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary:hover { background: #D9A84A; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(200,151,58,.4); }
+  .btn-outline {
+    background: transparent;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1.5px solid rgba(255,255,255,.4);
+    transition: all .2s;
+  }
+  .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+
+  /* ── FREE PERKS BAR ── */
+  .perks-bar {
+    background: var(--teal);
+    padding: 14px 24px;
+  }
+  .perks-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .perk-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .perk-icon { font-size: 16px; }
+  .perk-sep { width: 1px; height: 18px; background: rgba(255,255,255,.3); }
+
+  /* ── LAYOUT ── */
+  .page { max-width: 900px; margin: 0 auto; padding: 40px 20px 80px; }
+
+  /* ── SECTION ── */
+  .section { margin-bottom: 56px; }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .icon-implant { background: #EBF3FF; }
+  .icon-su { background: #F0F9F7; }
+  .icon-tuy { background: #FFF5EB; }
+  .icon-chu { background: #F0F9F7; }
+  .icon-nho { background: #FFF0F0; }
+  .icon-tram { background: #F5F0FF; }
+  .icon-trang { background: #FFFBEB; }
+  .icon-nieng { background: #F0F9FF; }
+  .icon-ham { background: #F5F5F5; }
+  .icon-tre { background: #FFF0F9; }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .section-sub {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  /* ── TABLE ── */
+  .price-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .price-table thead th {
+    background: var(--navy);
+    color: rgba(255,255,255,.85);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 11px 16px;
+    text-align: left;
+  }
+  .price-table thead th:last-child { text-align: right; }
+  .price-table tbody tr {
+    border-top: 1px solid var(--border);
+    transition: background .15s;
+  }
+  .price-table tbody tr:first-child { border-top: none; }
+  .price-table tbody tr:hover { background: var(--surface); }
+  .price-table td {
+    padding: 12px 16px;
+    vertical-align: middle;
+  }
+  .svc-name { font-weight: 500; font-size: 14px; color: var(--text); }
+  .svc-origin {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+  .svc-unit {
+    font-size: 12px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  td.price-col { text-align: right; white-space: nowrap; }
+  .price-val {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--teal);
+  }
+  .price-free {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--teal);
+  }
+  .price-old {
+    font-size: 12px;
+    color: #aaa;
+    text-decoration: line-through;
+    display: block;
+  }
+  .badge-bh {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 99px;
+    background: var(--teal-light);
+    color: var(--teal);
+    margin-top: 3px;
+    white-space: nowrap;
+  }
+  .badge-hot {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 99px;
+    background: var(--red-badge);
+    color: #fff;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .badge-free {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 99px;
+    background: #E8F5F3;
+    color: var(--teal);
+    border: 1px solid var(--teal-mid);
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .badge-gold {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 99px;
+    background: var(--gold-light);
+    color: var(--gold);
+    border: 1px solid #E8D5A0;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .note-col { font-size: 12px; color: var(--muted); text-align: right; }
+
+  /* ── CTA INLINE ── */
+  .cta-inline {
+    background: linear-gradient(135deg, var(--navy), #143A5E);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 32px 0 0;
+  }
+  .cta-inline-text { color: #fff; }
+  .cta-inline-text strong { display: block; font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+  .cta-inline-text span { font-size: 13px; color: rgba(255,255,255,.7); }
+  .cta-inline-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+
+  /* ── IMPLANT TIER CARDS ── */
+  .implant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+    margin-bottom: 4px;
+  }
+  .implant-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    transition: all .2s;
+    position: relative;
+    cursor: default;
+  }
+  .implant-card:hover {
+    border-color: var(--teal);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+  }
+  .implant-card.recommended {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 1px var(--gold);
+  }
+  .rec-label {
+    position: absolute;
+    top: -10px; right: 16px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 99px;
+  }
+  .implant-flag { font-size: 18px; margin-bottom: 8px; }
+  .implant-brand { font-weight: 700; font-size: 15px; color: var(--navy); }
+  .implant-country { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+  .implant-price-old { font-size: 12px; color: #bbb; text-decoration: line-through; }
+  .implant-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--teal);
+    line-height: 1.1;
+  }
+  .implant-unit { font-size: 11px; color: var(--muted); font-family: 'Be Vietnam Pro', sans-serif; font-weight: 400; }
+  .implant-bh {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--teal);
+    background: var(--teal-light);
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+
+  /* ── ALLON TABLE NOTE ── */
+  .table-note {
+    font-size: 12px;
+    color: var(--muted);
+    padding: 10px 0 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ── CTA FLOATING ── */
+  .cta-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+  }
+  .float-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,.2);
+    transition: all .2s;
+    white-space: nowrap;
+  }
+  .float-primary { background: var(--gold); color: var(--navy); }
+  .float-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(200,151,58,.45); }
+  .float-tel { background: var(--teal); color: #fff; }
+  .float-tel:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(13,122,107,.4); }
+
+  /* ── DISCLAIMER ── */
+  .disclaimer {
+    background: var(--gold-light);
+    border: 1px solid #E8D5A0;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 12.5px;
+    color: #7A5F1A;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+  .disclaimer strong { color: #5A430D; }
+
+  /* ── BOTTOM CTA BLOCK ── */
+  .bottom-cta {
+    background: var(--navy);
+    border-radius: 16px;
+    padding: 40px 36px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .bottom-cta h2 {
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  .bottom-cta p {
+    color: rgba(255,255,255,.7);
+    font-size: 14px;
+    margin-bottom: 28px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bottom-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .contact-row {
+    margin-top: 24px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .contact-item { color: rgba(255,255,255,.75); font-size: 13px; display: flex; align-items: center; gap: 6px; }
+  .contact-item a { color: #F5C96A; text-decoration: none; font-weight: 600; }
+
+  /* ── GUARANTEE ROW ── */
+  .guarantee-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin: 32px 0;
+  }
+  .guarantee-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 16px;
+    text-align: center;
+  }
+  .g-icon { font-size: 26px; margin-bottom: 8px; }
+  .g-title { font-weight: 700; font-size: 13px; color: var(--navy); margin-bottom: 4px; }
+  .g-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .hero { padding: 40px 16px 32px; }
+    .cta-inline { padding: 20px; }
+    .cta-float { bottom: 16px; right: 12px; }
+    .float-btn { padding: 11px 16px; font-size: 13px; }
+    .bottom-cta { padding: 28px 20px; }
+    .price-table td { padding: 10px 12px; }
+    .implant-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav">
+  <ul>
+    <li><a href="#implant">🦷 Implant</a></li>
+    <li><a href="#rang-su">✨ Răng sứ</a></li>
+    <li><a href="#tuy">🔬 Chữa tủy</a></li>
+    <li><a href="#nha-chu">🌿 Nha chu</a></li>
+    <li><a href="#nho-rang">⚡ Nhổ răng</a></li>
+    <li><a href="#tram">🎯 Trám răng</a></li>
+    <li><a href="#tay-trang">💎 Tẩy trắng</a></li>
+    <li><a href="#nieng">🔧 Niềng răng</a></li>
+    <li><a href="#ham-thao">🦷 Hàm tháo lắp</a></li>
+    <li><a href="#tre-em">👶 Trẻ em</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-badge">Cập nhật 01/04/2026</span>
+    <h1>Bảng Giá Dịch Vụ<br>Nha Khoa Đông Nam</h1>
+    <p>Giá niêm yết công khai · Không phát sinh thêm · Cam kết đúng với bác sĩ tư vấn</p>
+    <div class="hero-trust">
+      <span class="trust-item"><span class="trust-dot"></span>21+ năm kinh nghiệm</span>
+      <span class="trust-item"><span class="trust-dot"></span>152.000+ khách hàng</span>
+      <span class="trust-item"><span class="trust-dot"></span>10.500+ ca Implant</span>
+      <span class="trust-item"><span class="trust-dot"></span>Bác sĩ giám đốc trực tiếp</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#dat-lich" class="btn-primary">📅 Đặt lịch tư vấn miễn phí</a>
+      <a href="tel:0972411411" class="btn-outline">📞 0972.411.411</a>
+    </div>
+  </div>
+</section>
+
+<!-- PERKS BAR -->
+<div class="perks-bar">
+  <div class="perks-inner">
+    <div class="perk-item"><span class="perk-icon">✅</span> Khám & tư vấn miễn phí</div>
+    <div class="perk-sep"></div>
+    <div class="perk-item"><span class="perk-icon">✅</span> Chụp CT Cone Beam 3D tặng kèm</div>
+    <div class="perk-sep"></div>
+    <div class="perk-item"><span class="perk-icon">✅</span> Bảo hành lâu dài theo từng dịch vụ</div>
+    <div class="perk-sep"></div>
+    <div class="perk-item"><span class="perk-icon">✅</span> Không phát sinh sau điều trị</div>
+  </div>
+</div>
+
+<!-- PAGE -->
+<main class="page">
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <strong>📌 Lưu ý:</strong> Bảng giá áp dụng từ 01/04/2026. Giá thực tế có thể thay đổi tùy tình trạng răng miệng của từng khách hàng sau khi được bác sĩ thăm khám trực tiếp. Đông Nam cam kết <strong>không phát sinh thêm chi phí</strong> ngoài báo giá đã được bác sĩ xác nhận.
+  </div>
+
+  <!-- GUARANTEE ROW -->
+  <div class="guarantee-row">
+    <div class="guarantee-card">
+      <div class="g-icon">🔍</div>
+      <div class="g-title">Khám & X-quang 3D</div>
+      <div class="g-desc">Hoàn toàn miễn phí, không cam kết điều trị</div>
+    </div>
+    <div class="guarantee-card">
+      <div class="g-icon">📋</div>
+      <div class="g-title">Báo giá rõ ràng</div>
+      <div class="g-desc">Bác sĩ xác nhận bằng văn bản trước khi thực hiện</div>
+    </div>
+    <div class="guarantee-card">
+      <div class="g-icon">🛡️</div>
+      <div class="g-title">Bảo hành chính sách</div>
+      <div class="g-desc">Từ 3 đến 25 năm tùy loại vật liệu</div>
+    </div>
+    <div class="guarantee-card">
+      <div class="g-icon">💳</div>
+      <div class="g-title">Hỗ trợ trả góp</div>
+      <div class="g-desc">0% lãi suất cho dịch vụ lớn qua thẻ tín dụng</div>
+    </div>
+  </div>
+
+  <!-- ══ I. IMPLANT ══ -->
+  <section class="section" id="implant">
+    <div class="section-header">
+      <div class="section-icon icon-implant">🦷</div>
+      <div>
+        <div class="section-title">Cấy ghép răng Implant</div>
+        <div class="section-sub">Giá trọn gói 1 trụ · Bao gồm phẫu thuật, vật tư, theo dõi sau cấy</div>
+      </div>
+    </div>
+
+    <div class="implant-grid">
+      <div class="implant-card">
+        <div class="implant-flag">🇰🇷</div>
+        <div class="implant-brand">Implant Hàn Quốc</div>
+        <div class="implant-country">Biotem · Korea</div>
+        <div class="implant-price-old">16.500.000 ₫</div>
+        <div class="implant-price">13.500.000 <span class="implant-unit">₫ / trụ</span></div>
+        <div class="implant-bh">✔ Bảo hành trọn đời trụ</div>
+      </div>
+      <div class="implant-card">
+        <div class="implant-flag">🇮🇹</div>
+        <div class="implant-brand">Implant Ý</div>
+        <div class="implant-country">Italy · Chất lượng châu Âu</div>
+        <div class="implant-price">19.900.000 <span class="implant-unit">₫ / trụ</span></div>
+        <div class="implant-bh">✔ Bảo hành trọn đời trụ</div>
+      </div>
+      <div class="implant-card">
+        <div class="implant-flag">🇺🇸</div>
+        <div class="implant-brand">Implant Mỹ</div>
+        <div class="implant-country">Himed HA · USA</div>
+        <div class="implant-price">23.500.000 <span class="implant-unit">₫ / trụ</span></div>
+        <div class="implant-bh">✔ Bảo hành trọn đời trụ</div>
+      </div>
+      <div class="implant-card recommended">
+        <div class="rec-label">Phổ biến nhất</div>
+        <div class="implant-flag">🇫🇷</div>
+        <div class="implant-brand">Implant ETK Active</div>
+        <div class="implant-country">Pháp · FDA & CE certified</div>
+        <div class="implant-price">28.200.000 <span class="implant-unit">₫ / trụ</span></div>
+        <div class="implant-bh">✔ Bảo hành trọn đời trụ</div>
+      </div>
+      <div class="implant-card">
+        <div class="implant-flag">🇸🇪</div>
+        <div class="implant-brand">Implant Nobel Active</div>
+        <div class="implant-country">Thụy Điển · Top thương hiệu thế giới</div>
+        <div class="implant-price">32.900.000 <span class="implant-unit">₫ / trụ</span></div>
+        <div class="implant-bh">✔ Bảo hành trọn đời trụ</div>
+      </div>
+      <div class="implant-card">
+        <div class="implant-flag">🇨🇭</div>
+        <div class="implant-brand">Implant Straumann</div>
+        <div class="implant-country">Thụy Sĩ · SLActive — #1 châu Âu</div>
+        <div class="implant-price">34.000.000 <span class="implant-unit">₫ / trụ</span></div>
+        <div class="implant-bh">✔ Bảo hành trọn đời trụ</div>
+      </div>
+    </div>
+
+    <!-- Allon table -->
+    <div class="table-note">📌 Giá trọn hàm All-on (bao gồm trụ Implant Ý, hàm hybrid / răng sứ):</div>
+    <table class="price-table" style="margin-top:10px">
+      <thead>
+        <tr>
+          <th>Loại All-on</th>
+          <th style="text-align:center">Combo sứ thường</th>
+          <th style="text-align:right">Combo toàn sứ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="svc-name">All-on-4 cải tiến <span class="badge-gold">Tháo lắp</span></span><br><span class="svc-origin">Implant Ý · Thanh Bar + hàm tháo lắp</span></td>
+          <td style="text-align:center"><span class="price-val">120.000.000 ₫</span></td>
+          <td class="price-col"><span class="price-val">148.000.000 ₫</span></td>
+        </tr>
+        <tr>
+          <td><span class="svc-name">All-on-4 cố định</span><br><span class="svc-origin">Implant Ý · Hàm Hybrid + răng sứ</span></td>
+          <td style="text-align:center"><span class="price-val">151.000.000 ₫</span></td>
+          <td class="price-col"><span class="price-val">179.000.000 ₫</span></td>
+        </tr>
+        <tr>
+          <td><span class="svc-name">All-on-6 cố định <span class="badge-hot">Khuyên dùng</span></span><br><span class="svc-origin">Implant Ý · Ổn định tối ưu</span></td>
+          <td style="text-align:center"><span class="price-val">190.800.000 ₫</span></td>
+          <td class="price-col"><span class="price-val">218.800.000 ₫</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Phẫu thuật xương -->
+    <div class="table-note" style="margin-top:20px">🔧 Các can thiệp xương đi kèm (nếu cần):</div>
+    <table class="price-table" style="margin-top:10px">
+      <thead><tr><th>Dịch vụ</th><th>Đơn vị</th><th style="text-align:right">Giá</th></tr></thead>
+      <tbody>
+        <tr><td class="svc-name">Cấy ghép xương</td><td class="svc-unit">1 ống</td><td class="price-col"><span class="price-val">8.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Cấy màng xương</td><td class="svc-unit">1 đơn vị</td><td class="price-col"><span class="price-val">2.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Cắt gọt xương</td><td class="svc-unit">1 ca</td><td class="price-col"><span class="price-val">15.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Tạo hình xương + nướu</td><td class="svc-unit">1 ca</td><td class="price-col"><span class="price-val">10.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Nâng xoang</td><td class="svc-unit">1 bên</td><td class="price-col"><span class="price-val">10.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Khớp nối Abutment</td><td class="svc-unit">1 cái</td><td class="price-col"><span class="price-val">5.000.000 ₫</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="cta-inline">
+      <div class="cta-inline-text">
+        <strong>Không biết nên chọn loại Implant nào?</strong>
+        <span>Bác sĩ giám đốc tư vấn trực tiếp — miễn phí — không cam kết điều trị</span>
+      </div>
+      <div class="cta-inline-btns">
+        <a href="#dat-lich" class="btn-primary">📅 Đặt lịch ngay</a>
+        <a href="tel:0972411411" class="btn-outline">Gọi ngay</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ II. RĂNG SỨ ══ -->
+  <section class="section" id="rang-su">
+    <div class="section-header">
+      <div class="section-icon icon-su">✨</div>
+      <div>
+        <div class="section-title">Răng sứ thẩm mỹ & Mặt dán sứ</div>
+        <div class="section-sub">Giá / 1 răng · Có phòng Labo chế tác riêng tại chỗ — công nghệ CAD/CAM</div>
+      </div>
+    </div>
+    <table class="price-table">
+      <thead><tr><th>Loại răng sứ</th><th>Xuất xứ</th><th style="text-align:center">Bảo hành</th><th style="text-align:right">Giá / răng</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc-name">Răng sứ kim loại Ceramco III</span></td>
+          <td><span class="svc-unit">🇺🇸 Mỹ</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 3 năm</span></td>
+          <td class="price-col"><span class="price-val">1.000.000 ₫</span></td>
+        </tr>
+        <tr>
+          <td><span class="svc-name">Răng sứ Titan</span></td>
+          <td><span class="svc-unit">🇩🇪🇺🇸 Đức/Mỹ</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 5 năm</span></td>
+          <td class="price-col"><span class="price-val">2.000.000 ₫</span></td>
+        </tr>
+        <tr>
+          <td><span class="svc-name">Răng toàn sứ Emax</span></td>
+          <td><span class="svc-unit">🇩🇪 Đức</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 5 năm</span></td>
+          <td class="price-col"><span class="price-val">4.000.000 ₫</span></td>
+        </tr>
+        <tr>
+          <td><span class="svc-name">Răng toàn sứ Zirconia <span class="badge-hot">Phổ biến</span></span></td>
+          <td><span class="svc-unit">🇩🇪 Đức</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 10 năm</span></td>
+          <td class="price-col"><span class="price-val">6.000.000 ₫</span></td>
+        </tr>
+        <tr>
+          <td><span class="svc-name">Răng toàn sứ Cercon HT / Zolid</span></td>
+          <td><span class="svc-unit">🇩🇪 Đức</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 15 năm</span></td>
+          <td class="price-col"><span class="price-val">7.000.000 ₫</span></td>
+        </tr>
+        <tr style="background:#FFFDF5">
+          <td><span class="svc-name">Răng toàn sứ Multilayer Zolid <span class="badge-gold">Cao cấp</span></span></td>
+          <td><span class="svc-unit">🇩🇪 Đức</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 15 năm</span></td>
+          <td class="price-col"><span class="price-val">8.000.000 ₫</span></td>
+        </tr>
+        <tr>
+          <td><span class="svc-name">Răng toàn sứ Lava 3M Plus</span></td>
+          <td><span class="svc-unit">🇩🇪 Đức</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 20 năm</span></td>
+          <td class="price-col"><span class="price-val">8.500.000 ₫</span></td>
+        </tr>
+        <tr style="background:#FFFDF5">
+          <td><span class="svc-name">Răng toàn sứ Orodent <span class="badge-gold">Premium</span></span></td>
+          <td><span class="svc-unit">🇮🇹 Ý</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 20 năm</span></td>
+          <td class="price-col"><span class="price-val">10.000.000 ₫</span></td>
+        </tr>
+        <tr>
+          <td><span class="svc-name">Mặt dán sứ Laminate Veneer</span></td>
+          <td><span class="svc-unit">Không mài hoặc mài ít</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 10 năm</span></td>
+          <td class="price-col"><span class="price-val">7.000.000 ₫</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="cta-inline" style="margin-top:24px">
+      <div class="cta-inline-text">
+        <strong>Cần tư vấn chọn loại sứ phù hợp?</strong>
+        <span>Bác sĩ sẽ tư vấn dựa trên tình trạng răng thực tế — không ép dịch vụ</span>
+      </div>
+      <a href="#dat-lich" class="btn-primary">📅 Đặt lịch tư vấn</a>
+    </div>
+  </section>
+
+  <!-- ══ III. CHỮA TỦY ══ -->
+  <section class="section" id="tuy">
+    <div class="section-header">
+      <div class="section-icon icon-tuy">🔬</div>
+      <div>
+        <div class="section-title">Chữa tủy răng</div>
+        <div class="section-sub">Giá / 1 răng · Không bao gồm trám kết thúc (tính riêng)</div>
+      </div>
+    </div>
+    <table class="price-table">
+      <thead><tr><th>Dịch vụ</th><th>Đơn vị</th><th style="text-align:right">Giá</th></tr></thead>
+      <tbody>
+        <tr><td class="svc-name">Chữa tủy răng cửa (R1, 2, 3)</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">700.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Chữa tủy răng cối nhỏ (R4, 5)</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Chữa tủy răng cối lớn (R6, 7)</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.500.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Trám răng kết thúc chữa tủy</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">400.000 ₫</span></td></tr>
+        <tr style="background:#FFF8F8"><td class="svc-name">Chữa tủy lại — răng cửa</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.200.000 ₫</span></td></tr>
+        <tr style="background:#FFF8F8"><td class="svc-name">Chữa tủy lại — răng cối nhỏ</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.500.000 ₫</span></td></tr>
+        <tr style="background:#FFF8F8"><td class="svc-name">Chữa tủy lại — răng cối lớn</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">2.000.000 ₫</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══ IV. NHA CHU ══ -->
+  <section class="section" id="nha-chu">
+    <div class="section-header">
+      <div class="section-icon icon-chu">🌿</div>
+      <div>
+        <div class="section-title">Nha chu — Cạo vôi răng</div>
+        <div class="section-sub">Nên thực hiện 6 tháng / lần để bảo vệ nướu và răng</div>
+      </div>
+    </div>
+    <table class="price-table">
+      <thead><tr><th>Dịch vụ</th><th>Đơn vị</th><th style="text-align:right">Giá</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc-name">Cạo vôi răng + Đánh bóng <span class="badge-free">Miễn phí tư vấn</span></span></td>
+          <td class="svc-unit">2 hàm</td>
+          <td class="price-col"><span class="price-val">400.000 ₫</span></td>
+        </tr>
+        <tr><td class="svc-name">Điều trị nha chu 1 răng</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Điều trị nha chu 1 cụm</td><td class="svc-unit">1 cụm</td><td class="price-col"><span class="price-val">2.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Điều trị nha chu 1 hàm</td><td class="svc-unit">1 hàm</td><td class="price-col"><span class="price-val">6.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Điều trị nha chu 2 hàm</td><td class="svc-unit">2 hàm</td><td class="price-col"><span class="price-val">10.000.000 ₫</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══ V. NHỔ RĂNG ══ -->
+  <section class="section" id="nho-rang">
+    <div class="section-header">
+      <div class="section-icon icon-nho">⚡</div>
+      <div>
+        <div class="section-title">Nhổ răng & Tiểu phẫu</div>
+        <div class="section-sub">Bác sĩ chuyên khoa RHM · Gây tê không đau</div>
+      </div>
+    </div>
+    <table class="price-table">
+      <thead><tr><th>Dịch vụ</th><th>Đơn vị</th><th style="text-align:right">Giá</th></tr></thead>
+      <tbody>
+        <tr><td class="svc-name">Nhổ răng lung lay</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">300.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Nhổ răng thường</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">500.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Nhổ răng khó</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Tiểu phẫu răng khôn hàm trên</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.500.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Tiểu phẫu răng khôn hàm dưới</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">2.500.000 ₫</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══ VI. TRÁM RĂNG ══ -->
+  <section class="section" id="tram">
+    <div class="section-header">
+      <div class="section-icon icon-tram">🎯</div>
+      <div>
+        <div class="section-title">Trám răng</div>
+        <div class="section-sub">Chất liệu Composite cao cấp · Màu sắc tự nhiên</div>
+      </div>
+    </div>
+    <table class="price-table">
+      <thead><tr><th>Dịch vụ</th><th>Đơn vị</th><th style="text-align:right">Giá</th></tr></thead>
+      <tbody>
+        <tr><td class="svc-name">Trám răng Composite</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">400.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Trám kẽ răng / răng thưa</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">500.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Trám răng Onlay / Inlay / Overlay <span class="badge-gold">Cao cấp</span></td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">4.000.000 ₫</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══ VII. TẨY TRẮNG ══ -->
+  <section class="section" id="tay-trang">
+    <div class="section-header">
+      <div class="section-icon icon-trang">💎</div>
+      <div>
+        <div class="section-title">Tẩy trắng răng</div>
+        <div class="section-sub">Công nghệ Zoom Whitening · An toàn · Không ê buốt</div>
+      </div>
+    </div>
+    <table class="price-table">
+      <thead><tr><th>Dịch vụ</th><th>Đơn vị</th><th style="text-align:right">Giá</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc-name">Tẩy trắng răng <span class="badge-free">Tặng máng + thuốc</span></span></td>
+          <td class="svc-unit">2 hàm</td>
+          <td class="price-col"><span class="price-val">3.000.000 ₫</span></td>
+        </tr>
+        <tr><td class="svc-name">Máng ngậm trắng răng</td><td class="svc-unit">2 hàm</td><td class="price-col"><span class="price-val">500.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Thuốc tẩy trắng răng</td><td class="svc-unit">1 ống</td><td class="price-col"><span class="price-val">300.000 ₫</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══ VIII. NIỀNG RĂNG ══ -->
+  <section class="section" id="nieng">
+    <div class="section-header">
+      <div class="section-icon icon-nieng">🔧</div>
+      <div>
+        <div class="section-title">Chỉnh nha — Niềng răng</div>
+        <div class="section-sub">Giá trọn liệu trình 2 hàm · Bao gồm theo dõi định kỳ</div>
+      </div>
+    </div>
+    <table class="price-table">
+      <thead><tr><th>Loại niềng</th><th>Đơn vị</th><th style="text-align:right">Giá</th></tr></thead>
+      <tbody>
+        <tr><td class="svc-name">Niềng mắc cài tự buộc</td><td class="svc-unit">2 hàm</td><td class="price-col"><span class="price-val">50.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Niềng mắc cài sứ</td><td class="svc-unit">2 hàm</td><td class="price-col"><span class="price-val">55.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Niềng mắc cài cánh cam</td><td class="svc-unit">2 hàm</td><td class="price-col"><span class="price-val">65.000.000 ₫</span></td></tr>
+        <tr><td><span class="svc-name">Niềng trong suốt 3D Clear <span class="badge-hot">Thẩm mỹ cao</span></span></td><td class="svc-unit">2 hàm</td><td class="price-col"><span class="price-val">130.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Máng duy trì sau niềng</td><td class="svc-unit">1 hàm</td><td class="price-col"><span class="price-val">800.000 ₫</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══ IX. HÀM THÁO LẮP ══ -->
+  <section class="section" id="ham-thao">
+    <div class="section-header">
+      <div class="section-icon icon-ham">🦷</div>
+      <div>
+        <div class="section-title">Hàm giả tháo lắp</div>
+        <div class="section-sub">Giải pháp phục hồi răng mất linh hoạt, chi phí phù hợp</div>
+      </div>
+    </div>
+    <table class="price-table">
+      <thead><tr><th>Loại hàm</th><th>Đơn vị</th><th style="text-align:right">Giá</th></tr></thead>
+      <tbody>
+        <tr><td class="svc-name">Hàm nhựa dẻo</td><td class="svc-unit">1 hàm</td><td class="price-col"><span class="price-val">3.500.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Hàm khung</td><td class="svc-unit">1 hàm</td><td class="price-col"><span class="price-val">2.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Vá hàm / Đệm hàm tháo lắp</td><td class="svc-unit">1 hàm</td><td class="price-col"><span class="price-val">500.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Lưới kim loại</td><td class="svc-unit">1 hàm</td><td class="price-col"><span class="price-val">500.000 ₫</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══ X. TRẺ EM ══ -->
+  <section class="section" id="tre-em">
+    <div class="section-header">
+      <div class="section-icon icon-tre">👶</div>
+      <div>
+        <div class="section-title">Nha khoa trẻ em (Răng sữa)</div>
+        <div class="section-sub">Bác sĩ nhẹ nhàng · Không gây sợ hãi cho bé</div>
+      </div>
+    </div>
+    <table class="price-table">
+      <thead><tr><th>Dịch vụ</th><th>Đơn vị</th><th style="text-align:right">Giá</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc-name">Nhổ răng sữa <span class="badge-free">Miễn phí</span></span></td>
+          <td class="svc-unit">1 răng</td>
+          <td class="price-col"><span class="price-free">Miễn phí</span></td>
+        </tr>
+        <tr><td class="svc-name">Cạo vôi răng trẻ em</td><td class="svc-unit">2 hàm</td><td class="price-col"><span class="price-val">100.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Trám răng trẻ em</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">200.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Chữa tủy răng cửa trẻ em</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">350.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Chữa tủy răng cối trẻ em</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">750.000 ₫</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <div class="bottom-cta" id="dat-lich">
+    <h2>Đặt lịch tư vấn miễn phí</h2>
+    <p>Gặp trực tiếp bác sĩ — nhận báo giá chính xác theo tình trạng thực tế của bạn. Không cam kết, không ép buộc.</p>
+    <div class="bottom-actions">
+      <a href="https://nhakhoadongnam.com/dat-lich-kham/" class="btn-primary" style="font-size:15px; padding:14px 32px">📅 Đặt lịch online</a>
+      <a href="tel:19007141" class="btn-outline" style="font-size:15px; padding:14px 28px">📞 1900.7141</a>
+      <a href="tel:0972411411" class="btn-outline" style="font-size:15px; padding:14px 28px">📱 0972.411.411</a>
+    </div>
+    <div class="contact-row">
+      <div class="contact-item">📍 CS1: <a href="#">411 Nguyễn Kiệm, Phú Nhuận</a></div>
+      <div class="contact-item">📍 CS2: <a href="#">614 Lê Hồng Phong, Q.10</a></div>
+      <div class="contact-item">⏰ T2–T7: 8h–19h · CN: 8h–16h</div>
+    </div>
+  </div>
+
+</main>
+
+<!-- FLOATING CTA -->
+<div class="cta-float">
+  <a href="tel:0972411411" class="float-btn float-tel">📞 Gọi ngay</a>
+  <a href="#dat-lich" class="float-btn float-primary">📅 Đặt lịch</a>
+</div>
+
+<script>
+// Sticky nav active highlight on scroll
+const sections = document.querySelectorAll('section[id], div[id="dat-lich"]');
+const navLinks = document.querySelectorAll('.sticky-nav a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 80) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+// Smooth hide float on scroll up reveal
+let lastScroll = 0;
+const floatDiv = document.querySelector('.cta-float');
+window.addEventListener('scroll', () => {
+  const now = window.scrollY;
+  floatDiv.style.opacity = now < 200 ? '0' : '1';
+  floatDiv.style.pointerEvents = now < 200 ? 'none' : 'all';
+  lastScroll = now;
+}, { passive: true });
+floatDiv.style.transition = 'opacity .3s';
+floatDiv.style.opacity = '0';
+</script>
+</body>
+</html>
