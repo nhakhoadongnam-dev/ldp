@@ -371,13 +371,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin: 32px 0 0;
   }
-  .cta-inline-text { color: #fff; }
+  .cta-inline-text { color: #fff; flex: 1; min-width: 0; }
   .cta-inline-text strong { display: block; font-size: 17px; font-weight: 700; margin-bottom: 4px; }
   .cta-inline-text span { font-size: 13px; color: rgba(255,255,255,.7); }
-  .cta-inline-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .cta-inline-btns { display: flex; gap: 10px; flex-shrink: 0; }
+  @media (max-width: 600px) {
+    .cta-inline { flex-wrap: wrap; }
+    .cta-inline-btns { flex-shrink: 1; }
+  }
 
   /* ── IMPLANT TIER CARDS ── */
   .implant-grid {
@@ -1103,7 +1107,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- CLINIC INFO -->
 <section style="background:var(--white);padding:48px 24px;text-align:center;border-top:1px solid var(--border);">
   <div style="max-width:680px;margin:0 auto;">
-    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(20px,3.5vw,28px);color:var(--navy);margin-bottom:8px;">Nha Khoa Đông Nam — Hơn 21 năm đồng hành cùng bạn</h2>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(16px,2.8vw,26px);color:var(--navy);margin-bottom:8px;white-space:nowrap;">Nha Khoa Đông Nam — Hơn 21 năm đồng hành cùng bạn</h2>
     <p style="color:var(--teal);font-size:15px;font-weight:600;margin-bottom:24px;">Chuyên sâu cấy ghép Implant, xử lý cả ca khó 🔬</p>
     <div style="display:flex;flex-direction:column;gap:10px;align-items:center;">
       <div style="font-size:14px;color:var(--text);"><strong>Cơ sở 1:</strong> 411 Nguyễn Kiệm - Phường Đức Nhuận - TPHCM</div>
