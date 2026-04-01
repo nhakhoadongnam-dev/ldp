@@ -275,6 +275,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     text-align: left;
   }
   .price-table thead th:last-child { text-align: right; }
+  .price-table thead th:nth-last-child(2) { text-align: right; }
   .price-table tbody tr {
     border-top: 1px solid var(--border);
     transition: background .15s;
@@ -361,6 +362,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     vertical-align: middle;
   }
   .note-col { font-size: 12px; color: var(--muted); text-align: right; }
+  .price-promo {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--red-badge);
+  }
+  .price-crossed {
+    font-size: 12px;
+    color: #aaa;
+    text-decoration: line-through;
+  }
 
   /* ── CTA INLINE ── */
   .cta-inline {
@@ -841,67 +852,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <table class="price-table">
-      <thead><tr><th>Loại răng sứ</th><th>Xuất xứ</th><th style="text-align:center">Bảo hành</th><th style="text-align:right">Giá / răng</th></tr></thead>
+      <thead><tr><th>Loại răng sứ</th><th>Xuất xứ</th><th style="text-align:center">Bảo hành</th><th style="text-align:right">Giá / răng</th><th style="text-align:right">Ưu đãi</th></tr></thead>
       <tbody>
         <tr>
           <td><span class="svc-name">Răng sứ kim loại Ceramco III</span></td>
           <td><span class="svc-unit"><span class="fi fi-us fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Mỹ</span></td>
           <td style="text-align:center"><span class="badge-bh">BH 3 năm</span></td>
           <td class="price-col"><span class="price-val">1.000.000 ₫</span></td>
+          <td class="price-col"></td>
         </tr>
         <tr>
           <td><span class="svc-name">Răng sứ Titan</span></td>
           <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:2px"></span><span class="fi fi-us fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức/Mỹ</span></td>
           <td style="text-align:center"><span class="badge-bh">BH 5 năm</span></td>
           <td class="price-col"><span class="price-val">2.000.000 ₫</span></td>
+          <td class="price-col"></td>
         </tr>
         <tr>
           <td><span class="svc-name">Răng toàn sứ Emax</span></td>
           <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức</span></td>
           <td style="text-align:center"><span class="badge-bh">BH 5 năm</span></td>
           <td class="price-col"><span class="price-val">4.000.000 ₫</span></td>
+          <td class="price-col"></td>
         </tr>
         <tr>
           <td><span class="svc-name">Răng toàn sứ Zirconia <span class="badge-hot">Phổ biến</span></span></td>
           <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức</span></td>
           <td style="text-align:center"><span class="badge-bh">BH 10 năm</span></td>
           <td class="price-col"><span class="price-val">6.000.000 ₫</span></td>
+          <td class="price-col"></td>
         </tr>
         <tr>
           <td><span class="svc-name">Răng toàn sứ Cercon HT</span></td>
           <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức</span></td>
           <td style="text-align:center"><span class="badge-bh">BH 15 năm</span></td>
           <td class="price-col"><span class="price-val">7.000.000 ₫</span></td>
+          <td class="price-col"></td>
         </tr>
         <tr style="background:#FFFDF5">
           <td><span class="svc-name">Răng toàn sứ Zolid <span class="badge-gold">Khuyên dùng</span></span></td>
           <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức</span></td>
           <td style="text-align:center"><span class="badge-bh">BH 15 năm</span></td>
-          <td class="price-col"><span class="price-val">7.000.000 ₫</span></td>
+          <td class="price-col"><span class="price-crossed">7.000.000 ₫</span></td>
+          <td class="price-col"><span class="price-promo">5.600.000 ₫</span></td>
         </tr>
         <tr style="background:#FFFDF5">
           <td><span class="svc-name">Răng toàn sứ Multilayer Zolid <span class="badge-gold">Cao cấp</span></span></td>
           <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức</span></td>
           <td style="text-align:center"><span class="badge-bh">BH 15 năm</span></td>
           <td class="price-col"><span class="price-val">8.000.000 ₫</span></td>
+          <td class="price-col"></td>
         </tr>
         <tr style="background:#FFFDF5">
           <td><span class="svc-name">Răng toàn sứ Lava 3M Plus <span class="badge-gold">Cao cấp</span></span></td>
           <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức</span></td>
           <td style="text-align:center"><span class="badge-bh">BH 20 năm</span></td>
           <td class="price-col"><span class="price-val">8.500.000 ₫</span></td>
+          <td class="price-col"></td>
         </tr>
         <tr style="background:#FFFDF5">
           <td><span class="svc-name">Răng toàn sứ Orodent <span class="badge-gold">Premium</span></span></td>
           <td><span class="svc-unit"><span class="fi fi-it fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Ý</span></td>
           <td style="text-align:center"><span class="badge-bh">BH 20 năm</span></td>
           <td class="price-col"><span class="price-val">10.000.000 ₫</span></td>
+          <td class="price-col"></td>
         </tr>
         <tr>
           <td><span class="svc-name">Mặt dán sứ Laminate Veneer</span></td>
           <td><span class="svc-unit">Không mài hoặc mài ít</span></td>
           <td style="text-align:center"><span class="badge-bh">BH 10 năm</span></td>
           <td class="price-col"><span class="price-val">7.000.000 ₫</span></td>
+          <td class="price-col"></td>
         </tr>
       </tbody>
     </table>
@@ -947,17 +968,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <table class="price-table">
-      <thead><tr><th>Dịch vụ</th><th>Đơn vị</th><th style="text-align:right">Giá</th></tr></thead>
+      <thead><tr><th>Dịch vụ</th><th>Đơn vị</th><th style="text-align:right">Giá</th><th style="text-align:right">Ưu đãi</th></tr></thead>
       <tbody>
         <tr>
           <td><span class="svc-name">Cạo vôi răng + Đánh bóng <span class="badge-free">Nên thực hiện 6 tháng/lần</span></span></td>
           <td class="svc-unit">2 hàm</td>
-          <td class="price-col"><span class="price-val">400.000 ₫</span></td>
+          <td class="price-col"><span class="price-crossed">400.000 ₫</span></td>
+          <td class="price-col"><span class="price-promo">200.000 ₫</span></td>
         </tr>
-        <tr><td class="svc-name">Điều trị nha chu 1 răng</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.000.000 ₫</span></td></tr>
-        <tr><td class="svc-name">Điều trị nha chu 1 cụm</td><td class="svc-unit">1 cụm</td><td class="price-col"><span class="price-val">2.000.000 ₫</span></td></tr>
-        <tr><td class="svc-name">Điều trị nha chu 1 hàm</td><td class="svc-unit">1 hàm</td><td class="price-col"><span class="price-val">6.000.000 ₫</span></td></tr>
-        <tr><td class="svc-name">Điều trị nha chu 2 hàm</td><td class="svc-unit">2 hàm</td><td class="price-col"><span class="price-val">10.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Điều trị nha chu 1 răng</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.000.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Điều trị nha chu 1 cụm</td><td class="svc-unit">1 cụm</td><td class="price-col"><span class="price-val">2.000.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Điều trị nha chu 1 hàm</td><td class="svc-unit">1 hàm</td><td class="price-col"><span class="price-val">6.000.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Điều trị nha chu 2 hàm</td><td class="svc-unit">2 hàm</td><td class="price-col"><span class="price-val">10.000.000 ₫</span></td><td class="price-col"></td></tr>
       </tbody>
     </table>
   </section>
