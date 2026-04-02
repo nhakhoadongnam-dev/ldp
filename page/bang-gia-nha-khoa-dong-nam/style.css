@@ -278,7 +278,6 @@ body {
   text-align: left;
 }
 .price-table thead th:last-child { text-align: right; }
-.price-table thead th:nth-last-child(2) { text-align: right; }
 .price-table tbody tr {
   border-top: 1px solid var(--border);
   transition: background .15s;
@@ -349,6 +348,42 @@ td.price-col { text-align: right; white-space: nowrap; }
   background: #E8F5F3;
   color: var(--teal);
   border: 1px solid var(--teal-mid);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.badge-economy {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: #F0F4F8;
+  color: #637085;
+  border: 1px solid #D0D7E0;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.badge-aesthetic {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: #FFF3E6;
+  color: #D4760A;
+  border: 1px solid #F0D4A8;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.badge-premium {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: #F3E8FF;
+  color: #7C3AED;
+  border: 1px solid #D8B4FE;
   margin-left: 6px;
   vertical-align: middle;
 }
@@ -730,5 +765,5 @@ td.price-col { text-align: right; white-space: nowrap; }
   .implant-card { padding: 14px 16px; }
   .price-table { font-size: 12px; }
   .price-table td { padding: 7px 5px; }
-  .badge-hot, .badge-free, .badge-gold { font-size: 8px; padding: 1px 5px; }
+  .badge-hot, .badge-free, .badge-gold, .badge-economy, .badge-aesthetic, .badge-premium { font-size: 8px; padding: 1px 5px; }
 }
