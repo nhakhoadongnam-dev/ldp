@@ -228,6 +228,34 @@ body {
   font-weight: 400;
   margin-top: 2px;
 }
+.section-header-highlight {
+  background: var(--gold-light);
+  border: 1px solid #E8D5A0;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.section-header-highlight .section-sub {
+  color: #7A5F1A;
+}
+.section-header-highlight .section-title {
+  color: #5A430D;
+}
+.badge-common {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: var(--teal-light);
+  color: var(--teal);
+  border: 1px solid var(--teal-mid);
+  margin-left: 6px;
+  vertical-align: middle;
+}
 
 /* ── TABLE ── */
 .price-table {
