@@ -408,6 +408,12 @@ td.price-col { text-align: right; white-space: nowrap; }
   width: 140px;
   text-align: right;
 }
+.price-table--unit-align thead th:nth-child(4) {
+  color: transparent;
+  border: none;
+  background: transparent;
+  pointer-events: none;
+}
 .badge-premium {
   display: inline-block;
   font-size: 10px;
