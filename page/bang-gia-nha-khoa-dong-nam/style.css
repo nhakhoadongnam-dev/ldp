@@ -390,17 +390,23 @@ td.price-col { text-align: right; white-space: nowrap; }
 .price-table--unit-align thead th:nth-child(1),
 .price-table--unit-align tbody td:first-child {
   white-space: nowrap;
-  min-width: 220px;
+  min-width: 260px;
 }
 .price-table--unit-align thead th:nth-child(2),
-.price-table--unit-align tbody td.svc-unit {
+.price-table--unit-align tbody td:nth-child(2) {
   width: 104px;
   text-align: center;
   white-space: nowrap;
 }
 .price-table--unit-align thead th:nth-child(3),
-.price-table--unit-align tbody td.price-col {
+.price-table--unit-align tbody td:nth-child(3) {
   width: 140px;
+  text-align: right;
+}
+.price-table--unit-align thead th:nth-child(4),
+.price-table--unit-align tbody td:nth-child(4) {
+  width: 140px;
+  text-align: right;
 }
 .badge-premium {
   display: inline-block;
