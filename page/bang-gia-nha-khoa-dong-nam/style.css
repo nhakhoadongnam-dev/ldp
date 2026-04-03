@@ -411,7 +411,7 @@ td.price-col { text-align: right; white-space: nowrap; }
 .price-table--unit-align thead th:nth-child(4) {
   color: transparent;
   border: none;
-  background: transparent;
+  background: inherit;
   pointer-events: none;
 }
 .badge-premium {
