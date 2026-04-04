@@ -778,7 +778,7 @@ td.price-col { text-align: right; white-space: nowrap; }
   .cta-inline { padding: 20px; flex-wrap: wrap; }
   .cta-inline-text strong { font-size: 15px; }
   .cta-inline-text span { font-size: 12px; }
-  .cta-inline-btns { flex-shrink: 1; }
+  .cta-inline-btns { flex-shrink: 1; flex-wrap: wrap; }
   .cta-float { bottom: 16px; right: 12px; }
   .float-btn { padding: 11px 16px; font-size: 13px; }
   .bottom-cta { padding: 28px 20px; }
@@ -797,6 +797,57 @@ td.price-col { text-align: right; white-space: nowrap; }
   .guarantee-row { grid-template-columns: 1fr; }
   .sticky-nav a { padding: 12px 14px; font-size: 12px; }
   .clinic-info h2 { white-space: normal; font-size: clamp(16px, 4.5vw, 24px); }
+
+  /* ── FIX BẢNG GIÁ TRÀN NGANG TRÊN MOBILE ── */
+
+  /* Bỏ min-width cứng và nowrap ở cột dịch vụ — cho phép xuống dòng */
+  .price-table--unit-align thead th:nth-child(1),
+  .price-table--unit-align tbody td:first-child {
+    min-width: 0;
+    white-space: normal;
+  }
+  /* Thu nhỏ cột Đơn vị */
+  .price-table--unit-align thead th:nth-child(2),
+  .price-table--unit-align tbody td:nth-child(2) {
+    width: 52px;
+  }
+  /* Thu nhỏ cột Giá */
+  .price-table--unit-align thead th:nth-child(3),
+  .price-table--unit-align tbody td:nth-child(3) {
+    width: 100px;
+  }
+  /* Ẩn cột Ưu đãi (hiện đang trống hoàn toàn) */
+  .price-table--unit-align thead th:nth-child(4),
+  .price-table--unit-align tbody td:nth-child(4) {
+    display: none;
+  }
+
+  /* Bảng Răng sứ 5 cột: ẩn Xuất xứ (col 2) và Ưu đãi (col 5) */
+  .price-table--rang-su thead th:nth-child(2),
+  .price-table--rang-su tbody td:nth-child(2),
+  .price-table--rang-su thead th:nth-child(5),
+  .price-table--rang-su tbody td:nth-child(5) {
+    display: none;
+  }
+  /* Thu gọn cột Bảo hành và Giá */
+  .price-table--rang-su thead th:nth-child(3),
+  .price-table--rang-su tbody td:nth-child(3) {
+    width: 66px;
+    text-align: center;
+    padding: 8px 4px;
+  }
+  .price-table--rang-su thead th:nth-child(4),
+  .price-table--rang-su tbody td:nth-child(4) {
+    width: 100px;
+  }
+
+  /* Cho phép badge xuống dòng trong ô tên dịch vụ */
+  .badge-hot, .badge-free, .badge-bh,
+  .badge-economy, .badge-aesthetic, .badge-aesthetic-green,
+  .badge-premium, .badge-gold, .badge-common {
+    display: inline-block;
+    margin-top: 2px;
+  }
 }
 
 @media (max-width: 400px) {
