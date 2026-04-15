@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 <head>
 <!-- Google tag (gtag.js) -->
@@ -174,39 +174,50 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 </div>
 
 <main id="main">
-<!-- ═══ HERO ═══ -->
+<!-- ═══ HERO ══ -->
 <section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <button class="skip-layer" aria-label="Bỏ qua phần giới thiệu">bỏ qua</button>
+  <div class="hero-text-layer">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="line"></span>
+          <span class="since">Since 2005</span>
+          <span>Chuyên gia cấy ghép Implant</span>
+        </div>
+        <h1>
+          Hơn <em>21 năm</em><br>
+          đồng hành cùng bạn.
+        </h1>
+        <p class="hero-lede">
+          Từ 2005 đến hôm nay — vẫn là nơi bạn có thể quay lại sau 10, 20 năm để được chăm sóc bởi cùng một đội ngũ.
+        </p>
+        <div class="hero-actions">
+          <a href="#cta" class="btn btn-red">Đặt lịch tư vấn miễn phí →</a>
+          <a href="#timeline" class="btn btn-ghost">Xem hành trình 21 năm</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS HIGHLIGHT ═══ -->
+<section class="stats-highlight">
   <div class="container">
-    <div>
-      <div class="hero-eyebrow">
-        <span class="line"></span>
-        <span class="since">Since 2005</span>
-        <span>Chuyên gia cấy ghép Implant</span>
+    <div class="stats-row">
+      <div class="stat-item">
+        <div class="stat-num">152.000<em>+</em></div>
+        <div class="stat-label">Khách hàng đã tin chọn</div>
       </div>
-      <h1>
-        Hơn <em>21 năm</em><br>
-        <span class="big">đồng hành cùng bạn.</span>
-      </h1>
-      <p class="hero-lede">
-        Từ 2005 đến hôm nay — vẫn là nơi bạn có thể quay lại sau 10, 20 năm để được chăm sóc bởi cùng một đội ngũ.
-      </p>
-      <div class="hero-actions">
-        <a href="#cta" class="btn btn-red">Đặt lịch tư vấn miễn phí →</a>
-        <a href="#timeline" class="btn btn-ghost">Xem hành trình 21 năm</a>
+      <div class="stat-item">
+        <div class="stat-num">10.500<em>+</em></div>
+        <div class="stat-label">Trụ Implant đã cấy</div>
       </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="num">152.000<em>+</em></div>
-          <div class="lbl">Khách hàng đã tin chọn</div>
-        </div>
-        <div class="hero-stat">
-          <div class="num">10.500<em>+</em></div>
-          <div class="lbl">Trụ Implant đã cấy</div>
-        </div>
-        <div class="hero-stat">
-          <div class="num">2</div>
-          <div class="lbl">Cơ sở tại TP.HCM</div>
-        </div>
+      <div class="stat-item">
+        <div class="stat-num">2</div>
+        <div class="stat-label">Cơ sở tại TP.HCM</div>
       </div>
     </div>
   </div>
@@ -253,10 +264,16 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
     <!-- Video full-width -->
     <div class="tl-video">
-      <!-- HƯỚNG DẪN: Thay YOUTUBE_ID_HERE bằng ID video YouTube thực tế -->
-      <div class="tl-video-wrap" data-videoid="YOUTUBE_ID_HERE">
-        <div class="tl-video-thumb" role="img" aria-label="Thumbnail video hành trình 21 năm Nha Khoa Đông Nam"></div>
-        <button class="tl-video-play" aria-label="Phát video hành trình 21 năm Nha Khoa Đông Nam">▶</button>
+      <div class="tl-video-wrap">
+        <iframe 
+          src="https://www.youtube.com/embed/BbhrSFq6jUk?rel=0" 
+          title="TVC kỷ niệm 21 năm — Nha Khoa Đông Nam" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen
+          loading="lazy">
+        </iframe>
         <div class="tl-video-caption">TVC kỷ niệm 21 năm — Nha Khoa Đông Nam</div>
       </div>
     </div>
@@ -591,7 +608,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
           <div class="testi-slide">
             <div class="testi-card" data-videoid="c8Pb_kKWdMM">
-              <img src="https://img.youtube.com/vi/c8Pb_kKWdMM/maxresdefault.jpg" alt="Video cảm nhận Cô Lan Q.Phú Nhuận" loading="lazy">
+              <img src="https://placehold.co/480x640/1B2A4A/E8D5A8?text=Co+Lan&font=playfair-display" alt="Video cảm nhận Cô Lan Q.Phú Nhuận" loading="lazy" width="480" height="640">
               <button class="testi-play" aria-label="Phát video cảm nhận của Cô Lan">▶</button>
               <div class="testi-info">
                 <div class="name">Cô Lan · Q.Phú Nhuận</div>
@@ -602,7 +619,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
           <div class="testi-slide">
             <div class="testi-card" data-videoid="eblVhYpRay8">
-              <img src="https://img.youtube.com/vi/eblVhYpRay8/maxresdefault.jpg" alt="Video cảm nhận Chú Hải Q.10" loading="lazy">
+              <img src="https://placehold.co/480x640/1B2A4A/E8D5A8?text=Chu+Hai&font=playfair-display" alt="Video cảm nhận Chú Hải Q.10" loading="lazy" width="480" height="640">
               <button class="testi-play" aria-label="Phát video cảm nhận của Chú Hải">▶</button>
               <div class="testi-info">
                 <div class="name">Chú Hải · Q.10</div>
@@ -613,7 +630,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
           <div class="testi-slide">
             <div class="testi-card" data-videoid="kh1zckdYSX8">
-              <img src="https://img.youtube.com/vi/kh1zckdYSX8/maxresdefault.jpg" alt="Video cảm nhận Chị Ngọc Tân Bình" loading="lazy">
+              <img src="https://placehold.co/480x640/1B2A4A/E8D5A8?text=Chi+Ngoc&font=playfair-display" alt="Video cảm nhận Chị Ngọc Tân Bình" loading="lazy" width="480" height="640">
               <button class="testi-play" aria-label="Phát video cảm nhận của Chị Ngọc">▶</button>
               <div class="testi-info">
                 <div class="name">Chị Ngọc · Tân Bình</div>
@@ -624,7 +641,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
           <div class="testi-slide">
             <div class="testi-card" data-videoid="rQkbBt-CciA">
-              <img src="https://img.youtube.com/vi/rQkbBt-CciA/maxresdefault.jpg" alt="Video cảm nhận Anh Minh Gò Vấp" loading="lazy">
+              <img src="https://placehold.co/480x640/1B2A4A/E8D5A8?text=Anh+Minh&font=playfair-display" alt="Video cảm nhận Anh Minh Gò Vấp" loading="lazy" width="480" height="640">
               <button class="testi-play" aria-label="Phát video cảm nhận của Anh Minh">▶</button>
               <div class="testi-info">
                 <div class="name">Anh Minh · Gò Vấp</div>
@@ -635,7 +652,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
           <div class="testi-slide">
             <div class="testi-card" data-videoid="uNDrs3Cvwvs">
-              <img src="https://img.youtube.com/vi/uNDrs3Cvwvs/maxresdefault.jpg" alt="Video cảm nhận Chị Thùy Q.Phú Nhuận" loading="lazy">
+              <img src="https://placehold.co/480x640/1B2A4A/E8D5A8?text=Chi+Thuy&font=playfair-display" alt="Video cảm nhận Chị Thùy Q.Phú Nhuận" loading="lazy" width="480" height="640">
               <button class="testi-play" aria-label="Phát video cảm nhận của Chị Thùy">▶</button>
               <div class="testi-info">
                 <div class="name">Chị Thùy · Q.Phú Nhuận</div>
@@ -646,7 +663,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
           <div class="testi-slide">
             <div class="testi-card" data-videoid="vatpzUlPl4c">
-              <img src="https://img.youtube.com/vi/vatpzUlPl4c/maxresdefault.jpg" alt="Video cảm nhận Anh Tùng Bình Thạnh" loading="lazy">
+              <img src="https://placehold.co/480x640/1B2A4A/E8D5A8?text=Anh+Tung&font=playfair-display" alt="Video cảm nhận Anh Tùng Bình Thạnh" loading="lazy" width="480" height="640">
               <button class="testi-play" aria-label="Phát video cảm nhận của Anh Tùng">▶</button>
               <div class="testi-info">
                 <div class="name">Anh Tùng · Bình Thạnh</div>
@@ -716,51 +733,163 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 </section><!-- /.final-cta -->
 </main>
 
+<!-- ═══ REGISTRATION FORM ═══ -->
+<section class="form-section" id="form-section">
+  <div class="form-section-inner">
+    <div class="form-section-text reveal-left">
+      <h2>ĐẶT LỊCH KHÁM NHẬN ƯU ĐÃI TRI ÂN</h2>
+      <p>Chương trình kết thúc 01/05/2026. Đăng ký ngay để được tư vấn miễn phí và giữ suất ưu đãi.</p>
+      <div class="form-section-contact">
+        <div class="contact-row">
+          <div class="contact-row-icon">📞</div>
+          <div>Tổng đài: <a href="tel:19007141">1900.7141</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-icon">📱</div>
+          <div>Hotline: <a href="tel:0972411411">0972.411.411</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-icon">📍</div>
+          <div style="font-size: 14px; line-height: 1.6;">
+            CS1: 411 Nguyễn Kiệm - Phường Đức Nhuận - TPHCM<br>
+            CS2: 614 Lê Hồng Phong - Phường Vườn Lài - TPHCM
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-icon">🕐</div>
+          <div style="font-size: 14px; line-height: 1.6;">
+            Thứ 2 - 7: 8h00 - 19h00<br>
+            Chủ nhật: 8h00 - 16h00
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-form-wrapper reveal-right">
+      <div class="form-header">
+        <div class="form-urgency-badge">Suất ưu đãi có hạn</div>
+        <h3>Đăng ký nhận ưu đãi</h3>
+        <p>Quý khách hàng hãy để lại thông tin để được hỗ trợ trực tiếp</p>
+      </div>
+      <iframe class="cf7-iframe" src="https://nhakhoadongnam.com/trang-30-4/" title="Form đăng ký"></iframe>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="container">
     <div class="foot-grid">
-      <div class="foot-brand">
-        <a href="/" class="brand">
-          <img src="https://nhakhoadongnam.com/wp-content/uploads/2021/03/Nha-khoa-dong-nam-thong-bao-doi-logo-2.png" alt="Logo Nha Khoa Đông Nam" class="brand-logo">
-        </a>
-        <p>Hơn 21 năm đồng hành cùng bạn — nơi bạn có thể quay lại sau 10, 20 năm và vẫn được chăm sóc bởi cùng một đội ngũ.</p>
+      <!-- Column 1: Nha Khoa Đông Nam -->
+      <div class="foot-col foot-col-brand">
+        <h3 class="foot-col-title">Nha Khoa Đông Nam</h3>
+        <div class="foot-address">
+          <div class="foot-address-item">
+            <span class="foot-icon">📍</span>
+            <div>
+              <strong>Cơ sở 1:</strong> 411 Nguyễn Kiệm, Phường 9, Quận Phú Nhuận, TPHCM - 
+              <a href="https://maps.google.com/maps?q=411+Nguyen+Kiem,+Phu+Nhuan,+Ho+Chi+Minh+City,+Vietnam" target="_blank" rel="noopener" class="foot-link-inline"><em>Click xem bản đồ</em></a>
+            </div>
+          </div>
+          <div class="foot-address-item">
+            <span class="foot-icon">📍</span>
+            <div>
+              <strong>Cơ sở 2:</strong> 614 Lê Hồng Phong, Phường 10, Quận 10, TPHCM - 
+              <a href="https://maps.google.com/maps?q=614+Le+Hong+Phong,+District+10,+Ho+Chi+Minh+City,+Vietnam" target="_blank" rel="noopener" class="foot-link-inline"><em>Click xem bản đồ</em></a>
+            </div>
+          </div>
+        </div>
+        <div class="foot-phones">
+          <div class="foot-phone-item">
+            <span class="foot-icon">📞</span>
+            <span><strong>Tư Vấn:</strong> <a href="tel:19007141" class="foot-link-inline">1900.7141</a></span>
+          </div>
+          <div class="foot-phone-item">
+            <span class="foot-icon">📞</span>
+            <span><strong>Điện thoại:</strong> <a href="tel:02873077141" class="foot-link-inline">(028).7307.7141</a></span>
+          </div>
+          <div class="foot-phone-item">
+            <span class="foot-icon">📞</span>
+            <span><strong>Hotline:</strong> <a href="tel:0972411411" class="foot-link-inline">0972.411.411</a></span>
+          </div>
+        </div>
+        <div class="foot-email">
+          <span class="foot-icon">✉️</span>
+          <span><strong>Email:</strong> <a href="mailto:nhakhoadongnam@gmail.com" class="foot-link-inline">nhakhoadongnam@gmail.com</a></span>
+        </div>
+        <div class="foot-working-hours">
+          <strong>Thời gian làm việc</strong>
+          <ul>
+            <li>Thứ 2 - 7: 8h00 - 19h00</li>
+            <li>Chủ nhật: 8h00 - 16h00</li>
+          </ul>
+        </div>
       </div>
+
+      <!-- Column 2: Liên Kết Nhanh -->
       <div class="foot-col">
-        <h3>Dịch vụ</h3>
-        <a href="https://nhakhoadongnam.com/page/implant/">Trồng răng Implant</a>
-        <a href="https://nhakhoadongnam.com/bang-gia/#rang-su">Bọc răng sứ</a>
-        <a href="https://nhakhoadongnam.com/bang-gia/#nieng">Niềng răng</a>
-        <a href="https://nhakhoadongnam.com/bang-gia/#rang-su">Dán sứ Veneer</a>
-        <a href="https://nhakhoadongnam.com/bang-gia/#tay-trang">Tẩy trắng răng</a>
-      </div>
-      <div class="foot-col">
-        <h3>Về chúng tôi</h3>
-        <a href="#usp">Giới thiệu</a>
-        <a href="#doctors">Đội ngũ bác sĩ</a>
-        <a href="#locations">Cơ sở vật chất</a>
-        <a href="https://nhakhoadongnam.com/kien-thuc-nha-khoa/">Kiến thức nha khoa</a>
-        <a href="https://nhakhoadongnam.com/chinh-sach/">Chính sách</a>
-      </div>
-      <div class="foot-col">
-        <h3>Liên hệ</h3>
-        <a href="tel:19007141" aria-label="Gọi tổng đài 1900 7141">☎ 1900 7141</a>
-        <a href="tel:0972411411" aria-label="Gọi hotline 0972 411 411">📱 0972 411 411</a>
-        <a href="#locations">411 Nguyễn Kiệm</a>
-        <a href="#locations">614 Lê Hồng Phong</a>
-        <ul class="social-links" aria-label="Mạng xã hội">
-          <li><a href="https://facebook.com/nhakhoadongnam" target="_blank" rel="noopener">Facebook</a></li>
-          <li><a href="https://youtube.com/@nhakhoadongnam" target="_blank" rel="noopener">YouTube</a></li>
-          <li><a href="https://tiktok.com/@nhakhoadongnam" target="_blank" rel="noopener">TikTok</a></li>
+        <h3 class="foot-col-title">Liên Kết Nhanh</h3>
+        <ul class="foot-quick-links">
+          <li><a href="https://nhakhoadongnam.com/bang-gia-nhap/">Bảng giá nha khoa</a></li>
+          <li><a href="#cta">Đặt lịch</a></li>
         </ul>
       </div>
+
+      <!-- Column 3: Chính Sách - Hỗ Trợ -->
+      <div class="foot-col">
+        <h3 class="foot-col-title">Chính Sách - Hỗ Trợ</h3>
+        <ul class="foot-policies">
+          <li><a href="https://nhakhoadongnam.com/chinh-sach-bao-mat/">Chính sách bảo mật thông tin khách hàng</a></li>
+          <li><a href="https://nhakhoadongnam.com/chinh-sach-bao-hanh/">Chính sách bảo hành các dịch vụ</a></li>
+          <li><a href="https://nhakhoadongnam.com/chinh-sach-thanh-toan/">Chính sách thanh toán</a></li>
+          <li><a href="https://nhakhoadongnam.com/huong-dan-dat-lich/">Hướng dẫn đặt lịch khám</a></li>
+          <li><a href="https://nhakhoadongnam.com/giay-phep-hoat-dong/">Giấy phép hoạt động</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Kết Nối & Thanh Toán -->
+      <div class="foot-col">
+        <h3 class="foot-col-title">Kết Nối Với Chúng Tôi</h3>
+        <div class="foot-social-icons">
+          <a href="https://facebook.com/nhakhoadongnam" target="_blank" rel="noopener" aria-label="Facebook Nha Khoa Đông Nam">
+            <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/icon-facebook.png" alt="Facebook" loading="lazy">
+          </a>
+          <a href="https://youtube.com/@nhakhoadongnam" target="_blank" rel="noopener" aria-label="YouTube Nha Khoa Đông Nam">
+            <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/icon-youtube.png" alt="YouTube" loading="lazy">
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Zalo Nha Khoa Đông Nam">
+            <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/icon-zalo.png" alt="Zalo" loading="lazy">
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="WhatsApp Nha Khoa Đông Nam">
+            <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/icon-whatsapp.png" alt="WhatsApp" loading="lazy">
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Instagram Nha Khoa Đông Nam">
+            <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/icon-instagram.png" alt="Instagram" loading="lazy">
+          </a>
+        </div>
+
+        <h3 class="foot-col-title foot-col-title-payment">Đối Tác Thanh Toán</h3>
+        <div class="foot-payment-icons">
+          <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/icon-visa.png" alt="VISA" loading="lazy">
+          <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/icon-mastercard.png" alt="Mastercard" loading="lazy">
+          <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/icon-jcb.png" alt="JCB" loading="lazy">
+        </div>
+        <div class="foot-dmca">
+          <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/03/ico_dmca.svg?ID=fd369e04-7ea2-456e-b703-bd0608a71e81" alt="DMCA Protected" loading="lazy">
+        </div>
+      </div>
     </div>
-    <div class="foot-bottom">
-      <div>© 2026 Nha Khoa Đông Nam · Hơn 21 năm đồng hành cùng bạn</div>
-      <div>GP 03708/SYT-GPHĐ · 01672/HCM-GPHĐ</div>
+
     </div>
   </div>
 </footer>
+
+<!-- Company Info Bar -->
+<div class="foot-company-bar">
+  <div class="container">
+    Công Ty TNHH Nha Khoa Đông Nam - Địa chỉ: 411 Nguyễn Kiệm, Phường 9, Quận Phú Nhuận, TP. HCM - Điện thoại: (028).7307.7141 - GPĐKKD: 0304132304 do sở KH & ĐT TP.HCM cấp ngày: 06/12/2005
+  </div>
+</div>
 
 <!-- ═══ FLOATING CTA ═══ -->
 <div class="cta-float">
