@@ -867,6 +867,8 @@ nav.main .container { display: flex; align-items: center; justify-content: space
 .testi-inner {
   overflow: hidden;
   margin: 0 48px;
+  transform: translateZ(0); /* force GPU layer → đảm bảo overflow clip đúng khi con dùng transform */
+  will-change: transform;
 }
 .testi-slides {
   display: flex;
