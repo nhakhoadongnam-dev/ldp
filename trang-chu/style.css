@@ -865,10 +865,8 @@ nav.main .container { display: flex; align-items: center; justify-content: space
 }
 /* Clip container: overflow hidden + margin dành chỗ cho arrows */
 .testi-inner {
-  overflow: hidden;
+  clip-path: inset(-20px 0); /* clip ngang để ẩn slide thừa, -20px dọc để hover card không bị cắt */
   margin: 0 48px;
-  transform: translateZ(0); /* force GPU layer → đảm bảo overflow clip đúng khi con dùng transform */
-  will-change: transform;
 }
 .testi-slides {
   display: flex;
