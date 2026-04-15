@@ -581,79 +581,83 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
     </div>
 
     <div class="testi-slider">
+      <!-- Arrows ngoài vùng clip, positioned relative to .testi-slider -->
       <button class="slider-arrow prev" aria-label="Video trước">‹</button>
-      <div class="testi-clip">
-      <div class="testi-slides">
-
-        <div class="testi-slide">
-          <div class="testi-card" data-videoid="c8Pb_kKWdMM">
-            <img src="https://img.youtube.com/vi/c8Pb_kKWdMM/hqdefault.jpg" alt="Video cảm nhận Cô Lan Q.Phú Nhuận" loading="lazy">
-            <button class="testi-play" aria-label="Phát video cảm nhận của Cô Lan">▶</button>
-            <div class="testi-info">
-              <div class="name">Cô Lan · Q.Phú Nhuận</div>
-              <div class="meta">Khách hàng từ 2008</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-slide">
-          <div class="testi-card" data-videoid="eblVhYpRay8">
-            <img src="https://img.youtube.com/vi/eblVhYpRay8/hqdefault.jpg" alt="Video cảm nhận Chú Hải Q.10" loading="lazy">
-            <button class="testi-play" aria-label="Phát video cảm nhận của Chú Hải">▶</button>
-            <div class="testi-info">
-              <div class="name">Chú Hải · Q.10</div>
-              <div class="meta">Implant toàn hàm</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-slide">
-          <div class="testi-card" data-videoid="kh1zckdYSX8">
-            <img src="https://img.youtube.com/vi/kh1zckdYSX8/hqdefault.jpg" alt="Video cảm nhận Chị Ngọc Tân Bình" loading="lazy">
-            <button class="testi-play" aria-label="Phát video cảm nhận của Chị Ngọc">▶</button>
-            <div class="testi-info">
-              <div class="name">Chị Ngọc · Tân Bình</div>
-              <div class="meta">Bọc răng sứ</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-slide">
-          <div class="testi-card" data-videoid="rQkbBt-CciA">
-            <img src="https://img.youtube.com/vi/rQkbBt-CciA/hqdefault.jpg" alt="Video cảm nhận Anh Minh Gò Vấp" loading="lazy">
-            <button class="testi-play" aria-label="Phát video cảm nhận của Anh Minh">▶</button>
-            <div class="testi-info">
-              <div class="name">Anh Minh · Gò Vấp</div>
-              <div class="meta">Niềng răng trong suốt</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-slide">
-          <div class="testi-card" data-videoid="uNDrs3Cvwvs">
-            <img src="https://img.youtube.com/vi/uNDrs3Cvwvs/hqdefault.jpg" alt="Video cảm nhận Chị Thùy Q.Phú Nhuận" loading="lazy">
-            <button class="testi-play" aria-label="Phát video cảm nhận của Chị Thùy">▶</button>
-            <div class="testi-info">
-              <div class="name">Chị Thùy · Q.Phú Nhuận</div>
-              <div class="meta">Implant kỹ thuật số</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-slide">
-          <div class="testi-card" data-videoid="vatpzUlPl4c">
-            <img src="https://img.youtube.com/vi/vatpzUlPl4c/hqdefault.jpg" alt="Video cảm nhận Anh Tùng Bình Thạnh" loading="lazy">
-            <button class="testi-play" aria-label="Phát video cảm nhận của Anh Tùng">▶</button>
-            <div class="testi-info">
-              <div class="name">Anh Tùng · Bình Thạnh</div>
-              <div class="meta">Phục hình toàn hàm</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      </div><!-- /.testi-clip -->
       <button class="slider-arrow next" aria-label="Video tiếp">›</button>
+
+      <!-- .testi-inner: overflow hidden + margin tạo khoảng cho arrows -->
+      <div class="testi-inner">
+        <div class="testi-slides">
+
+          <div class="testi-slide">
+            <div class="testi-card" data-videoid="c8Pb_kKWdMM">
+              <img src="https://img.youtube.com/vi/c8Pb_kKWdMM/maxresdefault.jpg" alt="Video cảm nhận Cô Lan Q.Phú Nhuận" loading="lazy">
+              <button class="testi-play" aria-label="Phát video cảm nhận của Cô Lan">▶</button>
+              <div class="testi-info">
+                <div class="name">Cô Lan · Q.Phú Nhuận</div>
+                <div class="meta">Khách hàng từ 2008</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <div class="testi-card" data-videoid="eblVhYpRay8">
+              <img src="https://img.youtube.com/vi/eblVhYpRay8/maxresdefault.jpg" alt="Video cảm nhận Chú Hải Q.10" loading="lazy">
+              <button class="testi-play" aria-label="Phát video cảm nhận của Chú Hải">▶</button>
+              <div class="testi-info">
+                <div class="name">Chú Hải · Q.10</div>
+                <div class="meta">Implant toàn hàm</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <div class="testi-card" data-videoid="kh1zckdYSX8">
+              <img src="https://img.youtube.com/vi/kh1zckdYSX8/maxresdefault.jpg" alt="Video cảm nhận Chị Ngọc Tân Bình" loading="lazy">
+              <button class="testi-play" aria-label="Phát video cảm nhận của Chị Ngọc">▶</button>
+              <div class="testi-info">
+                <div class="name">Chị Ngọc · Tân Bình</div>
+                <div class="meta">Bọc răng sứ</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <div class="testi-card" data-videoid="rQkbBt-CciA">
+              <img src="https://img.youtube.com/vi/rQkbBt-CciA/maxresdefault.jpg" alt="Video cảm nhận Anh Minh Gò Vấp" loading="lazy">
+              <button class="testi-play" aria-label="Phát video cảm nhận của Anh Minh">▶</button>
+              <div class="testi-info">
+                <div class="name">Anh Minh · Gò Vấp</div>
+                <div class="meta">Niềng răng trong suốt</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <div class="testi-card" data-videoid="uNDrs3Cvwvs">
+              <img src="https://img.youtube.com/vi/uNDrs3Cvwvs/maxresdefault.jpg" alt="Video cảm nhận Chị Thùy Q.Phú Nhuận" loading="lazy">
+              <button class="testi-play" aria-label="Phát video cảm nhận của Chị Thùy">▶</button>
+              <div class="testi-info">
+                <div class="name">Chị Thùy · Q.Phú Nhuận</div>
+                <div class="meta">Implant kỹ thuật số</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <div class="testi-card" data-videoid="vatpzUlPl4c">
+              <img src="https://img.youtube.com/vi/vatpzUlPl4c/maxresdefault.jpg" alt="Video cảm nhận Anh Tùng Bình Thạnh" loading="lazy">
+              <button class="testi-play" aria-label="Phát video cảm nhận của Anh Tùng">▶</button>
+              <div class="testi-info">
+                <div class="name">Anh Tùng · Bình Thạnh</div>
+                <div class="meta">Phục hình toàn hàm</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /.testi-inner -->
+
       <div class="slider-dots testi-dots"></div>
     </div>
   </div>
