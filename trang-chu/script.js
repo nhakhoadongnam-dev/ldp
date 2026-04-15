@@ -368,34 +368,42 @@ if (docCards.length && docDetail) {
   window.addEventListener('resize', () => { buildDots(); goTo(Math.min(current, getMaxIndex())); });
 })();
 
-// ── Testimonial Click → Featured Player ──
-const testiFeatured = document.getElementById('testiFeatured');
-const testiFeatIframe = document.getElementById('testiFeaturedIframe');
-const testiFeatClose = document.querySelector('.testi-feat-close');
+// ── Testimonial Click → Modal Overlay ──
+const testiModal   = document.getElementById('testiModal');
+const testiIframe  = document.getElementById('testiModalIframe');
+const testiClose   = document.querySelector('.testi-modal-close');
+
+function closeTestiModal() {
+  if (!testiModal) return;
+  testiIframe.src = '';
+  testiModal.classList.remove('visible');
+  testiModal.setAttribute('aria-hidden', 'true');
+  document.querySelectorAll('.testi-card').forEach((c) => c.classList.remove('active'));
+  document.body.style.overflow = '';
+}
 
 document.querySelectorAll('.testi-card[data-videoid]').forEach((card) => {
   card.addEventListener('click', () => {
     const videoId = card.dataset.videoid;
-    if (!videoId || !testiFeatured) return;
-
+    if (!videoId || !testiModal) return;
     document.querySelectorAll('.testi-card').forEach((c) => c.classList.remove('active'));
     card.classList.add('active');
-
-    testiFeatIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-    testiFeatured.classList.add('visible');
-    testiFeatured.setAttribute('aria-hidden', 'false');
-    testiFeatured.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    testiIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    testiModal.classList.add('visible');
+    testiModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
   });
 });
 
-if (testiFeatClose) {
-  testiFeatClose.addEventListener('click', () => {
-    testiFeatIframe.src = '';
-    testiFeatured.classList.remove('visible');
-    testiFeatured.setAttribute('aria-hidden', 'true');
-    document.querySelectorAll('.testi-card').forEach((c) => c.classList.remove('active'));
-  });
-}
+// Đóng khi click nút × hoặc click nền
+if (testiClose) testiClose.addEventListener('click', closeTestiModal);
+if (testiModal) testiModal.addEventListener('click', (e) => {
+  if (e.target === testiModal) closeTestiModal();
+});
+// Đóng bằng Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && testiModal && testiModal.classList.contains('visible')) closeTestiModal();
+});
 
 // ── Video Click to Play ──
 const videoWrap = document.querySelector('.tl-video-wrap');

@@ -830,11 +830,10 @@ nav.main .container { display: flex; align-items: center; justify-content: space
 .slider-dot.active { background: var(--navy); transform: scale(1.2); }
 .slider-dot:hover { background: var(--navy-2); }
 
-/* ── Brand mark logo img ── */
-.brand-mark img {
-  width: 100%; height: 100%;
-  object-fit: contain;
-  border-radius: inherit;
+/* ── Brand logo (raw img, no circle) ── */
+.brand-logo {
+  height: 52px;
+  width: auto;
   display: block;
 }
 
@@ -875,44 +874,43 @@ nav.main .container { display: flex; align-items: center; justify-content: space
   min-width: calc((100% - 54px) / 4);
 }
 
-/* Featured player */
-.testi-featured {
+/* Modal overlay */
+.testi-modal {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.82);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 500;
   display: none;
-  max-width: 320px;
-  margin: 0 auto 40px;
+  align-items: center;
+  justify-content: center;
+}
+.testi-modal.visible { display: flex; }
+.testi-modal-inner {
+  width: min(340px, 88vw);
+  aspect-ratio: 9/16;
   position: relative;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 24px 64px rgba(0,0,0,.55);
-  animation: featIn .35s ease;
+  box-shadow: 0 32px 80px rgba(0,0,0,.7);
+  animation: modalIn .3s ease;
 }
-.testi-featured.visible { display: block; }
-@keyframes featIn {
-  from { opacity: 0; transform: scale(.96) translateY(10px); }
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(.94); }
   to   { opacity: 1; transform: none; }
 }
-.testi-feat-wrap {
-  aspect-ratio: 9/16;
-  position: relative;
-  background: #000;
-}
-.testi-feat-wrap iframe {
+.testi-modal-inner iframe {
   position: absolute; inset: 0;
   width: 100%; height: 100%; border: 0;
 }
-.testi-feat-close {
-  position: absolute; top: 10px; right: 10px;
-  z-index: 20;
-  background: rgba(0,0,0,.65);
-  color: #fff; border: none;
-  border-radius: 50%;
-  width: 34px; height: 34px;
-  font-size: 20px; line-height: 1;
-  cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  transition: background .2s;
+.testi-modal-close {
+  position: absolute; top: -44px; right: 0;
+  background: none; border: none;
+  color: rgba(255,255,255,.85); font-size: 38px; line-height: 1;
+  cursor: pointer; padding: 4px;
+  transition: color .2s;
 }
-.testi-feat-close:hover { background: var(--red); }
+.testi-modal-close:hover { color: #fff; }
 
 .testi-card.active .testi-play {
   background: var(--red); color: #fff;
@@ -922,7 +920,7 @@ nav.main .container { display: flex; align-items: center; justify-content: space
 }
 
 .testi-card {
-  aspect-ratio: 9/16; border-radius: 12px;
+  aspect-ratio: 3/4; border-radius: 12px;
   background: linear-gradient(180deg, #3a4a60, #1a2a40);
   position: relative; overflow: hidden; cursor: pointer;
   transition: all .3s;
@@ -1195,7 +1193,6 @@ a:focus-visible, button:focus-visible {
   .doc-detail-body { padding: 24px 28px 32px; }
   .docs-head .section-title { white-space: normal; }
   .testi-slide { flex: 0 0 calc((100% - 36px) / 3); min-width: calc((100% - 36px) / 3); }
-  .testi-featured { max-width: 260px; }
   .loc-grid { grid-template-columns: 1fr; }
   .foot-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
   .nav-links { display: none; }
