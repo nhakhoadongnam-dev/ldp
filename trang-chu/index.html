@@ -483,45 +483,64 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
       </div>
     </div>
 
-    <!-- Row 2: 4 cards ảnh nhỏ gọn để chọn bác sĩ -->
-    <!-- HƯỚNG DẪN: Thay ảnh thật vào .doc-photo bằng background-image inline hoặc CSS class -->
-    <div class="docs-grid" role="listbox" aria-label="Chọn bác sĩ">
-      <button class="doc-card active" role="option" aria-selected="true"
-        data-name="BS Dũng — Giám đốc chuyên môn"
-        data-spec="Chuyên gia cấy ghép Implant"
-        data-photo="featured"
-        data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp"
-        data-link="#"
-        data-creds="Tốt nghiệp Đại học Y Dược TP. Hồ Chí Minh|Chứng chỉ Implant nâng cao — Đại học Mahidol, Thái Lan|Người sáng lập và xây dựng chuẩn lâm sàng Đông Nam|Hơn 20 năm kinh nghiệm cấy ghép Implant">
-        <img class="doc-photo" src="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp" alt="Ảnh BS Dũng — Giám đốc chuyên môn" loading="lazy">
-      </button>
-      <button class="doc-card" role="option" aria-selected="false"
-        data-name="BS Nguyễn Phú Nhân"
-        data-spec="Implant · Veneer thẩm mỹ"
-        data-photo=""
-        data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp"
-        data-link="#"
-        data-creds="Tốt nghiệp Đại học Y Dược TP. Hồ Chí Minh|Chứng chỉ Implant & Phục hình sứ thẩm mỹ|Chuyên sâu Veneer và dán sứ Emax cao cấp|15 năm kinh nghiệm lâm sàng">
-        <img class="doc-photo" src="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp" alt="Ảnh BS Nguyễn Phú Nhân" loading="lazy">
-      </button>
-      <button class="doc-card" role="option" aria-selected="false"
-        data-name="BS CKI Thanh Thảo"
-        data-spec="Chỉnh nha · Nha khoa tổng quát"
-        data-photo=""
-        data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-thi-thanh-thao.webp"
-        data-link="#"
-        data-creds="Chuyên khoa I Răng Hàm Mặt — ĐH Y Dược TP.HCM|Chứng chỉ Chỉnh nha Invisalign Certified Provider|Thành viên Hội Chỉnh nha Việt Nam|10 năm kinh nghiệm niềng răng">
-        <img class="doc-photo" src="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-thi-thanh-thao.webp" alt="Ảnh BS CKI Thanh Thảo" loading="lazy">
-      </button>
-      <button class="doc-card" role="option" aria-selected="false"
-        data-name="BS Trần Xuân Dự"
-        data-spec="Implant kỹ thuật số 3D"
-        data-photo=""
-        data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-tran-thi-xuan-du.webp"
-        data-link="#"
-        data-creds="Tốt nghiệp Đại học Y Dược TP. Hồ Chí Minh|Chứng chỉ Implant kỹ thuật số — Seoul, Hàn Quốc|Chuyên sâu lập kế hoạch Implant 3D và dẫn hướng phẫu thuật|12 năm kinh nghiệm">
-        <img class="doc-photo" src="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-tran-thi-xuan-du.webp" alt="Ảnh BS Trần Xuân Dự" loading="lazy">
-      </button>
+    <!-- Row 2: 4 cards -->
+    <div class="docs-slider-wrap">
+      <button class="docs-arrow docs-prev" aria-label="Bác sĩ trước">‹</button>
+      <div class="docs-grid" role="listbox" aria-label="Chọn bác sĩ">
+        <button class="doc-card active" role="option" aria-selected="true"
+          data-name="BS Dũng — Giám đốc chuyên môn"
+          data-spec="Chuyên gia cấy ghép Implant"
+          data-photo="featured"
+          data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp"
+          data-link="#"
+          data-creds="Tốt nghiệp Đại học Y Dược TP. Hồ Chí Minh|Chứng chỉ Implant nâng cao — Đại học Mahidol, Thái Lan|Người sáng lập và xây dựng chuẩn lâm sàng Đông Nam|Hơn 20 năm kinh nghiệm cấy ghép Implant">
+          <img class="doc-photo" src="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp" alt="Ảnh BS Dũng — Giám đốc chuyên môn" loading="lazy">
+          <div class="doc-card-info">
+            <div class="doc-card-name">BS Dũng — Giám đốc chuyên môn</div>
+            <div class="doc-card-spec">Chuyên gia cấy ghép Implant</div>
+          </div>
+        </button>
+        <button class="doc-card" role="option" aria-selected="false"
+          data-name="BS Nguyễn Phú Nhân"
+          data-spec="Implant · Veneer thẩm mỹ"
+          data-photo=""
+          data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp"
+          data-link="#"
+          data-creds="Tốt nghiệp Đại học Y Dược TP. Hồ Chí Minh|Chứng chỉ Implant & Phục hình sứ thẩm mỹ|Chuyên sâu Veneer và dán sứ Emax cao cấp|15 năm kinh nghiệm lâm sàng">
+          <img class="doc-photo" src="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp" alt="Ảnh BS Nguyễn Phú Nhân" loading="lazy">
+          <div class="doc-card-info">
+            <div class="doc-card-name">BS Nguyễn Phú Nhân</div>
+            <div class="doc-card-spec">Implant · Veneer thẩm mỹ</div>
+          </div>
+        </button>
+        <button class="doc-card" role="option" aria-selected="false"
+          data-name="BS CKI Thanh Thảo"
+          data-spec="Chỉnh nha · Nha khoa tổng quát"
+          data-photo=""
+          data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-thi-thanh-thao.webp"
+          data-link="#"
+          data-creds="Chuyên khoa I Răng Hàm Mặt — ĐH Y Dược TP.HCM|Chứng chỉ Chỉnh nha Invisalign Certified Provider|Thành viên Hội Chỉnh nha Việt Nam|10 năm kinh nghiệm niềng răng">
+          <img class="doc-photo" src="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-thi-thanh-thao.webp" alt="Ảnh BS CKI Thanh Thảo" loading="lazy">
+          <div class="doc-card-info">
+            <div class="doc-card-name">BS CKI Thanh Thảo</div>
+            <div class="doc-card-spec">Chỉnh nha · Nha khoa tổng quát</div>
+          </div>
+        </button>
+        <button class="doc-card" role="option" aria-selected="false"
+          data-name="BS Trần Xuân Dự"
+          data-spec="Implant kỹ thuật số 3D"
+          data-photo=""
+          data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-tran-thi-xuan-du.webp"
+          data-link="#"
+          data-creds="Tốt nghiệp Đại học Y Dược TP. Hồ Chí Minh|Chứng chỉ Implant kỹ thuật số — Seoul, Hàn Quốc|Chuyên sâu lập kế hoạch Implant 3D và dẫn hướng phẫu thuật|12 năm kinh nghiệm">
+          <img class="doc-photo" src="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-tran-thi-xuan-du.webp" alt="Ảnh BS Trần Xuân Dự" loading="lazy">
+          <div class="doc-card-info">
+            <div class="doc-card-name">BS Trần Xuân Dự</div>
+            <div class="doc-card-spec">Implant kỹ thuật số 3D</div>
+          </div>
+        </button>
+      </div>
+      <button class="docs-arrow docs-next" aria-label="Bác sĩ tiếp theo">›</button>
     </div>
 
 </section>
