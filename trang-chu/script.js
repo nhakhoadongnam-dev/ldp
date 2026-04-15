@@ -319,9 +319,10 @@ if (docCards.length && docDetail) {
   let autoplay;
 
   function getVisible() {
-    if (window.innerWidth <= 768) return 1;
-    if (window.innerWidth <= 1024) return 2;
-    return 3;
+    if (window.innerWidth <= 480) return 1;
+    if (window.innerWidth <= 768) return 2;
+    if (window.innerWidth <= 1024) return 3;
+    return 4;
   }
 
   function getMaxIndex() {
@@ -367,25 +368,34 @@ if (docCards.length && docDetail) {
   window.addEventListener('resize', () => { buildDots(); goTo(Math.min(current, getMaxIndex())); });
 })();
 
-// ── Testimonial Click-to-Play ──
+// ── Testimonial Click → Featured Player ──
+const testiFeatured = document.getElementById('testiFeatured');
+const testiFeatIframe = document.getElementById('testiFeaturedIframe');
+const testiFeatClose = document.querySelector('.testi-feat-close');
+
 document.querySelectorAll('.testi-card[data-videoid]').forEach((card) => {
   card.addEventListener('click', () => {
     const videoId = card.dataset.videoid;
-    if (!videoId || card.classList.contains('playing')) return;
-    // Stop all other playing cards first
-    document.querySelectorAll('.testi-card.playing').forEach((c) => {
-      c.classList.remove('playing');
-      const iframe = c.querySelector('iframe');
-      if (iframe) iframe.remove();
-    });
-    const iframe = document.createElement('iframe');
-    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-    iframe.allowFullscreen = true;
-    card.appendChild(iframe);
-    card.classList.add('playing');
+    if (!videoId || !testiFeatured) return;
+
+    document.querySelectorAll('.testi-card').forEach((c) => c.classList.remove('active'));
+    card.classList.add('active');
+
+    testiFeatIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    testiFeatured.classList.add('visible');
+    testiFeatured.setAttribute('aria-hidden', 'false');
+    testiFeatured.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
 });
+
+if (testiFeatClose) {
+  testiFeatClose.addEventListener('click', () => {
+    testiFeatIframe.src = '';
+    testiFeatured.classList.remove('visible');
+    testiFeatured.setAttribute('aria-hidden', 'true');
+    document.querySelectorAll('.testi-card').forEach((c) => c.classList.remove('active'));
+  });
+}
 
 // ── Video Click to Play ──
 const videoWrap = document.querySelector('.tl-video-wrap');
