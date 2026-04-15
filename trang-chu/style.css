@@ -862,6 +862,10 @@ nav.main .container { display: flex; align-items: center; justify-content: space
 /* ── Testi Slider ── */
 .testi-slider {
   position: relative;
+  overflow: visible;
+  padding: 0 48px;
+}
+.testi-clip {
   overflow: hidden;
 }
 .testi-slides {
@@ -1192,6 +1196,7 @@ a:focus-visible, button:focus-visible {
   .doc-detail-creds { grid-template-columns: 1fr; }
   .doc-detail-body { padding: 24px 28px 32px; }
   .docs-head .section-title { white-space: normal; }
+  .testi-slider { padding: 0 40px; }
   .testi-slide { flex: 0 0 calc((100% - 36px) / 3); min-width: calc((100% - 36px) / 3); }
   .loc-grid { grid-template-columns: 1fr; }
   .foot-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
@@ -1217,6 +1222,7 @@ a:focus-visible, button:focus-visible {
   .svc-minor { grid-template-columns: repeat(2, 1fr); }
   .docs-grid { grid-template-columns: repeat(2, 1fr); }
   .doc-detail-name { font-size: 20px; }
+  .testi-slider { padding: 0 36px; }
   .testi-slide { flex: 0 0 calc((100% - 18px) / 2); min-width: calc((100% - 18px) / 2); }
   .testi-card { aspect-ratio: 3/4; }
   .foot-grid { grid-template-columns: 1fr; }
@@ -1226,8 +1232,8 @@ a:focus-visible, button:focus-visible {
 }
 
 @media (max-width: 480px) {
+  .testi-slider { padding: 0 32px; }
   .testi-slide { flex: 0 0 100%; min-width: 100%; }
-  .testi-featured { max-width: 100%; border-radius: 0; }
   .container { padding: 0 16px; }
   .hero h1 { font-size: 30px; }
   .hero-actions { flex-direction: column; }
