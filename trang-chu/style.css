@@ -1754,7 +1754,6 @@ a:focus-visible, button:focus-visible {
   .cert-title { font-size: 24px; }
   .svc-hero h3 { font-size: 32px; }
   .svc-minor { grid-template-columns: repeat(2, 1fr); }
-  .docs-grid { grid-template-columns: repeat(2, 1fr); }
   .doc-detail-name { font-size: 20px; }
   .testi-inner { margin: 0 36px; }
   .testi-slide { flex: 0 0 calc((100% - 18px) / 2); min-width: calc((100% - 18px) / 2); }
@@ -1841,7 +1840,7 @@ a:focus-visible, button:focus-visible {
   .tl-card-desc { font-size: 13px; }
   .tl-video-play { width: 60px; height: 60px; font-size: 20px; }
   .svc-minor { grid-template-columns: 1fr 1fr; }
-  .docs-grid { grid-template-columns: 1fr 1fr; }
+  .hero-eyebrow { flex-wrap: wrap; gap: 8px; }
   .loc-meta { flex-direction: column; gap: 12px; }
   .topbar .container { flex-direction: column; text-align: center; gap: 4px; }
   .mobile-nav-inner { gap: 20px; }
@@ -1859,8 +1858,8 @@ a:focus-visible, button:focus-visible {
   .results { padding: 60px 0; }
   .result-slider { padding: 0 28px; }
   .slider-arrow { width: 36px; height: 36px; font-size: 16px; }
-  /* Docs */
-  .docs-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  /* Docs slider — giữ flex từ 768px, thu hẹp card */
+  .doc-card { flex: 0 0 85%; min-width: 85%; }
   .doc-detail-body { padding: 20px; }
   /* Footer */
   .foot-grid { gap: 24px; }
@@ -1896,8 +1895,8 @@ a:focus-visible, button:focus-visible {
   /* Timeline */
   .timeline-items { grid-template-columns: 1fr 1fr; gap: 16px 8px; }
   .tl-year { font-size: 13px; }
-  /* Docs */
-  .docs-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  /* Docs slider — 1 card full width */
+  .doc-card { flex: 0 0 92%; min-width: 92%; }
   .doc-photo { border-radius: 10px; }
   /* Nav */
   .mobile-nav-inner a { font-size: 16px; }
