@@ -25,6 +25,7 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { overflow-x: hidden; max-width: 100%; }
 html { scroll-behavior: smooth; }
 
 /* Skip Link */
@@ -760,7 +761,7 @@ nav.main .container { display: flex; align-items: center; justify-content: space
   }
 
 /* Docs slider wrapper (mobile) */
-.docs-slider-wrap { position: relative; }
+.docs-slider-wrap { position: relative; max-width: 100%; }
 .docs-arrow {
   display: none;
   position: absolute;
