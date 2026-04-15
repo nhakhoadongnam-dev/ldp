@@ -611,8 +611,8 @@ nav.main .container { display: flex; align-items: center; justify-content: space
   display: flex; justify-content: space-between; align-items: flex-end;
   margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line);
 }
-.cert-foot-left { font-size: 11px; color: rgba(255,255,255,.5); line-height: 1.6; font-style: italic; }
-.cert-foot-left strong { color: #E8D7A8; display: block; font-style: normal; font-size: 12px; letter-spacing: .05em; }
+.cert-foot-left { font-size: 11px; color: var(--muted); line-height: 1.6; font-style: italic; }
+.cert-foot-left strong { color: var(--navy-ink); display: block; font-style: normal; font-size: 12px; letter-spacing: .05em; }
 .cert-seal {
   width: 90px; height: 90px; border-radius: 50%;
   border: 2px dashed var(--red);
@@ -1195,6 +1195,7 @@ nav.main .container { display: flex; align-items: center; justify-content: space
   align-items: center;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 
 /* Left: Text + Contact */
@@ -1590,8 +1591,6 @@ footer {
   font-size: 13px;
   font-weight: 500;
   line-height: 1.5;
-  white-space: nowrap;
-  overflow: visible;
 }
 
 /* ═══ FLOATING CTA ═══ */
@@ -1717,7 +1716,7 @@ a:focus-visible, button:focus-visible {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-content: stretch;
   }
-  .doc-detail { flex-direction: column; min-height: unset; }
+  .doc-detail { flex-direction: column; min-height: unset; height: auto; }
   .doc-detail-photo { width: 100%; min-height: 180px; }
   .doc-detail-photo::after { background: linear-gradient(0deg, var(--navy) 0%, transparent 60%); }
   .doc-detail-creds { grid-template-columns: 1fr; }
@@ -1742,6 +1741,7 @@ a:focus-visible, button:focus-visible {
 
 @media (max-width: 768px) {
   .hero { padding: 60px 0 80px; }
+  .hero .container { padding-top: 60px; }
   .hero h1 { font-size: 36px; }
   .hero-visual { height: 280px; }
   .hero-stats { gap: 24px; }
@@ -1827,7 +1827,7 @@ a:focus-visible, button:focus-visible {
   .hero h1 { font-size: 30px; }
   .hero-actions { flex-direction: column; }
   .btn { width: 100%; justify-content: center; }
-  .usp-headline { font-size: 32px; }
+  .usp-headline { font-size: 32px; min-height: auto; }
   .tl-video { margin-bottom: 36px; }
   .timeline-track { display: none; }
   .timeline-items { grid-template-columns: repeat(2, 1fr); gap: 20px 12px; }
