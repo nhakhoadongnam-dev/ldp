@@ -405,18 +405,44 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && testiModal && testiModal.classList.contains('visible')) closeTestiModal();
 });
 
-// ── Video Click to Play ──
-const videoWrap = document.querySelector('.tl-video-wrap');
-if (videoWrap) {
-  videoWrap.addEventListener('click', () => {
-    const videoId = videoWrap.dataset.videoid;
-    if (!videoId || videoId === 'YOUTUBE_ID_HERE') return;
-    const iframe = document.createElement('iframe');
-    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-    iframe.allowFullscreen = true;
-    videoWrap.appendChild(iframe);
-    videoWrap.classList.add('playing');
-  });
-}
+// ── Auto-resize CF7 iframe ──
+document.querySelectorAll('.cf7-iframe').forEach(function(iframe) {
+  function resize() {
+    try {
+      var h = iframe.contentDocument.body.scrollHeight;
+      if (h > 0) iframe.style.height = h + 'px';
+    } catch(e) {}
+  }
+  iframe.addEventListener('load', resize);
+});
 
+// ── Form Section Reveal Animations ──
+const revealLeft = document.querySelector('.reveal-left');
+const revealRight = document.querySelector('.reveal-right');
+const formObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        formObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+if (revealLeft) formObserver.observe(revealLeft);
+if (revealRight) formObserver.observe(revealRight);
+
+
+// ── Skip hero layer ──
+(function () {
+  const btn = document.querySelector('.skip-layer');
+  const textLayer = document.querySelector('.hero-text-layer');
+  const overlay = document.querySelector('.hero-overlay');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    textLayer.classList.add('hidden');
+    overlay.classList.add('hidden');
+    btn.style.display = 'none';
+  });
+})();
