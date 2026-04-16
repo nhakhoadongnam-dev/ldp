@@ -130,6 +130,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <?php wp_head(); ?>
 </head>
 <body>
+<?php /* Elementor yêu cầu the_content() */ if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
 <!-- Skip Navigation -->
 <a href="#main" class="skip-link">Bỏ qua đến nội dung chính</a>
 <!-- Google Tag Manager (noscript) -->
