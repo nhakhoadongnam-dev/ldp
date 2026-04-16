@@ -1771,8 +1771,8 @@ a:focus-visible, button:focus-visible {
   .cta-float { bottom: 16px; right: 16px; }
   .float-btn { padding: 12px 18px; font-size: 13px; }
   /* Stats strip */
-  .usp-stats { flex-direction: column; }
-  .usp-stat-item { padding: 16px 0; border-right: none; border-bottom: 1px solid var(--line); }
+  .usp-stats { flex-direction: column; align-items: center; }
+  .usp-stat-item { padding: 16px 0; border-right: none; border-bottom: 1px solid var(--line); text-align: center; width: 100%; }
   .usp-stat-item:last-child { border-bottom: none; }
   .usp-stat-item + .usp-stat-item::before { display: none; }
   .usp-stat-num { font-size: 28px; }
@@ -1795,28 +1795,31 @@ a:focus-visible, button:focus-visible {
     gap: 0;
   }
   .doc-card {
-    flex: 0 0 80%;
-    min-width: 80%;
-    padding: 0 8px;
+    flex: 0 0 100%;
+    min-width: 100%;
+    padding: 0 12px;
     transition: transform .4s cubic-bezier(.4,0,.2,1);
   }
   .doc-detail { display: none !important; }
   .doc-card-info {
     display: block;
-    padding: 12px 4px 4px;
-    text-align: left;
+    padding: 14px 4px 4px;
+    text-align: center;
   }
   .doc-card-name {
     font-family: 'Fraunces', serif;
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 500;
     color: var(--navy-ink);
     line-height: 1.3;
   }
   .doc-card-spec {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--muted);
-    margin-top: 3px;
+    margin-top: 4px;
+  }
+  .doc-photo {
+    border-radius: 12px;
   }
 }
 
@@ -1859,8 +1862,7 @@ a:focus-visible, button:focus-visible {
   .results { padding: 60px 0; }
   .result-slider { padding: 0 28px; }
   .slider-arrow { width: 36px; height: 36px; font-size: 16px; }
-  /* Docs slider — giữ flex từ 768px, thu hẹp card */
-  .doc-card { flex: 0 0 85%; min-width: 85%; }
+  /* Docs slider — card vẫn 100% từ 768px */
   .doc-detail-body { padding: 20px; }
   /* Footer */
   .foot-grid { gap: 24px; }
@@ -1871,7 +1873,7 @@ a:focus-visible, button:focus-visible {
   .results-head { margin-bottom: 32px; }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .hero { padding: 48px 0 60px; }
   .hero h1 { font-size: 26px; }
   .hero-visual { height: 220px; }
@@ -1896,9 +1898,6 @@ a:focus-visible, button:focus-visible {
   /* Timeline */
   .timeline-items { grid-template-columns: 1fr 1fr; gap: 16px 8px; }
   .tl-year { font-size: 13px; }
-  /* Docs slider — 1 card full width */
-  .doc-card { flex: 0 0 92%; min-width: 92%; }
-  .doc-photo { border-radius: 10px; }
   /* Nav */
   .mobile-nav-inner a { font-size: 16px; }
   /* Form */

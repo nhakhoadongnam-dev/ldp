@@ -123,6 +123,8 @@ document.querySelectorAll('.result-slider').forEach((slider) => {
     if (Math.abs(dx) > 40) dx < 0 ? goTo(current + 1) : goTo(current - 1);
   }, { passive: true });
 
+  // Initialize slider on mobile
+  if (isMobile()) goTo(0);
   window.addEventListener('resize', () => { if (!isMobile()) { grid.style.transform = ''; } else { goTo(current); } });
 })();
 
