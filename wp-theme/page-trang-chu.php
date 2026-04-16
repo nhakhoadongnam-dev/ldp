@@ -123,16 +123,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ═══ FONTS & CSS ═══ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="<?php echo esc_url($assets); ?>/style.css">
 <link rel="icon" href="/favicon.ico" sizes="any">
 
 <?php wp_head(); ?>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ── Isolate landing page từ WordPress theme CSS ── */
-html, body { all: revert; }
-*, *::before, *::after { box-sizing: border-box; }
+/* ── Reset toàn bộ theme CSS trước khi landing CSS load ── */
+*, *::before, *::after { all: revert; box-sizing: border-box; }
 </style>
+<link rel="stylesheet" href="<?php echo esc_url($assets); ?>/style.css">
 </head>
 <body>
 <?php /* Elementor yêu cầu the_content() */ if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
