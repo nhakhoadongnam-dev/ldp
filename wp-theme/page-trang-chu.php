@@ -128,6 +128,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" href="/favicon.ico" sizes="any">
 
 <?php wp_head(); ?>
+<style>
+/* ── Isolate landing page từ WordPress theme CSS ── */
+html, body { all: revert; }
+*, *::before, *::after { box-sizing: border-box; }
+</style>
 </head>
 <body>
 <?php /* Elementor yêu cầu the_content() */ if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
