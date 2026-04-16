@@ -253,6 +253,9 @@ nav.main .container { display: flex; align-items: center; justify-content: space
   background: var(--cream);
   padding: 8px 0;
 }
+.stats-strip .container {
+  max-width: 960px;
+}
 .usp-stats {
   display: flex;
   align-items: stretch;
