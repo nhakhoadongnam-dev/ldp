@@ -14,6 +14,17 @@
  */
 defined('ABSPATH') || exit;
 
+// Dequeue CHỈ Flatsome theme CSS — giữ nguyên CSS của plugin
+add_action('wp_enqueue_scripts', function() {
+    global $wp_styles;
+    foreach ($wp_styles->queue as $handle) {
+        if (strpos($handle, 'flatsome') !== false) {
+            wp_dequeue_style($handle);
+            wp_deregister_style($handle);
+        }
+    }
+}, 999);
+
 $assets = get_stylesheet_directory_uri() . '/assets';
 ?>
 <!DOCTYPE html>
@@ -127,10 +138,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <?php wp_head(); ?>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-/* ── Reset toàn bộ theme CSS trước khi landing CSS load ── */
-*, *::before, *::after { all: revert; box-sizing: border-box; }
-</style>
 <link rel="stylesheet" href="<?php echo esc_url($assets); ?>/style.css">
 </head>
 <body>
