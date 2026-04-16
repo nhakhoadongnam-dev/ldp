@@ -761,7 +761,7 @@ nav.main .container { display: flex; align-items: center; justify-content: space
   }
 
 /* Docs slider wrapper (mobile) */
-.docs-slider-wrap { position: relative; max-width: 100%; }
+.docs-slider-wrap { position: relative; max-width: 100%; overflow: hidden; }
 .docs-arrow {
   display: none;
   position: absolute;
@@ -1791,7 +1791,6 @@ a:focus-visible, button:focus-visible {
   .docs-arrow { display: flex; }
   .docs-grid {
     display: flex;
-    overflow: hidden;
     gap: 0;
   }
   .doc-card {
