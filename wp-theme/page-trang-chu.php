@@ -14,16 +14,9 @@
  */
 defined('ABSPATH') || exit;
 
-// Dequeue CHỈ Flatsome theme CSS — giữ nguyên CSS của plugin
-add_action('wp_enqueue_scripts', function() {
-    global $wp_styles;
-    foreach ($wp_styles->queue as $handle) {
-        if (strpos($handle, 'flatsome') !== false) {
-            wp_dequeue_style($handle);
-            wp_deregister_style($handle);
-        }
-    }
-}, 999);
+// CSS isolation: toàn bộ landing page được wrap trong .ndn-lp
+// → không cần dequeue Flatsome. Selector `.ndn-lp ...` có specificity
+// cao hơn selector Flatsome nên thắng cascade; plugin CSS còn nguyên.
 
 $assets = get_stylesheet_directory_uri() . '/assets';
 ?>
@@ -147,6 +140,7 @@ if (have_posts()) : while (have_posts()) : the_post();
     ob_start(); the_content(); ob_end_clean();
 endwhile; endif;
 ?>
+<div class="ndn-lp">
 <!-- Skip Navigation -->
 <a href="#main" class="skip-link">Bỏ qua đến nội dung chính</a>
 <!-- Google Tag Manager (noscript) -->
@@ -792,6 +786,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
   </div>
 </div>
 
+</div><!-- /.ndn-lp -->
 <script src="<?php echo esc_url($assets); ?>/script.js"></script>
 <?php wp_footer(); ?>
 </body>
