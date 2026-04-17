@@ -17,6 +17,10 @@ defined('ABSPATH') || exit;
 
 $lp_base = home_url('/trang-chu');
 
+// Ép CF7 load script/CSS — không tự detect trong custom template.
+add_filter('wpcf7_load_js',  '__return_true');
+add_filter('wpcf7_load_css', '__return_true');
+
 // Enqueue CSS/JS landing — chạy trước khi get_header() gọi wp_head().
 add_action('wp_enqueue_scripts', function () use ($lp_base) {
     wp_enqueue_style(
@@ -561,7 +565,7 @@ get_header();
         <h3>Đăng ký nhận ưu đãi</h3>
         <p>Quý khách hàng hãy để lại thông tin để được hỗ trợ trực tiếp</p>
       </div>
-      <iframe class="cf7-iframe" src="https://nhakhoadongnam.com/trang-30-4/" title="Form đăng ký"></iframe>
+      <?php echo do_shortcode('[contact-form-7 id="1314978" title="CT-GIOTO2026 - name-at - phone"]'); ?>
     </div>
   </div>
 </section>
