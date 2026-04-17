@@ -3,26 +3,19 @@
  * Template Name: Trang Chủ Landing
  *
  * Standalone landing page — không dùng header/footer của theme.
- * CSS/JS nằm trong wp-theme/assets/ (copy từ trang-chu/).
+ * CSS/JS load trực tiếp từ /trang-chu/ (không cần copy assets).
  *
  * Cách dùng:
- * 1. Copy folder wp-theme/ vào child theme (hoặc theme chính).
- * 2. Copy trang-chu/style.css → wp-theme/assets/style.css
- *    Copy trang-chu/script.js → wp-theme/assets/script.js
- * 3. Trong WP Admin → Pages → tạo page mới → chọn template "Trang Chủ Landing".
- * 4. (Tuỳ chọn) Set làm Static Homepage: Settings → Reading.
+ * 1. WP Admin → Pages → Add New → chọn template "Trang Chủ Landing".
+ * 2. Publish → truy cập URL.
  */
 defined('ABSPATH') || exit;
 
-// Dequeue toàn bộ CSS của theme/plugin — chỉ dùng CSS của landing page
-add_action('wp_enqueue_scripts', function() {
-    global $wp_styles;
-    foreach ($wp_styles->queue as $handle) {
-        wp_dequeue_style($handle);
-    }
-}, 999);
+// CSS isolation: toàn bộ landing page được wrap trong .ndn-lp
+// → không cần dequeue Flatsome. Selector `.ndn-lp ...` có specificity
+// cao hơn selector Flatsome nên thắng cascade; plugin CSS còn nguyên.
 
-$assets = get_stylesheet_directory_uri() . '/assets';
+$lp_base = home_url('/trang-chu');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -135,10 +128,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <?php wp_head(); ?>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="<?php echo esc_url($assets); ?>/style.css">
+<link rel="stylesheet" href="<?php echo esc_url($lp_base); ?>/style.css">
 </head>
 <body>
-<?php /* Elementor yêu cầu the_content() */ if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
+<?php
+// Gọi the_content() để Elementor không báo lỗi, nhưng ẩn output
+if (have_posts()) : while (have_posts()) : the_post();
+    ob_start(); the_content(); ob_end_clean();
+endwhile; endif;
+?>
+<div class="ndn-lp">
 <!-- Skip Navigation -->
 <a href="#main" class="skip-link">Bỏ qua đến nội dung chính</a>
 <!-- Google Tag Manager (noscript) -->
@@ -784,7 +783,8 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
   </div>
 </div>
 
-<script src="<?php echo esc_url($assets); ?>/script.js"></script>
+</div><!-- /.ndn-lp -->
+<script src="<?php echo esc_url($lp_base); ?>/script.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>
