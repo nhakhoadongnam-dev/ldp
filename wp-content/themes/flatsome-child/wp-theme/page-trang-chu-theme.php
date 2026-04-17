@@ -561,7 +561,7 @@ get_header();
         <h3>Đăng ký nhận ưu đãi</h3>
         <p>Quý khách hàng hãy để lại thông tin để được hỗ trợ trực tiếp</p>
       </div>
-      <iframe class="cf7-iframe" src="https://nhakhoadongnam.com/trang-30-4/" title="Form đăng ký"></iframe>
+[contact-form-7 id="1314978" title="CT-GIOTO2026 - name-at - phone"]
     </div>
   </div>
 </section>
