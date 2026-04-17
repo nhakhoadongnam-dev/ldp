@@ -148,7 +148,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
 <!-- ═══ TOPBAR ═══ -->
 <div class="topbar">
-  <div class="container">
+  <div class="ndn-container">
     <span>📍 CS1: 411 Nguyễn Kiệm, P.Đức Nhuận &nbsp;·&nbsp; CS2: 614 Lê Hồng Phong, P.Vườn Lài, TP.HCM</span>
     <span>Tổng đài <a href="tel:19007141" class="hot">1900 7141</a> &nbsp;·&nbsp; Hotline <a href="tel:0972411411" class="hot">0972 411 411</a></span>
   </div>
@@ -156,7 +156,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
 <!-- ═══ NAV ═══ -->
 <nav class="main">
-  <div class="container">
+  <div class="ndn-container">
     <a href="/" class="brand">
       <img src="https://nhakhoadongnam.com/wp-content/uploads/2021/03/Nha-khoa-dong-nam-thong-bao-doi-logo-2.png" alt="Logo Nha Khoa Đông Nam" class="brand-logo">
     </a>
@@ -195,7 +195,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
   <div class="hero-overlay"></div>
   <button class="skip-layer" aria-label="Bỏ qua phần giới thiệu">bỏ qua</button>
   <div class="hero-text-layer">
-    <div class="container">
+    <div class="ndn-container">
       <div class="hero-content">
         <div class="hero-eyebrow">
           <span class="line"></span>
@@ -220,9 +220,9 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
 <!-- ═══ USP ═══ -->
 <section class="usp" id="usp">
-  <div class="container">
+  <div class="ndn-container">
     <div class="section-label">Ba trụ cột thương hiệu</div>
-    <h2 class="section-title">Điều gì giữ chúng tôi <em>đứng vững</em> suốt 21 năm?</h2>
+    <h2 class="ndn-title">Điều gì giữ chúng tôi <em>đứng vững</em> suốt 21 năm?</h2>
     <p class="section-sub">Không phải quảng cáo. Là những lần khách hàng quay lại sau 15 năm, dẫn theo con cháu.</p>
 
     <div class="usp-grid">
@@ -250,10 +250,10 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
 <!-- ═══ TIMELINE ═══ -->
 <section class="timeline-section" id="timeline">
-  <div class="container">
+  <div class="ndn-container">
     <div class="timeline-head">
       <div class="section-label">Hành trình 21 năm</div>
-      <h2 class="section-title">Câu chuyện bắt đầu từ <em>một phòng khám nhỏ</em></h2>
+      <h2 class="ndn-title">Câu chuyện bắt đầu từ <em>một phòng khám nhỏ</em></h2>
       <p class="section-sub" style="margin:18px auto 0">Tại 411 Nguyễn Kiệm, nơi vẫn là cơ sở 1 của chúng tôi đến hôm nay.</p>
     </div>
 
@@ -333,7 +333,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
 <!-- ═══ STATS HIGHLIGHT ═══ -->
 <div class="stats-strip">
-  <div class="container">
+  <div class="ndn-container">
     <div class="usp-stats">
       <div class="usp-stat-item">
         <span class="usp-stat-num">152.000<em>+</em></span>
@@ -353,10 +353,10 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
 <!-- ═══ COMMITMENT CERTIFICATE ═══ -->
 <section class="commit">
-  <div class="container">
+  <div class="ndn-container">
     <div class="commit-head">
       <div class="section-label">Đồng hành trọn đời</div>
-      <h2 class="section-title">Một lời hứa, <em>không phải slogan</em></h2>
+      <h2 class="ndn-title">Một lời hứa, <em>không phải slogan</em></h2>
     </div>
 
     <div class="certificate">
@@ -407,11 +407,11 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
 <!-- ═══ SERVICES ═══ -->
 <section class="services" id="services">
-  <div class="container">
+  <div class="ndn-container">
     <div class="services-head">
       <div class="left">
         <div class="section-label">Dịch vụ tại Đông Nam</div>
-        <h2 class="section-title">Dịch vụ <em>trọn gói</em>, chi phí minh bạch</h2>
+        <h2 class="ndn-title">Dịch vụ <em>trọn gói</em>, chi phí minh bạch</h2>
       </div>
       <p class="section-sub">Mọi gói Implant đã bao gồm trụ + abutment + răng sứ + xét nghiệm. Khách hàng nhận vỏ hộp trụ chính hãng để tra cứu.</p>
     </div>
@@ -466,10 +466,10 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
 <!-- ═══ DOCTORS ═══ -->
 <section class="doctors" id="doctors">
-  <div class="container">
+  <div class="ndn-container">
     <div class="docs-head">
       <div class="section-label">Đội ngũ bác sĩ</div>
-      <h2 class="section-title">Cùng một <em>chuẩn chuyên môn</em></h2>
+      <h2 class="ndn-title">Cùng một <em>chuẩn chuyên môn</em></h2>
       <p class="section-sub" style="margin-top:18px">Quy trình điều trị do Bác sĩ Giám đốc — chuyên gia cấy ghép Implant — thiết lập. Mọi ca Implant đều được giám sát bởi cùng một tiêu chuẩn y khoa.</p>
     </div>
 
@@ -549,11 +549,11 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
 <!-- ═══ RESULTS ═══ -->
 <section class="results" id="results">
-  <div class="container">
+  <div class="ndn-container">
     <div class="results-head">
       <div>
         <div class="section-label">Kết quả điều trị</div>
-        <h2 class="section-title">Những <em>nụ cười</em> đã trở lại</h2>
+        <h2 class="ndn-title">Những <em>nụ cười</em> đã trở lại</h2>
       </div>
       <div class="result-tabs" role="tablist" aria-label="Kết quả điều trị theo loại dịch vụ">
         <button class="result-tab active" role="tab" aria-selected="true" aria-controls="panel-implant" id="tab-implant">Implant</button>
@@ -602,10 +602,10 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
 <!-- ═══ TESTIMONIALS ═══ -->
 <section class="testimonials">
-  <div class="container">
+  <div class="ndn-container">
     <div class="testi-head">
       <div class="section-label">Cảm nhận khách hàng</div>
-      <h2 class="section-title">Lời kể <em>từ chính họ</em></h2>
+      <h2 class="ndn-title">Lời kể <em>từ chính họ</em></h2>
       <p class="section-sub">Không diễn viên, không kịch bản. Chỉ là những khách hàng đã đồng hành với Đông Nam hơn một thập kỷ.</p>
     </div>
 
@@ -629,10 +629,10 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
 <!-- ═══ LOCATIONS ═══ -->
 <section class="locations" id="locations">
-  <div class="container">
+  <div class="ndn-container">
     <div class="loc-head">
       <div class="section-label">Hai cơ sở tại TP.HCM</div>
-      <h2 class="section-title">Đến <em>gặp chúng tôi</em></h2>
+      <h2 class="ndn-title">Đến <em>gặp chúng tôi</em></h2>
     </div>
     <div class="loc-grid">
       <div class="loc-card">
@@ -669,7 +669,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
 <!-- ═══ FINAL CTA ═══ -->
 <section class="final-cta" id="cta">
-  <div class="container">
+  <div class="ndn-container">
     <h2 class="sr-only">Đăng ký tư vấn miễn phí</h2>
     <div class="eyebrow"><span>Từ 2005 đến hôm nay</span></div>
     <p>Năm 2005, ca cấy ghép Implant đầu tiên được thực hiện trong căn phòng khám nhỏ tại Nguyễn Kiệm.</p>
@@ -705,7 +705,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
-  <div class="container">
+  <div class="ndn-container">
     <div class="foot-grid">
       <div class="foot-col foot-col-brand">
         <h3 class="foot-col-title">Nha Khoa Đông Nam</h3>
@@ -765,7 +765,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 </footer>
 
 <div class="foot-company-bar">
-  <div class="container">
+  <div class="ndn-container">
     Công Ty TNHH Nha Khoa Đông Nam - Địa chỉ: 411 Nguyễn Kiệm, Phường 9, Quận Phú Nhuận, TP. HCM - Điện thoại: (028).7307.7141 - GPĐKKD: 0304132304 do sở KH & ĐT TP.HCM cấp ngày: 06/12/2005
   </div>
 </div>
