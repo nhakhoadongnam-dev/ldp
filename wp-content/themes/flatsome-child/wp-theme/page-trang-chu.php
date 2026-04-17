@@ -132,11 +132,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
 <?php
-// Gọi the_content() để Elementor không báo lỗi, nhưng ẩn output
-if (have_posts()) : while (have_posts()) : the_post();
-    ob_start(); the_content(); ob_end_clean();
-endwhile; endif;
+// Elementor scan DOM rendered để tìm the_content — phải output thật
+// vào HTML, không được buffer-clean. Bọc display:none để form ẩn.
 ?>
+<div class="elementor-hidden-content" style="display:none !important" aria-hidden="true">
+<?php if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
+</div>
 <div class="ndn-lp">
 <!-- Skip Navigation -->
 <a href="#main" class="skip-link">Bỏ qua đến nội dung chính</a>
