@@ -3,7 +3,7 @@
  * Template Name: Bảng Giá Landing
  *
  * Standalone landing page — không dùng header/footer của theme.
- * CSS/JS load trực tiếp từ /bang-gia/ (không cần copy assets).
+ * CSS/JS load trực tiếp từ /page/bang-gia/ (không cần copy assets).
  *
  * Cách dùng:
  * 1. WP Admin → Pages → Add New → chọn template "Bảng Giá Landing".
@@ -11,7 +11,7 @@
  */
 defined('ABSPATH') || exit;
 
-$lp_base = home_url('/bang-gia');
+$lp_base = home_url('/page/bang-gia');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>

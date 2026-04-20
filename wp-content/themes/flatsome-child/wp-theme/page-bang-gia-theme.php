@@ -4,14 +4,14 @@
  *
  * Bản dùng get_header() / get_footer() của Flatsome.
  * Không tự render nav/footer riêng — Flatsome cung cấp.
- * CSS/JS landing vẫn load từ /bang-gia/ (single source of truth).
+ * CSS/JS landing vẫn load từ /page/bang-gia/ (single source of truth).
  *
  * Cách dùng:
  *  WP Admin → Pages → Add New → chọn template "Bảng Giá Landing (Theme Header/Footer)".
  */
 defined('ABSPATH') || exit;
 
-$lp_base = home_url('/bang-gia');
+$lp_base = home_url('/page/bang-gia');
 
 // Enqueue CSS/JS landing — chạy trước khi get_header() gọi wp_head().
 add_action('wp_enqueue_scripts', function () use ($lp_base) {
