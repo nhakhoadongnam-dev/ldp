@@ -31,7 +31,7 @@ add_action('wp_enqueue_scripts', function () use ($lp_base) {
     );
     wp_enqueue_style(
         'ndn-landing-fonts',
-        'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap',
+        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap',
         [],
         null
     );
@@ -481,12 +481,65 @@ get_header();
       <button class="slider-arrow next" aria-label="Video tiếp">›</button>
       <div class="testi-inner">
         <div class="testi-slides">
-          <div class="testi-slide"><div class="testi-card" data-videoid="c8Pb_kKWdMM"><img src="https://placehold.co/480x640/1B2A4A/E8D5A8?text=Co+Lan&font=playfair-display" alt="Video cảm nhận Cô Lan" loading="lazy" width="480" height="640"><button class="testi-play" aria-label="Phát video">▶</button><div class="testi-info"><div class="name">Cô Lan · Q.Phú Nhuận</div><div class="meta">Khách hàng từ 2008</div></div></div></div>
-          <div class="testi-slide"><div class="testi-card" data-videoid="eblVhYpRay8"><img src="https://placehold.co/480x640/1B2A4A/E8D5A8?text=Chu+Hai&font=playfair-display" alt="Video cảm nhận Chú Hải" loading="lazy" width="480" height="640"><button class="testi-play" aria-label="Phát video">▶</button><div class="testi-info"><div class="name">Chú Hải · Q.10</div><div class="meta">Implant toàn hàm</div></div></div></div>
-          <div class="testi-slide"><div class="testi-card" data-videoid="kh1zckdYSX8"><img src="https://placehold.co/480x640/1B2A4A/E8D5A8?text=Chi+Ngoc&font=playfair-display" alt="Video cảm nhận Chị Ngọc" loading="lazy" width="480" height="640"><button class="testi-play" aria-label="Phát video">▶</button><div class="testi-info"><div class="name">Chị Ngọc · Tân Bình</div><div class="meta">Bọc răng sứ</div></div></div></div>
-          <div class="testi-slide"><div class="testi-card" data-videoid="rQkbBt-CciA"><img src="https://placehold.co/480x640/1B2A4A/E8D5A8?text=Anh+Minh&font=playfair-display" alt="Video cảm nhận Anh Minh" loading="lazy" width="480" height="640"><button class="testi-play" aria-label="Phát video">▶</button><div class="testi-info"><div class="name">Anh Minh · Gò Vấp</div><div class="meta">Niềng răng trong suốt</div></div></div></div>
-          <div class="testi-slide"><div class="testi-card" data-videoid="uNDrs3Cvwvs"><img src="https://placehold.co/480x640/1B2A4A/E8D5A8?text=Chi+Thuy&font=playfair-display" alt="Video cảm nhận Chị Thùy" loading="lazy" width="480" height="640"><button class="testi-play" aria-label="Phát video">▶</button><div class="testi-info"><div class="name">Chị Thùy · Q.Phú Nhuận</div><div class="meta">Implant kỹ thuật số</div></div></div></div>
-          <div class="testi-slide"><div class="testi-card" data-videoid="vatpzUlPl4c"><img src="https://placehold.co/480x640/1B2A4A/E8D5A8?text=Anh+Tung&font=playfair-display" alt="Video cảm nhận Anh Tùng" loading="lazy" width="480" height="640"><button class="testi-play" aria-label="Phát video">▶</button><div class="testi-info"><div class="name">Anh Tùng · Bình Thạnh</div><div class="meta">Phục hình toàn hàm</div></div></div></div>
+          <div class="testi-slide">
+            <div class="testi-card">
+              <iframe src="https://www.youtube.com/embed/c8Pb_kKWdMM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Cô Lan · Q.Phú Nhuận"></iframe>
+              <div class="testi-info">
+                <div class="name">Cô Lan · Q.Phú Nhuận</div>
+                <div class="meta">Khách hàng từ 2008</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <div class="testi-card">
+              <iframe src="https://www.youtube.com/embed/eblVhYpRay8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Chú Hải · Q.10"></iframe>
+              <div class="testi-info">
+                <div class="name">Chú Hải · Q.10</div>
+                <div class="meta">Implant toàn hàm</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <div class="testi-card">
+              <iframe src="https://www.youtube.com/embed/kh1zckdYSX8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Chị Ngọc · Tân Bình"></iframe>
+              <div class="testi-info">
+                <div class="name">Chị Ngọc · Tân Bình</div>
+                <div class="meta">Bọc răng sứ</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <div class="testi-card">
+              <iframe src="https://www.youtube.com/embed/rQkbBt-CciA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Anh Minh · Gò Vấp"></iframe>
+              <div class="testi-info">
+                <div class="name">Anh Minh · Gò Vấp</div>
+                <div class="meta">Niềng răng trong suốt</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <div class="testi-card">
+              <iframe src="https://www.youtube.com/embed/uNDrs3Cvwvs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Chị Thùy · Q.Phú Nhuận"></iframe>
+              <div class="testi-info">
+                <div class="name">Chị Thùy · Q.Phú Nhuận</div>
+                <div class="meta">Implant kỹ thuật số</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <div class="testi-card">
+              <iframe src="https://www.youtube.com/embed/vatpzUlPl4c" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Anh Tùng · Bình Thạnh"></iframe>
+              <div class="testi-info">
+                <div class="name">Anh Tùng · Bình Thạnh</div>
+                <div class="meta">Phục hình toàn hàm</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="slider-dots testi-dots"></div>
@@ -569,14 +622,6 @@ get_header();
     </div>
   </div>
 </section>
-
-<!-- Modal overlay video -->
-<div class="testi-modal" id="testiModal" aria-hidden="true" role="dialog" aria-label="Video cảm nhận khách hàng">
-  <div class="testi-modal-inner">
-    <button class="testi-modal-close" aria-label="Đóng video">×</button>
-    <iframe id="testiModalIframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Video cảm nhận khách hàng"></iframe>
-  </div>
-</div>
 
 </div><!-- /.ndn-lp -->
 
