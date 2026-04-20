@@ -1,6 +1,6 @@
 // Sticky nav active highlight on scroll
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.sticky-nav a');
+const sections = document.querySelectorAll('.ndn-lp section[id]');
+const navLinks = document.querySelectorAll('.ndn-lp .ndn-sticky-nav a');
 window.addEventListener('scroll', () => {
   let current = '';
   sections.forEach(s => {
@@ -13,7 +13,7 @@ window.addEventListener('scroll', () => {
 
 // Smooth hide float on scroll up reveal
 let lastScroll = 0;
-const floatDiv = document.querySelector('.cta-float');
+const floatDiv = document.querySelector('.ndn-lp .ndn-cta-float');
 window.addEventListener('scroll', () => {
   const now = window.scrollY;
   floatDiv.style.opacity = now < 200 ? '0' : '1';
@@ -24,7 +24,7 @@ floatDiv.style.transition = 'opacity .3s';
 floatDiv.style.opacity = '0';
 
 /* Auto-resize CF7 iframes to match content height */
-document.querySelectorAll('.cf7-iframe').forEach(function(iframe) {
+document.querySelectorAll('.ndn-lp .ndn-cf7-iframe').forEach(function(iframe) {
   function resize() {
     try {
       var h = iframe.contentDocument.body.scrollHeight;

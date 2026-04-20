@@ -1,122 +1,58 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SKMM9JDYTH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<?php
+/**
+ * Template Name: Bảng Giá Landing (Theme Header/Footer)
+ *
+ * Bản dùng get_header() / get_footer() của Flatsome.
+ * Không tự render nav/footer riêng — Flatsome cung cấp.
+ * CSS/JS landing vẫn load từ /bang-gia/ (single source of truth).
+ *
+ * Cách dùng:
+ *  WP Admin → Pages → Add New → chọn template "Bảng Giá Landing (Theme Header/Footer)".
+ */
+defined('ABSPATH') || exit;
 
-  gtag('config', 'G-SKMM9JDYTH');
-</script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5XG3JXR');</script>
-<!-- End Google Tag Manager -->
+$lp_base = home_url('/bang-gia');
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+// Enqueue CSS/JS landing — chạy trước khi get_header() gọi wp_head().
+add_action('wp_enqueue_scripts', function () use ($lp_base) {
+    // Landing CSS — load sau Flatsome để thắng cascade
+    wp_enqueue_style(
+        'ndn-landing-bang-gia',
+        $lp_base . '/style.css',
+        [],
+        null
+    );
+    // Google Fonts
+    wp_enqueue_style(
+        'ndn-landing-bang-gia-fonts',
+        'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap',
+        [],
+        null
+    );
+    // Flag icons CDN
+    wp_enqueue_style(
+        'ndn-landing-bang-gia-flags',
+        'https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css',
+        [],
+        null
+    );
+    // Landing JS (footer)
+    wp_enqueue_script(
+        'ndn-landing-bang-gia',
+        $lp_base . '/script.js',
+        [],
+        null,
+        true
+    );
+}, 99);
 
-<!-- ═══ SEO CORE ═══ -->
-<!-- Title: 55 ký tự -->
-<title>Bảng Giá Dịch Vụ Nha Khoa 2026 | Nha Khoa Đông Nam</title>
-<!-- Description: 155 ký tự -->
-<meta name="description" content="Bảng giá dịch vụ nha khoa Đông Nam 2026: Implant, răng sứ, niềng răng, nhổ răng khôn, trám răng. Giá niêm yết công khai, cam kết không phát sinh. Hotline: 0972.411.411.">
-<meta name="keywords" content="bảng giá nha khoa, giá trồng răng implant, giá răng sứ, giá niềng răng, giá nhổ răng khôn, giá trám răng, nha khoa đông nam, nha khoa tphcm, bảng giá nha khoa 2026">
-<meta name="author" content="Nha Khoa Đông Nam">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://nhakhoadongnam.com/bang-gia/">
+get_header();
+?>
 
-<!-- ═══ OPEN GRAPH (Facebook / Zalo) ═══ -->
-<meta property="og:type" content="website">
-<meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Nha Khoa Đông Nam">
-<meta property="og:title" content="Bảng Giá Dịch Vụ Nha Khoa 2026 | Nha Khoa Đông Nam">
-<meta property="og:description" content="Bảng giá dịch vụ nha khoa Đông Nam 2026: Implant, răng sứ, niềng răng, nhổ răng khôn, trám răng. Giá công khai, không phát sinh. Hotline: 0972.411.411.">
-<meta property="og:image" content="https://nhakhoadongnam.com/wp-content/uploads/2026/03/bang-gia-nha-khoa-dong-nam.jpg">
-<meta property="og:image:alt" content="Bảng Giá Dịch Vụ Nha Khoa Đông Nam 2026">
-<meta property="og:url" content="https://nhakhoadongnam.com/bang-gia/">
-
-<!-- ═══ TWITTER CARD ═══ -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bảng Giá Dịch Vụ Nha Khoa 2026 | Nha Khoa Đông Nam">
-<meta name="twitter:description" content="Bảng giá dịch vụ nha khoa Đông Nam 2026: Implant, răng sứ, niềng răng, nhổ răng khôn, trám răng. Hotline: 0972.411.411.">
-<meta name="twitter:image" content="https://nhakhoadongnam.com/wp-content/uploads/2026/03/bang-gia-nha-khoa-dong-nam.jpg">
-
-<!-- ═══ MISC ═══ -->
-<meta name="theme-color" content="#0B2240">
-<meta name="geo.region" content="VN-SG">
-<meta name="geo.placename" content="TP. Hồ Chí Minh">
-
-<!-- ═══ SCHEMA.ORG JSON-LD ═══ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Dentist",
-      "@id": "https://nhakhoadongnam.com/#dentist",
-      "name": "Nha Khoa Đông Nam",
-      "url": "https://nhakhoadongnam.com",
-      "telephone": "+840972411411",
-      "address": [
-        {
-          "@type": "PostalAddress",
-          "streetAddress": "411 Nguyễn Kiệm",
-          "addressLocality": "Phường Đức Nhuận, Quận Phú Nhuận",
-          "addressRegion": "TP. Hồ Chí Minh",
-          "addressCountry": "VN"
-        },
-        {
-          "@type": "PostalAddress",
-          "streetAddress": "614 Lê Hồng Phong",
-          "addressLocality": "Phường Vườn Lài, Quận 10",
-          "addressRegion": "TP. Hồ Chí Minh",
-          "addressCountry": "VN"
-        }
-      ],
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-          "opens": "08:00",
-          "closes": "19:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Sunday"],
-          "opens": "08:00",
-          "closes": "16:00"
-        }
-      ],
-      "priceRange": "$$"
-    },
-    {
-      "@type": "WebPage",
-      "name": "Bảng Giá Dịch Vụ Nha Khoa Đông Nam 2026",
-      "description": "Bảng giá chi tiết các dịch vụ nha khoa tại Đông Nam: Implant, răng sứ, niềng răng, nhổ răng, trám răng, chữa tủy, tẩy trắng.",
-      "url": "https://nhakhoadongnam.com/bang-gia/",
-      "provider": { "@id": "https://nhakhoadongnam.com/#dentist" }
-    }
-  ]
-}
-</script>
-
-<!-- ═══ FONTS & CSS ═══ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"/>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XG3JXR"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<?php // Elementor cần the_content() có mặt trong DOM rendered. ?>
+<div style="display:none!important" aria-hidden="true">
+  <?php if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
+</div>
 
 <div class="ndn-lp">
 <a href="#ndn-main" class="skip-link">Bỏ qua đến nội dung chính</a>
@@ -154,7 +90,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-
 
 <!-- PAGE -->
 <main class="ndn-page" id="ndn-main">
@@ -199,7 +134,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="rec-label">Phổ biến nhất</div>
         <div class="implant-brand">Implant Hàn Quốc</div>
         <div class="implant-country">Tối ưu chi phí</div>
-        <!-- <div class="implant-price-old">16.500.000 ₫</div> -->
         <div class="implant-price">16.500.000 <span class="implant-unit">₫</span></div>
         <div class="implant-bh">✔ Đồng hành trọn đời</div>
       </div>
@@ -347,7 +281,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức</span></td>
           <td style="text-align:center"><span class="badge-bh">BH 15 năm</span></td>
           <td class="price-col"><span class="price-val">7.000.000 ₫</span></td>
-          <td class="price-col"><!-- <span class="price-promo">5.600.000 ₫</span> --></td>
+          <td class="price-col"></td>
         </tr>
         <tr style="background:#FFFDF5">
           <td><span class="svc-name">Răng toàn sứ Multilayer Zolid <span class="badge-gold">Cao cấp</span></span></td>
@@ -427,7 +361,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <td><span class="svc-name">Cạo vôi răng + Đánh bóng <span class="badge-free">Nên thực hiện 6 tháng/lần</span></span></td>
           <td class="svc-unit">2 hàm</td>
           <td class="price-col"><span class="price-val">400.000 ₫</span></td>
-          <td class="price-col"><!-- <span class="price-promo">200.000 ₫</span><br><span style="font-size:10px;color:var(--muted);font-style:italic;">(giá trải nghiệm lần đầu)</span> --></td>
+          <td class="price-col"></td>
         </tr>
         <tr><td class="svc-name">Điều trị nha chu 1 răng</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.000.000 ₫</span></td><td class="price-col"></td></tr>
         <tr><td class="svc-name">Điều trị nha chu 1 cụm</td><td class="svc-unit">1 cụm</td><td class="price-col"><span class="price-val">2.000.000 ₫</span></td><td class="price-col"></td></tr>
@@ -580,19 +514,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </table>
   </section>
 
-
 </main>
-
-<!-- CLINIC INFO -->
-<section class="ndn-clinic-info">
-  <div class="ndn-clinic-info-inner">
-    <h2>Nha Khoa Đông Nam — Hơn 21 năm đồng hành cùng bạn</h2>
-    <div class="ndn-clinic-addresses">
-      <div><strong>Cơ sở 1:</strong> 411 Nguyễn Kiệm - Phường Đức Nhuận - TPHCM</div>
-      <div><strong>Cơ sở 2:</strong> 614 Lê Hồng Phong - Phường Vườn Lài - TPHCM</div>
-    </div>
-  </div>
-</section>
 
 <!-- FORM SECTION -->
 <section class="ndn-form-section" id="dang-ky">
@@ -642,9 +564,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#dang-ky" class="ndn-float-btn ndn-float-primary">📅 Đặt lịch</a>
 </div>
 
-
 </div><!-- /.ndn-lp -->
 
-<script src="script.js"></script>
-</body>
-</html>
+<?php get_footer(); ?>
