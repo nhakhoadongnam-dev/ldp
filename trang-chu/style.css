@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════
    NHA KHOA DONG NAM — TRANG CHU (Homepage)
    Brand: Navy + Cream + Red accent
-   Font: Fraunces (display) + Inter (body)
+   Font: Inter (toàn trang)
    ═══════════════════════════════════════════════════════════ */
 
 :root {
@@ -99,7 +99,7 @@ html { scroll-behavior: smooth; }
   background: var(--navy);
   display: flex; align-items: center; justify-content: center;
   color: var(--cream);
-  font-family: 'Fraunces', serif; font-weight: 500; font-size: 20px;
+  font-family: inherit; font-weight: 500; font-size: 20px;
   position: relative;
   overflow: hidden;
 }
@@ -107,7 +107,7 @@ html { scroll-behavior: smooth; }
   content: ""; position: absolute; inset: -4px; border-radius: 50%;
   border: 1px solid var(--navy); opacity: .3;
 }
-.ndn-lp .brand-text .name { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 500; color: var(--navy-ink); line-height: 1; letter-spacing: .01em; }
+.ndn-lp .brand-text .name { font-family: inherit; font-size: 18px; font-weight: 500; color: var(--navy-ink); line-height: 1; letter-spacing: .01em; }
 .ndn-lp .brand-text .sub { font-size: 10px; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; margin-top: 3px; }
 
 .ndn-lp .nav-links { display: flex; gap: 32px; list-style: none; }
@@ -206,7 +206,7 @@ html { scroll-behavior: smooth; }
 }
 
 .ndn-lp .hero h1 {
-  font-family: 'Fraunces', serif;
+  font-family: inherit;
   font-size: clamp(42px, 5.5vw, 68px);
   line-height: 1.08;
   font-weight: 300;
@@ -214,14 +214,14 @@ html { scroll-behavior: smooth; }
   margin-bottom: 24px;
   color: #fff;
 }
-.ndn-lp .hero h1 em { font-style: italic; color: #E8D7A8; font-weight: 400; }
+.ndn-lp .hero h1 em { font-style: normal; color: #E8D7A8; font-weight: 400; }
 
 .ndn-lp .hero-lede {
   font-size: 17px; line-height: 1.65;
   color: rgba(255,255,255,.72);
   max-width: 520px;
   margin-bottom: 36px;
-  font-family: 'Fraunces', serif; font-style: italic; font-weight: 300;
+  font-family: inherit; font-style: italic; font-weight: 300;
 }
 
 .ndn-lp .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
@@ -244,7 +244,7 @@ html { scroll-behavior: smooth; }
   padding: 32px 0 40px;
   border-top: 1px solid rgba(255,255,255,.12);
 }
-.ndn-lp .hero-stat .num { font-family: 'Fraunces', serif; font-size: 34px; font-weight: 400; color: #fff; line-height: 1; }
+.ndn-lp .hero-stat .num { font-family: inherit; font-size: 34px; font-weight: 400; color: #fff; line-height: 1; }
 .ndn-lp .hero-stat .num em { color: #E8D7A8; font-style: normal; }
 .ndn-lp .hero-stat .lbl { font-size: 12px; color: rgba(255,255,255,.55); letter-spacing: .08em; text-transform: uppercase; margin-top: 6px; }
 
@@ -279,7 +279,7 @@ html { scroll-behavior: smooth; }
   background: var(--line);
 }
 .ndn-lp .usp-stat-num {
-  font-family: 'Fraunces', serif;
+  font-family: inherit;
   font-size: clamp(28px, 3vw, 38px);
   font-weight: 400;
   color: var(--navy-ink);
@@ -310,7 +310,7 @@ html { scroll-behavior: smooth; }
   text-align: center;
 }
 .ndn-lp .stat-num {
-  font-family: 'Fraunces', serif;
+  font-family: inherit;
   font-size: clamp(28px, 3.5vw, 42px);
   font-weight: 400;
   color: var(--navy-ink);
@@ -352,12 +352,12 @@ html { scroll-behavior: smooth; }
 }
 .ndn-lp .section-label::before { content: ""; width: 32px; height: 1px; background: var(--red); }
 .ndn-lp .ndn-title {
-  font-family: 'Fraunces', serif; font-size: clamp(32px, 3.8vw, 48px);
+  font-family: inherit; font-size: clamp(32px, 3.8vw, 48px);
   font-weight: 400; line-height: 1.1; letter-spacing: -.02em;
   color: var(--navy-ink); margin-bottom: 18px;
 }
-.ndn-lp .ndn-title em { font-style: italic; color: var(--red); }
-.ndn-lp .section-sub { font-size: 16px; color: var(--muted); max-width: 680px; font-family: 'Fraunces', serif; font-style: italic; font-weight: 300; line-height: 1.65; }
+.ndn-lp .ndn-title em { font-style: normal; color: var(--red); }
+.ndn-lp .section-sub { font-size: 16px; color: var(--muted); max-width: 680px; font-family: inherit; font-style: italic; font-weight: 300; line-height: 1.65; }
 
 .ndn-lp .usp-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
@@ -373,12 +373,12 @@ html { scroll-behavior: smooth; }
 .ndn-lp .usp-card:last-child { border-right: none; }
 .ndn-lp .usp-card:hover { background: rgba(27,75,140,.03); }
 .ndn-lp .usp-num {
-  font-family: 'Fraunces', serif; font-size: 12px;
+  font-family: inherit; font-size: 12px;
   color: var(--muted); letter-spacing: .15em;
   margin-bottom: 24px; display: block;
 }
 .ndn-lp .usp-headline {
-  font-family: 'Fraunces', serif;
+  font-family: inherit;
   font-size: 42px; line-height: 1.15; font-weight: 500;
   color: var(--navy); margin-bottom: 12px; letter-spacing: -.02em;
   min-height: calc(42px * 1.15 * 2);
@@ -426,7 +426,7 @@ html { scroll-behavior: smooth; }
   padding: 14px 20px;
   background: linear-gradient(transparent, rgba(14,42,77,.75));
   color: rgba(255,255,255,.9);
-  font-size: 13px; font-family: 'Fraunces', serif; font-style: italic;
+  font-size: 13px; font-family: inherit; font-style: italic;
   pointer-events: none;
 }
 
@@ -475,7 +475,7 @@ html { scroll-behavior: smooth; }
   transform: scale(1.5);
 }
 .ndn-lp .tl-year {
-  font-family: 'Fraunces', serif;
+  font-family: inherit;
   font-size: 18px; font-weight: 500;
   color: var(--navy-ink); line-height: 1;
   letter-spacing: -.01em;
@@ -515,7 +515,7 @@ html { scroll-behavior: smooth; }
   transform: translateY(0);
 }
 .ndn-lp .tl-card-year {
-  font-family: 'Fraunces', serif;
+  font-family: inherit;
   font-size: 56px; font-weight: 500; line-height: 1;
   color: var(--cream-2); flex-shrink: 0; min-width: 110px;
   letter-spacing: -.03em;
@@ -588,7 +588,7 @@ html { scroll-behavior: smooth; }
   width: 60px; height: 5px; background: var(--red);
 }
 .ndn-lp .cert-brand { font-size: 11px; letter-spacing: .25em; color: var(--muted); margin-bottom: 12px; text-transform: uppercase; font-weight: 500; }
-.ndn-lp .cert-title { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 400; color: var(--navy-ink); letter-spacing: -.01em; line-height: 1.2; font-style: italic; }
+.ndn-lp .cert-title { font-family: inherit; font-size: 32px; font-weight: 400; color: var(--navy-ink); letter-spacing: -.01em; line-height: 1.2; }
 .ndn-lp .cert-sub { font-size: 12px; color: var(--muted); margin-top: 10px; font-style: italic; }
 
 .ndn-lp .cert-items { margin: 30px 0; }
@@ -617,7 +617,7 @@ html { scroll-behavior: smooth; }
   border: 2px dashed var(--red);
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   color: var(--red); font-size: 9px; text-align: center;
-  font-family: 'Fraunces', serif;
+  font-family: inherit;
   transform: rotate(-8deg);
   position: relative;
 }
@@ -656,7 +656,7 @@ html { scroll-behavior: smooth; }
 .ndn-lp .svc-hero::after {
   content: "IMPLANT";
   position: absolute; bottom: -20px; right: 20px;
-  font-family: 'Fraunces', serif; font-weight: 500;
+  font-family: inherit; font-weight: 500;
   font-size: 150px; color: rgba(255,255,255,.04);
   letter-spacing: -.05em; line-height: .8;
   pointer-events: none;
@@ -669,15 +669,15 @@ html { scroll-behavior: smooth; }
   letter-spacing: .15em; font-weight: 500; margin-bottom: 24px;
   text-transform: uppercase;
 }
-.ndn-lp .svc-hero h3 { font-family: 'Fraunces', serif; font-size: 46px; font-weight: 400; line-height: 1.05; letter-spacing: -.02em; margin-bottom: 12px; }
-.ndn-lp .svc-hero h3 em { font-style: italic; color: #E8D7A8; }
-.ndn-lp .svc-tagline { font-size: 14px; color: rgba(255,255,255,.75); font-style: italic; font-family: 'Fraunces', serif; margin-bottom: 32px; }
+.ndn-lp .svc-hero h3 { font-family: inherit; font-size: 46px; font-weight: 400; line-height: 1.05; letter-spacing: -.02em; margin-bottom: 12px; }
+.ndn-lp .svc-hero h3 em { font-style: normal; color: #E8D7A8; }
+.ndn-lp .svc-tagline { font-size: 14px; color: rgba(255,255,255,.75); font-style: italic; font-family: inherit; margin-bottom: 32px; }
 .ndn-lp .svc-stats {
   display: flex; gap: 28px; margin-bottom: 32px;
   padding: 20px 0; border-top: 1px solid rgba(255,255,255,.15); border-bottom: 1px solid rgba(255,255,255,.15);
   position: relative; z-index: 2;
 }
-.ndn-lp .svc-stat strong { font-family: 'Fraunces', serif; font-size: 22px; color: #fff; display: block; line-height: 1; }
+.ndn-lp .svc-stat strong { font-family: inherit; font-size: 22px; color: #fff; display: block; line-height: 1; }
 .ndn-lp .svc-stat span { font-size: 10px; color: rgba(255,255,255,.55); letter-spacing: .08em; text-transform: uppercase; margin-top: 4px; display: block; }
 
 .ndn-lp .svc-hero .bottom { position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
@@ -708,7 +708,7 @@ html { scroll-behavior: smooth; }
   width: 100%; height: 100%; object-fit: cover;
   display: block;
 }
-.ndn-lp .svc-card h4 { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 500; color: var(--navy-ink); margin-bottom: 6px; padding: 20px 24px 0; }
+.ndn-lp .svc-card h4 { font-family: inherit; font-size: 22px; font-weight: 500; color: var(--navy-ink); margin-bottom: 6px; padding: 20px 24px 0; }
 .ndn-lp .svc-card p { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 18px; flex: 1; padding: 0 24px; }
 .ndn-lp .svc-card .arrow {
   font-size: 12px;
@@ -850,7 +850,7 @@ html { scroll-behavior: smooth; }
   text-transform: uppercase; color: var(--red); margin-bottom: 10px;
 }
 .ndn-lp .doc-detail-name {
-  font-family: 'Fraunces', serif;
+  font-family: inherit;
   font-size: 26px; font-weight: 500; line-height: 1.2;
   color: #fff; margin-bottom: 6px;
 }
@@ -993,8 +993,7 @@ html { scroll-behavior: smooth; }
 /* Clip container: overflow hidden + margin dành chỗ cho arrows */
 .ndn-lp .testi-inner {
   margin: 0 48px;
-  padding: 20px 0;  /* cho hover card translateY(-6px) không bị cắt */
-  contain: paint;   /* đảm bảo clip cả GPU compositing layer của .testi-slides */
+  contain: paint;
 }
 .ndn-lp .testi-slides {
   display: flex;
@@ -1006,90 +1005,19 @@ html { scroll-behavior: smooth; }
   min-width: calc((100% - 54px) / 4);
 }
 
-/* Modal overlay */
-.ndn-lp .testi-modal {
-  position: fixed; inset: 0;
-  background: rgba(0,0,0,.82);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  z-index: 500;
-  display: none;
-  align-items: center;
-  justify-content: center;
-}
-.ndn-lp .testi-modal.visible { display: flex; }
-.ndn-lp .testi-modal-inner {
-  width: min(340px, 88vw);
-  aspect-ratio: 9/16;
-  position: relative;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 32px 80px rgba(0,0,0,.7);
-  animation: modalIn .3s ease;
-}
-@keyframes modalIn {
-  from { opacity: 0; transform: scale(.94); }
-  to   { opacity: 1; transform: none; }
-}
-.ndn-lp .testi-modal-inner iframe {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%; border: 0;
-}
-.ndn-lp .testi-modal-close {
-  position: absolute; top: -44px; right: 0;
-  background: none; border: none;
-  color: rgba(255,255,255,.85); font-size: 38px; line-height: 1;
-  cursor: pointer; padding: 4px;
-  transition: color .2s;
-}
-.ndn-lp .testi-modal-close:hover { color: #fff; }
-
-.ndn-lp .testi-card.active .testi-play {
-  background: var(--red); color: #fff;
-}
-.ndn-lp .testi-card.active {
-  box-shadow: 0 0 0 2px var(--red), 0 12px 32px rgba(192,57,43,.3);
-}
-
 .ndn-lp .testi-card {
-  aspect-ratio: 3/4; border-radius: 12px;
-  background: linear-gradient(180deg, #3a4a60, #1a2a40);
-  position: relative; overflow: hidden; cursor: pointer;
-  transition: all .3s;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #1a2a40;
 }
-/* thumbnail image */
-.ndn-lp .testi-card img {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover; z-index: 0;
-  transition: opacity .3s;
+.ndn-lp .testi-card iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9/16;
+  border: 0;
 }
-
-.ndn-lp .testi-card:hover { transform: translateY(-6px) scale(1.02); }
-.ndn-lp .testi-card::before {
-  content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,.85) 100%);
-}
-.ndn-lp .testi-card::after {
-  content: ""; position: absolute; top: 20%; left: 20%; right: 20%;
-  aspect-ratio: 1; border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,.1), transparent 70%);
-}
-.ndn-lp .testi-play {
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  width: 54px; height: 54px; border-radius: 50%;
-  background: rgba(255,255,255,.95);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--navy); font-size: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.4);
-  z-index: 2; transition: all .3s;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-.ndn-lp .testi-card:hover .testi-play { background: var(--red); color: #fff; transform: translate(-50%, -50%) scale(1.1); }
-.ndn-lp .testi-info { position: absolute; bottom: 18px; left: 18px; right: 18px; z-index: 3; }
-.ndn-lp .testi-info .name { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 500; color: #fff; margin-bottom: 2px; }
+.ndn-lp .testi-info { padding: 10px 4px 0; }
+.ndn-lp .testi-info .name { font-family: inherit; font-size: 16px; font-weight: 500; color: #fff; margin-bottom: 2px; }
 .ndn-lp .testi-info .meta { font-size: 11px; color: rgba(255,255,255,.65); }
 
 /* ═══ LOCATIONS ═══ */
@@ -1123,10 +1051,10 @@ html { scroll-behavior: smooth; }
 }
 .ndn-lp .loc-info { padding: 28px 32px 32px; }
 .ndn-lp .loc-tag { font-size: 11px; letter-spacing: .15em; color: var(--red); text-transform: uppercase; font-weight: 500; margin-bottom: 8px; }
-.ndn-lp .loc-name { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 500; color: var(--navy-ink); margin-bottom: 6px; line-height: 1.2; }
+.ndn-lp .loc-name { font-family: inherit; font-size: 26px; font-weight: 500; color: var(--navy-ink); margin-bottom: 6px; line-height: 1.2; }
 .ndn-lp .loc-addr { font-size: 14px; color: var(--ink-2); line-height: 1.6; margin-bottom: 16px; }
 .ndn-lp .loc-meta { display: flex; gap: 24px; padding-top: 16px; border-top: 1px dashed var(--line); font-size: 13px; }
-.ndn-lp .loc-meta div strong { display: block; font-family: 'Fraunces', serif; color: var(--navy); font-size: 14px; }
+.ndn-lp .loc-meta div strong { display: block; font-family: inherit; color: var(--navy); font-size: 14px; }
 .ndn-lp .loc-meta div span { color: var(--muted); font-size: 11px; letter-spacing: .05em; }
 
 /* ═══ FINAL CTA ═══ */
@@ -1147,7 +1075,7 @@ html { scroll-behavior: smooth; }
 .ndn-lp .final-cta::after {
   content: "2005";
   position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  font-family: 'Fraunces', serif; font-weight: 500;
+  font-family: inherit; font-weight: 500;
   font-size: 420px; color: rgba(255,255,255,.025);
   letter-spacing: -.05em; line-height: 1; pointer-events: none;
   white-space: nowrap;
@@ -1160,7 +1088,7 @@ html { scroll-behavior: smooth; }
 }
 .ndn-lp .final-cta .eyebrow::before, .ndn-lp .final-cta .eyebrow::after { content: ""; width: 40px; height: 1px; background: rgba(232,215,168,.4); }
 .ndn-lp .final-cta p {
-  font-family: 'Fraunces', serif;
+  font-family: inherit;
   font-size: clamp(22px, 2.5vw, 32px);
   line-height: 1.45; font-weight: 300;
   color: rgba(255,255,255,.82);
@@ -1198,7 +1126,7 @@ html { scroll-behavior: smooth; }
 
 /* Left: Text + Contact */
 .ndn-lp .form-section-text h2 {
-  font-family: 'Fraunces', serif;
+  font-family: inherit;
   font-size: clamp(22px, 2.8vw, 30px);
   text-transform: uppercase;
   font-weight: 600;
@@ -1259,7 +1187,7 @@ html { scroll-behavior: smooth; }
   margin-bottom: 24px;
 }
 .ndn-lp .form-header h3 {
-  font-family: 'Fraunces', serif;
+  font-family: inherit;
   font-size: 22px;
   font-weight: 600;
   color: #0E2A4D;
@@ -1346,7 +1274,7 @@ html { scroll-behavior: smooth; }
 
 /* Column titles */
 .ndn-lp .foot-col-title { 
-  font-family: 'Fraunces', serif; 
+  font-family: inherit; 
   font-size: 18px; 
   font-weight: 600; 
   color: #fff; 
@@ -1446,7 +1374,7 @@ html { scroll-behavior: smooth; }
 
 /* Column general styles */
 .ndn-lp .foot-col h3 { 
-  font-family: 'Fraunces', serif; 
+  font-family: inherit; 
   font-size: 18px; 
   font-weight: 600; 
   color: #fff; 
@@ -1660,7 +1588,7 @@ html { scroll-behavior: smooth; }
 }
 .ndn-lp .mobile-nav-inner a {
   color: #fff; text-decoration: none; font-size: 20px;
-  font-family: 'Fraunces', serif; font-weight: 400;
+  font-family: inherit; font-weight: 400;
   letter-spacing: .01em; transition: color .2s;
 }
 .ndn-lp .mobile-nav-inner a:hover { color: #E8D7A8; }
@@ -1804,7 +1732,7 @@ html { scroll-behavior: smooth; }
     text-align: center;
   }
   .ndn-lp .doc-card-name {
-    font-family: 'Fraunces', serif;
+    font-family: inherit;
     font-size: 16px;
     font-weight: 500;
     color: var(--navy-ink);
