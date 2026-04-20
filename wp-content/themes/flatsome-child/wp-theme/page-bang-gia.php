@@ -1,5 +1,20 @@
+<?php
+/**
+ * Template Name: Bảng Giá Landing
+ *
+ * Standalone landing page — không dùng header/footer của theme.
+ * CSS/JS load trực tiếp từ /bang-gia/ (không cần copy assets).
+ *
+ * Cách dùng:
+ * 1. WP Admin → Pages → Add New → chọn template "Bảng Giá Landing".
+ * 2. Publish → truy cập URL.
+ */
+defined('ABSPATH') || exit;
+
+$lp_base = home_url('/bang-gia');
+?>
 <!DOCTYPE html>
-<html lang="vi">
+<html <?php language_attributes(); ?>>
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SKMM9JDYTH"></script>
@@ -7,7 +22,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-SKMM9JDYTH');
 </script>
 <!-- Google Tag Manager -->
@@ -18,13 +32,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5XG3JXR');</script>
 <!-- End Google Tag Manager -->
 
-<meta charset="UTF-8">
+<meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- ═══ SEO CORE ═══ -->
-<!-- Title: 55 ký tự -->
 <title>Bảng Giá Dịch Vụ Nha Khoa 2026 | Nha Khoa Đông Nam</title>
-<!-- Description: 155 ký tự -->
 <meta name="description" content="Bảng giá dịch vụ nha khoa Đông Nam 2026: Implant, răng sứ, niềng răng, nhổ răng khôn, trám răng. Giá niêm yết công khai, cam kết không phát sinh. Hotline: 0972.411.411.">
 <meta name="keywords" content="bảng giá nha khoa, giá trồng răng implant, giá răng sứ, giá niềng răng, giá nhổ răng khôn, giá trám răng, nha khoa đông nam, nha khoa tphcm, bảng giá nha khoa 2026">
 <meta name="author" content="Nha Khoa Đông Nam">
@@ -106,19 +118,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 
-<!-- ═══ FONTS & CSS ═══ -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<?php wp_head(); ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"/>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="<?php echo esc_url($lp_base); ?>/style.css">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XG3JXR"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <div class="ndn-lp">
+<?php // Elementor scans the rendered DOM for shortcodes (e.g. [contact-form-7]).
+      // the_content() must be present so Elementor can detect & enqueue CF7 assets. ?>
+<div style="display:none!important" aria-hidden="true">
+  <?php if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
+</div>
+
 <a href="#ndn-main" class="skip-link">Bỏ qua đến nội dung chính</a>
 
 <!-- STICKY NAV -->
@@ -154,7 +173,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-
 
 <!-- PAGE -->
 <main class="ndn-page" id="ndn-main">
@@ -199,7 +217,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="rec-label">Phổ biến nhất</div>
         <div class="implant-brand">Implant Hàn Quốc</div>
         <div class="implant-country">Tối ưu chi phí</div>
-        <!-- <div class="implant-price-old">16.500.000 ₫</div> -->
         <div class="implant-price">16.500.000 <span class="implant-unit">₫</span></div>
         <div class="implant-bh">✔ Đồng hành trọn đời</div>
       </div>
@@ -347,7 +364,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức</span></td>
           <td style="text-align:center"><span class="badge-bh">BH 15 năm</span></td>
           <td class="price-col"><span class="price-val">7.000.000 ₫</span></td>
-          <td class="price-col"><!-- <span class="price-promo">5.600.000 ₫</span> --></td>
+          <td class="price-col"></td>
         </tr>
         <tr style="background:#FFFDF5">
           <td><span class="svc-name">Răng toàn sứ Multilayer Zolid <span class="badge-gold">Cao cấp</span></span></td>
@@ -427,7 +444,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <td><span class="svc-name">Cạo vôi răng + Đánh bóng <span class="badge-free">Nên thực hiện 6 tháng/lần</span></span></td>
           <td class="svc-unit">2 hàm</td>
           <td class="price-col"><span class="price-val">400.000 ₫</span></td>
-          <td class="price-col"><!-- <span class="price-promo">200.000 ₫</span><br><span style="font-size:10px;color:var(--muted);font-style:italic;">(giá trải nghiệm lần đầu)</span> --></td>
+          <td class="price-col"></td>
         </tr>
         <tr><td class="svc-name">Điều trị nha chu 1 răng</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.000.000 ₫</span></td><td class="price-col"></td></tr>
         <tr><td class="svc-name">Điều trị nha chu 1 cụm</td><td class="svc-unit">1 cụm</td><td class="price-col"><span class="price-val">2.000.000 ₫</span></td><td class="price-col"></td></tr>
@@ -580,7 +597,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </table>
   </section>
 
-
 </main>
 
 <!-- CLINIC INFO -->
@@ -642,9 +658,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#dang-ky" class="ndn-float-btn ndn-float-primary">📅 Đặt lịch</a>
 </div>
 
-
 </div><!-- /.ndn-lp -->
 
-<script src="script.js"></script>
+<script src="<?php echo esc_url($lp_base); ?>/script.js"></script>
+<?php wp_footer(); ?>
 </body>
 </html>
