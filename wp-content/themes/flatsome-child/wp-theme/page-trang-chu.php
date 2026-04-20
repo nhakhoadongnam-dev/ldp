@@ -3,7 +3,7 @@
  * Template Name: Trang Chủ Landing
  *
  * Standalone landing page — không dùng header/footer của theme.
- * CSS/JS load trực tiếp từ /trang-chu/ (không cần copy assets).
+ * CSS/JS load trực tiếp từ /page/trang-chu/ (không cần copy assets).
  *
  * Cách dùng:
  * 1. WP Admin → Pages → Add New → chọn template "Trang Chủ Landing".
@@ -15,7 +15,7 @@ defined('ABSPATH') || exit;
 // → không cần dequeue Flatsome. Selector `.ndn-lp ...` có specificity
 // cao hơn selector Flatsome nên thắng cascade; plugin CSS còn nguyên.
 
-$lp_base = home_url('/trang-chu');
+$lp_base = home_url('/page/trang-chu');
 
 // Ép CF7 load script/CSS — không tự detect trong custom standalone template.
 add_filter('wpcf7_load_js',  '__return_true');

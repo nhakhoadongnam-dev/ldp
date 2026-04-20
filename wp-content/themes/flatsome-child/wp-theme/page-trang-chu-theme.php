@@ -8,14 +8,14 @@
  * So với page-trang-chu.php:
  *  - KHÔNG tự render topbar/nav/footer của landing → để Flatsome lo.
  *  - Giữ nội dung chính (hero → final CTA → form) bọc trong .ndn-lp.
- *  - CSS/JS landing vẫn load từ /trang-chu/ (single source of truth).
+ *  - CSS/JS landing vẫn load từ /page/trang-chu/ (single source of truth).
  *
  * Cách dùng:
  *  WP Admin → Pages → Add New → chọn template "Trang Chủ Landing (Theme Header/Footer)".
  */
 defined('ABSPATH') || exit;
 
-$lp_base = home_url('/trang-chu');
+$lp_base = home_url('/page/trang-chu');
 
 // Ép CF7 load script/CSS — không tự detect trong custom template.
 add_filter('wpcf7_load_js',  '__return_true');
