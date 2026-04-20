@@ -11,6 +11,13 @@
  */
 defined('ABSPATH') || exit;
 
+// Standalone template: không qua get_header() nên redirect_canonical có thể bị
+// caching layer (WP Rocket) bypass. Tự redirect về phiên bản có trailing slash.
+if ( ! str_ends_with( strtok( $_SERVER['REQUEST_URI'] ?? '/', '?' ), '/' ) ) {
+    wp_redirect( trailingslashit( get_permalink() ), 301 );
+    exit;
+}
+
 $lp_base = home_url('/page/bang-gia');
 ?>
 <!DOCTYPE html>

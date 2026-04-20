@@ -11,6 +11,13 @@
  */
 defined('ABSPATH') || exit;
 
+// Standalone template: không qua get_header() nên redirect_canonical có thể bị
+// caching layer (WP Rocket) bypass. Tự redirect về phiên bản có trailing slash.
+if ( ! str_ends_with( strtok( $_SERVER['REQUEST_URI'] ?? '/', '?' ) , '/' ) ) {
+    wp_redirect( trailingslashit( get_permalink() ), 301 );
+    exit;
+}
+
 // CSS isolation: toàn bộ landing page được wrap trong .ndn-lp
 // → không cần dequeue Flatsome. Selector `.ndn-lp ...` có specificity
 // cao hơn selector Flatsome nên thắng cascade; plugin CSS còn nguyên.
