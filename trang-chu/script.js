@@ -413,42 +413,6 @@ if (docCards.length && docDetail) {
   window.addEventListener('resize', () => { buildDots(); goTo(Math.min(current, getMaxIndex())); });
 })();
 
-// ── Testimonial Click → Modal Overlay ──
-const testiModal   = document.getElementById('testiModal');
-const testiIframe  = document.getElementById('testiModalIframe');
-const testiClose   = document.querySelector('.testi-modal-close');
-
-function closeTestiModal() {
-  if (!testiModal) return;
-  testiIframe.src = '';
-  testiModal.classList.remove('visible');
-  testiModal.setAttribute('aria-hidden', 'true');
-  document.querySelectorAll('.testi-card').forEach((c) => c.classList.remove('active'));
-  document.body.style.overflow = '';
-}
-
-document.querySelectorAll('.testi-card[data-videoid]').forEach((card) => {
-  card.addEventListener('click', () => {
-    const videoId = card.dataset.videoid;
-    if (!videoId || !testiModal) return;
-    document.querySelectorAll('.testi-card').forEach((c) => c.classList.remove('active'));
-    card.classList.add('active');
-    testiIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-    testiModal.classList.add('visible');
-    testiModal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  });
-});
-
-// Đóng khi click nút × hoặc click nền
-if (testiClose) testiClose.addEventListener('click', closeTestiModal);
-if (testiModal) testiModal.addEventListener('click', (e) => {
-  if (e.target === testiModal) closeTestiModal();
-});
-// Đóng bằng Escape
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && testiModal && testiModal.classList.contains('visible')) closeTestiModal();
-});
 
 // ── Auto-resize CF7 iframe ──
 document.querySelectorAll('.cf7-iframe').forEach(function(iframe) {
