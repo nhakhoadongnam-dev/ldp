@@ -1,2 +1,5 @@
 .claude/
 .github/
+
+# Local dev tools (never commit)
+scripts/
