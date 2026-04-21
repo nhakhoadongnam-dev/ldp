@@ -534,34 +534,14 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
 
 /* Structure diagram */
 .ndn-lp .lp-bgi-structure {
-  margin-top: 48px; padding: 40px 32px;
-  background: var(--cream); border-radius: var(--radius-lg);
-  border: 1px solid var(--border); text-align: center;
+  margin-top: 48px;
 }
-.ndn-lp .lp-bgi-structure h3 {
-  font-size: clamp(18px, 2vw, 24px); margin-bottom: 14px; color: var(--navy);
-}
-.ndn-lp .lp-bgi-structure-cols {
-  display: flex; align-items: center; justify-content: center;
-  gap: 8px; flex-wrap: wrap;
-}
-.ndn-lp .lp-bgi-part {
-  flex: 0 0 180px; text-align: center; padding: 20px 16px;
-  background: var(--white); border-radius: var(--radius-md);
-  border: 1px solid var(--border);
-}
-.ndn-lp .lp-bgi-part-visual {
-  width: 56px; height: 72px;
-  margin: 0 auto 12px; border-radius: 6px;
-}
-.ndn-lp .lp-bgi-part--titanium { background: linear-gradient(180deg, #e0e0e0 0%, #9e9e9e 100%); border: 2px solid #bbb; }
-.ndn-lp .lp-bgi-part--abutment { background: linear-gradient(180deg, #ffd700 0%, #f0a500 100%); border: 2px solid #c8860a; }
-.ndn-lp .lp-bgi-part--crown   { background: linear-gradient(180deg, #ffffff 0%, #f0ece4 100%); border: 2px solid #d4cfc6; border-radius: 12px 12px 6px 6px; }
-.ndn-lp .lp-bgi-part-name { font-weight: 700; font-size: 14px; color: var(--navy); margin-bottom: 8px; }
-.ndn-lp .lp-bgi-part p { font-size: 13px; color: var(--muted); line-height: 1.5; margin: 0; }
-.ndn-lp .lp-bgi-part-divider {
-  font-size: 28px; font-weight: 300; color: var(--muted);
-  flex: 0 0 auto; padding: 0 4px;
+.ndn-lp .lp-bgi-structure-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -612,6 +592,13 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
   font-size: clamp(18px, 2vw, 24px);
   font-weight: 600;
   color: var(--navy-deep);
+}
+.ndn-lp .lp-bgi-price-note {
+  max-width: 860px;
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink);
 }
 .ndn-lp .lp-bgi-price-promo {
   margin-top: 34px;
@@ -665,9 +652,16 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
   align-items: center;
   box-shadow: var(--shadow-md);
 }
+.ndn-lp .lp-bgi-cta-box--promo {
+  grid-template-columns: minmax(0, 1.45fr) auto;
+  gap: 18px;
+}
 .ndn-lp .lp-bgi-cta-box--inline {
   margin-top: 28px;
   padding: 24px 28px;
+}
+.ndn-lp .lp-bgi-cta-box--promo .lp-bgi-cta-content {
+  max-width: 620px;
 }
 .ndn-lp .lp-bgi-cta-content h3 {
   color: var(--white);
@@ -686,6 +680,9 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
   gap: 12px;
   flex-shrink: 0;
 }
+.ndn-lp .lp-bgi-cta-box--promo .lp-bgi-cta-actions {
+  gap: 10px;
+}
 .ndn-lp .lp-btn {
   display: inline-flex;
   align-items: center;
@@ -699,6 +696,9 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
   white-space: nowrap;
   border: 2px solid transparent;
   cursor: pointer;
+}
+.ndn-lp .lp-bgi-cta-box--promo .lp-btn {
+  padding: 12px 18px;
 }
 .ndn-lp .lp-btn-icon {
   font-size: 18px;
@@ -812,12 +812,10 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
   table-layout: fixed;
   background: var(--white); font-size: 15px;
 }
-/* 5-col implant table: 6+40+14+18+22 = 100% */
-.ndn-lp .lp-bgi-table--implant .lp-bgi-col-stt    { width: 6%; }
-.ndn-lp .lp-bgi-table--implant .lp-bgi-col-main   { width: 40%; }
-.ndn-lp .lp-bgi-table--implant .lp-bgi-col-origin { width: 14%; }
-.ndn-lp .lp-bgi-table--implant .lp-bgi-col-meta   { width: 18%; }
-.ndn-lp .lp-bgi-table--implant .lp-bgi-col-price  { width: 22%; }
+/* 3-col implant table */
+.ndn-lp .lp-bgi-table--implant .lp-bgi-col-main   { width: 50%; }
+.ndn-lp .lp-bgi-table--implant .lp-bgi-col-meta   { width: 25%; }
+.ndn-lp .lp-bgi-table--implant .lp-bgi-col-price  { width: 25%; }
 /* 3-col tables: col-2 starts at 60% → aligns with "Bảo hành trụ" in Table 1 */
 .ndn-lp .lp-bgi-table--three-col .lp-bgi-col-main  { width: 60%; }
 .ndn-lp .lp-bgi-table--three-col .lp-bgi-col-meta  { width: 18%; }
@@ -847,6 +845,17 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
 }
 .ndn-lp .lp-bgi-row-highlight { background: var(--gold-muted) !important; }
 .ndn-lp .lp-bgi-row-highlight .lp-bgi-price-cell { color: var(--gold); }
+.ndn-lp .lp-bgi-row-emphasis td:first-child,
+.ndn-lp .lp-bgi-row-highlight td:first-child {
+  font-weight: 700;
+  color: var(--navy-deep);
+}
+.ndn-lp .lp-bgi-row-emphasis .lp-bgi-price-cell {
+  font-weight: 700;
+}
+.ndn-lp .lp-bgi-row-highlight--premium .lp-bgi-price-cell {
+  color: var(--navy);
+}
 .ndn-lp .lp-bgi-row-badge {
   display: inline-block;
   background: var(--gold); color: var(--white);
@@ -873,6 +882,10 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
   .ndn-lp .lp-bgi-price-subhead h3 {
     font-size: 20px;
     margin-bottom: 12px;
+  }
+  .ndn-lp .lp-bgi-price-note {
+    margin-bottom: 12px;
+    font-size: 15px;
   }
   .ndn-lp .lp-bgi-price-promo {
     margin-top: 26px;
@@ -1270,20 +1283,6 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
   }
   .ndn-lp .lp-bgi-structure {
     margin-top: 34px;
-    padding: 28px 20px;
-  }
-  .ndn-lp .lp-bgi-structure-cols {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-  }
-  .ndn-lp .lp-bgi-part {
-    flex: 1 1 auto;
-    width: 100%;
-  }
-  .ndn-lp .lp-bgi-part-divider {
-    transform: rotate(90deg);
-    padding: 2px 0;
   }
   .ndn-lp .lp-bgi-cta-box,
   .ndn-lp .lp-bgi-cta-box--inline {
