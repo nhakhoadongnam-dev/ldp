@@ -25,7 +25,7 @@ add_action('wp_enqueue_scripts', function () use ($lp_base) {
     // Google Fonts
     wp_enqueue_style(
         'ndn-landing-bang-gia-fonts',
-        'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap',
+      'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap',
         [],
         null
     );

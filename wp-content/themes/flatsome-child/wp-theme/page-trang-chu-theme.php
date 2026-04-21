@@ -31,7 +31,7 @@ add_action('wp_enqueue_scripts', function () use ($lp_base) {
     );
     wp_enqueue_style(
         'ndn-landing-fonts',
-        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap',
+      'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap',
         [],
         null
     );
