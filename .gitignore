@@ -1,5 +1,7 @@
 .claude/
 .github/
+AGENTS.md
 
 # Local dev tools (never commit)
 scripts/
+.opencode-logs/
