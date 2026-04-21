@@ -145,7 +145,7 @@
   }
 
   .logo-text {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       color: var(--white);
       font-size: 22px;
       font-weight: 700;
@@ -394,7 +394,7 @@
   }
 
   .hero-banner-title {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       color: var(--gold);
       font-size: clamp(52px, 8vw, 80px);
       font-weight: 800;
@@ -618,7 +618,7 @@
   }
 
   .service-card-title {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       font-size: 16px;
       font-weight: 700;
       color: var(--navy);
@@ -670,7 +670,7 @@
   }
 
   .form-header h3 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       font-size: 22px;
       font-weight: 700;
       color: var(--navy);
@@ -874,7 +874,7 @@
   }
 
   .price-new {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       font-size: 22px;
       font-weight: 700;
       color: var(--gold-dark);
@@ -1012,7 +1012,7 @@
   }
 
   .implant-gift-title {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       font-size: clamp(16px, 2vw, 20px);
       font-weight: 700;
       color: white;
@@ -1037,7 +1037,7 @@
   }
 
   .implant-gift-value-num {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       font-size: clamp(26px, 3.5vw, 38px);
       font-weight: 900;
       color: var(--gold);
@@ -1155,7 +1155,7 @@
   }
 
   .new-num {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       font-size: clamp(28px, 3.2vw, 40px);
       font-weight: 900;
       color: var(--gold);
@@ -1362,7 +1362,7 @@
   }
 
   .process-step-num {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       font-size: 28px;
       font-weight: 900;
       color: var(--navy);
@@ -2637,7 +2637,7 @@
   }
 
   .pain-subtitle {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       font-size: 18px;
       font-weight: 700;
       color: var(--navy);
@@ -2830,7 +2830,7 @@
   }
 
   .etk-feature-num {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       font-size: 32px;
       font-weight: 900;
       color: rgba(201, 169, 110, 0.3);

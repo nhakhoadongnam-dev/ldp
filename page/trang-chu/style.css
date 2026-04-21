@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════
    NHA KHOA DONG NAM — TRANG CHU (Homepage)
    Brand: Navy + Cream + Red accent
-   Font: Inter (toàn trang)
+  Font: Be Vietnam Pro (toàn trang)
    ═══════════════════════════════════════════════════════════ */
 
 :root {
@@ -39,7 +39,7 @@ html { scroll-behavior: smooth; }
 .ndn-lp .skip-link:focus { top: 0; }
 
 .ndn-lp {
-  font-family: 'Inter', -apple-system, sans-serif;
+  font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
   background: var(--cream);
   color: var(--ink);
   font-size: 16px;

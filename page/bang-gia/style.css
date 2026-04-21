@@ -103,7 +103,7 @@ html { scroll-behavior: smooth; }
   margin-bottom: 18px;
 }
 .ndn-lp .ndn-hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: clamp(26px, 5vw, 40px);
   color: #fff;
   line-height: 1.2;
@@ -232,7 +232,7 @@ html { scroll-behavior: smooth; }
 .ndn-lp .icon-ham { background: #F5F5F5; }
 .ndn-lp .icon-tre { background: #FFF0F9; }
 .ndn-lp .ndn-section-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 20px;
   font-weight: 700;
   color: var(--navy);
@@ -523,7 +523,7 @@ html { scroll-behavior: smooth; }
 .ndn-lp .implant-country { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
 .ndn-lp .implant-price-old { font-size: 12px; color: #bbb; text-decoration: line-through; }
 .ndn-lp .implant-price {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 22px;
   font-weight: 700;
   color: var(--teal);
@@ -602,7 +602,7 @@ html { scroll-behavior: smooth; }
   margin-top: 20px;
 }
 .ndn-lp .ndn-bottom-cta h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   color: #fff;
   font-size: 26px;
   margin-bottom: 10px;
@@ -658,7 +658,7 @@ html { scroll-behavior: smooth; }
 }
 .ndn-lp .ndn-clinic-info-inner { max-width: 680px; margin: 0 auto; }
 .ndn-lp .ndn-clinic-info h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: clamp(16px, 2.8vw, 26px);
   color: var(--navy);
   margin-bottom: 8px;
@@ -696,7 +696,7 @@ html { scroll-behavior: smooth; }
   align-items: start;
 }
 .ndn-lp .ndn-form-section-text h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: clamp(20px, 3vw, 28px);
   color: #fff;
   line-height: 1.3;
