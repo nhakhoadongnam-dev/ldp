@@ -1,0 +1,12 @@
+{
+  "slug": "trang-chu",
+  "templates": {
+    "standalone": {
+      "file": "page-trang-chu.php",
+      "templateNameBase": "Trang Chủ Landing",
+      "description": "Standalone landing page — không dùng header/footer của theme.",
+      "trailingSlashRedirect": false
+    }
+  },
+  "notes": "Trang chủ — Brand page. Chỉ có Mode A (standalone)."
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "bang-gia",
+  "templates": {
+    "standalone": {
+      "file": "page-bang-gia.php",
+      "templateNameBase": "Bảng Giá Landing",
+      "description": "Standalone landing page — không dùng header/footer của theme.",
+      "trailingSlashRedirect": true
+    },
+    "theme": {
+      "file": "page-bang-gia-theme.php",
+      "templateNameBase": "Bảng Giá Landing (Theme Header/Footer)",
+      "enqueueHandle": "ndn-landing-bang-gia"
+    }
+  },
+  "notes": "Bảng giá — Content page. Có cả Mode A và Mode B."
+}

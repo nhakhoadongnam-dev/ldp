@@ -1,0 +1,671 @@
+<?php
+/**
+ * Template Name: Bảng Giá Landing v1
+ * Auto-generated from page/bang-gia/ by wp-sync.
+ * DO NOT EDIT MANUALLY — run `npm run wp:sync`.
+ * Mode: Standalone (full HTML shell)
+ */
+defined('ABSPATH') || exit;
+$lp_base = home_url('/page/bang-gia');
+
+// Redirect trailing slash → no-slash (SEO)
+$request_uri = $_SERVER['REQUEST_URI'] ?? '';
+if (substr($request_uri, -1) === '/' && $request_uri !== '/') {
+    wp_redirect(home_url($request_uri), 301);
+    exit;
+}
+?>
+<!DOCTYPE html><html <?php language_attributes(); ?>><head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SKMM9JDYTH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SKMM9JDYTH');
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5XG3JXR');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="<?php bloginfo('charset'); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══ SEO CORE ═══ -->
+<!-- Title: 55 ký tự -->
+<title>Bảng Giá Dịch Vụ Nha Khoa 2026 | Nha Khoa Đông Nam</title>
+<!-- Description: 155 ký tự -->
+<meta name="description" content="Bảng giá dịch vụ nha khoa Đông Nam 2026: Implant, răng sứ, niềng răng, nhổ răng khôn, trám răng. Giá niêm yết công khai, cam kết không phát sinh. Hotline: 0972.411.411.">
+<meta name="keywords" content="bảng giá nha khoa, giá trồng răng implant, giá răng sứ, giá niềng răng, giá nhổ răng khôn, giá trám răng, nha khoa đông nam, nha khoa tphcm, bảng giá nha khoa 2026">
+<meta name="author" content="Nha Khoa Đông Nam">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nhakhoadongnam.com/bang-gia/">
+
+<!-- ═══ OPEN GRAPH (Facebook / Zalo) ═══ -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Nha Khoa Đông Nam">
+<meta property="og:title" content="Bảng Giá Dịch Vụ Nha Khoa 2026 | Nha Khoa Đông Nam">
+<meta property="og:description" content="Bảng giá dịch vụ nha khoa Đông Nam 2026: Implant, răng sứ, niềng răng, nhổ răng khôn, trám răng. Giá công khai, không phát sinh. Hotline: 0972.411.411.">
+<meta property="og:image" content="https://nhakhoadongnam.com/wp-content/uploads/2026/03/bang-gia-nha-khoa-dong-nam.jpg">
+<meta property="og:image:alt" content="Bảng Giá Dịch Vụ Nha Khoa Đông Nam 2026">
+<meta property="og:url" content="https://nhakhoadongnam.com/bang-gia/">
+
+<!-- ═══ TWITTER CARD ═══ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bảng Giá Dịch Vụ Nha Khoa 2026 | Nha Khoa Đông Nam">
+<meta name="twitter:description" content="Bảng giá dịch vụ nha khoa Đông Nam 2026: Implant, răng sứ, niềng răng, nhổ răng khôn, trám răng. Hotline: 0972.411.411.">
+<meta name="twitter:image" content="https://nhakhoadongnam.com/wp-content/uploads/2026/03/bang-gia-nha-khoa-dong-nam.jpg">
+
+<!-- ═══ MISC ═══ -->
+<meta name="theme-color" content="#0B2240">
+<meta name="geo.region" content="VN-SG">
+<meta name="geo.placename" content="TP. Hồ Chí Minh">
+
+<!-- ═══ SCHEMA.ORG JSON-LD ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Dentist",
+      "@id": "https://nhakhoadongnam.com/#dentist",
+      "name": "Nha Khoa Đông Nam",
+      "url": "https://nhakhoadongnam.com",
+      "telephone": "+840972411411",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "411 Nguyễn Kiệm",
+          "addressLocality": "Phường Đức Nhuận, Quận Phú Nhuận",
+          "addressRegion": "TP. Hồ Chí Minh",
+          "addressCountry": "VN"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "614 Lê Hồng Phong",
+          "addressLocality": "Phường Vườn Lài, Quận 10",
+          "addressRegion": "TP. Hồ Chí Minh",
+          "addressCountry": "VN"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "08:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday"],
+          "opens": "08:00",
+          "closes": "16:00"
+        }
+      ],
+      "priceRange": "$$"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Bảng Giá Dịch Vụ Nha Khoa Đông Nam 2026",
+      "description": "Bảng giá chi tiết các dịch vụ nha khoa tại Đông Nam: Implant, răng sứ, niềng răng, nhổ răng, trám răng, chữa tủy, tẩy trắng.",
+      "url": "https://nhakhoadongnam.com/bang-gia/",
+      "provider": { "@id": "https://nhakhoadongnam.com/#dentist" }
+    }
+  ]
+}
+</script>
+
+<!-- ═══ FONTS & CSS ═══ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
+<link rel="stylesheet" href="<?php echo esc_url($lp_base); ?>/style.css">
+  <?php wp_head(); ?>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XG3JXR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="ndn-lp">
+  <!-- Elementor hidden div -->
+  <div style="display:none;"><?php the_content(); ?></div>
+<a href="#ndn-main" class="skip-link">Bỏ qua đến nội dung chính</a>
+
+<!-- STICKY NAV -->
+<nav class="ndn-sticky-nav">
+  <ul>
+    <li><a href="https://nhakhoadongnam.com">🏠 Trang chủ</a></li>
+    <li><a href="#implant">🦷 Implant</a></li>
+    <li><a href="#rang-su">✨ Răng sứ</a></li>
+    <li><a href="#tuy">🔬 Chữa tủy</a></li>
+    <li><a href="#nha-chu">🌿 Nha chu</a></li>
+    <li><a href="#nho-rang">⚡ Nhổ răng</a></li>
+    <li><a href="#tram">🎯 Trám răng</a></li>
+    <li><a href="#tay-trang">💎 Tẩy trắng</a></li>
+    <li><a href="#nieng">🔧 Niềng răng</a></li>
+    <li><a href="#ham-thao">🦷 Hàm tháo lắp</a></li>
+    <li><a href="#tre-em">👶 Trẻ em</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="ndn-hero">
+  <div class="ndn-hero-inner">
+    <h1>BẢNG GIÁ DỊCH VỤ<br>"MỚI NHẤT 2026"</h1>
+    <p>Giá niêm yết công khai · Không phát sinh thêm</p>
+    <div class="ndn-hero-trust">
+      <span class="ndn-trust-item"><span class="ndn-trust-dot"></span>21+ năm kinh nghiệm</span>
+      <span class="ndn-trust-item"><span class="ndn-trust-dot"></span>152.000+ khách hàng</span>
+      <span class="ndn-trust-item"><span class="ndn-trust-dot"></span>10.500+ ca Implant</span>
+    </div>
+    <div class="ndn-hero-cta">
+      <a href="#dang-ky" class="ndn-btn-primary">📅 Đặt lịch tư vấn miễn phí</a>
+      <a href="tel:0972411411" class="ndn-btn-outline">📞 0972.411.411</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- PAGE -->
+<main class="ndn-page" id="ndn-main">
+
+  <!-- DISCLAIMER -->
+  <div class="ndn-disclaimer">
+    <strong>📌 Lưu ý:</strong> Bảng giá áp dụng từ 01/04/2026. Cam kết <strong>không phát sinh thêm chi phí</strong> ngoài báo giá đã được bác sĩ xác nhận.
+  </div>
+
+  <!-- GUARANTEE ROW -->
+  <div class="ndn-guarantee-row">
+    <div class="ndn-guarantee-card">
+      <div class="ndn-g-icon">🔍</div>
+      <div class="ndn-g-title">Thăm khám &amp; chụp CT Cone Beam 3D</div>
+      <div class="ndn-g-desc">Hoàn toàn miễn phí, hỗ trợ khách hàng nắm rõ tình trạng răng miệng.</div>
+    </div>
+    <div class="ndn-guarantee-card">
+      <div class="ndn-g-icon">📋</div>
+      <div class="ndn-g-title">Chi phí minh bạch</div>
+      <div class="ndn-g-desc">Cung cấp báo giá chi tiết, trọn gói, cam kết không phát sinh</div>
+    </div>
+    <div class="ndn-guarantee-card">
+      <div class="ndn-g-icon">🛡️</div>
+      <div class="ndn-g-title">Đồng hành dài hạn</div>
+      <div class="ndn-g-desc">Nha Khoa Đông Nam cam kết đồng hành trước, trong và sau điều trị</div>
+    </div>
+  </div>
+
+  <!-- ══ I. IMPLANT ══ -->
+  <section class="ndn-section" id="implant">
+    <div class="ndn-section-header-highlight">
+      <div class="ndn-section-icon icon-implant">🦷</div>
+      <div>
+        <div class="ndn-section-title">Trồng răng Implant</div>
+        <div class="ndn-section-sub" style="color:#D32F2F"><strong>Giá trồng răng Implant trọn gói = Giá trụ Implant + Giá khớp nối Abutment + Giá răng sứ + Chi phí xét nghiệm</strong></div>
+      </div>
+    </div>
+
+    <div class="implant-grid">
+      <div class="implant-card recommended">
+        <div class="implant-flag"><span class="fi fi-kr"></span></div>
+        <div class="rec-label">Phổ biến nhất</div>
+        <div class="implant-brand">Implant Hàn Quốc</div>
+        <div class="implant-country">Tối ưu chi phí</div>
+        <!-- <div class="implant-price-old">16.500.000 ₫</div> -->
+        <div class="implant-price">16.500.000 <span class="implant-unit">₫</span></div>
+        <div class="implant-bh">✔ Đồng hành trọn đời</div>
+      </div>
+      <div class="implant-card recommended">
+        <div class="rec-label">Ổn định nhất</div>
+        <div class="implant-flag"><span class="fi fi-it"></span></div>
+        <div class="implant-brand">Implant Ý <span style="color:#D32F2F">*</span></div>
+        <div class="implant-country">Tỷ lệ Trụ C-Tech tích hợp xương &gt; 99.6%*</div>
+        <div class="implant-price">19.900.000 <span class="implant-unit">₫</span></div>
+        <div class="implant-bh">✔ Đồng hành trọn đời</div>
+      </div>
+      <div class="implant-card">
+        <div class="implant-flag"><span class="fi fi-us"></span></div>
+        <div class="implant-brand">Implant Mỹ</div>
+        <div class="implant-country">Vật liệu titan cao cấp</div>
+        <div class="implant-price">23.500.000 <span class="implant-unit">₫</span></div>
+        <div class="implant-bh">✔ Đồng hành trọn đời</div>
+      </div>
+      <div class="implant-card">
+        <div class="implant-flag"><span class="fi fi-fr"></span></div>
+        <div class="implant-brand">Implant ETK Active (Pháp)</div>
+        <div class="implant-country">Lên răng tức thì, rút ngắn thời gian</div>
+        <div class="implant-price">28.200.000 <span class="implant-unit">₫</span></div>
+        <div class="implant-bh">✔ Đồng hành trọn đời</div>
+      </div>
+      <div class="implant-card">
+        <div class="implant-flag"><span class="fi fi-se"></span></div>
+        <div class="implant-brand">Implant Nobel Active (Thụy Điển)</div>
+        <div class="implant-country">Lịch sử lâu đời</div>
+        <div class="implant-price">32.900.000 <span class="implant-unit">₫</span></div>
+        <div class="implant-bh">✔ Đồng hành trọn đời</div>
+      </div>
+      <div class="implant-card">
+        <div class="implant-flag"><span class="fi fi-ch"></span></div>
+        <div class="implant-brand">Implant Straumann (Thụy Sĩ)</div>
+        <div class="implant-country">Lành thương siêu tốc</div>
+        <div class="implant-price">34.000.000 <span class="implant-unit">₫</span></div>
+        <div class="implant-bh">✔ Đồng hành trọn đời</div>
+      </div>
+    </div>
+    <div style="font-size:0.82em;color:#555;margin-top:8px;padding:0 4px">(*) Theo báo cáo khoa học của Thư viện Y khoa Quốc gia Hoa Kỳ - NCBI</div>
+
+    <!-- Allon table -->
+    <table class="price-table price-table--unit-align" style="margin-top:20px">
+      <thead>
+        <tr>
+          <th>📌 Giá trọn hàm All-on (bao gồm trụ Implant Ý + Hàm hybrid + Tặng Răng sứ)</th>
+          <th>Đơn vị</th>
+          <th style="text-align:right">Giá</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="svc-name">All-on-4 cải tiến <span class="badge-gold">Tháo lắp</span></span><br><span class="svc-origin">Implant Ý + Thanh Bar + hàm tháo lắp</span></td>
+          <td class="svc-unit">1 hàm</td>
+          <td class="price-col"><span class="price-val">120.000.000 ₫</span></td>
+        </tr>
+        <tr>
+          <td><span class="svc-name">All-on-4 cố định</span><br><span class="svc-origin">Implant Ý + Hàm Hybrid + răng sứ</span></td>
+          <td class="svc-unit">1 hàm</td>
+          <td class="price-col"><span class="price-val">151.000.000 ₫</span></td>
+        </tr>
+        <tr>
+          <td><span class="svc-name">All-on-6 cố định</span><br><span class="svc-origin">Implant Ý + Hàm Hybrid + Răng sứ</span></td>
+          <td class="svc-unit">1 hàm</td>
+          <td class="price-col"><span class="price-val">190.800.000 ₫</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Phẫu thuật xương -->
+    <table class="price-table price-table--unit-align" style="margin-top:20px">
+      <thead><tr><th>Các can thiệp xương đi kèm (nếu cần)</th><th>Đơn vị</th><th style="text-align:right">Giá</th></tr></thead>
+      <tbody>
+        <tr><td class="svc-name">Cấy ghép xương</td><td class="svc-unit">1 ống</td><td class="price-col"><span class="price-val">8.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Cấy màng xương</td><td class="svc-unit">1 đơn vị</td><td class="price-col"><span class="price-val">2.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Cắt gọt xương</td><td class="svc-unit">1 ca</td><td class="price-col"><span class="price-val">15.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Tạo hình xương + nướu</td><td class="svc-unit">1 ca</td><td class="price-col"><span class="price-val">10.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Nâng xoang</td><td class="svc-unit">1 bên</td><td class="price-col"><span class="price-val">10.000.000 ₫</span></td></tr>
+        <tr><td class="svc-name">Khớp nối Abutment</td><td class="svc-unit">1 cái</td><td class="price-col"><span class="price-val">5.000.000 ₫</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="ndn-cta-inline">
+      <div class="ndn-cta-inline-text">
+        <strong>Không biết nên chọn loại Implant nào?</strong>
+        <span>Miễn phí thăm khám, chụp CT Cone Beam 3D, lập kế hoạch điều cùng bác sĩ chuyên Implant</span>
+      </div>
+      <div class="ndn-cta-inline-btns">
+        <a href="#dang-ky" class="ndn-btn-primary">📅 Đặt lịch ngay</a>
+        <a href="tel:0972411411" class="ndn-btn-outline">Gọi ngay</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ II. RĂNG SỨ ══ -->
+  <section class="ndn-section" id="rang-su">
+    <div class="ndn-section-header-highlight">
+      <div class="ndn-section-icon icon-su">✨</div>
+      <div>
+        <div class="ndn-section-title">Răng sứ thẩm mỹ &amp; Mặt dán sứ</div>
+        <div class="ndn-section-sub">Giá / 1 răng · Có phòng Labo chế tác riêng tại chỗ — công nghệ CAD/CAM</div>
+      </div>
+    </div>
+    <table class="price-table price-table--rang-su">
+      <thead><tr><th>Loại răng sứ</th><th>Xuất xứ</th><th style="text-align:center">Bảo hành</th><th style="text-align:right">Giá / răng</th><th style="text-align:right">Ưu đãi</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc-name">Răng sứ kim loại Ceramco III </span></td>
+          <td><span class="svc-unit"><span class="fi fi-us fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Mỹ</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 3 năm</span></td>
+          <td class="price-col"><span class="price-val">1.000.000 ₫</span></td>
+          <td class="price-col"></td>
+        </tr>
+        <tr>
+          <td><span class="svc-name">Răng sứ Titan <span class="badge-economy">Tiết kiệm</span></span></td>
+          <td><span class="svc-unit"><span class="fi fi-us fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Mỹ</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 5 năm</span></td>
+          <td class="price-col"><span class="price-val">2.000.000 ₫</span></td>
+          <td class="price-col"></td>
+        </tr>
+        <tr>
+          <td><span class="svc-name">Răng toàn sứ Emax </span></td>
+          <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 5 năm</span></td>
+          <td class="price-col"><span class="price-val">4.000.000 ₫</span></td>
+          <td class="price-col"></td>
+        </tr>
+        <tr>
+          <td><span class="svc-name">Răng toàn sứ Zirconia <span class="badge-common">Phổ thông</span></span></td>
+          <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 10 năm</span></td>
+          <td class="price-col"><span class="price-val">6.000.000 ₫</span></td>
+          <td class="price-col"></td>
+        </tr>
+        <tr>
+          <td><span class="svc-name">Răng toàn sứ Cercon HT </span></td>
+          <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 15 năm</span></td>
+          <td class="price-col"><span class="price-val">7.000.000 ₫</span></td>
+          <td class="price-col"></td>
+        </tr>
+        <tr>
+          <td><span class="svc-name">Răng toàn sứ Zolid <span class="badge-aesthetic">Thẩm mỹ</span></span></td>
+          <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 15 năm</span></td>
+          <td class="price-col"><span class="price-val">7.000.000 ₫</span></td>
+          <td class="price-col"><!-- <span class="price-promo">5.600.000 ₫</span> --></td>
+        </tr>
+        <tr style="background:#FFFDF5">
+          <td><span class="svc-name">Răng toàn sứ Multilayer Zolid <span class="badge-gold">Cao cấp</span></span></td>
+          <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 15 năm</span></td>
+          <td class="price-col"><span class="price-val">8.000.000 ₫</span></td>
+          <td class="price-col"></td>
+        </tr>
+        <tr style="background:#FFFDF5">
+          <td><span class="svc-name">Răng toàn sứ Lava 3M Plus <span class="badge-gold">Cao cấp</span></span></td>
+          <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 20 năm</span></td>
+          <td class="price-col"><span class="price-val">8.500.000 ₫</span></td>
+          <td class="price-col"></td>
+        </tr>
+        <tr style="background:#FFFDF5">
+          <td><span class="svc-name">Răng toàn sứ Orodent <span class="badge-premium">Siêu cao cấp</span></span></td>
+          <td><span class="svc-unit"><span class="fi fi-it fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Ý</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 20 năm</span></td>
+          <td class="price-col"><span class="price-val">10.000.000 ₫</span></td>
+          <td class="price-col"></td>
+        </tr>
+        <tr>
+          <td><span class="svc-name">Mặt dán sứ Laminate Veneer</span></td>
+          <td><span class="svc-unit">Không mài hoặc mài ít</span></td>
+          <td style="text-align:center"><span class="badge-bh">BH 10 năm</span></td>
+          <td class="price-col"><span class="price-val">7.000.000 ₫</span></td>
+          <td class="price-col"></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="ndn-cta-inline" style="margin-top:24px">
+      <div class="ndn-cta-inline-text">
+        <strong>Miễn phí tư vấn từ bác sĩ chuyên khoa</strong>
+        <span>Quy trình điều trị nhanh chóng, chuẩn y khoa, có răng sau 2 - 4 ngày</span>
+      </div>
+      <a href="#dang-ky" class="ndn-btn-primary">📅 Đặt lịch tư vấn</a>
+    </div>
+  </section>
+
+  <!-- ══ III. CHỮA TỦY ══ -->
+  <section class="ndn-section" id="tuy">
+    <div class="ndn-section-header-highlight">
+      <div class="ndn-section-icon icon-tuy">🔬</div>
+      <div>
+        <div class="ndn-section-title">Chữa tủy răng</div>
+        <div class="ndn-section-sub">Giá / 1 răng · Không bao gồm trám kết thúc</div>
+      </div>
+    </div>
+    <table class="price-table price-table--unit-align">
+      <thead><tr><th>Dịch vụ</th><th>Đơn vị</th><th style="text-align:right">Giá</th><th style="text-align:right">Ưu đãi</th></tr></thead>
+      <tbody>
+        <tr><td class="svc-name">Chữa tủy răng cửa (R1, 2, 3)</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">700.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Chữa tủy răng cối nhỏ (R4, 5)</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.000.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Chữa tủy răng cối lớn (R6, 7)</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.500.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Trám răng kết thúc chữa tủy</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">400.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr style="background:#FFF8F8"><td class="svc-name">Chữa tủy lại — răng cửa</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.200.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr style="background:#FFF8F8"><td class="svc-name">Chữa tủy lại — răng cối nhỏ</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.500.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr style="background:#FFF8F8"><td class="svc-name">Chữa tủy lại — răng cối lớn</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">2.000.000 ₫</span></td><td class="price-col"></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══ IV. NHA CHU ══ -->
+  <section class="ndn-section" id="nha-chu">
+    <div class="ndn-section-header-highlight">
+      <div class="ndn-section-icon icon-chu">🌿</div>
+      <div>
+        <div class="ndn-section-title">Nha chu — Cạo vôi răng</div>
+        <div class="ndn-section-sub">Thăm khám định kỳ để bảo vệ sức khỏe răng miệng</div>
+      </div>
+    </div>
+    <table class="price-table price-table--unit-align">
+      <thead><tr><th>Dịch vụ</th><th>Đơn vị</th><th style="text-align:right">Giá</th><th style="text-align:right">Ưu đãi</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc-name">Cạo vôi răng + Đánh bóng <span class="badge-free">Nên thực hiện 6 tháng/lần</span></span></td>
+          <td class="svc-unit">2 hàm</td>
+          <td class="price-col"><span class="price-val">400.000 ₫</span></td>
+          <td class="price-col"><!-- <span class="price-promo">200.000 ₫</span><br><span style="font-size:10px;color:var(--muted);font-style:italic;">(giá trải nghiệm lần đầu)</span> --></td>
+        </tr>
+        <tr><td class="svc-name">Điều trị nha chu 1 răng</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.000.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Điều trị nha chu 1 cụm</td><td class="svc-unit">1 cụm</td><td class="price-col"><span class="price-val">2.000.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Điều trị nha chu 1 hàm</td><td class="svc-unit">1 hàm</td><td class="price-col"><span class="price-val">6.000.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Điều trị nha chu 2 hàm</td><td class="svc-unit">2 hàm</td><td class="price-col"><span class="price-val">10.000.000 ₫</span></td><td class="price-col"></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══ V. NHỔ RĂNG ══ -->
+  <section class="ndn-section" id="nho-rang">
+    <div class="ndn-section-header-highlight">
+      <div class="ndn-section-icon icon-nho">⚡</div>
+      <div>
+        <div class="ndn-section-title">Nhổ răng &amp; Tiểu phẫu</div>
+        <div class="ndn-section-sub">Ứng dụng công nghệ Piezotome: Ít xâm lấn, lành thương nhanh</div>
+      </div>
+    </div>
+    <table class="price-table price-table--unit-align">
+      <thead><tr><th>Dịch vụ</th><th>Đơn vị</th><th style="text-align:right">Giá</th><th style="text-align:right">Ưu đãi</th></tr></thead>
+      <tbody>
+        <tr><td class="svc-name">Nhổ răng lung lay</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">300.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Nhổ răng thường</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">500.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Nhổ răng khó</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.000.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Tiểu phẫu răng khôn hàm trên</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">1.500.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Tiểu phẫu răng khôn hàm dưới</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">2.500.000 ₫</span></td><td class="price-col"></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══ VI. TRÁM RĂNG ══ -->
+  <section class="ndn-section" id="tram">
+    <div class="ndn-section-header-highlight">
+      <div class="ndn-section-icon icon-tram">🎯</div>
+      <div>
+        <div class="ndn-section-title">Trám răng</div>
+        <div class="ndn-section-sub">Chất liệu Composite cao cấp · Màu sắc tự nhiên</div>
+      </div>
+    </div>
+    <table class="price-table price-table--unit-align">
+      <thead><tr><th>Dịch vụ</th><th>Đơn vị</th><th style="text-align:right">Giá</th><th style="text-align:right">Ưu đãi</th></tr></thead>
+      <tbody>
+        <tr><td class="svc-name">Trám răng Composite</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">400.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Trám kẽ răng / răng thưa</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">500.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Onlay / Inlay / Overlay <span class="badge-gold">Cao cấp</span></td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">4.000.000 ₫</span></td><td class="price-col"></td></tr>
+      </tbody>
+    </table>
+    <div class="ndn-cta-inline" style="margin-top:24px">
+      <div class="ndn-cta-inline-text">
+        <strong>Đừng để lỗ sâu nhỏ trở thành ca viêm tủy phức tạp</strong>
+        <span>Trám răng sớm để bảo tồn tối đa răng thật.</span>
+      </div>
+      <div class="ndn-cta-inline-btns">
+        <a href="#dang-ky" class="ndn-btn-primary">📅 Đặt lịch ngay</a>
+        <a href="tel:0972411411" class="ndn-btn-outline">Gọi ngay</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ VII. TẨY TRẮNG ══ -->
+  <section class="ndn-section" id="tay-trang">
+    <div class="ndn-section-header-highlight">
+      <div class="ndn-section-icon icon-trang">💎</div>
+      <div>
+        <div class="ndn-section-title">Tẩy trắng răng</div>
+        <div class="ndn-section-sub">Công nghệ Zoom Whitening · An toàn · Không ê buốt</div>
+      </div>
+    </div>
+    <table class="price-table price-table--unit-align">
+      <thead><tr><th>Dịch vụ</th><th>Đơn vị</th><th style="text-align:right">Giá</th><th style="text-align:right">Ưu đãi</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc-name">Tẩy trắng răng <span class="badge-free">Tặng máng + thuốc + cạo vôi răng</span></span></td>
+          <td class="svc-unit">2 hàm</td>
+          <td class="price-col"><span class="price-val">3.000.000 ₫</span></td>
+          <td class="price-col"></td>
+        </tr>
+        <tr><td class="svc-name">Máng ngậm trắng răng</td><td class="svc-unit">2 hàm</td><td class="price-col"><span class="price-val">500.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Thuốc tẩy trắng răng</td><td class="svc-unit">1 ống</td><td class="price-col"><span class="price-val">300.000 ₫</span></td><td class="price-col"></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══ VIII. NIỀNG RĂNG ══ -->
+  <section class="ndn-section" id="nieng">
+    <div class="ndn-section-header-highlight">
+      <div class="ndn-section-icon icon-nieng">🔧</div>
+      <div>
+        <div class="ndn-section-title">Chỉnh nha — Niềng răng</div>
+        <div class="ndn-section-sub">Giá trọn liệu trình 2 hàm · Bao gồm theo dõi định kỳ</div>
+      </div>
+    </div>
+    <table class="price-table price-table--unit-align">
+      <thead><tr><th>Loại niềng</th><th>Đơn vị</th><th style="text-align:right">Giá</th><th style="text-align:right">Ưu đãi</th></tr></thead>
+      <tbody>
+        <tr><td class="svc-name">Niềng mắc cài tự buộc</td><td class="svc-unit">2 hàm</td><td class="price-col"><span class="price-val">50.000.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Niềng mắc cài sứ</td><td class="svc-unit">2 hàm</td><td class="price-col"><span class="price-val">55.000.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Niềng mắc cài cánh cam</td><td class="svc-unit">2 hàm</td><td class="price-col"><span class="price-val">65.000.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td><span class="svc-name">Niềng răng trong suốt <span class="badge-aesthetic-green">Thẩm mỹ</span></span></td><td class="svc-unit">2 hàm</td><td class="price-col"><span class="price-val">130.000.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Máng duy trì sau niềng</td><td class="svc-unit">1 hàm</td><td class="price-col"><span class="price-val">800.000 ₫</span></td><td class="price-col"></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══ IX. HÀM THÁO LẮP ══ -->
+  <section class="ndn-section" id="ham-thao">
+    <div class="ndn-section-header-highlight">
+      <div class="ndn-section-icon icon-ham">🦷</div>
+      <div>
+        <div class="ndn-section-title">Hàm giả tháo lắp</div>
+        <div class="ndn-section-sub">Giải pháp phục hồi răng mất tiết kiệm</div>
+      </div>
+    </div>
+    <table class="price-table price-table--unit-align">
+      <thead><tr><th>Loại hàm</th><th>Đơn vị</th><th style="text-align:right">Giá</th><th style="text-align:right">Ưu đãi</th></tr></thead>
+      <tbody>
+        <tr><td class="svc-name">Hàm nhựa dẻo</td><td class="svc-unit">1 hàm</td><td class="price-col"><span class="price-val">3.500.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Hàm khung</td><td class="svc-unit">1 hàm</td><td class="price-col"><span class="price-val">2.000.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Vá hàm / Đệm hàm tháo lắp</td><td class="svc-unit">1 hàm</td><td class="price-col"><span class="price-val">500.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Lưới kim loại</td><td class="svc-unit">1 hàm</td><td class="price-col"><span class="price-val">500.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Răng Composite</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">500.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Răng Nhựa (VN)</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">300.000 ₫</span></td><td class="price-col"></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══ X. TRẺ EM ══ -->
+  <section class="ndn-section" id="tre-em">
+    <div class="ndn-section-header-highlight">
+      <div class="ndn-section-icon icon-tre">👶</div>
+      <div>
+        <div class="ndn-section-title">Nha khoa trẻ em (Răng sữa)</div>
+        <div class="ndn-section-sub">Bác sĩ nhẹ nhàng, thấu hiểu tâm lý trẻ em</div>
+      </div>
+    </div>
+    <table class="price-table price-table--unit-align">
+      <thead><tr><th>Dịch vụ</th><th>Đơn vị</th><th style="text-align:right">Giá</th><th style="text-align:right">Ưu đãi</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc-name">Nhổ răng sữa <span class="badge-free">Miễn phí</span></span></td>
+          <td class="svc-unit">1 răng</td>
+          <td class="price-col"><span class="price-free">Miễn phí</span></td>
+          <td class="price-col"></td>
+        </tr>
+        <tr><td class="svc-name">Cạo vôi răng trẻ em</td><td class="svc-unit">2 hàm</td><td class="price-col"><span class="price-val">100.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Trám răng trẻ em</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">200.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Chữa tủy răng cửa trẻ em</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">350.000 ₫</span></td><td class="price-col"></td></tr>
+        <tr><td class="svc-name">Chữa tủy răng cối trẻ em</td><td class="svc-unit">1 răng</td><td class="price-col"><span class="price-val">750.000 ₫</span></td><td class="price-col"></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+
+</main>
+
+<!-- CLINIC INFO -->
+<section class="ndn-clinic-info">
+  <div class="ndn-clinic-info-inner">
+    <h2>Nha Khoa Đông Nam — Hơn 21 năm đồng hành cùng bạn</h2>
+    <div class="ndn-clinic-addresses">
+      <div><strong>Cơ sở 1:</strong> 411 Nguyễn Kiệm - Phường Đức Nhuận - TPHCM</div>
+      <div><strong>Cơ sở 2:</strong> 614 Lê Hồng Phong - Phường Vườn Lài - TPHCM</div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM SECTION -->
+<section class="ndn-form-section" id="dang-ky">
+  <div class="ndn-form-section-inner">
+    <div class="ndn-form-section-text">
+      <h2>Đặt lịch tư vấn miễn phí</h2>
+      <p>Gặp trực tiếp bác sĩ — nhận báo giá chính xác theo tình trạng thực tế của bạn.</p>
+      <div class="ndn-form-section-contact">
+        <div class="ndn-contact-row-item">
+          <div class="ndn-contact-row-icon">📞</div>
+          <div>Tổng đài: <a href="tel:19007141">1900.7141</a></div>
+        </div>
+        <div class="ndn-contact-row-item">
+          <div class="ndn-contact-row-icon">📱</div>
+          <div>Hotline: <a href="tel:0972411411">0972.411.411</a></div>
+        </div>
+        <div class="ndn-contact-row-item">
+          <div class="ndn-contact-row-icon">📍</div>
+          <div style="font-size:14px; line-height:1.6">
+            CS1: 411 Nguyễn Kiệm – Phường Đức Nhuận – TPHCM<br>
+            CS2: 614 Lê Hồng Phong – Phường Vườn Lài – TPHCM
+          </div>
+        </div>
+        <div class="ndn-contact-row-item">
+          <div class="ndn-contact-row-icon">🕐</div>
+          <div style="font-size:14px; line-height:1.6">
+            Thứ 2 – 7: 8h00 – 19h00<br>
+            Chủ nhật: 8h00 – 16h00
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ndn-hero-form-wrapper">
+      <div class="ndn-form-header">
+        <div class="ndn-form-urgency-badge">Tư vấn miễn phí</div>
+        <h3>Đăng ký nhận tư vấn</h3>
+        <p>Để lại thông tin để được bác sĩ hỗ trợ trực tiếp</p>
+      </div>
+      <iframe class="ndn-cf7-iframe" src="https://nhakhoadongnam.com/trang-30-4/" title="Form đăng ký tư vấn"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FLOATING CTA -->
+<div class="ndn-cta-float">
+  <a href="tel:0972411411" class="ndn-float-btn ndn-float-tel">📞 Gọi ngay</a>
+  <a href="#dang-ky" class="ndn-float-btn ndn-float-primary">📅 Đặt lịch</a>
+</div>
+
+
+</div><!-- /.ndn-lp -->
+
+<script src="<?php echo esc_url($lp_base); ?>/script.js"></script>
+
+
+  <?php wp_footer(); ?>
+</body></html>
