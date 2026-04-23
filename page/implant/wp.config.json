@@ -1,0 +1,12 @@
+{
+  "slug": "implant",
+  "templates": {
+    "standalone": {
+      "file": "page-implant.php",
+      "templateNameBase": "Implant Landing",
+      "description": "Standalone landing page — không dùng header/footer của theme.",
+      "trailingSlashRedirect": false
+    }
+  },
+  "notes": "Implant — Campaign page. Chỉ có Mode A."
+}

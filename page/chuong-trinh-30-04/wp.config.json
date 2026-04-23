@@ -1,0 +1,12 @@
+{
+  "slug": "chuong-trinh-30-04",
+  "templates": {
+    "standalone": {
+      "file": "page-chuong-trinh-30-04.php",
+      "templateNameBase": "Chương Trình 30/04 Landing",
+      "description": "Standalone landing page — không dùng header/footer của theme.",
+      "trailingSlashRedirect": false
+    }
+  },
+  "notes": "Chương trình 30/04 — Campaign page. Chỉ có Mode A."
+}
