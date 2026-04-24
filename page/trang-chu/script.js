@@ -239,10 +239,44 @@ if (tlItems.length && tlCard) {
   const tlCardTitle = tlCard.querySelector('.tl-card-title');
   const tlCardDesc  = tlCard.querySelector('.tl-card-desc');
   const tlCardClose = tlCard.querySelector('.tl-card-close');
+  const tlCardInner = tlCard.querySelector('.tl-card-inner');
+  let tlAutoplay;
 
-  function activateTlItem(item) {
+  function syncTlCardHeight() {
+    if (!tlCardInner) return;
+
+    const previousYear = tlCardYear.textContent;
+    const previousTitle = tlCardTitle.textContent;
+    const previousDesc = tlCardDesc.textContent;
+    const wasVisible = tlCard.classList.contains('visible');
+
+    tlCard.classList.add('visible');
+    tlCard.style.setProperty('--tl-card-height', 'auto');
+
+    let maxHeight = 0;
+    tlItems.forEach((item) => {
+      tlCardYear.textContent = item.dataset.year;
+      tlCardTitle.textContent = item.dataset.title;
+      tlCardDesc.textContent = item.dataset.desc;
+      maxHeight = Math.max(maxHeight, tlCardInner.scrollHeight);
+    });
+
+    tlCardYear.textContent = previousYear;
+    tlCardTitle.textContent = previousTitle;
+    tlCardDesc.textContent = previousDesc;
+
+    if (!wasVisible) {
+      tlCard.classList.remove('visible');
+    }
+
+    tlCard.style.setProperty('--tl-card-height', `${Math.ceil(maxHeight)}px`);
+  }
+
+  function activateTlItem(item, options = {}) {
+    const { forceOpen = false, scrollIntoView = true } = options;
+
     // If clicking the same active item, close the card
-    if (item.classList.contains('active')) {
+    if (!forceOpen && item.classList.contains('active')) {
       item.classList.remove('active');
       item.setAttribute('aria-selected', 'false');
       tlCard.classList.remove('visible');
@@ -259,7 +293,9 @@ if (tlItems.length && tlCard) {
     tlCardTitle.textContent = item.dataset.title;
     tlCardDesc.textContent  = item.dataset.desc;
     tlCard.classList.add('visible');
-    tlCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (scrollIntoView) {
+      tlCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   }
 
   function closeTlCard() {
@@ -270,14 +306,38 @@ if (tlItems.length && tlCard) {
     tlCard.classList.remove('visible');
   }
 
+  function stopTlAutoplay() {
+    clearInterval(tlAutoplay);
+  }
+
+  function goToNextTlItem() {
+    const activeIndex = Array.from(tlItems).findIndex((item) => item.classList.contains('active'));
+    const nextIndex = activeIndex === -1 ? 0 : (activeIndex + 1) % tlItems.length;
+    activateTlItem(tlItems[nextIndex], { forceOpen: true, scrollIntoView: false });
+  }
+
+  function startTlAutoplay() {
+    stopTlAutoplay();
+    tlAutoplay = setInterval(goToNextTlItem, 4000);
+  }
+
+  function restartTlAutoplay() {
+    startTlAutoplay();
+  }
+
   tlItems.forEach((item) => {
-    item.addEventListener('click', () => activateTlItem(item));
+    item.addEventListener('click', () => {
+      activateTlItem(item);
+      restartTlAutoplay();
+    });
     item.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         activateTlItem(item);
+        restartTlAutoplay();
       }
     });
+    item.addEventListener('focus', restartTlAutoplay);
   });
 
   // Close button
@@ -285,11 +345,15 @@ if (tlItems.length && tlCard) {
     tlCardClose.addEventListener('click', (e) => {
       e.stopPropagation();
       closeTlCard();
+      restartTlAutoplay();
     });
   }
 
   // Kích hoạt mốc đầu tiên (2005) mặc định
-  activateTlItem(tlItems[0]);
+  syncTlCardHeight();
+  activateTlItem(tlItems[0], { forceOpen: true, scrollIntoView: false });
+  startTlAutoplay();
+  window.addEventListener('resize', syncTlCardHeight);
 }
 
 // ── Doctors Interactive ──
@@ -426,8 +490,6 @@ document.querySelectorAll('.cf7-iframe').forEach(function(iframe) {
 });
 
 // ── Form Section Reveal Animations ──
-const revealLeft = document.querySelector('.reveal-left');
-const revealRight = document.querySelector('.reveal-right');
 const formObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -439,8 +501,9 @@ const formObserver = new IntersectionObserver(
   },
   { threshold: 0.2 }
 );
-if (revealLeft) formObserver.observe(revealLeft);
-if (revealRight) formObserver.observe(revealRight);
+document.querySelectorAll('.reveal-left, .reveal-right').forEach((el) => {
+  formObserver.observe(el);
+});
 
 
 // ── Skip hero layer ──
