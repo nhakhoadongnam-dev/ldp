@@ -235,12 +235,21 @@ const tlItems = document.querySelectorAll('.tl-item[role="tab"]');
 const tlCard = document.getElementById('tlPanel');
 
 if (tlItems.length && tlCard) {
+  const tlItemsWrap = document.querySelector('.timeline-items');
   const tlCardYear  = tlCard.querySelector('.tl-card-year');
   const tlCardTitle = tlCard.querySelector('.tl-card-title');
   const tlCardDesc  = tlCard.querySelector('.tl-card-desc');
   const tlCardClose = tlCard.querySelector('.tl-card-close');
   const tlCardInner = tlCard.querySelector('.tl-card-inner');
   let tlAutoplay;
+
+  function syncTlItemViewport(item) {
+    if (!tlItemsWrap || window.innerWidth > 768) return;
+    const targetLeft = item.offsetLeft - ((tlItemsWrap.clientWidth - item.clientWidth) / 2);
+    const maxScroll = tlItemsWrap.scrollWidth - tlItemsWrap.clientWidth;
+    const nextLeft = Math.max(0, Math.min(targetLeft, maxScroll));
+    tlItemsWrap.scrollTo({ left: nextLeft, behavior: 'smooth' });
+  }
 
   function syncTlCardHeight() {
     if (!tlCardInner) return;
@@ -293,6 +302,7 @@ if (tlItems.length && tlCard) {
     tlCardTitle.textContent = item.dataset.title;
     tlCardDesc.textContent  = item.dataset.desc;
     tlCard.classList.add('visible');
+    syncTlItemViewport(item);
     if (scrollIntoView) {
       tlCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
@@ -791,8 +801,36 @@ document.querySelectorAll('.reveal-left, .reveal-right').forEach((el) => {
   const btn = document.querySelector('.skip-layer');
   const textLayer = document.querySelector('.hero-text-layer');
   const overlay = document.querySelector('.hero-overlay');
+  const hero = document.querySelector('.hero');
+  const bgSlides = hero ? Array.from(hero.querySelectorAll('.hero-bg-slide')) : [];
+  const heroDots = hero ? Array.from(hero.querySelectorAll('.hero-dot')) : [];
+  let heroInterval = null;
+
+  function showHeroSlide(index) {
+    bgSlides.forEach((slide, slideIndex) => {
+      slide.classList.toggle('active', slideIndex === index);
+    });
+    heroDots.forEach((dot, dotIndex) => {
+      dot.classList.toggle('active', dotIndex === index);
+    });
+  }
+
+  function startHeroSlider() {
+    if (bgSlides.length < 2) return;
+    let current = 0;
+    heroInterval = window.setInterval(() => {
+      current = (current + 1) % bgSlides.length;
+      showHeroSlide(current);
+    }, 5000);
+  }
+
+  startHeroSlider();
+
   if (!btn) return;
   btn.addEventListener('click', function () {
+    if (heroInterval) {
+      window.clearInterval(heroInterval);
+    }
     textLayer.classList.add('hidden');
     overlay.classList.add('hidden');
     btn.style.display = 'none';
