@@ -5,3 +5,13 @@ AGENTS.md
 # Local dev tools (never commit)
 scripts/
 .opencode-logs/
+
+# Root config files — do not commit
+package.json
+package-lock.json
+node_modules/
+plan.md
+todo.md
+
+# JSON files (local only)
+*.json

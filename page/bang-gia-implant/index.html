@@ -332,73 +332,448 @@
     <div class="lp-container">
       <div class="lp-bgi-video-head lp-section-head--center">
         <h2>Video <em>chia sẻ thực tế</em></h2>
+        <p class="lp-bgi-video-intro">Các khách hàng chia sẻ trải nghiệm điều trị Implant thực tế tại Nha Khoa Đông Nam</p>
       </div>
 
-      <div class="lp-bgi-video-grid">
-        <div class="lp-bgi-video-item">
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_1"
-            title="Chia sẻ 1"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
+      <div class="lp-bgi-video-slider">
+        <div class="lp-bgi-video-track-wrap">
+          <div class="lp-bgi-video-track">
+            <div class="lp-bgi-video-item">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_1"
+                title="Chia sẻ 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="lp-bgi-video-item">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_2"
+                title="Chia sẻ 2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="lp-bgi-video-item">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_3"
+                title="Chia sẻ 3"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="lp-bgi-video-item">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_4"
+                title="Chia sẻ 4"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
         </div>
-        <div class="lp-bgi-video-item">
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_2"
-            title="Chia sẻ 2"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        </div>
-        <div class="lp-bgi-video-item">
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_3"
-            title="Chia sẻ 3"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        </div>
-        <div class="lp-bgi-video-item">
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_4"
-            title="Chia sẻ 4"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        </div>
-</div>
+      </div>
+      <div class="lp-bgi-video-dots"></div>
     </div>
   </section>
+
+  <script>
+  (function() {
+    var section = document.getElementById('video-khach-hang');
+    if (!section) return;
+
+    var track = section.querySelector('.lp-bgi-video-track');
+    var items = section.querySelectorAll('.lp-bgi-video-item');
+    var viewport = section.querySelector('.lp-bgi-video-track-wrap');
+    var dotsWrap = section.querySelector('.lp-bgi-video-dots');
+    if (!track || !viewport || !items.length || !dotsWrap) return;
+
+    var currentPage = 0;
+    var pageCount = 1;
+    var resizeTimer = null;
+    var pointerDown = false;
+    var isDragging = false;
+    var startX = 0;
+    var startY = 0;
+    var deltaX = 0;
+    var pointerId = null;
+    var dragBaseOffset = 0;
+
+    function getSlidesPerView() {
+      var w = window.innerWidth;
+      if (w <= 980) return 1.5;
+      return 3;
+    }
+
+    function getStepWidth() {
+      if (items.length < 2) return items[0].getBoundingClientRect().width;
+      var first = items[0].getBoundingClientRect();
+      var second = items[1].getBoundingClientRect();
+      return second.left - first.left;
+    }
+
+    function renderDots() {
+      var html = '';
+      for (var i = 0; i < pageCount; i++) {
+        html += '<button type="button" data-page="' + i + '" aria-label="Video trang ' + (i + 1) + '"></button>';
+      }
+      dotsWrap.innerHTML = html;
+    }
+
+    function updateDotsState() {
+      var dots = dotsWrap.querySelectorAll('button');
+      for (var i = 0; i < dots.length; i++) {
+        var active = i === currentPage;
+        dots[i].classList.toggle('active', active);
+      }
+    }
+
+    function update(keepPage) {
+      var perView = getSlidesPerView();
+      var nextPageCount = Math.max(1, Math.ceil(items.length / perView));
+
+      if (!keepPage || currentPage > nextPageCount - 1) currentPage = Math.min(currentPage, nextPageCount - 1);
+      if (pageCount !== nextPageCount) {
+        pageCount = nextPageCount;
+        renderDots();
+      }
+
+      var step = getStepWidth();
+      var maxOffset = Math.max(0, track.scrollWidth - viewport.clientWidth);
+      var targetOffset = Math.min(currentPage * perView * step, maxOffset);
+      track.style.transform = 'translate3d(-' + targetOffset + 'px, 0, 0)';
+
+      updateDotsState();
+    }
+
+    function goTo(page) {
+      currentPage = Math.max(0, Math.min(page, pageCount - 1));
+      update(true);
+    }
+
+    function getMaxOffset() {
+      return Math.max(0, track.scrollWidth - viewport.clientWidth);
+    }
+
+    function getCurrentOffset() {
+      var perView = getSlidesPerView();
+      var step = getStepWidth();
+      var maxOffset = getMaxOffset();
+      return Math.min(currentPage * perView * step, maxOffset);
+    }
+
+    function onGestureStart(clientX, clientY, id) {
+      pointerDown = true;
+      isDragging = false;
+      startX = clientX;
+      startY = clientY;
+      deltaX = 0;
+      pointerId = id;
+      dragBaseOffset = getCurrentOffset();
+      viewport.classList.add('is-dragging');
+    }
+
+    function onGestureMove(clientX, clientY) {
+      if (!pointerDown) return;
+      var moveX = clientX - startX;
+      var moveY = clientY - startY;
+      if (!isDragging && Math.abs(moveX) > 8 && Math.abs(moveX) > Math.abs(moveY)) {
+        isDragging = true;
+      }
+      if (isDragging) {
+        deltaX = moveX;
+        var maxOffset = getMaxOffset();
+        var nextOffset = dragBaseOffset - deltaX;
+        if (nextOffset < 0) nextOffset = nextOffset * 0.25;
+        if (nextOffset > maxOffset) nextOffset = maxOffset + (nextOffset - maxOffset) * 0.25;
+        track.style.transform = 'translate3d(-' + nextOffset + 'px, 0, 0)';
+      }
+    }
+
+    function onGestureEnd() {
+      if (!pointerDown) return;
+      pointerDown = false;
+      if (!isDragging) return;
+
+      var threshold = 28;
+      if (deltaX <= -threshold) goTo(currentPage + 1);
+      else if (deltaX >= threshold) goTo(currentPage - 1);
+      else update(true);
+
+      isDragging = false;
+      deltaX = 0;
+      pointerId = null;
+      viewport.classList.remove('is-dragging');
+    }
+
+    dotsWrap.addEventListener('click', function(event) {
+      var btn = event.target.closest('button[data-page]');
+      if (!btn) return;
+      var page = parseInt(btn.getAttribute('data-page'), 10);
+      if (!isNaN(page)) goTo(page);
+    });
+
+    viewport.addEventListener('dragstart', function(event) {
+      event.preventDefault();
+    });
+
+    viewport.addEventListener('pointerdown', function(event) {
+      if (event.pointerType === 'mouse' && event.button !== 0) return;
+      onGestureStart(event.clientX, event.clientY, event.pointerId);
+      if (viewport.setPointerCapture) viewport.setPointerCapture(event.pointerId);
+    });
+
+    viewport.addEventListener('pointermove', function(event) {
+      if (!pointerDown || (pointerId !== null && event.pointerId !== pointerId)) return;
+      onGestureMove(event.clientX, event.clientY);
+      if (isDragging) event.preventDefault();
+    });
+
+    viewport.addEventListener('pointerup', onGestureEnd);
+    viewport.addEventListener('pointercancel', onGestureEnd);
+    viewport.addEventListener('pointerleave', onGestureEnd);
+
+    window.addEventListener('resize', function() {
+      window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(function() {
+        update(true);
+      }, 120);
+    });
+
+    update(false);
+  })();
+  </script>
 
   <!-- ── PRESS COVERAGE ── -->
   <section class="lp-bgi-press lp-section" id="bao-chi">
     <div class="lp-container">
       <h2>Báo Chí Nói Gì Về <em>Nha Khoa Đông Nam</em></h2>
       <p class="lp-bgi-press-intro">Các cơ quan truyền thông uy tín đã đưa tin về Nha Khoa Đông Nam</p>
-      
-      <div class="lp-bgi-press-grid">
-        <a href="https://dantri.com.vn/suc-khoe/uu-diem-dot-pha-cua-tru-implant-straumann-20250225191103421.htm" class="lp-bgi-press-item" target="_blank" rel="noopener">
-          <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/04/bao-dan-tri.jpg" alt="Báo Dân Trí" loading="lazy" decoding="async">
-        </a>
-        <a href="https://vnexpress.net/uu-diem-cua-giai-phap-trong-rang-implant-toan-ham-4875056.html" class="lp-bgi-press-item" target="_blank" rel="noopener">
-          <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/04/bao-vnexpress.jpg" alt="Báo VNExpress" loading="lazy" decoding="async">
-        </a>
-        <a href="https://thanhnien.vn/dieu-tri-benh-ly-rang-mieng-nha-khoa-uy-tin-chia-khoa-nu-cuoi-hoan-hao-185250514121518541.htm" class="lp-bgi-press-item" target="_blank" rel="noopener">
-          <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/04/bao-thanh-nien.jpg" alt="Báo Thanh Niên" loading="lazy" decoding="async">
-        </a>
-        <a href="https://www.24h.com.vn/bi-quyet-lam-dep/chat-luong-hay-gia-re-bi-quyet-lua-chon-nha-khoa-cua-viet-kieu-c673a1665759.html" class="lp-bgi-press-item" target="_blank" rel="noopener">
-          <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/04/bao-24h.jpg" alt="Báo 24h" loading="lazy" decoding="async">
-        </a>
-        <a href="https://suckhoe.vtv.vn/khong-phai-cong-nghe-day-moi-la-ly-do-implant-co-the-ton-tai-hang-chuc-nam-102251120153533042.htm" class="lp-bgi-press-item" target="_blank" rel="noopener">
-          <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/04/vtv-suc-khoe.jpg" alt="VTV Sức Khỏe" loading="lazy" decoding="async">
-        </a>
+
+      <div class="lp-bgi-press-slider">
+        <div class="lp-bgi-press-track-wrap">
+          <div class="lp-bgi-press-track">
+            <a href="https://dantri.com.vn/suc-khoe/uu-diem-dot-pha-cua-tru-implant-straumann-20250225191103421.htm" class="lp-bgi-press-item" target="_blank" rel="noopener">
+              <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/04/bao-dan-tri.jpg" alt="Báo Dân Trí" loading="lazy" decoding="async">
+            </a>
+            <a href="https://vnexpress.net/uu-diem-cua-giai-phap-trong-rang-implant-toan-ham-4875056.html" class="lp-bgi-press-item" target="_blank" rel="noopener">
+              <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/04/bao-vnexpress.jpg" alt="Báo VNExpress" loading="lazy" decoding="async">
+            </a>
+            <a href="https://thanhnien.vn/dieu-tri-benh-ly-rang-mieng-nha-khoa-uy-tin-chia-khoa-nu-cuoi-hoan-hao-185250514121518541.htm" class="lp-bgi-press-item" target="_blank" rel="noopener">
+              <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/04/bao-thanh-nien.jpg" alt="Báo Thanh Niên" loading="lazy" decoding="async">
+            </a>
+            <a href="https://www.24h.com.vn/bi-quyet-lam-dep/chat-luong-hay-gia-re-bi-quyet-lua-chon-nha-khoa-cua-viet-kieu-c673a1665759.html" class="lp-bgi-press-item" target="_blank" rel="noopener">
+              <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/04/bao-24h.jpg" alt="Báo 24h" loading="lazy" decoding="async">
+            </a>
+            <a href="https://suckhoe.vtv.vn/khong-phai-cong-nghe-day-moi-la-ly-do-implant-co-the-ton-tai-hang-chuc-nam-102251120153533042.htm" class="lp-bgi-press-item" target="_blank" rel="noopener">
+              <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/04/vtv-suc-khoe.jpg" alt="VTV Sức Khỏe" loading="lazy" decoding="async">
+            </a>
+          </div>
+        </div>
       </div>
+      <div class="lp-bgi-press-dots"></div>
     </div>
+
+    <script>
+    (function() {
+      var section = document.getElementById('bao-chi');
+      if (!section) return;
+
+      var track = section.querySelector('.lp-bgi-press-track');
+      var items = section.querySelectorAll('.lp-bgi-press-item');
+      var viewport = section.querySelector('.lp-bgi-press-track-wrap');
+      var dotsWrap = section.querySelector('.lp-bgi-press-dots');
+      if (!track || !viewport || !items.length || !dotsWrap) return;
+
+      var currentPage = 0;
+      var pageCount = 1;
+      var resizeTimer = null;
+      var autoTimer = null;
+      var pointerDown = false;
+      var isDragging = false;
+      var startX = 0;
+      var startY = 0;
+      var deltaX = 0;
+      var pointerId = null;
+      var dragBaseOffset = 0;
+
+      function getSlidesPerView() {
+        var w = window.innerWidth;
+        if (w <= 980) return 1.5;
+        return 3;
+      }
+
+      function getStepWidth() {
+        if (items.length < 2) return items[0].getBoundingClientRect().width;
+        var first = items[0].getBoundingClientRect();
+        var second = items[1].getBoundingClientRect();
+        return second.left - first.left;
+      }
+
+      function renderDots() {
+        var html = '';
+        for (var i = 0; i < pageCount; i++) {
+          html += '<button type="button" data-page="' + i + '" aria-label="Trang ' + (i + 1) + '"></button>';
+        }
+        dotsWrap.innerHTML = html;
+      }
+
+      function updateDotsState() {
+        var dots = dotsWrap.querySelectorAll('button');
+        for (var i = 0; i < dots.length; i++) {
+          var active = i === currentPage;
+          dots[i].classList.toggle('active', active);
+          dots[i].setAttribute('aria-current', active ? 'true' : 'false');
+        }
+      }
+
+      function update(keepPage) {
+        var perView = getSlidesPerView();
+        var nextPageCount = Math.max(1, Math.ceil(items.length / perView));
+
+        if (!keepPage || currentPage > nextPageCount - 1) currentPage = Math.min(currentPage, nextPageCount - 1);
+        if (pageCount !== nextPageCount) {
+          pageCount = nextPageCount;
+          renderDots();
+        }
+
+        var step = getStepWidth();
+        var maxOffset = Math.max(0, track.scrollWidth - viewport.clientWidth);
+        var targetOffset = Math.min(currentPage * perView * step, maxOffset);
+        track.style.transform = 'translate3d(-' + targetOffset + 'px, 0, 0)';
+
+        updateDotsState();
+      }
+
+      function goTo(page) {
+        currentPage = Math.max(0, Math.min(page, pageCount - 1));
+        update(true);
+      }
+
+      function getMaxOffset() {
+        return Math.max(0, track.scrollWidth - viewport.clientWidth);
+      }
+
+      function getCurrentOffset() {
+        var perView = getSlidesPerView();
+        var step = getStepWidth();
+        var maxOffset = getMaxOffset();
+        return Math.min(currentPage * perView * step, maxOffset);
+      }
+
+      function onGestureStart(clientX, clientY, id) {
+        pointerDown = true;
+        isDragging = false;
+        startX = clientX;
+        startY = clientY;
+        deltaX = 0;
+        pointerId = id;
+        dragBaseOffset = getCurrentOffset();
+        viewport.classList.add('is-dragging');
+        stopAuto();
+      }
+
+      function onGestureMove(clientX, clientY) {
+        if (!pointerDown) return;
+        var moveX = clientX - startX;
+        var moveY = clientY - startY;
+        if (!isDragging && Math.abs(moveX) > 8 && Math.abs(moveX) > Math.abs(moveY)) {
+          isDragging = true;
+        }
+        if (isDragging) {
+          deltaX = moveX;
+          var maxOffset = getMaxOffset();
+          var nextOffset = dragBaseOffset - deltaX;
+          if (nextOffset < 0) nextOffset = nextOffset * 0.25;
+          if (nextOffset > maxOffset) nextOffset = maxOffset + (nextOffset - maxOffset) * 0.25;
+          track.style.transform = 'translate3d(-' + nextOffset + 'px, 0, 0)';
+        }
+      }
+
+      function onGestureEnd() {
+        if (!pointerDown) return;
+        pointerDown = false;
+        if (!isDragging) {
+          startAuto();
+          return;
+        }
+
+        var threshold = 28;
+        if (deltaX <= -threshold) goTo(currentPage + 1);
+        else if (deltaX >= threshold) goTo(currentPage - 1);
+        else update(true);
+
+        isDragging = false;
+        deltaX = 0;
+        pointerId = null;
+        viewport.classList.remove('is-dragging');
+        startAuto();
+      }
+
+      function startAuto() {
+        stopAuto();
+        if (pageCount <= 1) return;
+        autoTimer = window.setInterval(function() {
+          var next = currentPage >= pageCount - 1 ? 0 : currentPage + 1;
+          goTo(next);
+        }, 4500);
+      }
+
+      function stopAuto() {
+        if (autoTimer) {
+          window.clearInterval(autoTimer);
+          autoTimer = null;
+        }
+      }
+
+      dotsWrap.addEventListener('click', function(event) {
+        var btn = event.target.closest('button[data-page]');
+        if (!btn) return;
+        var page = parseInt(btn.getAttribute('data-page'), 10);
+        if (!isNaN(page)) goTo(page);
+      });
+
+      viewport.addEventListener('dragstart', function(event) {
+        event.preventDefault();
+      });
+
+      viewport.addEventListener('pointerdown', function(event) {
+        if (event.pointerType === 'mouse' && event.button !== 0) return;
+        onGestureStart(event.clientX, event.clientY, event.pointerId);
+        if (viewport.setPointerCapture) viewport.setPointerCapture(event.pointerId);
+      });
+
+      viewport.addEventListener('pointermove', function(event) {
+        if (!pointerDown || (pointerId !== null && event.pointerId !== pointerId)) return;
+        onGestureMove(event.clientX, event.clientY);
+        if (isDragging) event.preventDefault();
+      });
+
+      viewport.addEventListener('pointerup', onGestureEnd);
+      viewport.addEventListener('pointercancel', onGestureEnd);
+      viewport.addEventListener('pointerleave', onGestureEnd);
+
+      section.addEventListener('mouseenter', stopAuto);
+      section.addEventListener('mouseleave', startAuto);
+      section.addEventListener('focusin', stopAuto);
+      section.addEventListener('focusout', startAuto);
+
+      window.addEventListener('resize', function() {
+        window.clearTimeout(resizeTimer);
+        resizeTimer = window.setTimeout(function() {
+          update(true);
+          startAuto();
+        }, 120);
+      });
+
+      update(false);
+      startAuto();
+    })();
+    </script>
   </section>
 
   <!-- FAQ -->
