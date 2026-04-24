@@ -151,7 +151,11 @@ add_filter('wpcf7_load_css', '__return_true');
 <main id="ndn-main">
 <!-- ═══ HERO ══ -->
 <section class="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-bg-slide active" style="--hero-image: url('https://nhakhoadongnam.com/wp-content/uploads/2026/03/chuong-trinh-uu-dai-implant-30-4-scaled.jpg');"></div>
+    <div class="hero-bg-slide" style="--hero-image: url('https://nhakhoadongnam.com/wp-content/uploads/2026/03/chuong-trinh-uu-dai-dip-30-4-scaled.jpg');"></div>
+    <div class="hero-bg-slide" style="--hero-image: url('https://nhakhoadongnam.com/wp-content/uploads/2024/12/20-nam-tao-nen-thuong-hieu-mang-tam-quoc-te.webp');"></div>
+  </div>
   <div class="hero-overlay"></div>
   <button class="skip-layer" aria-label="Bỏ qua phần giới thiệu">bỏ qua</button>
   <div class="hero-text-layer">
@@ -176,6 +180,11 @@ add_filter('wpcf7_load_css', '__return_true');
       </div>
     </div>
   </div>
+  <div class="hero-dots" aria-label="Trạng thái banner hero">
+    <button class="hero-dot active" type="button" aria-label="Slide 1"></button>
+    <button class="hero-dot" type="button" aria-label="Slide 2"></button>
+    <button class="hero-dot" type="button" aria-label="Slide 3"></button>
+  </div>
 </section>
 
 <!-- ═══ USP ═══ -->
@@ -183,7 +192,7 @@ add_filter('wpcf7_load_css', '__return_true');
   <div class="ndn-container">
     <div class="section-label">Ba trụ cột thương hiệu</div>
     <h2 class="ndn-title">Điều gì giữ chúng tôi <em>đứng vững</em> suốt 21 năm?</h2>
-    <p class="section-sub">Không phải quảng cáo. Là những lần khách hàng quay lại sau 10, 20 năm, dẫn theo gia đình.</p>
+    <p class="section-sub">Không phải quảng cáo. Là những lần khách hàng quay lại sau 10, 20 năm, dẫn theo gia&nbsp;đình.</p>
 
     <div class="usp-grid">
       <div class="usp-card reveal">
@@ -341,7 +350,7 @@ add_filter('wpcf7_load_css', '__return_true');
           <h3>Đăng ký nhận ưu đãi</h3>
           <p>Quý khách hàng hãy để lại thông tin để được hỗ trợ trực tiếp</p>
         </div>
-        <iframe class="cf7-iframe" src="https://nhakhoadongnam.com/trang-30-4/" title="Form đăng ký"></iframe>
+        <?php echo do_shortcode('[contact-form-7 id="1314978" title="CT-GIOTO2026 - name-at - phone"]'); ?>
       </div>
     </div>
   </div>
@@ -354,8 +363,8 @@ add_filter('wpcf7_load_css', '__return_true');
       <div class="left">
         <div class="section-label">Dịch vụ tại Đông Nam</div>
         <h2 class="ndn-title">Dịch vụ <em>trọn gói</em>, chi phí minh bạch</h2>
+        <p class="section-sub">Mọi gói Implant đã bao gồm trụ + abutment + răng sứ + xét nghiệm. Khách hàng nhận vỏ hộp trụ chính hãng để tra cứu.</p>
       </div>
-      <p class="section-sub">Mọi gói Implant đã bao gồm trụ + abutment + răng sứ + xét nghiệm. Khách hàng nhận vỏ hộp trụ chính hãng để tra cứu.</p>
     </div>
 
     <div class="svc-grid">
@@ -666,6 +675,47 @@ add_filter('wpcf7_load_css', '__return_true');
   </div>
 </section>
 
+<!-- ═══ AWARDS & CERTIFICATIONS ═══ -->
+<section class="awards-certifications" id="awards">
+  <div class="ndn-container">
+    <div class="awards-head">
+      <div class="section-label">Dấu ấn uy tín</div>
+      <h2 class="ndn-title">Giải thưởng &amp; <em>chứng nhận</em></h2>
+      <p class="section-sub">Những ghi nhận tiêu biểu cho hành trình phát triển bền bỉ, chuyên môn vững vàng và sự tận tâm mà Đông Nam đã giữ gìn suốt nhiều năm.</p>
+    </div>
+
+    <div class="awards-grid">
+      <a class="award-card" href="https://nhakhoadongnam.com/wp-content/uploads/2025/10/chung-nhan-top-10-thuong-hieu-tin-cay-719x1024-1.jpg" target="_blank" rel="noopener" aria-label="Xem chứng nhận Top 10 thương hiệu tin cậy">
+        <span class="award-frame">
+          <img src="https://nhakhoadongnam.com/wp-content/uploads/2025/10/chung-nhan-top-10-thuong-hieu-tin-cay-719x1024-1.jpg" alt="Chứng nhận Top 10 thương hiệu tin cậy của Nha Khoa Đông Nam" loading="lazy">
+        </span>
+      </a>
+
+      <a class="award-card" href="https://nhakhoadongnam.com/wp-content/uploads/2025/10/chung-nhan-dich-vu-tot-nhat-733x1024-1.webp" target="_blank" rel="noopener" aria-label="Xem chứng nhận dịch vụ tốt nhất">
+        <span class="award-frame">
+          <img src="https://nhakhoadongnam.com/wp-content/uploads/2025/10/chung-nhan-dich-vu-tot-nhat-733x1024-1.webp" alt="Chứng nhận dịch vụ tốt nhất của Nha Khoa Đông Nam" loading="lazy">
+        </span>
+      </a>
+
+      <a class="award-card" href="https://nhakhoadongnam.com/wp-content/uploads/2024/02/giay-chung-nhan.jpg" target="_blank" rel="noopener" aria-label="Xem giấy chứng nhận của Nha Khoa Đông Nam">
+        <span class="award-frame">
+          <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/giay-chung-nhan.jpg" alt="Giấy chứng nhận của Nha Khoa Đông Nam" loading="lazy">
+        </span>
+      </a>
+
+      <a class="award-card" href="https://nhakhoadongnam.com/wp-content/uploads/2024/03/chung-nhan-dich-vu-tot-nhat-1.jpg" target="_blank" rel="noopener" aria-label="Xem chứng nhận dịch vụ tốt nhất năm 2015">
+        <span class="award-frame">
+          <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/03/chung-nhan-dich-vu-tot-nhat-1.jpg" alt="Chứng nhận dịch vụ tốt nhất năm 2015 của Nha Khoa Đông Nam" loading="lazy">
+        </span>
+      </a>
+    </div>
+
+    <div class="awards-action">
+      <a class="btn btn-red" href="https://nhakhoadongnam.com/wp-content/uploads/2025/10/chung-nhan-top-10-thuong-hieu-tin-cay-719x1024-1.jpg" target="_blank" rel="noopener">Xem chi tiết</a>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ LOCATIONS ═══ -->
 <section class="locations" id="locations">
   <div class="ndn-container">
@@ -757,7 +807,7 @@ add_filter('wpcf7_load_css', '__return_true');
         <h3>Đăng ký nhận ưu đãi</h3>
         <p>Quý khách hàng hãy để lại thông tin để được hỗ trợ trực tiếp</p>
       </div>
-      <iframe class="cf7-iframe" src="https://nhakhoadongnam.com/trang-30-4/" title="Form đăng ký"></iframe>
+      <?php echo do_shortcode('[contact-form-7 id="1314978" title="CT-GIOTO2026 - name-at - phone"]'); ?>
     </div>
   </div>
 </section>
@@ -873,12 +923,6 @@ add_filter('wpcf7_load_css', '__return_true');
   <div class="ndn-container">
     Công Ty TNHH Nha Khoa Đông Nam - Địa chỉ: 411 Nguyễn Kiệm, Phường 9, Quận Phú Nhuận, TP. HCM - Điện thoại: (028).7307.7141 - GPĐKKD: 0304132304 do sở KH &amp; ĐT TP.HCM cấp ngày: 06/12/2005
   </div>
-</div>
-
-<!-- ═══ FLOATING CTA ═══ -->
-<div class="cta-float">
-  <a href="tel:0972411411" class="float-btn float-tel" aria-label="Gọi hotline 0972 411 411">📞 Gọi ngay</a>
-  <a href="#cta" class="float-btn float-primary" aria-label="Đặt lịch tư vấn miễn phí">📅 Đặt lịch</a>
 </div>
 
 </div><!-- /.ndn-lp -->

@@ -858,7 +858,7 @@ add_filter('wpcf7_load_css', '__return_true');
           <h3>ĐẶT LỊCH HẸN THĂM KHÁM NGAY</h3>
           <p>Quý khách hàng hãy để lại thông tin để được hỗ trợ trực tiếp</p>
         </div>
-        <iframe class="lp-bgi-form-iframe" src="https://nhakhoadongnam.com/form-placeholder/" title="Form đăng ký"></iframe>
+        <?php echo do_shortcode('[contact-form-7 id="1314978" title="CT-GIOTO2026 - name-at - phone"]'); ?>
       </div>
     </div>
   </section>

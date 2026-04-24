@@ -576,7 +576,7 @@ get_header();
         <h3>Đăng ký nhận tư vấn</h3>
         <p>Để lại thông tin để được bác sĩ hỗ trợ trực tiếp</p>
       </div>
-      <iframe class="ndn-cf7-iframe" src="https://nhakhoadongnam.com/trang-30-4/" title="Form đăng ký tư vấn"></iframe>
+      <?php echo do_shortcode('[contact-form-7 id="1314978" title="CT-GIOTO2026 - name-at - phone"]'); ?>
     </div>
   </div>
 </section>
