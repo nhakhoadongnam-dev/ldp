@@ -777,9 +777,22 @@ html { scroll-behavior: smooth; }
 
 /* ═══ SERVICES ═══ */
 .ndn-lp .services { padding: 96px 0; background: var(--cream); }
-.ndn-lp .services-head { margin-bottom: 44px; display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
-.ndn-lp .services-head .left { max-width: 560px; }
-.ndn-lp .services-head .section-sub { max-width: 420px; margin-top: 6px; }
+.ndn-lp .services-head {
+  margin-bottom: 44px;
+}
+.ndn-lp .services-head .left {
+  max-width: 560px;
+}
+.ndn-lp .services-head .section-sub {
+  max-width: 680px;
+  margin-top: 8px;
+  font-size: 16px;
+  color: var(--muted);
+  font-family: inherit;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.65;
+}
 
 .ndn-lp .svc-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 20px; margin-bottom: 20px; }
 
