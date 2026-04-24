@@ -415,17 +415,26 @@ if (docCards.length && docDetail) {
 
 // ── Testimonial Slider ──
 (function () {
-  const slider = document.querySelector('.testi-slider');
+  const slider = document.querySelector('.press-slider');
   if (!slider) return;
 
-  const slidesContainer = slider.querySelector('.testi-slides');
-  const allSlides = slider.querySelectorAll('.testi-slide');
-  const dotsContainer = slider.querySelector('.testi-dots');
+  const slidesContainer = slider.querySelector('.press-slides');
+  const allSlides = slider.querySelectorAll('.press-slide');
+  const viewport = slider.querySelector('.press-inner');
+  const dotsContainer = slider.querySelector('.press-dots');
   const prevBtn = slider.querySelector('.slider-arrow.prev');
   const nextBtn = slider.querySelector('.slider-arrow.next');
   const totalSlides = allSlides.length;
   let current = 0;
   let autoplay;
+  let resizeTimer;
+  let pointerDown = false;
+  let isDragging = false;
+  let startX = 0;
+  let startY = 0;
+  let deltaX = 0;
+  let pointerId = null;
+  let dragBaseOffset = 0;
 
   function getVisible() {
     if (window.innerWidth <= 480) return 1;
@@ -434,15 +443,186 @@ if (docCards.length && docDetail) {
     return 4;
   }
 
+  function getStepWidth() {
+    if (allSlides.length < 2) return allSlides[0].getBoundingClientRect().width;
+    const first = allSlides[0].getBoundingClientRect();
+    const second = allSlides[1].getBoundingClientRect();
+    return second.left - first.left;
+  }
+
   function getMaxIndex() {
     return Math.max(0, totalSlides - getVisible());
   }
 
   function goTo(index) {
     current = Math.max(0, Math.min(index, getMaxIndex()));
-    const gap = 18;
-    const slideWidth = allSlides[0].offsetWidth + gap;
-    slidesContainer.style.transform = `translateX(-${current * slideWidth}px)`;
+    const slideWidth = getStepWidth();
+    slidesContainer.style.transform = `translate3d(-${current * slideWidth}px, 0, 0)`;
+    dotsContainer.querySelectorAll('.slider-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current)
+    );
+  }
+
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    const count = getMaxIndex() + 1;
+    for (let i = 0; i < count; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Trang ' + (i + 1));
+      dot.addEventListener('click', () => { stopAutoplay(); goTo(i); startAutoplay(); });
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function startAutoplay() {
+    if (totalSlides <= getVisible()) return;
+    autoplay = setInterval(() => goTo(current >= getMaxIndex() ? 0 : current + 1), 5000);
+  }
+  function stopAutoplay() { clearInterval(autoplay); }
+
+  function getMaxOffset() {
+    return Math.max(0, slidesContainer.scrollWidth - viewport.clientWidth);
+  }
+
+  function getCurrentOffset() {
+    return Math.min(current * getStepWidth(), getMaxOffset());
+  }
+
+  function onGestureStart(clientX, clientY, id) {
+    pointerDown = true;
+    isDragging = false;
+    startX = clientX;
+    startY = clientY;
+    deltaX = 0;
+    pointerId = id;
+    dragBaseOffset = getCurrentOffset();
+    viewport.classList.add('is-dragging');
+    stopAutoplay();
+  }
+
+  function onGestureMove(clientX, clientY) {
+    if (!pointerDown) return;
+    const moveX = clientX - startX;
+    const moveY = clientY - startY;
+    if (!isDragging && Math.abs(moveX) > 8 && Math.abs(moveX) > Math.abs(moveY)) {
+      isDragging = true;
+    }
+    if (isDragging) {
+      deltaX = moveX;
+      const maxOffset = getMaxOffset();
+      let nextOffset = dragBaseOffset - deltaX;
+      if (nextOffset < 0) nextOffset = nextOffset * 0.25;
+      if (nextOffset > maxOffset) nextOffset = maxOffset + (nextOffset - maxOffset) * 0.25;
+      slidesContainer.style.transform = `translate3d(-${nextOffset}px, 0, 0)`;
+    }
+  }
+
+  function onGestureEnd() {
+    if (!pointerDown) return;
+    pointerDown = false;
+    if (!isDragging) {
+      viewport.classList.remove('is-dragging');
+      startAutoplay();
+      return;
+    }
+
+    const threshold = 28;
+    if (deltaX <= -threshold) goTo(current + 1);
+    else if (deltaX >= threshold) goTo(current - 1);
+    else goTo(current);
+
+    isDragging = false;
+    deltaX = 0;
+    pointerId = null;
+    viewport.classList.remove('is-dragging');
+    startAutoplay();
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', () => { stopAutoplay(); goTo(current <= 0 ? getMaxIndex() : current - 1); startAutoplay(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { stopAutoplay(); goTo(current >= getMaxIndex() ? 0 : current + 1); startAutoplay(); });
+
+  viewport.addEventListener('dragstart', (event) => {
+    event.preventDefault();
+  });
+
+  viewport.addEventListener('pointerdown', (event) => {
+    if (event.pointerType === 'mouse' && event.button !== 0) return;
+    onGestureStart(event.clientX, event.clientY, event.pointerId);
+    if (viewport.setPointerCapture) viewport.setPointerCapture(event.pointerId);
+  });
+
+  viewport.addEventListener('pointermove', (event) => {
+    if (!pointerDown || (pointerId !== null && event.pointerId !== pointerId)) return;
+    onGestureMove(event.clientX, event.clientY);
+    if (isDragging) event.preventDefault();
+  });
+
+  viewport.addEventListener('pointerup', onGestureEnd);
+  viewport.addEventListener('pointercancel', onGestureEnd);
+  viewport.addEventListener('pointerleave', onGestureEnd);
+
+  slidesContainer.style.transition = 'transform .55s cubic-bezier(0.22, 1, 0.36, 1)';
+  buildDots();
+  goTo(0);
+  startAutoplay();
+
+  window.addEventListener('resize', () => {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(() => {
+      buildDots();
+      goTo(Math.min(current, getMaxIndex()));
+    }, 120);
+  });
+})();
+
+// ── Testimonial Slider ──
+(function () {
+  const slider = document.querySelector('.testi-slider');
+  if (!slider) return;
+
+  const slidesContainer = slider.querySelector('.testi-slides');
+  const allSlides = slider.querySelectorAll('.testi-slide');
+  const viewport = slider.querySelector('.testi-inner');
+  const gestureLayers = slider.querySelectorAll('.testi-gesture-layer');
+  const dotsContainer = slider.querySelector('.testi-dots');
+  const prevBtn = slider.querySelector('.slider-arrow.prev');
+  const nextBtn = slider.querySelector('.slider-arrow.next');
+  const totalSlides = allSlides.length;
+  let current = 0;
+  let autoplay;
+  let resizeTimer;
+  let pointerDown = false;
+  let isDragging = false;
+  let startX = 0;
+  let startY = 0;
+  let deltaX = 0;
+  let pointerId = null;
+  let dragBaseOffset = 0;
+  let suppressClick = false;
+
+  function getVisible() {
+    if (window.innerWidth <= 480) return 1;
+    if (window.innerWidth <= 768) return 2;
+    if (window.innerWidth <= 1024) return 3;
+    return 4;
+  }
+
+  function getStepWidth() {
+    if (allSlides.length < 2) return allSlides[0].getBoundingClientRect().width;
+    const first = allSlides[0].getBoundingClientRect();
+    const second = allSlides[1].getBoundingClientRect();
+    return second.left - first.left;
+  }
+
+  function getMaxIndex() {
+    return Math.max(0, totalSlides - getVisible());
+  }
+
+  function goTo(index) {
+    current = Math.max(0, Math.min(index, getMaxIndex()));
+    const slideWidth = getStepWidth();
+    slidesContainer.style.transform = `translate3d(-${current * slideWidth}px, 0, 0)`;
     dotsContainer.querySelectorAll('.slider-dot').forEach((d, i) =>
       d.classList.toggle('active', i === current)
     );
@@ -466,15 +646,115 @@ if (docCards.length && docDetail) {
   }
   function stopAutoplay() { clearInterval(autoplay); }
 
+  function getMaxOffset() {
+    return Math.max(0, slidesContainer.scrollWidth - viewport.clientWidth);
+  }
+
+  function getCurrentOffset() {
+    return Math.min(current * getStepWidth(), getMaxOffset());
+  }
+
+  function onGestureStart(clientX, clientY, id) {
+    pointerDown = true;
+    isDragging = false;
+    startX = clientX;
+    startY = clientY;
+    deltaX = 0;
+    pointerId = id;
+    dragBaseOffset = getCurrentOffset();
+    viewport.classList.add('is-dragging');
+    stopAutoplay();
+  }
+
+  function onGestureMove(clientX, clientY) {
+    if (!pointerDown) return;
+    const moveX = clientX - startX;
+    const moveY = clientY - startY;
+    if (!isDragging && Math.abs(moveX) > 8 && Math.abs(moveX) > Math.abs(moveY)) {
+      isDragging = true;
+    }
+    if (isDragging) {
+      deltaX = moveX;
+      const maxOffset = getMaxOffset();
+      let nextOffset = dragBaseOffset - deltaX;
+      if (nextOffset < 0) nextOffset = nextOffset * 0.25;
+      if (nextOffset > maxOffset) nextOffset = maxOffset + (nextOffset - maxOffset) * 0.25;
+      slidesContainer.style.transform = `translate3d(-${nextOffset}px, 0, 0)`;
+    }
+  }
+
+  function onGestureEnd() {
+    if (!pointerDown) return;
+    pointerDown = false;
+    if (!isDragging) {
+      viewport.classList.remove('is-dragging');
+      startAutoplay();
+      return;
+    }
+
+    const threshold = 28;
+    suppressClick = true;
+    if (deltaX <= -threshold) goTo(current + 1);
+    else if (deltaX >= threshold) goTo(current - 1);
+    else goTo(current);
+
+    isDragging = false;
+    deltaX = 0;
+    pointerId = null;
+    viewport.classList.remove('is-dragging');
+    startAutoplay();
+  }
+
   if (prevBtn) prevBtn.addEventListener('click', () => { stopAutoplay(); goTo(current <= 0 ? getMaxIndex() : current - 1); startAutoplay(); });
   if (nextBtn) nextBtn.addEventListener('click', () => { stopAutoplay(); goTo(current >= getMaxIndex() ? 0 : current + 1); startAutoplay(); });
 
-  slidesContainer.style.transition = 'transform .5s cubic-bezier(.4,0,.2,1)';
+  gestureLayers.forEach((layer) => {
+    layer.addEventListener('dragstart', (event) => {
+      event.preventDefault();
+    });
+
+    layer.addEventListener('pointerdown', (event) => {
+      if (event.pointerType === 'mouse' && event.button !== 0) return;
+      onGestureStart(event.clientX, event.clientY, event.pointerId);
+      if (layer.setPointerCapture) layer.setPointerCapture(event.pointerId);
+    });
+
+    layer.addEventListener('pointermove', (event) => {
+      if (!pointerDown || (pointerId !== null && event.pointerId !== pointerId)) return;
+      onGestureMove(event.clientX, event.clientY);
+      if (isDragging) event.preventDefault();
+    });
+
+    layer.addEventListener('pointerup', onGestureEnd);
+    layer.addEventListener('pointercancel', onGestureEnd);
+    layer.addEventListener('pointerleave', onGestureEnd);
+
+    layer.addEventListener('click', (event) => {
+      if (suppressClick) {
+        event.preventDefault();
+        suppressClick = false;
+        return;
+      }
+
+      const videoUrl = layer.getAttribute('data-video-url');
+      if (videoUrl) {
+        window.open(videoUrl, '_blank', 'noopener');
+      }
+    });
+  });
+
+  slidesContainer.style.transition = 'transform .55s cubic-bezier(0.22, 1, 0.36, 1)';
   buildDots();
   goTo(0);
   startAutoplay();
 
-  window.addEventListener('resize', () => { buildDots(); goTo(Math.min(current, getMaxIndex())); });
+  window.addEventListener('resize', () => {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(() => {
+      buildDots();
+      goTo(Math.min(current, getMaxIndex()));
+    }, 120);
+  });
 })();
 
 
