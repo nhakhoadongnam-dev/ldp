@@ -3,71 +3,29 @@
  * Template Name: Bảng Giá Landing v1
  * Auto-generated from page/bang-gia/ by wp-sync.
  * DO NOT EDIT MANUALLY — run `npm run wp:sync`.
- * Mode: Standalone (full HTML shell)
+ * Mode: Standalone (full HTML shell, delegate SEO/GTM to Yoast + Site Kit)
  */
 defined('ABSPATH') || exit;
-$lp_base = home_url('/page/bang-gia');
 
-// Redirect trailing slash → no-slash (SEO)
-$request_uri = $_SERVER['REQUEST_URI'] ?? '';
-if (substr($request_uri, -1) === '/' && $request_uri !== '/') {
-    wp_redirect(home_url($request_uri), 301);
+// Standalone template: không qua get_header() nên redirect_canonical có thể bị
+// caching layer (WP Rocket) bypass. Tự redirect về phiên bản có trailing slash.
+if ( ! str_ends_with( strtok( $_SERVER['REQUEST_URI'] ?? '/', '?' ), '/' ) ) {
+    wp_redirect( trailingslashit( get_permalink() ), 301 );
     exit;
 }
+
+$lp_base = home_url('/page/bang-gia');
+
+// Ép CF7 load script/CSS — custom template không tự detect shortcode sớm.
+add_filter('wpcf7_load_js',  '__return_true');
+add_filter('wpcf7_load_css', '__return_true');
+
 ?>
 <!DOCTYPE html><html <?php language_attributes(); ?>><head>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SKMM9JDYTH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SKMM9JDYTH');
-</script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5XG3JXR');</script>
-<!-- End Google Tag Manager -->
 
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ═══ SEO CORE ═══ -->
-<!-- Title: 55 ký tự -->
-<title>Bảng Giá Dịch Vụ Nha Khoa 2026 | Nha Khoa Đông Nam</title>
-<!-- Description: 155 ký tự -->
-<meta name="description" content="Bảng giá dịch vụ nha khoa Đông Nam 2026: Implant, răng sứ, niềng răng, nhổ răng khôn, trám răng. Giá niêm yết công khai, cam kết không phát sinh. Hotline: 0972.411.411.">
-<meta name="keywords" content="bảng giá nha khoa, giá trồng răng implant, giá răng sứ, giá niềng răng, giá nhổ răng khôn, giá trám răng, nha khoa đông nam, nha khoa tphcm, bảng giá nha khoa 2026">
-<meta name="author" content="Nha Khoa Đông Nam">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://nhakhoadongnam.com/bang-gia/">
-
-<!-- ═══ OPEN GRAPH (Facebook / Zalo) ═══ -->
-<meta property="og:type" content="website">
-<meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Nha Khoa Đông Nam">
-<meta property="og:title" content="Bảng Giá Dịch Vụ Nha Khoa 2026 | Nha Khoa Đông Nam">
-<meta property="og:description" content="Bảng giá dịch vụ nha khoa Đông Nam 2026: Implant, răng sứ, niềng răng, nhổ răng khôn, trám răng. Giá công khai, không phát sinh. Hotline: 0972.411.411.">
-<meta property="og:image" content="https://nhakhoadongnam.com/wp-content/uploads/2026/03/bang-gia-nha-khoa-dong-nam.jpg">
-<meta property="og:image:alt" content="Bảng Giá Dịch Vụ Nha Khoa Đông Nam 2026">
-<meta property="og:url" content="https://nhakhoadongnam.com/bang-gia/">
-
-<!-- ═══ TWITTER CARD ═══ -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bảng Giá Dịch Vụ Nha Khoa 2026 | Nha Khoa Đông Nam">
-<meta name="twitter:description" content="Bảng giá dịch vụ nha khoa Đông Nam 2026: Implant, răng sứ, niềng răng, nhổ răng khôn, trám răng. Hotline: 0972.411.411.">
-<meta name="twitter:image" content="https://nhakhoadongnam.com/wp-content/uploads/2026/03/bang-gia-nha-khoa-dong-nam.jpg">
-
-<!-- ═══ MISC ═══ -->
-<meta name="theme-color" content="#0B2240">
-<meta name="geo.region" content="VN-SG">
-<meta name="geo.placename" content="TP. Hồ Chí Minh">
-
-<!-- ═══ SCHEMA.ORG JSON-LD ═══ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -120,24 +78,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-
+<?php wp_head(); ?>
 <!-- ═══ FONTS & CSS ═══ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
 <link rel="stylesheet" href="<?php echo esc_url($lp_base); ?>/style.css">
-  <?php wp_head(); ?>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XG3JXR"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <div class="ndn-lp">
-  <!-- Elementor hidden div -->
-  <div style="display:none;"><?php the_content(); ?></div>
+<?php // Elementor scans the rendered DOM for shortcodes (e.g. [contact-form-7]).
+      // the_content() must be present so Elementor can detect & enqueue CF7 assets. ?>
+<div style="display:none!important" aria-hidden="true">
+  <?php if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
+</div>
+
 <a href="#ndn-main" class="skip-link">Bỏ qua đến nội dung chính</a>
 
 <!-- STICKY NAV -->
@@ -173,7 +130,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-
 
 <!-- PAGE -->
 <main class="ndn-page" id="ndn-main">
@@ -599,7 +555,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </table>
   </section>
 
-
 </main>
 
 <!-- CLINIC INFO -->
@@ -661,11 +616,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#dang-ky" class="ndn-float-btn ndn-float-primary">📅 Đặt lịch</a>
 </div>
 
-
 </div><!-- /.ndn-lp -->
 
 <script src="<?php echo esc_url($lp_base); ?>/script.js"></script>
 
-
-  <?php wp_footer(); ?>
+<?php wp_footer(); ?>
 </body></html>

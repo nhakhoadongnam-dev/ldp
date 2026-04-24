@@ -1,30 +1,67 @@
 <?php
 /**
- * Template Name: Bảng Giá Landing (Theme Header/Footer) v2
+ * Template Name: Bảng Giá Landing (Theme) v1
  * Auto-generated from page/bang-gia/ by wp-sync.
  * DO NOT EDIT MANUALLY — run `npm run wp:sync`.
  * Mode: Theme (content only, uses Flatsome header/footer)
  */
 defined('ABSPATH') || exit;
+
 $lp_base = home_url('/page/bang-gia');
 
-// Enqueue landing CSS/JS at priority 99
-add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('ndn-landing-theme', esc_url($lp_base) . '/style.css', [], null);
-    wp_enqueue_script('ndn-landing-theme', esc_url($lp_base) . '/script.js', [], null, true);
-    wp_enqueue_style('ndn-landing-fonts', 'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap', [], null);
+// Ép CF7 load script/CSS — custom template không tự detect shortcode sớm.
+add_filter('wpcf7_load_js',  '__return_true');
+add_filter('wpcf7_load_css', '__return_true');
+
+// Enqueue CSS/JS landing — chạy trước khi get_header() gọi wp_head().
+add_action('wp_enqueue_scripts', function () use ($lp_base) {
+    // Landing CSS — priority 99 để load sau Flatsome, thắng cascade
+    wp_enqueue_style(
+        'ndn-landing-bang-gia',
+        $lp_base . '/style.css',
+        [],
+        null
+    );
+    // Google Fonts
+    wp_enqueue_style(
+        'ndn-landing-bang-gia-fonts',
+        'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap',
+        [],
+        null
+    );
+    wp_enqueue_style(
+        'ndn-landing-bang-gia-flags',
+        'https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css',
+        [],
+        null
+    );
+    // Landing JS (footer)
+    wp_enqueue_script(
+        'ndn-landing-bang-gia',
+        $lp_base . '/script.js',
+        [],
+        null,
+        true
+    );
 }, 99);
+
+// Inject Schema.org JSON-LD từ page/bang-gia/schema.json nếu tồn tại
+add_action('wp_head', function () {
+    $schema_file = ABSPATH . 'page/bang-gia/schema.json';
+    if ( file_exists($schema_file) ) {
+        echo "\n<script type=\"application/ld+json\">\n";
+        echo file_get_contents($schema_file);
+        echo "\n</script>\n";
+    }
+}, 50);
+
+get_header();
 ?>
 
-<?php get_header(); ?>
-<!-- Elementor scans the rendered DOM for shortcodes -->
+<?php // Elementor cần the_content() có mặt trong DOM rendered. ?>
 <div style="display:none!important" aria-hidden="true">
   <?php if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
 </div>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XG3JXR"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <div class="ndn-lp">
 <a href="#ndn-main" class="skip-link">Bỏ qua đến nội dung chính</a>
@@ -543,4 +580,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
 <?php get_footer(); ?>
