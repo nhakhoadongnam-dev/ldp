@@ -1,180 +1,66 @@
-﻿<!DOCTYPE html>
-<html lang="vi">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SKMM9JDYTH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-SKMM9JDYTH');
-</script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5XG3JXR');</script>
-<!-- End Google Tag Manager -->
+<?php
+/**
+ * Template Name: Trang Chủ Landing (Theme) v2
+ * Auto-generated from page/trang-chu/ by wp-sync.
+ * DO NOT EDIT MANUALLY — run `npm run wp:sync`.
+ * Mode: Theme (content only, uses Flatsome header/footer)
+ */
+defined('ABSPATH') || exit;
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+$lp_base = home_url('/page/trang-chu');
 
-<!-- ═══ SEO CORE ═══ -->
-<!-- Title: 54 ký tự -->
-<title>Nha Khoa Đông Nam — 21 Năm Đồng Hành Cùng Nụ Cười Bạn</title>
-<!-- Description: 148 ký tự -->
-<meta name="description" content="Nha Khoa Đông Nam — Chuyên gia Implant từ 2005. 152.000+ khách hàng, 10.500+ trụ Implant, 2 cơ sở TP.HCM. Hotline: 0972.411.411.">
-<meta name="keywords" content="nha khoa đông nam, nha khoa tphcm, trồng răng implant, bọc răng sứ, niềng răng, nha khoa uy tín, implant giá tốt, nha khoa phú nhuận, nha khoa quận 10">
-<meta name="author" content="Nha Khoa Đông Nam">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://nhakhoadongnam.com/trang-chu/">
+// Ép CF7 load script/CSS — custom template không tự detect shortcode sớm.
+add_filter('wpcf7_load_js',  '__return_true');
+add_filter('wpcf7_load_css', '__return_true');
 
-<!-- ═══ OPEN GRAPH (Facebook / Zalo) ═══ -->
-<meta property="og:type" content="website">
-<meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Nha Khoa Đông Nam">
-<meta property="og:title" content="Nha Khoa Đông Nam — 21 Năm Đồng Hành Cùng Bạn">
-<meta property="og:description" content="Chuyên gia Implant từ 2005. 152.000+ khách hàng, 10.500+ trụ Implant. 2 cơ sở TP.HCM.">
-<!-- HƯỚNG DẪN: Thay URL ảnh thật bên dưới -->
-<meta property="og:image" content="https://nhakhoadongnam.com/wp-content/uploads/2026/03/nha-khoa-dong-nam-homepage.jpg">
-<meta property="og:image:alt" content="Nha Khoa Đông Nam — Hơn 21 Năm Đồng Hành Cùng Bạn">
-<meta property="og:url" content="https://nhakhoadongnam.com/trang-chu/">
+// Enqueue CSS/JS landing — chạy trước khi get_header() gọi wp_head().
+add_action('wp_enqueue_scripts', function () use ($lp_base) {
+    // Landing CSS — priority 99 để load sau Flatsome, thắng cascade
+    wp_enqueue_style(
+        'ndn-landing-trang-chu',
+        $lp_base . '/style.css',
+        [],
+        null
+    );
+    // Google Fonts
+    wp_enqueue_style(
+        'ndn-landing-trang-chu-fonts',
+        'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap',
+        [],
+        null
+    );
+    // Landing JS (footer)
+    wp_enqueue_script(
+        'ndn-landing-trang-chu',
+        $lp_base . '/script.js',
+        [],
+        null,
+        true
+    );
+}, 99);
 
-<!-- ═══ TWITTER CARD ═══ -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Nha Khoa Đông Nam — 21 Năm Đồng Hành Cùng Bạn">
-<meta name="twitter:description" content="Chuyên gia Implant từ 2005. 152.000+ khách hàng, 10.500+ trụ Implant. Hotline: 0972.411.411.">
-<!-- HƯỚNG DẪN: Thay URL ảnh thật bên dưới -->
-<meta name="twitter:image" content="https://nhakhoadongnam.com/wp-content/uploads/2026/03/nha-khoa-dong-nam-homepage.jpg">
-
-<!-- ═══ MISC ═══ -->
-<meta name="theme-color" content="#0E2A4D">
-<meta name="geo.region" content="VN-SG">
-<meta name="geo.placename" content="TP. Hồ Chí Minh">
-
-<!-- ═══ SCHEMA.ORG JSON-LD ═══ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Dentist",
-      "@id": "https://nhakhoadongnam.com/#dentist",
-      "name": "Nha Khoa Đông Nam",
-      "url": "https://nhakhoadongnam.com",
-      "telephone": "+84972411411",
-      "address": [
-        {
-          "@type": "PostalAddress",
-          "streetAddress": "411 Nguyễn Kiệm",
-          "addressLocality": "Phường Đức Nhuận, Quận Phú Nhuận",
-          "addressRegion": "TP. Hồ Chí Minh",
-          "addressCountry": "VN",
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "10.8231",
-            "longitude": "106.6297"
-          }
-        },
-        {
-          "@type": "PostalAddress",
-          "streetAddress": "614 Lê Hồng Phong",
-          "addressLocality": "Phường Vườn Lài, Quận 10",
-          "addressRegion": "TP. Hồ Chí Minh",
-          "addressCountry": "VN",
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "10.7685",
-            "longitude": "106.6704"
-          }
-        }
-      ],
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "07:30",
-          "closes": "19:30"
-        }
-      ],
-      "priceRange": "$$",
-      "sameAs": [
-        "https://facebook.com/nhakhoadongnam",
-        "https://youtube.com/@nhakhoadongnam",
-        "https://tiktok.com/@nhakhoadongnam"
-      ]
-    },
-    {
-      "@type": "WebPage",
-      "name": "Nha Khoa Đông Nam — 21 Năm Đồng Hành Cùng Bạn",
-      "description": "Nha Khoa Đông Nam — Chuyên gia Implant từ 2005. 152.000+ khách hàng, 10.500+ trụ Implant, 2 cơ sở TP.HCM.",
-      "url": "https://nhakhoadongnam.com/trang-chu/",
-      "provider": { "@id": "https://nhakhoadongnam.com/#dentist" }
+// Inject Schema.org JSON-LD từ page/trang-chu/schema.json nếu tồn tại
+add_action('wp_head', function () {
+    $schema_file = ABSPATH . 'page/trang-chu/schema.json';
+    if ( file_exists($schema_file) ) {
+        echo "\n<script type=\"application/ld+json\">\n";
+        echo file_get_contents($schema_file);
+        echo "\n</script>\n";
     }
-  ]
-}
-</script>
+}, 50);
 
-<!-- ═══ FONTS & CSS ═══ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="/favicon.ico" sizes="any">
-</head>
-<body>
+get_header();
+?>
+
+<?php // Elementor cần the_content() có mặt trong DOM rendered. ?>
+<div style="display:none!important" aria-hidden="true">
+  <?php if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
+</div>
+
 <div class="ndn-lp">
 <!-- Skip Navigation -->
 <a href="#ndn-main" class="skip-link">Bỏ qua đến nội dung chính</a>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XG3JXR"
-height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-<!-- ═══ TOPBAR ═══ -->
-<div class="topbar">
-  <div class="ndn-container">
-    <span>📍 CS1: 411 Nguyễn Kiệm, P.Đức Nhuận &nbsp;·&nbsp; CS2: 614 Lê Hồng Phong, P.Vườn Lài, TP.HCM</span>
-    <span>Tổng đài <a href="tel:19007141" class="hot">1900 7141</a> &nbsp;·&nbsp; Hotline <a href="tel:0972411411" class="hot">0972 411 411</a></span>
-  </div>
-</div>
-
-<!-- ═══ NAV ═══ -->
-<nav class="main">
-  <div class="ndn-container">
-    <a href="/" class="brand">
-      <img src="https://nhakhoadongnam.com/wp-content/uploads/2021/03/Nha-khoa-dong-nam-thong-bao-doi-logo-2.png" alt="Logo Nha Khoa Đông Nam" class="brand-logo">
-    </a>
-    <ul class="nav-links">
-      <li><a href="https://nhakhoadongnam.com">Trang chủ</a></li>
-      <li><a href="https://nhakhoadongnam.com/gioi-thieu/">Giới Thiệu</a></li>
-      <li><a href="https://nhakhoadongnam.com/bang-gia-nhap/">Bảng Giá</a></li>
-      <li><a href="https://nhakhoadongnam.com/dv/">Dịch Vụ</a></li>
-      <li><a href="https://nhakhoadongnam.com/kien-thuc-nha-khoa/">Kiến Thức</a></li>
-      <li><a href="https://nhakhoadongnam.com/cay-ghep-rang-implant/">Cấy Ghép Implant</a></li>
-    </ul>
-    <button class="hamburger" aria-label="Mở menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <button class="nav-cta" aria-label="Đặt lịch tư vấn miễn phí">Đặt lịch tư vấn</button>
-  </div>
-</nav>
-
-<!-- Mobile Nav Overlay -->
-<div class="mobile-nav" id="mobileNav" aria-hidden="true">
-  <div class="mobile-nav-inner">
-    <a href="https://nhakhoadongnam.com">Trang chủ</a>
-    <a href="https://nhakhoadongnam.com/gioi-thieu/">Giới Thiệu</a>
-    <a href="https://nhakhoadongnam.com/bang-gia-nhap/">Bảng Giá</a>
-    <a href="https://nhakhoadongnam.com/dv/">Dịch Vụ</a>
-    <a href="https://nhakhoadongnam.com/kien-thuc-nha-khoa/">Kiến Thức</a>
-    <a href="https://nhakhoadongnam.com/cay-ghep-rang-implant/">Cấy Ghép Implant</a>
-    <a href="#cta" class="nav-cta-mobile">Đặt lịch tư vấn miễn phí</a>
-  </div>
-</div>
-
-<main id="ndn-main">
 <!-- ═══ HERO ══ -->
 <section class="hero">
   <div class="hero-bg" aria-hidden="true">
@@ -405,7 +291,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
           <h3>Đăng ký nhận ưu đãi</h3>
           <p>Quý khách hàng hãy để lại thông tin để được hỗ trợ trực tiếp</p>
         </div>
-        <iframe class="cf7-iframe" src="https://nhakhoadongnam.com/trang-30-4/" title="Form đăng ký"></iframe>
+        <?php echo do_shortcode('[contact-form-7 id="1314978" title="CT-GIOTO2026 - name-at - phone"]'); ?>
       </div>
     </div>
   </div>
@@ -892,125 +778,9 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
         <h3>Đăng ký nhận ưu đãi</h3>
         <p>Quý khách hàng hãy để lại thông tin để được hỗ trợ trực tiếp</p>
       </div>
-      <iframe class="cf7-iframe" src="https://nhakhoadongnam.com/trang-30-4/" title="Form đăng ký"></iframe>
+      <?php echo do_shortcode('[contact-form-7 id="1314978" title="CT-GIOTO2026 - name-at - phone"]'); ?>
     </div>
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
-<footer>
-  <div class="ndn-container">
-    <div class="foot-grid">
-      <!-- Column 1: Nha Khoa Đông Nam -->
-      <div class="foot-col foot-col-brand">
-        <h3 class="foot-col-title">Nha Khoa Đông Nam</h3>
-        <div class="foot-address">
-          <div class="foot-address-item">
-            <span class="foot-icon">📍</span>
-            <div>
-              <strong>Cơ sở 1:</strong> 411 Nguyễn Kiệm, Phường 9, Quận Phú Nhuận, TPHCM - 
-              <a href="https://maps.google.com/maps?q=411+Nguyen+Kiem,+Phu+Nhuan,+Ho+Chi+Minh+City,+Vietnam" target="_blank" rel="noopener" class="foot-link-inline"><em>Click xem bản đồ</em></a>
-            </div>
-          </div>
-          <div class="foot-address-item">
-            <span class="foot-icon">📍</span>
-            <div>
-              <strong>Cơ sở 2:</strong> 614 Lê Hồng Phong, Phường 10, Quận 10, TPHCM - 
-              <a href="https://maps.google.com/maps?q=614+Le+Hong+Phong,+District+10,+Ho+Chi+Minh+City,+Vietnam" target="_blank" rel="noopener" class="foot-link-inline"><em>Click xem bản đồ</em></a>
-            </div>
-          </div>
-        </div>
-        <div class="foot-phones">
-          <div class="foot-phone-item">
-            <span class="foot-icon">📞</span>
-            <span><strong>Tư Vấn:</strong> <a href="tel:19007141" class="foot-link-inline">1900.7141</a></span>
-          </div>
-          <div class="foot-phone-item">
-            <span class="foot-icon">📞</span>
-            <span><strong>Điện thoại:</strong> <a href="tel:02873077141" class="foot-link-inline">(028).7307.7141</a></span>
-          </div>
-          <div class="foot-phone-item">
-            <span class="foot-icon">📞</span>
-            <span><strong>Hotline:</strong> <a href="tel:0972411411" class="foot-link-inline">0972.411.411</a></span>
-          </div>
-        </div>
-        <div class="foot-email">
-          <span class="foot-icon">✉️</span>
-          <span><strong>Email:</strong> <a href="mailto:nhakhoadongnam@gmail.com" class="foot-link-inline">nhakhoadongnam@gmail.com</a></span>
-        </div>
-        <div class="foot-working-hours">
-          <strong>Thời gian làm việc</strong>
-          <ul>
-            <li>Thứ 2 - 7: 8h00 - 19h00</li>
-            <li>Chủ nhật: 8h00 - 16h00</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Column 2: Liên Kết Nhanh -->
-      <div class="foot-col">
-        <h3 class="foot-col-title">Liên Kết Nhanh</h3>
-        <ul class="foot-quick-links">
-          <li><a href="https://nhakhoadongnam.com/bang-gia-nhap/">Bảng giá nha khoa</a></li>
-          <li><a href="#cta">Đặt lịch</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3: Chính Sách - Hỗ Trợ -->
-      <div class="foot-col">
-        <h3 class="foot-col-title">Chính Sách - Hỗ Trợ</h3>
-        <ul class="foot-policies">
-          <li><a href="https://nhakhoadongnam.com/chinh-sach-bao-mat/">Chính sách bảo mật thông tin khách hàng</a></li>
-          <li><a href="https://nhakhoadongnam.com/chinh-sach-bao-hanh/">Chính sách bảo hành các dịch vụ</a></li>
-          <li><a href="https://nhakhoadongnam.com/chinh-sach-thanh-toan/">Chính sách thanh toán</a></li>
-          <li><a href="https://nhakhoadongnam.com/huong-dan-dat-lich/">Hướng dẫn đặt lịch khám</a></li>
-          <li><a href="https://nhakhoadongnam.com/giay-phep-hoat-dong/">Giấy phép hoạt động</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 4: Kết Nối & Thanh Toán -->
-      <div class="foot-col">
-        <h3 class="foot-col-title">Kết Nối Với Chúng Tôi</h3>
-        <div class="foot-social-icons">
-          <a href="https://facebook.com/nhakhoadongnam" target="_blank" rel="noopener" aria-label="Facebook Nha Khoa Đông Nam">
-            <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/icon-facebook.png" alt="Facebook" loading="lazy">
-          </a>
-          <a href="https://youtube.com/@nhakhoadongnam" target="_blank" rel="noopener" aria-label="YouTube Nha Khoa Đông Nam">
-            <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/icon-youtube.png" alt="YouTube" loading="lazy">
-          </a>
-          <a href="#" target="_blank" rel="noopener" aria-label="Zalo Nha Khoa Đông Nam">
-            <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/icon-zalo.png" alt="Zalo" loading="lazy">
-          </a>
-          <a href="#" target="_blank" rel="noopener" aria-label="WhatsApp Nha Khoa Đông Nam">
-            <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/icon-whatsapp.png" alt="WhatsApp" loading="lazy">
-          </a>
-          <a href="#" target="_blank" rel="noopener" aria-label="Instagram Nha Khoa Đông Nam">
-            <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/icon-instagram.png" alt="Instagram" loading="lazy">
-          </a>
-        </div>
-
-        <h3 class="foot-col-title foot-col-title-payment">Đối Tác Thanh Toán</h3>
-        <div class="foot-payment-icons">
-          <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/icon-visa.png" alt="VISA" loading="lazy">
-          <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/icon-mastercard.png" alt="Mastercard" loading="lazy">
-          <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/02/icon-jcb.png" alt="JCB" loading="lazy">
-        </div>
-        <div class="foot-dmca">
-          <img src="https://nhakhoadongnam.com/wp-content/uploads/2024/03/ico_dmca.svg?ID=fd369e04-7ea2-456e-b703-bd0608a71e81" alt="DMCA Protected" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Company Info Bar -->
-<div class="foot-company-bar">
-  <div class="ndn-container">
-    Công Ty TNHH Nha Khoa Đông Nam - Địa chỉ: 411 Nguyễn Kiệm, Phường 9, Quận Phú Nhuận, TP. HCM - Điện thoại: (028).7307.7141 - GPĐKKD: 0304132304 do sở KH & ĐT TP.HCM cấp ngày: 06/12/2005
-  </div>
-</div>
-
-</div><!-- /.ndn-lp -->
-<script src="script.js"></script>
-</body>
-</html>
+<?php get_footer(); ?>

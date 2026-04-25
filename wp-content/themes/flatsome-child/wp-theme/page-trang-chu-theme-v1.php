@@ -61,7 +61,6 @@ get_header();
 <!-- Skip Navigation -->
 <a href="#ndn-main" class="skip-link">Bỏ qua đến nội dung chính</a>
 
-
 <!-- ═══ HERO ══ -->
 <section class="hero">
   <div class="hero-bg" aria-hidden="true">
@@ -256,11 +255,11 @@ get_header();
 <!-- ═══ COMMITMENT CERTIFICATE ═══ -->
 <section class="commit">
   <div class="ndn-container">
-    <div class="form-section-inner">
-      <div class="form-section-text reveal-left">
+    <div class="ndn-form-section-inner">
+      <div class="ndn-form-section-text reveal-left">
         <h2>ĐẶT LỊCH KHÁM NHẬN ƯU ĐÃI TRI ÂN</h2>
         <p>Chương trình kết thúc 01/05/2026. Đăng ký ngay để được tư vấn miễn phí và giữ suất ưu đãi.</p>
-        <div class="form-section-contact">
+        <div class="ndn-form-section-contact">
           <div class="contact-row">
             <div class="contact-row-icon">📞</div>
             <div>Tổng đài: <a href="tel:19007141">1900.7141</a></div>
@@ -742,12 +741,12 @@ get_header();
 </main>
 
 <!-- ═══ REGISTRATION FORM ═══ -->
-<section class="form-section" id="form-section">
-  <div class="form-section-inner">
-    <div class="form-section-text reveal-left">
+<section class="ndn-form-section" id="ndn-form-section">
+  <div class="ndn-form-section-inner">
+    <div class="ndn-form-section-text reveal-left">
       <h2>ĐẶT LỊCH KHÁM NHẬN ƯU ĐÃI TRI ÂN</h2>
       <p>Chương trình kết thúc 01/05/2026. Đăng ký ngay để được tư vấn miễn phí và giữ suất ưu đãi.</p>
-      <div class="form-section-contact">
+      <div class="ndn-form-section-contact">
         <div class="contact-row">
           <div class="contact-row-icon">📞</div>
           <div>Tổng đài: <a href="tel:19007141">1900.7141</a></div>

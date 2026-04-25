@@ -1,59 +1,31 @@
-﻿<!DOCTYPE html>
-<html lang="vi">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SKMM9JDYTH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-SKMM9JDYTH');
-</script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5XG3JXR');</script>
-<!-- End Google Tag Manager -->
+<?php
+/**
+ * Template Name: Trang Chủ Landing v2
+ * Auto-generated from page/trang-chu/ by wp-sync.
+ * DO NOT EDIT MANUALLY — run `npm run wp:sync`.
+ * Mode: Standalone (full HTML shell, delegate SEO/GTM to Yoast + Site Kit)
+ */
+defined('ABSPATH') || exit;
 
-<meta charset="UTF-8">
+// Standalone template: không qua get_header() nên redirect_canonical có thể bị
+// caching layer (WP Rocket) bypass. Tự redirect về phiên bản có trailing slash.
+if ( ! str_ends_with( strtok( $_SERVER['REQUEST_URI'] ?? '/', '?' ), '/' ) ) {
+    wp_redirect( trailingslashit( get_permalink() ), 301 );
+    exit;
+}
+
+$lp_base = home_url('/page/trang-chu');
+
+// Ép CF7 load script/CSS — custom template không tự detect shortcode sớm.
+add_filter('wpcf7_load_js',  '__return_true');
+add_filter('wpcf7_load_css', '__return_true');
+
+?>
+<!DOCTYPE html><html <?php language_attributes(); ?>><head>
+
+<meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ═══ SEO CORE ═══ -->
-<!-- Title: 54 ký tự -->
-<title>Nha Khoa Đông Nam — 21 Năm Đồng Hành Cùng Nụ Cười Bạn</title>
-<!-- Description: 148 ký tự -->
-<meta name="description" content="Nha Khoa Đông Nam — Chuyên gia Implant từ 2005. 152.000+ khách hàng, 10.500+ trụ Implant, 2 cơ sở TP.HCM. Hotline: 0972.411.411.">
-<meta name="keywords" content="nha khoa đông nam, nha khoa tphcm, trồng răng implant, bọc răng sứ, niềng răng, nha khoa uy tín, implant giá tốt, nha khoa phú nhuận, nha khoa quận 10">
-<meta name="author" content="Nha Khoa Đông Nam">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://nhakhoadongnam.com/trang-chu/">
-
-<!-- ═══ OPEN GRAPH (Facebook / Zalo) ═══ -->
-<meta property="og:type" content="website">
-<meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Nha Khoa Đông Nam">
-<meta property="og:title" content="Nha Khoa Đông Nam — 21 Năm Đồng Hành Cùng Bạn">
-<meta property="og:description" content="Chuyên gia Implant từ 2005. 152.000+ khách hàng, 10.500+ trụ Implant. 2 cơ sở TP.HCM.">
-<!-- HƯỚNG DẪN: Thay URL ảnh thật bên dưới -->
-<meta property="og:image" content="https://nhakhoadongnam.com/wp-content/uploads/2026/03/nha-khoa-dong-nam-homepage.jpg">
-<meta property="og:image:alt" content="Nha Khoa Đông Nam — Hơn 21 Năm Đồng Hành Cùng Bạn">
-<meta property="og:url" content="https://nhakhoadongnam.com/trang-chu/">
-
-<!-- ═══ TWITTER CARD ═══ -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Nha Khoa Đông Nam — 21 Năm Đồng Hành Cùng Bạn">
-<meta name="twitter:description" content="Chuyên gia Implant từ 2005. 152.000+ khách hàng, 10.500+ trụ Implant. Hotline: 0972.411.411.">
-<!-- HƯỚNG DẪN: Thay URL ảnh thật bên dưới -->
-<meta name="twitter:image" content="https://nhakhoadongnam.com/wp-content/uploads/2026/03/nha-khoa-dong-nam-homepage.jpg">
-
-<!-- ═══ MISC ═══ -->
-<meta name="theme-color" content="#0E2A4D">
-<meta name="geo.region" content="VN-SG">
-<meta name="geo.placename" content="TP. Hồ Chí Minh">
-
-<!-- ═══ SCHEMA.ORG JSON-LD ═══ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -115,22 +87,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-
+<?php wp_head(); ?>
 <!-- ═══ FONTS & CSS ═══ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="<?php echo esc_url($lp_base); ?>/style.css">
 <link rel="icon" href="/favicon.ico" sizes="any">
 </head>
 <body>
 <div class="ndn-lp">
+<?php // Elementor scans the rendered DOM for shortcodes (e.g. [contact-form-7]).
+      // the_content() must be present so Elementor can detect & enqueue CF7 assets. ?>
+<div style="display:none!important" aria-hidden="true">
+  <?php if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
+</div>
+
 <!-- Skip Navigation -->
 <a href="#ndn-main" class="skip-link">Bỏ qua đến nội dung chính</a>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XG3JXR"
-height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <!-- ═══ TOPBAR ═══ -->
 <div class="topbar">
@@ -253,14 +227,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
     <div class="tl-video">
       <div class="tl-video-grid">
         <div class="tl-video-wrap">
-          <iframe
-            src="https://www.youtube.com/embed/Wp_h8yXediI?rel=0"
-            title="20 năm đồng hành - Nha Khoa Đông Nam"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-            loading="lazy">
+          <iframe src="https://www.youtube.com/embed/Wp_h8yXediI?rel=0" title="20 năm đồng hành - Nha Khoa Đông Nam" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" loading="lazy">
           </iframe>
           <div class="tl-video-caption">
             <span class="tl-video-kicker">Video 20 năm</span>
@@ -268,14 +235,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
           </div>
         </div>
         <div class="tl-video-wrap">
-          <iframe
-            src="https://www.youtube.com/embed/xO72MGI2YPI?start=23&rel=0"
-            title="Phóng sự VTV về Nha Khoa Đông Nam"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-            loading="lazy">
+          <iframe src="https://www.youtube.com/embed/xO72MGI2YPI?start=23&amp;rel=0" title="Phóng sự VTV về Nha Khoa Đông Nam" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" loading="lazy">
           </iframe>
           <div class="tl-video-caption">
             <span class="tl-video-kicker">Phóng sự VTV</span>
@@ -289,42 +249,27 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
     <div class="timeline">
       <div class="timeline-track"></div>
       <div class="timeline-items" role="tablist" aria-label="Các mốc lịch sử Nha Khoa Đông Nam">
-        <button class="tl-item" role="tab" aria-selected="false"
-          data-year="2005"
-          data-title="Nha Khoa Đông Nam thành lập"
-          data-desc="Khởi nguồn từ mong muốn mang lại nụ cười tự tin và bền vững cho người Việt, Nha Khoa Đông Nam chính thức ra đời. Sự kiện này đặt viên gạch đầu tiên cho một thương hiệu nha khoa truyền thống và lâu đời, nơi y đức, sự tận tâm và tiêu chuẩn y khoa khắt khe được chúng tôi gìn giữ, phát triển xuyên suốt qua nhiều thế hệ khách hàng.">
+        <button class="tl-item" role="tab" aria-selected="false" data-year="2005" data-title="Nha Khoa Đông Nam thành lập" data-desc="Khởi nguồn từ mong muốn mang lại nụ cười tự tin và bền vững cho người Việt, Nha Khoa Đông Nam chính thức ra đời. Sự kiện này đặt viên gạch đầu tiên cho một thương hiệu nha khoa truyền thống và lâu đời, nơi y đức, sự tận tâm và tiêu chuẩn y khoa khắt khe được chúng tôi gìn giữ, phát triển xuyên suốt qua nhiều thế hệ khách hàng.">
           <div class="tl-dot"></div>
           <div class="tl-year">2005</div>
           <div class="tl-label">Nha Khoa Đông Nam thành lập</div>
         </button>
-        <button class="tl-item" role="tab" aria-selected="false"
-          data-year="2015"
-          data-title="Xác lập vị thế chuyên gia Implant, ca khó"
-          data-desc="Đánh dấu một bước ngoặt lớn khi vinh dự nhận giải thưởng “Dịch vụ tốt nhất năm 2015”. Đặc biệt, cột mốc thực hiện thành công hơn 8.000 trụ Implant đã chính thức định vị Đông Nam là phòng khám hàng đầu trong lĩnh vực phục hình răng. Với đội ngũ bác sĩ chuyên môn cao, nha khoa luôn tự tin tiếp nhận và đưa ra giải pháp an toàn, hiệu quả cho cả những ca mất răng lâu năm, tiêu xương hàm phức tạp.">
+        <button class="tl-item" role="tab" aria-selected="false" data-year="2015" data-title="Xác lập vị thế chuyên gia Implant, ca khó" data-desc="Đánh dấu một bước ngoặt lớn khi vinh dự nhận giải thưởng “Dịch vụ tốt nhất năm 2015”. Đặc biệt, cột mốc thực hiện thành công hơn 8.000 trụ Implant đã chính thức định vị Đông Nam là phòng khám hàng đầu trong lĩnh vực phục hình răng. Với đội ngũ bác sĩ chuyên môn cao, nha khoa luôn tự tin tiếp nhận và đưa ra giải pháp an toàn, hiệu quả cho cả những ca mất răng lâu năm, tiêu xương hàm phức tạp.">
           <div class="tl-dot"></div>
           <div class="tl-year">2015</div>
           <div class="tl-label">Xác lập vị thế chuyên gia Implant, ca khó</div>
         </button>
-        <button class="tl-item" role="tab" aria-selected="false"
-          data-year="2017"
-          data-title="Nối dài lời cam kết &quot;Đồng hành trọn đời&quot;"
-          data-desc="Đáp ứng nhu cầu ngày càng lớn mạnh, Nha Khoa Đông Nam khai trương cơ sở 2 tại (614 - 616 Lê Hồng Phong, phường Vườn Lài). Sự vươn mình này không chỉ dừng lại ở việc nâng cấp trang thiết bị hiện đại, mà còn là hành động thực tế hóa lời cam kết đồng hành trọn đời. Đông Nam tạo ra một hệ thống liền mạch, thuận tiện để khách hàng dễ dàng ghé thăm và chăm sóc răng miệng định kỳ.">
+        <button class="tl-item" role="tab" aria-selected="false" data-year="2017" data-title="Nối dài lời cam kết &quot;Đồng hành trọn đời&quot;" data-desc="Đáp ứng nhu cầu ngày càng lớn mạnh, Nha Khoa Đông Nam khai trương cơ sở 2 tại (614 - 616 Lê Hồng Phong, phường Vườn Lài). Sự vươn mình này không chỉ dừng lại ở việc nâng cấp trang thiết bị hiện đại, mà còn là hành động thực tế hóa lời cam kết đồng hành trọn đời. Đông Nam tạo ra một hệ thống liền mạch, thuận tiện để khách hàng dễ dàng ghé thăm và chăm sóc răng miệng định kỳ.">
           <div class="tl-dot"></div>
           <div class="tl-year">2017</div>
           <div class="tl-label">Nối dài lời cam kết "Đồng hành trọn đời"</div>
         </button>
-        <button class="tl-item" role="tab" aria-selected="false"
-          data-year="2019"
-          data-title="Bảo chứng cho sự chăm sóc tận tâm"
-          data-desc="Vinh dự nhận giải thưởng “TOP 10 THƯƠNG HIỆU TIN CẬY, SẢN PHẨM CHẤT LƯỢNG, DỊCH VỤ TẬN TÂM 2019”. Cụm từ &quot;Dịch vụ tận tâm&quot; được xướng tên chính là thước đo chuẩn xác nhất cho triết lý cá nhân hóa kế hoạch điều trị và chính sách chăm sóc sau điều trị không giới hạn của Nha Khoa Đông Nam.">
+        <button class="tl-item" role="tab" aria-selected="false" data-year="2019" data-title="Bảo chứng cho sự chăm sóc tận tâm" data-desc="Vinh dự nhận giải thưởng “TOP 10 THƯƠNG HIỆU TIN CẬY, SẢN PHẨM CHẤT LƯỢNG, DỊCH VỤ TẬN TÂM 2019”. Cụm từ &quot;Dịch vụ tận tâm&quot; được xướng tên chính là thước đo chuẩn xác nhất cho triết lý cá nhân hóa kế hoạch điều trị và chính sách chăm sóc sau điều trị không giới hạn của Nha Khoa Đông Nam.">
           <div class="tl-dot"></div>
           <div class="tl-year">2019</div>
           <div class="tl-label">Bảo chứng cho sự chăm sóc tận tâm</div>
         </button>
-        <button class="tl-item" role="tab" aria-selected="false"
-          data-year="2024"
-          data-title="Tự hào &quot;Top 10 Nha Khoa Tốt Nhất Việt Nam&quot;"
-          data-desc="Được vinh danh tại giải thưởng danh giá &quot;THE BEST OF VIETNAM 2024&quot;. Trái ngọt này là sự hội tụ hoàn hảo của 3 trụ cột thương hiệu: Nền tảng truyền thống uy tín, chuyên môn của đội ngũ bác sĩ và sự tận tâm đồng hành cùng nụ cười Việt. Thành tựu hơn 21 năm của Đông Nam không chỉ nằm ở những giải thưởng, mà nằm ở sự an tâm tuyệt đối của hàng trăm ngàn khách hàng.">
+        <button class="tl-item" role="tab" aria-selected="false" data-year="2024" data-title="Tự hào &quot;Top 10 Nha Khoa Tốt Nhất Việt Nam&quot;" data-desc="Được vinh danh tại giải thưởng danh giá &quot;THE BEST OF VIETNAM 2024&quot;. Trái ngọt này là sự hội tụ hoàn hảo của 3 trụ cột thương hiệu: Nền tảng truyền thống uy tín, chuyên môn của đội ngũ bác sĩ và sự tận tâm đồng hành cùng nụ cười Việt. Thành tựu hơn 21 năm của Đông Nam không chỉ nằm ở những giải thưởng, mà nằm ở sự an tâm tuyệt đối của hàng trăm ngàn khách hàng.">
           <div class="tl-dot"></div>
           <div class="tl-year">2024</div>
           <div class="tl-label">Tự hào "Top 10 Nha Khoa Tốt Nhất Việt Nam"</div>
@@ -339,7 +284,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
             <div class="tl-card-title"></div>
             <div class="tl-card-desc"></div>
           </div>
-          <button class="tl-card-close" aria-label="Đóng">&times;</button>
+          <button class="tl-card-close" aria-label="Đóng">×</button>
         </div>
       </div>
     </div>
@@ -405,7 +350,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
           <h3>Đăng ký nhận ưu đãi</h3>
           <p>Quý khách hàng hãy để lại thông tin để được hỗ trợ trực tiếp</p>
         </div>
-        <iframe class="cf7-iframe" src="https://nhakhoadongnam.com/trang-30-4/" title="Form đăng ký"></iframe>
+        <?php echo do_shortcode('[contact-form-7 id="1314978" title="CT-GIOTO2026 - name-at - phone"]'); ?>
       </div>
     </div>
   </div>
@@ -497,39 +442,21 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
     <div class="docs-slider-wrap">
       <button class="docs-arrow docs-prev" aria-label="Bác sĩ trước">‹</button>
       <div class="docs-grid" role="listbox" aria-label="Chọn bác sĩ">
-        <button class="doc-card active" role="option" aria-selected="true"
-          data-name="BÁC SĨ CKII ĐẶNG QUỐC DŨNG"
-          data-spec="Chuyên gia cấy ghép Implant"
-          data-photo="featured"
-          data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp"
-          data-link="#"
-          data-creds="Chứng chỉ hành nghề số: 001529/HCM - CCHN">
+        <button class="doc-card active" role="option" aria-selected="true" data-name="BÁC SĨ CKII ĐẶNG QUỐC DŨNG" data-spec="Chuyên gia cấy ghép Implant" data-photo="featured" data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp" data-link="#" data-creds="Chứng chỉ hành nghề số: 001529/HCM - CCHN">
           <img class="doc-photo" src="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp" alt="Ảnh BÁC SĨ CKII ĐẶNG QUỐC DŨNG" loading="lazy">
           <div class="doc-card-info">
             <div class="doc-card-name">BÁC SĨ CKII ĐẶNG QUỐC DŨNG</div>
             <div class="doc-card-spec">Chuyên gia cấy ghép Implant</div>
           </div>
         </button>
-        <button class="doc-card" role="option" aria-selected="false"
-          data-name="BS Nguyễn Phú Nhân"
-          data-spec="Implant · Phục hình sứ · Veneer"
-          data-photo=""
-          data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp"
-          data-link="#"
-          data-creds="Bác sĩ Răng Hàm Mặt|Chứng chỉ hành nghề số: 002254/HCM-CCHN|Chứng chỉ phục hồi thẩm mỹ mặt dán sứ Đại học Y Dược TP.HCM|Chứng chỉ kiểm soát nhiễm khuẩn Bệnh viện Nhi Đồng|Chứng chỉ phẫu thuật nha chu thẩm mỹ SA VIỆT NAM HOLISTIC DENTAL SOLUTIONS|Chứng chỉ cấy ghép nha khoa Bệnh viện Răng Hàm Mặt Trung Ương TP.HCM|Chứng chỉ chỉnh hình răng mặt Bệnh viện Trung ương Huế|Chuyên cấy ghép Implant, phục hình sứ trên Implant, phục hình thẩm mỹ răng sứ – Veneer, tiểu phẫu nha khoa.">
+        <button class="doc-card" role="option" aria-selected="false" data-name="BS Nguyễn Phú Nhân" data-spec="Implant · Phục hình sứ · Veneer" data-photo="" data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp" data-link="#" data-creds="Bác sĩ Răng Hàm Mặt|Chứng chỉ hành nghề số: 002254/HCM-CCHN|Chứng chỉ phục hồi thẩm mỹ mặt dán sứ Đại học Y Dược TP.HCM|Chứng chỉ kiểm soát nhiễm khuẩn Bệnh viện Nhi Đồng|Chứng chỉ phẫu thuật nha chu thẩm mỹ SA VIỆT NAM HOLISTIC DENTAL SOLUTIONS|Chứng chỉ cấy ghép nha khoa Bệnh viện Răng Hàm Mặt Trung Ương TP.HCM|Chứng chỉ chỉnh hình răng mặt Bệnh viện Trung ương Huế|Chuyên cấy ghép Implant, phục hình sứ trên Implant, phục hình thẩm mỹ răng sứ – Veneer, tiểu phẫu nha khoa.">
           <img class="doc-photo" src="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp" alt="Ảnh BS Nguyễn Phú Nhân" loading="lazy">
           <div class="doc-card-info">
             <div class="doc-card-name">BS Nguyễn Phú Nhân</div>
             <div class="doc-card-spec">Implant · Phục hình sứ · Veneer</div>
           </div>
         </button>
-        <button class="doc-card" role="option" aria-selected="false"
-          data-name="BS CKI Thanh Thảo"
-          data-spec="Chỉnh nha · Nha khoa tổng quát"
-          data-photo=""
-          data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-thi-thanh-thao.webp"
-          data-link="#"
-          data-creds="Bác sĩ Răng Hàm Mặt|Bác sĩ Chuyên khoa I – Đại học Y Dược|Chứng chỉ hành nghề số: 008071/ĐL-CCHN|Chứng chỉ cấy ghép nha khoa Bệnh viện Răng Hàm Mặt Trung Ương TP.HCM|Chứng chỉ đào tạo liên tục chỉnh hình răng hàm mặt Bệnh viện Răng Hàm Mặt Trung Ương TP.HCM|Chứng chỉ điều trị nội nha và nhổ răng tiểu phẫu chuyên khoa I Đại học Y Dược Huế|Chứng chỉ kiểm soát nhiễm khuẩn Bệnh viện Trường Đại Học Y Hà Nội|Chuyên niềng răng, răng sứ thẩm mỹ, nha khoa tổng quát, nha khoa phòng ngừa.">
+        <button class="doc-card" role="option" aria-selected="false" data-name="BS CKI Thanh Thảo" data-spec="Chỉnh nha · Nha khoa tổng quát" data-photo="" data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-thi-thanh-thao.webp" data-link="#" data-creds="Bác sĩ Răng Hàm Mặt|Bác sĩ Chuyên khoa I – Đại học Y Dược|Chứng chỉ hành nghề số: 008071/ĐL-CCHN|Chứng chỉ cấy ghép nha khoa Bệnh viện Răng Hàm Mặt Trung Ương TP.HCM|Chứng chỉ đào tạo liên tục chỉnh hình răng hàm mặt Bệnh viện Răng Hàm Mặt Trung Ương TP.HCM|Chứng chỉ điều trị nội nha và nhổ răng tiểu phẫu chuyên khoa I Đại học Y Dược Huế|Chứng chỉ kiểm soát nhiễm khuẩn Bệnh viện Trường Đại Học Y Hà Nội|Chuyên niềng răng, răng sứ thẩm mỹ, nha khoa tổng quát, nha khoa phòng ngừa.">
           <img class="doc-photo" src="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-thi-thanh-thao.webp" alt="Ảnh BS CKI Thanh Thảo" loading="lazy">
           <div class="doc-card-info">
             <div class="doc-card-name">BS CKI Thanh Thảo</div>
@@ -537,26 +464,14 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
           </div>
         </button>
         <!-- Đổi ảnh bác sĩ sau này: chỉ cần thay cùng lúc `data-image` và `img src` bên dưới. -->
-        <button class="doc-card" role="option" aria-selected="false"
-          data-name="BÁC SĨ CKI NGUYỄN THANH LONG"
-          data-spec="Implant · Nội nha · Phục hình · Tiểu phẫu"
-          data-photo=""
-          data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp"
-          data-link="#"
-          data-creds="Chứng chỉ hành nghề số: 044529/HCM-CCHN|Chứng chỉ Cấy ghép Implant tại Đại Học Y Dược TPHCM|Chứng chỉ Cấy ghép Implant nâng cao tại Đại Học Y Hà Nội|Bác sĩ chuyên khoa cấp I Đại Học Y Dược TPHCM|Chuyên sâu: Cấy ghép Implant, điều trị nội nha, phục hình, tiểu phẫu nhổ răng khôn và nha khoa thẩm mỹ.">
+        <button class="doc-card" role="option" aria-selected="false" data-name="BÁC SĨ CKI NGUYỄN THANH LONG" data-spec="Implant · Nội nha · Phục hình · Tiểu phẫu" data-photo="" data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp" data-link="#" data-creds="Chứng chỉ hành nghề số: 044529/HCM-CCHN|Chứng chỉ Cấy ghép Implant tại Đại Học Y Dược TPHCM|Chứng chỉ Cấy ghép Implant nâng cao tại Đại Học Y Hà Nội|Bác sĩ chuyên khoa cấp I Đại Học Y Dược TPHCM|Chuyên sâu: Cấy ghép Implant, điều trị nội nha, phục hình, tiểu phẫu nhổ răng khôn và nha khoa thẩm mỹ.">
           <img class="doc-photo" src="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-nguyen-phu-nhan.webp" alt="Ảnh BÁC SĨ CKI NGUYỄN THANH LONG" loading="lazy">
           <div class="doc-card-info">
             <div class="doc-card-name">BS CKI Nguyễn Thanh Long</div>
             <div class="doc-card-spec">Implant · Nội nha · Phục hình</div>
           </div>
         </button>
-        <button class="doc-card" role="option" aria-selected="false"
-          data-name="BS Trần Xuân Dự"
-          data-spec="Implant kỹ thuật số · Nha khoa tổng quát"
-          data-photo=""
-          data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-tran-thi-xuan-du.webp"
-          data-link="#"
-          data-creds="Bác sĩ Răng Hàm Mặt|Chứng chỉ hành nghề số: 008256/ĐL-CCHN|Chứng chỉ quy trình Implant kỹ thuật số Đại học Y Dược TP.HCM|Chứng chỉ chỉnh nha và Implant Đại học Y Dược Cần Thơ|Chuyên nha khoa tổng quát và nha khoa phòng ngừa.">
+        <button class="doc-card" role="option" aria-selected="false" data-name="BS Trần Xuân Dự" data-spec="Implant kỹ thuật số · Nha khoa tổng quát" data-photo="" data-image="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-tran-thi-xuan-du.webp" data-link="#" data-creds="Bác sĩ Răng Hàm Mặt|Chứng chỉ hành nghề số: 008256/ĐL-CCHN|Chứng chỉ quy trình Implant kỹ thuật số Đại học Y Dược TP.HCM|Chứng chỉ chỉnh nha và Implant Đại học Y Dược Cần Thơ|Chuyên nha khoa tổng quát và nha khoa phòng ngừa.">
           <img class="doc-photo" src="https://nhakhoadongnam.com/wp-content/uploads/2025/01/bac-si-tran-thi-xuan-du.webp" alt="Ảnh BS Trần Xuân Dự" loading="lazy">
           <div class="doc-card-info">
             <div class="doc-card-name">BS Trần Xuân Dự</div>
@@ -608,7 +523,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
       </div>
     </div>
     </div>
-    <div role="tabpanel" id="panel-rang-su" aria-labelledby="tab-rang-su" hidden>
+    <div role="tabpanel" id="panel-rang-su" aria-labelledby="tab-rang-su" hidden="">
     <div class="result-slider" id="sliderRangsu">
       <button class="slider-arrow prev" aria-label="Ảnh trước">‹</button>
       <div class="result-slides">
@@ -661,42 +576,42 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 
           <div class="testi-slide">
             <div class="testi-card">
-              <iframe src="https://www.youtube.com/embed/c8Pb_kKWdMM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Cô Lan · Q.Phú Nhuận"></iframe>
+              <iframe src="https://www.youtube.com/embed/c8Pb_kKWdMM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" title="Cô Lan · Q.Phú Nhuận"></iframe>
               <button class="testi-gesture-layer" type="button" data-video-url="https://www.youtube.com/watch?v=c8Pb_kKWdMM" aria-label="Mở video khách hàng Cô Lan trên YouTube"></button>
             </div>
           </div>
 
           <div class="testi-slide">
             <div class="testi-card">
-              <iframe src="https://www.youtube.com/embed/eblVhYpRay8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Chú Hải · Q.10"></iframe>
+              <iframe src="https://www.youtube.com/embed/eblVhYpRay8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" title="Chú Hải · Q.10"></iframe>
               <button class="testi-gesture-layer" type="button" data-video-url="https://www.youtube.com/watch?v=eblVhYpRay8" aria-label="Mở video khách hàng Chú Hải trên YouTube"></button>
             </div>
           </div>
 
           <div class="testi-slide">
             <div class="testi-card">
-              <iframe src="https://www.youtube.com/embed/kh1zckdYSX8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Chị Ngọc · Tân Bình"></iframe>
+              <iframe src="https://www.youtube.com/embed/kh1zckdYSX8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" title="Chị Ngọc · Tân Bình"></iframe>
               <button class="testi-gesture-layer" type="button" data-video-url="https://www.youtube.com/watch?v=kh1zckdYSX8" aria-label="Mở video khách hàng Chị Ngọc trên YouTube"></button>
             </div>
           </div>
 
           <div class="testi-slide">
             <div class="testi-card">
-              <iframe src="https://www.youtube.com/embed/rQkbBt-CciA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Anh Minh · Gò Vấp"></iframe>
+              <iframe src="https://www.youtube.com/embed/rQkbBt-CciA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" title="Anh Minh · Gò Vấp"></iframe>
               <button class="testi-gesture-layer" type="button" data-video-url="https://www.youtube.com/watch?v=rQkbBt-CciA" aria-label="Mở video khách hàng Anh Minh trên YouTube"></button>
             </div>
           </div>
 
           <div class="testi-slide">
             <div class="testi-card">
-              <iframe src="https://www.youtube.com/embed/uNDrs3Cvwvs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Chị Thùy · Q.Phú Nhuận"></iframe>
+              <iframe src="https://www.youtube.com/embed/uNDrs3Cvwvs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" title="Chị Thùy · Q.Phú Nhuận"></iframe>
               <button class="testi-gesture-layer" type="button" data-video-url="https://www.youtube.com/watch?v=uNDrs3Cvwvs" aria-label="Mở video khách hàng Chị Thùy trên YouTube"></button>
             </div>
           </div>
 
           <div class="testi-slide">
             <div class="testi-card">
-              <iframe src="https://www.youtube.com/embed/vatpzUlPl4c" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Anh Tùng · Bình Thạnh"></iframe>
+              <iframe src="https://www.youtube.com/embed/vatpzUlPl4c" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" title="Anh Tùng · Bình Thạnh"></iframe>
               <button class="testi-gesture-layer" type="button" data-video-url="https://www.youtube.com/watch?v=vatpzUlPl4c" aria-label="Mở video khách hàng Anh Tùng trên YouTube"></button>
             </div>
           </div>
@@ -812,7 +727,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
       <div class="loc-card">
         <!-- HƯỚNG DẪN: Thay .loc-map bằng Google Maps embed hoặc ảnh thật -->
         <div class="loc-map">
-          <iframe src="https://maps.google.com/maps?q=411+Nguyen+Kiem,+Phu+Nhuan,+Ho+Chi+Minh+City,+Vietnam&output=embed&hl=vi" title="Bản đồ cơ sở 1 - 411 Nguyễn Kiệm" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://maps.google.com/maps?q=411+Nguyen+Kiem,+Phu+Nhuan,+Ho+Chi+Minh+City,+Vietnam&amp;output=embed&amp;hl=vi" title="Bản đồ cơ sở 1 - 411 Nguyễn Kiệm" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="loc-info">
           <div class="loc-tag">Cơ sở 1</div>
@@ -826,7 +741,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
       </div>
       <div class="loc-card">
         <div class="loc-map">
-          <iframe src="https://maps.google.com/maps?q=614+Le+Hong+Phong,+District+10,+Ho+Chi+Minh+City,+Vietnam&output=embed&hl=vi" title="Bản đồ cơ sở 2 - 614 Lê Hồng Phong" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://maps.google.com/maps?q=614+Le+Hong+Phong,+District+10,+Ho+Chi+Minh+City,+Vietnam&amp;output=embed&amp;hl=vi" title="Bản đồ cơ sở 2 - 614 Lê Hồng Phong" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="loc-info">
           <div class="loc-tag">Cơ sở 2</div>
@@ -892,7 +807,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
         <h3>Đăng ký nhận ưu đãi</h3>
         <p>Quý khách hàng hãy để lại thông tin để được hỗ trợ trực tiếp</p>
       </div>
-      <iframe class="cf7-iframe" src="https://nhakhoadongnam.com/trang-30-4/" title="Form đăng ký"></iframe>
+      <?php echo do_shortcode('[contact-form-7 id="1314978" title="CT-GIOTO2026 - name-at - phone"]'); ?>
     </div>
   </div>
 </section>
@@ -1006,11 +921,12 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 <!-- Company Info Bar -->
 <div class="foot-company-bar">
   <div class="ndn-container">
-    Công Ty TNHH Nha Khoa Đông Nam - Địa chỉ: 411 Nguyễn Kiệm, Phường 9, Quận Phú Nhuận, TP. HCM - Điện thoại: (028).7307.7141 - GPĐKKD: 0304132304 do sở KH & ĐT TP.HCM cấp ngày: 06/12/2005
+    Công Ty TNHH Nha Khoa Đông Nam - Địa chỉ: 411 Nguyễn Kiệm, Phường 9, Quận Phú Nhuận, TP. HCM - Điện thoại: (028).7307.7141 - GPĐKKD: 0304132304 do sở KH &amp; ĐT TP.HCM cấp ngày: 06/12/2005
   </div>
 </div>
 
 </div><!-- /.ndn-lp -->
-<script src="script.js"></script>
-</body>
-</html>
+<script src="<?php echo esc_url($lp_base); ?>/script.js"></script>
+
+<?php wp_footer(); ?>
+</body></html>
