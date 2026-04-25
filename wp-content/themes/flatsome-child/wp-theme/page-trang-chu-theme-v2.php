@@ -783,4 +783,6 @@ get_header();
   </div>
 </section>
 
+</div><!-- /.ndn-lp -->
+
 <?php get_footer(); ?>
