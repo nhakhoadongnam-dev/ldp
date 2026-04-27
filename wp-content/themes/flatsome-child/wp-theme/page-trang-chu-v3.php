@@ -96,7 +96,6 @@ add_filter('wpcf7_load_css', '__return_true');
 <link rel="icon" href="/favicon.ico" sizes="any">
 </head>
 <body>
-<?php wp_body_open(); ?>
 <div class="ndn-lp">
 <?php // Elementor scans the rendered DOM for shortcodes (e.g. [contact-form-7]).
       // the_content() must be present so Elementor can detect & enqueue CF7 assets. ?>
