@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Trang Chủ Landing v1
+ * Template Name: Trang Chủ Landing v5
  * Auto-generated from page/trang-chu/ by wp-sync.
  * DO NOT EDIT MANUALLY — run `npm run wp:sync`.
  * Mode: Standalone (full HTML shell, delegate SEO/GTM to Yoast + Site Kit)
