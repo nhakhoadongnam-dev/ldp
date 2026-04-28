@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Trang Chủ Landing (Theme) v5
+ * Template Name: Trang Chủ Landing (Theme) v6
  * Auto-generated from page/trang-chu/ by wp-sync.
  * DO NOT EDIT MANUALLY — run `npm run wp:sync`.
  * Mode: Theme (content only, uses Flatsome header/footer)
@@ -51,6 +51,7 @@ get_header();
 <div class="ndn-lp">
 <!-- Skip Navigation -->
 <a href="#ndn-main" class="skip-link">Bỏ qua đến nội dung chính</a>
+
 
 <main id="ndn-main">
 <!-- ═══ HERO ══ -->
@@ -249,38 +250,13 @@ get_header();
   <div class="ndn-container">
     <div class="ndn-form-section-inner">
       <div class="ndn-form-section-text reveal-left">
-        <h2>ĐẶT LỊCH KHÁM NHẬN ƯU ĐÃI TRI ÂN</h2>
-        <p>Chương trình kết thúc 01/05/2026. Đăng ký ngay để được tư vấn miễn phí và giữ suất ưu đãi.</p>
-        <div class="ndn-form-section-contact">
-          <div class="contact-row">
-            <div class="contact-row-icon">📞</div>
-            <div>Tổng đài: <a href="tel:19007141">1900.7141</a></div>
-          </div>
-          <div class="contact-row">
-            <div class="contact-row-icon">📱</div>
-            <div>Hotline: <a href="tel:0972411411">0972.411.411</a></div>
-          </div>
-          <div class="contact-row">
-            <div class="contact-row-icon">📍</div>
-            <div style="font-size: 14px; line-height: 1.6;">
-              CS1: 411 Nguyễn Kiệm - Phường Đức Nhuận - TPHCM<br>
-              CS2: 614 Lê Hồng Phong - Phường Vườn Lài - TPHCM
-            </div>
-          </div>
-          <div class="contact-row">
-            <div class="contact-row-icon">🕐</div>
-            <div style="font-size: 14px; line-height: 1.6;">
-              Thứ 2 - 7: 8h00 - 19h00<br>
-              Chủ nhật: 8h00 - 16h00
-            </div>
-          </div>
-        </div>
+        <h2>NHẬN KẾ HOẠCH ĐIỀU TRỊ & DỰ TOÁN CHI PHÍ TRỌN GÓI</h2>
+        <p>Miễn phí thăm khám, chụp CT Cone Beam 3D, lập kế hoạch điều trị cùng bác sĩ chuyên Implant</p>
       </div>
 
       <div class="hero-form-wrapper reveal-right">
         <div class="form-header">
-          <div class="form-urgency-badge">Suất ưu đãi có hạn</div>
-          <h3>Đăng ký nhận ưu đãi</h3>
+          <h3>ĐĂNG KÝ THĂM KHÁM NGAY</h3>
           <p>Quý khách hàng hãy để lại thông tin để được hỗ trợ trực tiếp</p>
         </div>
         <?php echo do_shortcode('[contact-form-7 id="1314978" title="CT-GIOTO2026 - name-at - phone"]'); ?>
@@ -296,7 +272,7 @@ get_header();
       <div class="left">
         <div class="section-label">Dịch vụ tại Đông Nam</div>
         <h2 class="ndn-title">Dịch vụ <em>trọn gói</em>, chi phí minh bạch</h2>
-        <p class="section-sub">Mọi gói Implant đã bao gồm trụ + abutment + răng sứ + xét nghiệm. Khách hàng nhận vỏ hộp trụ chính hãng để tra cứu.</p>
+        <p class="section-sub">An tâm điều trị với kế hoạch chuẩn y khoa cùng bảng giá trọn gói được cam kết rõ ràng, tuyệt đối không phát sinh chi phí ẩn.</p>
       </div>
     </div>
 
@@ -736,8 +712,8 @@ get_header();
 <section class="ndn-form-section" id="ndn-form-section">
   <div class="ndn-form-section-inner">
     <div class="ndn-form-section-text reveal-left">
-      <h2>ĐẶT LỊCH KHÁM NHẬN ƯU ĐÃI TRI ÂN</h2>
-      <p>Chương trình kết thúc 01/05/2026. Đăng ký ngay để được tư vấn miễn phí và giữ suất ưu đãi.</p>
+      <h2>NHẬN KẾ HOẠCH ĐIỀU TRỊ & DỰ TOÁN CHI PHÍ TRỌN GÓI</h2>
+      <p>Miễn phí thăm khám, chụp CT Cone Beam 3D, lập kế hoạch điều trị cùng bác sĩ chuyên Implant</p>
       <div class="ndn-form-section-contact">
         <div class="contact-row">
           <div class="contact-row-icon">📞</div>
@@ -766,8 +742,7 @@ get_header();
 
     <div class="hero-form-wrapper reveal-right">
       <div class="form-header">
-        <div class="form-urgency-badge">Suất ưu đãi có hạn</div>
-        <h3>Đăng ký nhận ưu đãi</h3>
+        <h3>ĐĂNG KÝ THĂM KHÁM NGAY</h3>
         <p>Quý khách hàng hãy để lại thông tin để được hỗ trợ trực tiếp</p>
       </div>
       <?php echo do_shortcode('[contact-form-7 id="1314978" title="CT-GIOTO2026 - name-at - phone"]'); ?>
