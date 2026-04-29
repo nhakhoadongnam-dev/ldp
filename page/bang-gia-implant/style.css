@@ -652,6 +652,61 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
   color: var(--muted);
   font-size: 12px;
 }
+/* ── Osseointegration guarantee block ── */
+.ndn-lp .lp-bgi-osseo {
+  margin-top: 32px;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
+  color: var(--white);
+}
+.ndn-lp .lp-bgi-osseo h3 {
+  font-size: clamp(17px, 2vw, 21px);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+.ndn-lp .lp-bgi-osseo > p {
+  font-size: 15px;
+  color: rgba(255,255,255,.85);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.ndn-lp .lp-bgi-osseo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 32px;
+}
+.ndn-lp .lp-bgi-osseo-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.45;
+}
+.ndn-lp .lp-bgi-osseo-list li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--gold);
+  font-size: 11px;
+}
+@media (max-width: 600px) {
+  .ndn-lp .lp-bgi-osseo {
+    padding: 24px 20px;
+  }
+  .ndn-lp .lp-bgi-osseo-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* CTA box */
 .ndn-lp .lp-bgi-cta-box {
   margin-top: 24px;
@@ -1183,83 +1238,267 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
 .ndn-lp .lp-bgi-faq-answer p { font-size: 14px; color: var(--ink-2); margin: 0; }
 
 /* ═══════════════════════════════════════════════════════════
-   COMMITMENT
+   TRUST INTRO
+   ═══════════════════════════════════════════════════════════ */
+.ndn-lp .lp-bgi-trust-intro {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+.ndn-lp .lp-bgi-trust-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  padding: 40px 48px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+.ndn-lp .lp-bgi-trust-badge {
+  display: inline-block;
+  background: var(--gold-muted);
+  border: 1px solid var(--gold-light);
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.01em;
+  margin-bottom: 20px;
+}
+.ndn-lp .lp-bgi-trust-copy {
+  font-size: clamp(15px, 1.7vw, 17px);
+  color: var(--ink-2);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+.ndn-lp .lp-bgi-trust-rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ndn-lp .lp-bgi-trust-quote {
+  font-size: clamp(16px, 1.9vw, 19px);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.6;
+  margin: 0;
+}
+.ndn-lp .lp-bgi-trust-quote strong {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--navy-deep);
+}
+.ndn-lp .lp-bgi-trust-sub {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+}
+@media (max-width: 640px) {
+  .ndn-lp .lp-bgi-trust-card {
+    padding: 28px 22px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CAROUSEL — BEFORE/AFTER
+   ═══════════════════════════════════════════════════════════ */
+.ndn-lp .lp-bgi-carousel {
+  background: var(--cream);
+  border-top: 1px solid var(--border);
+}
+.ndn-lp .lp-bgi-section-head {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.ndn-lp .lp-bgi-section-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy-light);
+  background: var(--blue-pale);
+  border: 1px solid var(--blue-border);
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 12px;
+}
+.ndn-lp .lp-bgi-section-head h2 {
+  font-size: clamp(22px, 3.2vw, 32px);
+  color: var(--navy-deep);
+  margin-bottom: 10px;
+  line-height: 1.22;
+}
+.ndn-lp .lp-bgi-section-head h2 em {
+  color: var(--navy-deep);
+  font-style: normal;
+}
+.ndn-lp .lp-bgi-carousel-intro {
+  font-size: 15px;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.ndn-lp .lp-bgi-carousel-wrapper {
+  position: relative;
+  padding: 0 32px;
+}
+.ndn-lp .lp-bgi-carousel-viewport {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+.ndn-lp .lp-bgi-carousel-track {
+  display: flex;
+  gap: var(--gap-md);
+  transition: transform 0.45s var(--ease);
+}
+.ndn-lp .lp-bgi-carousel-slide {
+  flex: 0 0 calc((100% - var(--gap-md) * 2) / 3);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+.ndn-lp .lp-bgi-carousel-slide img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s var(--ease);
+}
+.ndn-lp .lp-bgi-carousel-slide:hover img {
+  transform: scale(1.03);
+}
+.ndn-lp .lp-bgi-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  line-height: 1;
+}
+.ndn-lp .lp-bgi-carousel-btn:hover {
+  background: var(--navy-deep);
+  box-shadow: var(--shadow-md);
+}
+.ndn-lp .lp-bgi-carousel-prev { left: 0; }
+.ndn-lp .lp-bgi-carousel-next { right: 0; }
+@media (max-width: 992px) {
+  .ndn-lp .lp-bgi-carousel-slide {
+    flex: 0 0 calc((100% - var(--gap-md)) / 2);
+  }
+}
+@media (max-width: 600px) {
+  .ndn-lp .lp-bgi-carousel-wrapper { padding: 0 40px; }
+  .ndn-lp .lp-bgi-carousel-slide { flex: 0 0 100%; }
+  .ndn-lp .lp-bgi-carousel-slide img { height: 220px; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   COMMITMENT — icon card grid
    ═══════════════════════════════════════════════════════════ */
 .ndn-lp .lp-bgi-commitment {
   background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
   border-top: none;
 }
-.ndn-lp .lp-bgi-commit-shell {
-  max-width: 860px;
-  margin: 0 auto;
+.ndn-lp .lp-bgi-commit-head {
   text-align: center;
-  padding: 34px 42px;
-  border: 1px solid rgba(232, 213, 168, 0.18);
-  border-radius: var(--radius-lg);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+  margin-bottom: 28px;
 }
-.ndn-lp .lp-bgi-commitment h2 {
+.ndn-lp .lp-bgi-commit-label {
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 700;
   color: var(--white);
-  margin-bottom: 16px;
+  line-height: 1.22;
+  margin: 0;
 }
-.ndn-lp .lp-bgi-commitment h2 em {
+.ndn-lp .lp-bgi-commit-label em {
   color: var(--gold-light);
   font-style: normal;
 }
-.ndn-lp .lp-bgi-commit-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+.ndn-lp .lp-bgi-commit-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  max-width: 940px;
+  margin: 0 auto;
 }
-.ndn-lp .lp-bgi-commit-line {
-  display: inline-flex;
-  align-items: flex-start;
+.ndn-lp .lp-bgi-commit-card {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius-md);
+  padding: 24px 16px 20px;
+  text-align: center;
+  transition: background 0.25s, border-color 0.25s;
+}
+.ndn-lp .lp-bgi-commit-card:hover {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(232,213,168,.35);
+}
+.ndn-lp .lp-bgi-commit-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 14px;
+  background: rgba(255,255,255,.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 10px;
+  color: var(--gold-light);
+}
+.ndn-lp .lp-bgi-commit-icon svg {
+  width: 22px;
+  height: 22px;
+}
+.ndn-lp .lp-bgi-commit-card p {
   margin: 0;
-  color: rgba(255,255,255,.96);
-  font-size: clamp(14px, 1.6vw, 17px);
+  font-size: 13px;
   font-weight: 600;
+  color: rgba(255,255,255,.92);
   line-height: 1.45;
 }
-.ndn-lp .lp-bgi-commit-check {
-  color: var(--white);
-  font-size: 28px;
-  line-height: 1;
-  transform: translateY(1px);
-}
 .ndn-lp .lp-bgi-free-bar {
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255,255,255,.16);
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.12);
   text-align: center;
-  font-size: clamp(14px, 1.8vw, 16px);
+  font-size: clamp(13px, 1.6vw, 15px);
   font-style: italic;
   font-weight: 500;
-  color: rgba(255,255,255,.68);
+  color: rgba(255,255,255,.6);
   letter-spacing: .01em;
 }
 .ndn-lp .lp-bgi-free-bar span {
-  color: rgba(255,255,255,.45);
+  color: rgba(255,255,255,.35);
   margin: 0 8px;
 }
-
-@media (max-width: 640px) {
-  .ndn-lp .lp-bgi-intro .lp-container--centered,
-  .ndn-lp .lp-bgi-commit-shell {
+@media (max-width: 860px) {
+  .ndn-lp .lp-bgi-commit-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .ndn-lp .lp-bgi-commit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ndn-lp .lp-bgi-intro .lp-container--centered {
     padding: 24px 18px;
-  }
-  .ndn-lp .lp-bgi-commitment h2 {
-    margin-bottom: 22px;
-  }
-  .ndn-lp .lp-bgi-commit-stack {
-    gap: 10px;
-  }
-  .ndn-lp .lp-bgi-commit-line {
-    width: 100%;
-    justify-content: flex-start;
-    text-align: left;
   }
   .ndn-lp .lp-bgi-free-bar {
     line-height: 1.6;
