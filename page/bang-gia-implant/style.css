@@ -1366,9 +1366,6 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
 .ndn-lp .lp-bgi-carousel-slide img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: contain;
-  background: var(--surface);
   display: block;
 }
 .ndn-lp .lp-bgi-carousel-btn {
