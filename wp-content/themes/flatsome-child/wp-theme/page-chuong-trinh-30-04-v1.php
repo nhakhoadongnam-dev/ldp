@@ -1,124 +1,44 @@
-<!DOCTYPE html>
-<html lang="vi">
+<?php
+/**
+ * Template Name: Chương Trình 30/04 Landing v1
+ * Auto-generated from page/chuong-trinh-30-04/ by wp-sync.
+ * DO NOT EDIT MANUALLY — run `npm run wp:sync`.
+ * Mode: Standalone (full HTML shell, delegate SEO/GTM to Yoast + Site Kit)
+ */
+defined('ABSPATH') || exit;
 
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SKMM9JDYTH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+$lp_base = home_url('/page/chuong-trinh-30-04');
 
-    gtag('config', 'G-SKMM9JDYTH');
-  </script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5XG3JXR');</script>
-  <!-- End Google Tag Manager -->
+// Ép CF7 load script/CSS — custom template không tự detect shortcode sớm.
+add_filter('wpcf7_load_js',  '__return_true');
+add_filter('wpcf7_load_css', '__return_true');
 
-  <meta charset="UTF-8">
+?>
+<!DOCTYPE html><html <?php language_attributes(); ?>><head>
+  
+  
+
+  <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ═══ SEO CORE ═══ -->
-  <!-- Title: 55 ký tự -->
-  <title>Ưu Đãi 30/4 | Nha Khoa Đông Nam</title>
-  <!-- Description: 152 ký tự -->
-  <meta name="description" content="Ưu đãi dịp 30/4: Implant ETK ưu đãi 20%, nhổ răng khôn trợ giá 50%. Đặt lịch tư vấn miễn phí tại Nha Khoa Đông Nam, 21+ năm uy tín. Hotline: 0972.411.411.">
-  <meta name="keywords" content="ưu đãi nha khoa 30/4, trồng răng implant, nha khoa đông nam, implant etk active, nhổ răng khôn, trám răng, nha khoa tphcm">
-  <meta name="author" content="Nha Khoa Đông Nam">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://nhakhoadongnam.com/page/chuong-trinh-30-04/">
+  
 
-  <!-- ═══ OPEN GRAPH (Facebook / Zalo) ═══ -->
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="vi_VN">
-  <meta property="og:site_name" content="Nha Khoa Đông Nam">
-  <meta property="og:title" content="Ưu Đãi 30/4 | Nha Khoa Đông Nam">
-  <meta property="og:description" content="Ưu đãi dịp 30/4: Implant ETK 20%, nhổ răng khôn trợ giá 50%. Đặt lịch tư vấn miễn phí tại Nha Khoa Đông Nam, 21+ năm uy tín. Hotline: 0972.411.411.">
-  <meta property="og:image" content="https://nhakhoadongnam.com/wp-content/uploads/2026/03/30-4-scaled.jpg">
-  <meta property="og:image:alt" content="Banner Ưu Đãi Nha Khoa Dịp 30/4 – Nha Khoa Đông Nam">
-  <meta property="og:url" content="https://nhakhoadongnam.com/page/chuong-trinh-30-04/">
-
-  <!-- ═══ TWITTER CARD ═══ -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ưu Đãi 30/4 – Implant ETK Ưu Đãi 20% | Nha Khoa Đông Nam">
-  <meta name="twitter:description" content="Ưu đãi dịp 30/4: Implant ETK Ưu Đãi 20%, nhổ răng khôn trợ giá 50%. Đặt lịch tư vấn miễn phí – Hotline: 0972.411.411.">
-  <meta name="twitter:image" content="https://nhakhoadongnam.com/wp-content/uploads/2026/03/30-4-scaled.jpg">
-
-  <!-- ═══ MISC ═══ -->
-  <meta name="theme-color" content="#1B2A4A">
-  <meta name="geo.region" content="VN-SG">
-  <meta name="geo.placename" content="TP. Hồ Chí Minh">
-
-  <!-- ═══ SCHEMA.ORG JSON-LD ═══ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Dentist",
-        "@id": "https://nhakhoadongnam.com/#dentist",
-        "name": "Nha Khoa Đông Nam",
-        "url": "https://nhakhoadongnam.com",
-        "telephone": "+840972411411",
-        "address": [
-          {
-            "@type": "PostalAddress",
-            "streetAddress": "411 Nguyễn Kiệm",
-            "addressLocality": "Phường Đức Nhuận, Quận Phú Nhuận",
-            "addressRegion": "TP. Hồ Chí Minh",
-            "addressCountry": "VN"
-          },
-          {
-            "@type": "PostalAddress",
-            "streetAddress": "614 Lê Hồng Phong",
-            "addressLocality": "Phường Vườn Lài, Quận 10",
-            "addressRegion": "TP. Hồ Chí Minh",
-            "addressCountry": "VN"
-          }
-        ],
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-            "opens": "08:00",
-            "closes": "19:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Sunday"],
-            "opens": "08:00",
-            "closes": "16:00"
-          }
-        ],
-        "priceRange": "$$"
-      },
-      {
-        "@type": "Offer",
-        "name": "Ưu Đãi Nha Khoa Dịp Đại Lễ 30/4",
-        "description": "Trồng răng Implant ETK Active ưu đãi 20%, nhổ răng khôn & trám răng trợ giá 50% dịp 30/4–1/5/2026.",
-        "validFrom": "2026-04-01",
-        "validThrough": "2026-05-01",
-        "seller": { "@id": "https://nhakhoadongnam.com/#dentist" }
-      }
-    ]
-  }
-  </script>
-
-  <!-- ═══ FONTS & CSS ═══ -->
+  <?php wp_head(); ?>
+<!-- ═══ FONTS & CSS ═══ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo esc_url($lp_base); ?>/style.css">
 </head>
 
 <body>
 <div class="ndn-lp">
+<?php // Elementor scans the rendered DOM for shortcodes (e.g. [contact-form-7]).
+      // the_content() must be present so Elementor can detect & enqueue CF7 assets. ?>
+<div style="display:none!important" aria-hidden="true">
+  <?php if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
+</div>
+
 
   <!-- COUNTDOWN TOPBAR -->
   <div class="topbar" id="topbar">
@@ -145,11 +65,10 @@
   <!-- HERO BANNER -->
   <!-- HƯỚNG DẪN CHÈN ẢNH:
      Xóa thẻ div.hero-banner-img-placeholder bên dưới,
-     thay bằng: <img src="TEN_FILE_ANH.jpg" alt="Banner" class="hero-banner-img">
+     thay bằng: <img src="<?php echo esc_url($lp_base); ?>/TEN_FILE_ANH.jpg" alt="Banner" class="hero-banner-img">
 -->
   <section class="hero-banner">
-    <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/03/chuong-trinh-uu-dai-dip-30-4-scaled.jpg"
-      alt="Banner Ưu Đãi 30/4 - Nha Khoa Đông Nam" class="hero-banner-img">
+    <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/03/chuong-trinh-uu-dai-dip-30-4-scaled.jpg" alt="Banner Ưu Đãi 30/4 - Nha Khoa Đông Nam" class="hero-banner-img">
   </section>
 
   <!-- PAIN POINT: ĐỪNG ĐỂ NHỮNG NỖI LO RĂNG MIỆNG CẢN TRỞ NIỀM VUI NGÀY LỄ -->
@@ -161,14 +80,13 @@
       <p class="pain-point-sub reveal">Nhiều người vẫn đang âm thầm chịu đựng những cơn ê buốt dai dẳng, sự bất tiện khi ăn uống hay cảm giác tự ti khi giao tiếp vì hàm răng khiếm khuyết. Đừng để những rào cản ấy làm giảm đi chất lượng sống đáng có của Quý khách hàng.</p>
 
       <!-- Service card row — 4 cards ngang -->
-      <!-- HƯỚNG DẪN: Thay .service-card-img-placeholder bằng <img src="..." class="service-card-img"> khi có ảnh thật -->
+      <!-- HƯỚNG DẪN: Thay .service-card-img-placeholder bằng <img src="<?php echo esc_url($lp_base); ?>/..." class="service-card-img"> khi có ảnh thật -->
       <div class="service-cards">
 
         <!-- Card 1: Mất răng lâu năm -->
         <div class="service-card reveal" style="transition-delay:0.05s">
           <div class="service-card-img-wrap">
-            <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/03/4.jpg" alt="Mất răng lâu năm"
-              class="service-card-img" loading="lazy">
+            <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/03/4.jpg" alt="Mất răng lâu năm" class="service-card-img" loading="lazy">
           </div>
           <div class="service-card-body">
             <div class="service-card-category">Mất răng lâu năm</div>
@@ -180,8 +98,7 @@
         <!-- Card 2: Răng sâu, mẻ -->
         <div class="service-card reveal" style="transition-delay:0.1s">
           <div class="service-card-img-wrap">
-            <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/03/3.jpg" alt="Răng sâu, mẻ"
-              class="service-card-img" loading="lazy">
+            <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/03/3.jpg" alt="Răng sâu, mẻ" class="service-card-img" loading="lazy">
           </div>
           <div class="service-card-body">
             <div class="service-card-category">Răng sâu, mẻ</div>
@@ -194,8 +111,7 @@
         <!-- Card 3: Răng khôn mọc lệch -->
         <div class="service-card reveal" style="transition-delay:0.15s">
           <div class="service-card-img-wrap">
-            <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/03/2.jpg" alt="Răng khôn mọc lệch"
-              class="service-card-img" loading="lazy">
+            <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/03/2.jpg" alt="Răng khôn mọc lệch" class="service-card-img" loading="lazy">
           </div>
           <div class="service-card-body">
             <div class="service-card-category">Răng khôn mọc lệch</div>
@@ -207,8 +123,7 @@
         <!-- Card 4: Viêm tủy -->
         <div class="service-card reveal" style="transition-delay:0.2s">
           <div class="service-card-img-wrap">
-            <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/03/1.jpg" alt="Viêm tủy"
-              class="service-card-img" loading="lazy">
+            <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/03/1.jpg" alt="Viêm tủy" class="service-card-img" loading="lazy">
           </div>
           <div class="service-card-body">
             <div class="service-card-category">Viêm tủy</div>
@@ -341,7 +256,6 @@
     </div>
   </section>
 
-
   <!-- FORM 1 (id: lien-he) — CF7 sẽ được nhúng bên dưới -->
   <section class="form-section" id="lien-he">
     <div class="form-section-inner">
@@ -380,7 +294,7 @@
           <h3>Đăng ký nhận ưu đãi</h3>
           <p>Quý khách hàng hãy để lại thông tin để được hỗ trợ trực tiếp</p>
         </div>
-        <iframe class="cf7-iframe" src="https://nhakhoadongnam.com/trang-30-4/" title="Form đăng ký"></iframe>
+        <?php echo do_shortcode('[contact-form-7 id="1314978" title="CT-GIOTO2026 - name-at - phone"]'); ?>
       </div>
     </div>
   </section>
@@ -389,8 +303,7 @@
   <section class="section carousel">
     <div class="section-inner">
       <div class="reveal" style="text-align: center; margin-bottom: 20px;">
-        <h2 class="section-title"
-          style="margin-left: auto; margin-right: auto;">HIỆU QUẢ ĐIỀU TRỊ QUA TRƯỜNG HỢP THỰC TẾ</h2>
+        <h2 class="section-title" style="margin-left: auto; margin-right: auto;">HIỆU QUẢ ĐIỀU TRỊ QUA TRƯỜNG HỢP THỰC TẾ</h2>
       </div>
 
       <div class="carousel-wrapper reveal" style="transition-delay: 0.1s;">
@@ -422,8 +335,7 @@
           <h2 class="section-title">Kết quả bền vững — An tâm trọn đời</h2>
         </div>
         <div class="trust-img">
-          <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/03/1-1.jpg" alt="Đội ngũ bác sĩ Đông Nam"
-            loading="lazy">
+          <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/03/1-1.jpg" alt="Đội ngũ bác sĩ Đông Nam" loading="lazy">
           <div class="trust-img-badge">
             <span>21+</span> Năm
           </div>
@@ -474,33 +386,24 @@
   <section class="section video-testimonials">
     <div class="section-inner">
       <div class="reveal" style="text-align: center; margin-bottom: 50px;">
-        <h2 class="section-title"
-          style="margin-left: auto; margin-right: auto; color: var(--navy);">KHÁCH HÀNG NÓI GÌ SAU KHI ĐIỀU TRỊ TẠI NHA KHOA<br>ĐÔNG NAM?</h2>
+        <h2 class="section-title" style="margin-left: auto; margin-right: auto; color: var(--navy);">KHÁCH HÀNG NÓI GÌ SAU KHI ĐIỀU TRỊ TẠI NHA KHOA<br>ĐÔNG NAM?</h2>
       </div>
       <div class="video-grid reveal">
         <!-- Video 1 -->
         <div class="video-item" style="transition-delay: 0.1s;">
-          <iframe src="https://www.youtube.com/embed/PoNe7n2yVEQ" title="Khách hàng 1"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/PoNe7n2yVEQ" title="Khách hàng 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <!-- Video 2 -->
         <div class="video-item" style="transition-delay: 0.2s;">
-          <iframe src="https://www.youtube.com/embed/eblVhYpRay8" title="Khách hàng 2"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/eblVhYpRay8" title="Khách hàng 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <!-- Video 3 -->
         <div class="video-item" style="transition-delay: 0.3s;">
-          <iframe src="https://www.youtube.com/embed/rQkbBt-CciA" title="Khách hàng 3"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/rQkbBt-CciA" title="Khách hàng 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <!-- Video 4 -->
         <div class="video-item" style="transition-delay: 0.4s;">
-          <iframe src="https://www.youtube.com/embed/WBPU55A7D0E" title="Khách hàng 4"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/WBPU55A7D0E" title="Khách hàng 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
     </div>
@@ -662,7 +565,7 @@
           <h3>Đăng ký nhận ưu đãi</h3>
           <p>Quý khách hàng hãy để lại thông tin để được hỗ trợ trực tiếp</p>
         </div>
-        <iframe class="cf7-iframe" src="https://nhakhoadongnam.com/trang-30-4/" title="Form đăng ký"></iframe>
+        <?php echo do_shortcode('[contact-form-7 id="1314978" title="CT-GIOTO2026 - name-at - phone"]'); ?>
       </div>
     </div>
   </section>
@@ -682,22 +585,21 @@
         <div class="branch-card main">
           <div class="branch-badge main">
             <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
             </svg>
             TRỤ SỞ CHÍNH
           </div>
           <div class="branch-title">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" viewBox="0 0 24 24">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
             </svg>
             CHI NHÁNH NGUYỄN KIỆM
           </div>
           <div class="branch-address">
             <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
-              <path d="M4 22v-7" />
+              <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+              <path d="M4 22v-7"></path>
             </svg>
             411 Nguyễn Kiệm, Phường Đức Nhuận, TP.HCM
           </div>
@@ -705,8 +607,7 @@
           <div class="branch-info-group">
             <div class="branch-info-label">
               <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path
-                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
               </svg>
               LIÊN HỆ TƯ VẤN
             </div>
@@ -727,8 +628,8 @@
           <div class="branch-info-group">
             <div class="branch-info-label">
               <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 6v6l4 2" />
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
               </svg>
               GIỜ LÀM VIỆC
             </div>
@@ -743,17 +644,15 @@
           </div>
 
           <div class="branch-actions">
-            <a href="https://maps.google.com/?q=411+Nguyễn+Kiệm,+Phường+9,+Quận+Phú+Nhuận,+TP.HCM" target="_blank"
-              class="btn-map">
+            <a href="https://maps.google.com/?q=411+Nguyễn+Kiệm,+Phường+9,+Quận+Phú+Nhuận,+TP.HCM" target="_blank" class="btn-map">
               <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M9 18l6-6-6-6" />
+                <path d="M9 18l6-6-6-6"></path>
               </svg>
               Chỉ đường Google Maps
             </a>
             <a href="tel:19007141" class="btn-call-branch">
               <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
               Gọi ngay
             </a>
@@ -764,23 +663,22 @@
         <div class="branch-card sub">
           <div class="branch-badge sub">
             <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
             </svg>
             CHI NHÁNH 2
           </div>
           <div class="branch-title">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" viewBox="0 0 24 24">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
             </svg>
             CHI NHÁNH LÊ HỒNG PHONG
           </div>
           <div class="branch-address">
             <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
-              <path d="M4 22v-7" />
+              <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+              <path d="M4 22v-7"></path>
             </svg>
             614 Lê Hồng Phong, Phường Vườn Lài, TP.HCM
           </div>
@@ -788,8 +686,7 @@
           <div class="branch-info-group">
             <div class="branch-info-label">
               <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path
-                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
               </svg>
               LIÊN HỆ TƯ VẤN
             </div>
@@ -810,8 +707,8 @@
           <div class="branch-info-group">
             <div class="branch-info-label">
               <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 6v6l4 2" />
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
               </svg>
               GIỜ LÀM VIỆC
             </div>
@@ -826,17 +723,15 @@
           </div>
 
           <div class="branch-actions">
-            <a href="https://maps.google.com/?q=614+Lê+Hồng+Phong,+Phường+10,+Quận+10,+TP.HCM" target="_blank"
-              class="btn-map">
+            <a href="https://maps.google.com/?q=614+Lê+Hồng+Phong,+Phường+10,+Quận+10,+TP.HCM" target="_blank" class="btn-map">
               <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M9 18l6-6-6-6" />
+                <path d="M9 18l6-6-6-6"></path>
               </svg>
               Chỉ đường Google Maps
             </a>
             <a href="tel:19007141" class="btn-call-branch">
               <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
               Gọi ngay
             </a>
@@ -846,8 +741,7 @@
 
       <div class="company-info reveal" style="padding-bottom: 30px;">
         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-          <path
-            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path>
         </svg>
         GPĐKKD: 0304132304 do Sở KH &amp; ĐT TP.HCM cấp ngày 06/12/2005
       </div>
@@ -855,7 +749,7 @@
   </section>
 
   <div class="footer-bottom">
-    © 2026 Nha Khoa Đông Nam — GP hoạt động: 03708/SYT-GPHĐ & 01672/HCM-GPHĐ
+    © 2026 Nha Khoa Đông Nam — GP hoạt động: 03708/SYT-GPHĐ &amp; 01672/HCM-GPHĐ
   </div>
 
   <!-- STICKY CTA MOBILE -->
@@ -877,7 +771,7 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="<?php echo esc_url($lp_base); ?>/script.js"></script>
   <script>
   (function () {
     var slides = Array.from(document.querySelectorAll('.carousel-slide'));
@@ -938,6 +832,6 @@
   </script>
 
 </div>
-</body>
 
-</html>
+<?php wp_footer(); ?>
+</body></html>
