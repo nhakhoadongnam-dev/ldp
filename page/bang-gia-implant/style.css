@@ -223,6 +223,16 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
   background: #fff;
 }
 
+.ndn-lp .lp-bgi-cf7-shortcode {
+  width: 100%;
+  min-height: 120px;
+  color: var(--ink);
+}
+
+.ndn-lp .lp-bgi-cf7-shortcode .wpcf7 {
+  width: 100%;
+}
+
 /* Form responsive */
 @media (max-width: 992px) {
   .ndn-lp .lp-bgi-form-section { padding: 60px 24px; }
