@@ -1,16 +1,36 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
+<?php
+/**
+ * Template Name: Bảng Giá Implant Landing v4
+ * Auto-generated from page/bang-gia-implant/ by wp-sync.
+ * DO NOT EDIT MANUALLY — run `npm run wp:sync`.
+ * Mode: Standalone (full HTML shell, delegate SEO/GTM to Yoast + Site Kit)
+ */
+defined('ABSPATH') || exit;
+
+$lp_base = home_url('/page/bang-gia-implant');
+
+// Ép CF7 load script/CSS — custom template không tự detect shortcode sớm.
+add_filter('wpcf7_load_js',  '__return_true');
+add_filter('wpcf7_load_css', '__return_true');
+
+?>
+<!DOCTYPE html><html <?php language_attributes(); ?>><head>
+  <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bảng Giá Trồng Răng Implant Trọn Gói 2026 - Nha Khoa Đông Nam</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <?php wp_head(); ?>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo esc_url($lp_base); ?>/style.css">
 </head>
 <body>
 <div class="ndn-lp">
+<?php // Elementor scans the rendered DOM for shortcodes (e.g. [contact-form-7]).
+      // the_content() must be present so Elementor can detect & enqueue CF7 assets. ?>
+<div style="display:none!important" aria-hidden="true">
+  <?php if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
+</div>
+
 
   <!-- ── HEADER  -->
   <header class="lp-bgi-header">
@@ -331,7 +351,6 @@
     </div>
   </section>
 
-
   <!-- ── BEFORE AFTER ── -->
   <section class="lp-bgi-carousel lp-section" id="ket-qua-dieu-tri">
     <div class="lp-container">
@@ -340,7 +359,7 @@
         <p class="lp-bgi-carousel-intro">Các ca cấy ghép Implant thực tế được thực hiện bởi đội ngũ bác sĩ chuyên sâu tại phòng khám</p>
       </div>
       <div class="lp-bgi-carousel-wrapper">
-        <button class="lp-bgi-carousel-btn lp-bgi-carousel-prev" aria-label="Ảnh trước">&#8249;</button>
+        <button class="lp-bgi-carousel-btn lp-bgi-carousel-prev" aria-label="Ảnh trước">‹</button>
         <div class="lp-bgi-carousel-viewport">
           <div class="lp-bgi-carousel-track">
             <div class="lp-bgi-carousel-slide">
@@ -360,7 +379,7 @@
             </div>
           </div>
         </div>
-        <button class="lp-bgi-carousel-btn lp-bgi-carousel-next" aria-label="Ảnh tiếp theo">&#8250;</button>
+        <button class="lp-bgi-carousel-btn lp-bgi-carousel-next" aria-label="Ảnh tiếp theo">›</button>
       </div>
     </div>
   </section>
@@ -377,49 +396,19 @@
         <div class="lp-bgi-video-track-wrap">
           <div class="lp-bgi-video-track">
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/WBPU55A7D0E"
-                title="Chia sẻ 1"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <iframe src="https://www.youtube.com/embed/WBPU55A7D0E" title="Chia sẻ 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/eblVhYpRay8"
-                title="Chia sẻ 2"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <iframe src="https://www.youtube.com/embed/eblVhYpRay8" title="Chia sẻ 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/07HeOz_5S4s"
-                title="Chia sẻ 3"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <iframe src="https://www.youtube.com/embed/07HeOz_5S4s" title="Chia sẻ 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/vatpzUlPl4c"
-                title="Chia sẻ 4"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <iframe src="https://www.youtube.com/embed/vatpzUlPl4c" title="Chia sẻ 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/a3GTXsOv3aM"
-                title="Chia sẻ 5"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <iframe src="https://www.youtube.com/embed/a3GTXsOv3aM" title="Chia sẻ 5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen="" loading="lazy"></iframe>
             </div>
           </div>
         </div>
@@ -828,7 +817,7 @@
     <div class="lp-container">
       <h2>Câu Hỏi Thường Gặp</h2>
       <div class="lp-bgi-faq-list">
-        <details class="lp-bgi-faq-item" open>
+        <details class="lp-bgi-faq-item" open="">
           <summary>Giá rẻ 6–9 triệu có đáng tin không?</summary>
           <div class="lp-bgi-faq-answer"><p>Đây thường là giá chỉ tính trụ Implant, chưa bao gồm khớp nối Abutment, mão răng sứ và chi phí ghép xương. Tổng cộng có thể đội lên gấp 2–3 lần. Nha Khoa Đông Nam cam kết báo giá trọn gói ngay từ đầu.</p></div>
         </details>
@@ -875,31 +864,31 @@
       <div class="lp-bgi-commit-grid" aria-label="Cam kết của Nha Khoa Đông Nam">
         <div class="lp-bgi-commit-card">
           <div class="lp-bgi-commit-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
           </div>
           <p>Vật liệu chính hãng có nguồn gốc</p>
         </div>
         <div class="lp-bgi-commit-card">
           <div class="lp-bgi-commit-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg>
           </div>
           <p>Bác sĩ chuyên sâu Implant</p>
         </div>
         <div class="lp-bgi-commit-card">
           <div class="lp-bgi-commit-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v4M16 4v4M3 12h18"/><path d="M8 16h4"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M8 4v4M16 4v4M3 12h18"></path><path d="M8 16h4"></path></svg>
           </div>
           <p>Báo giá trọn gói, không phát sinh</p>
         </div>
         <div class="lp-bgi-commit-card">
           <div class="lp-bgi-commit-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
           </div>
           <p>Cam kết đồng hành trọn đời</p>
         </div>
         <div class="lp-bgi-commit-card">
           <div class="lp-bgi-commit-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
           </div>
           <p>Phòng khám vô trùng đạt chuẩn</p>
         </div>
@@ -945,7 +934,7 @@
           <h3>ĐẶT LỊCH HẸN THĂM KHÁM NGAY</h3>
           <p>Quý khách hàng hãy để lại thông tin để được hỗ trợ trực tiếp</p>
         </div>
-        <iframe class="lp-bgi-form-iframe" src="https://nhakhoadongnam.com/form-placeholder/" title="Form đăng ký"></iframe>
+        <?php echo do_shortcode('[contact-form-7 id="1314978" title="CT-GIOTO2026 - name-at - phone"]'); ?>
       </div>
     </div>
   </section>
@@ -982,5 +971,6 @@
   </script>
 
 </div><!-- /.ndn-lp -->
-</body>
-</html>
+
+<?php wp_footer(); ?>
+</body></html>

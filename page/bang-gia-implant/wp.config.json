@@ -1,12 +1,21 @@
 {
   "slug": "bang-gia-implant",
+  "cf7Form": {
+    "id": "1314978",
+    "title": "CT-GIOTO2026 - name-at - phone"
+  },
   "templates": {
     "standalone": {
-      "file": "page-bang-gia-implant.php",
       "templateNameBase": "Bảng Giá Implant Landing",
-      "description": "Standalone landing page — không dùng header/footer của theme.",
-      "trailingSlashRedirect": false
+      "trailingSlashRedirect": false,
+      "cf7ForceLoad": true
+    },
+    "theme": {
+      "templateNameBase": "Bảng Giá Implant Landing (Theme)",
+      "enqueueHandlePrefix": "ndn-landing-bang-gia-implant",
+      "cf7ForceLoad": true,
+      "stripFloatingCta": false,
+      "stripSections": []
     }
-  },
-  "notes": "Bảng giá Implant — Content page. Chỉ có Mode A."
+  }
 }
