@@ -1,15 +1,53 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bảng Giá Trồng Răng Implant Trọn Gói 2026 - Nha Khoa Đông Nam</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<?php
+/**
+ * Template Name: Bảng Giá Implant Landing (Theme) v4
+ * Auto-generated from page/bang-gia-implant/ by wp-sync.
+ * DO NOT EDIT MANUALLY — run `npm run wp:sync`.
+ * Mode: Theme (content only, uses Flatsome header/footer)
+ */
+defined('ABSPATH') || exit;
+
+$lp_base = home_url('/page/bang-gia-implant');
+
+// Ép CF7 load script/CSS — custom template không tự detect shortcode sớm.
+add_filter('wpcf7_load_js',  '__return_true');
+add_filter('wpcf7_load_css', '__return_true');
+
+// Landing JS (footer) — enqueue qua wp_enqueue_scripts priority 99.
+add_action('wp_enqueue_scripts', function () use ($lp_base) {
+    wp_enqueue_script(
+        'ndn-landing-bang-gia-implant',
+        $lp_base . '/script.js',
+        [],
+        null,
+        true
+    );
+}, 99);
+
+// Landing CSS — inject trực tiếp cuối wp_head() để guaranteed load sau Flatsome/plugins.
+add_action('wp_head', function () use ($lp_base) {
+    echo '<link rel="stylesheet" href="' . esc_url( $lp_base . '/style.css' ) . '">' . "\n";
+    echo '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap">' . "\n";
+}, 999);
+
+// Inject Schema.org JSON-LD từ page/bang-gia-implant/schema.json nếu tồn tại
+add_action('wp_head', function () {
+    $schema_file = ABSPATH . 'page/bang-gia-implant/schema.json';
+    if ( file_exists($schema_file) ) {
+        echo "\n<script type=\"application/ld+json\">\n";
+        echo file_get_contents($schema_file);
+        echo "\n</script>\n";
+    }
+}, 50);
+
+get_header();
+?>
+
+<?php // Elementor cần the_content() có mặt trong DOM rendered. ?>
+<div style="display:none!important" aria-hidden="true">
+  <?php if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
+</div>
+
 <div class="ndn-lp">
 
   <!-- ── HEADER  -->
@@ -945,7 +983,7 @@
           <h3>ĐẶT LỊCH HẸN THĂM KHÁM NGAY</h3>
           <p>Quý khách hàng hãy để lại thông tin để được hỗ trợ trực tiếp</p>
         </div>
-        <iframe class="lp-bgi-form-iframe" src="https://nhakhoadongnam.com/form-placeholder/" title="Form đăng ký"></iframe>
+        <?php echo do_shortcode('[contact-form-7 id="1314978" title="CT-GIOTO2026 - name-at - phone"]'); ?>
       </div>
     </div>
   </section>
@@ -982,5 +1020,5 @@
   </script>
 
 </div><!-- /.ndn-lp -->
-</body>
-</html>
+
+<?php get_footer(); ?>
