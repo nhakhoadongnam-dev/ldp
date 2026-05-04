@@ -98,7 +98,7 @@
       if(archEl){sub+=parseInt(archEl.value);items.push({l:archEl.dataset.label,p:parseInt(archEl.value)});}
     } else {
       var u=prio==='cost'?prices.korea:(prio==='fast'?prices.france:prices.italy);
-      var n=prio==='cost'?'🇰🇷 Implant Hàn Quốc':(prio==='fast'?'🇫🇷 Implant Pháp (ETK Active)':'🇮🇹 Implant Ý (C-Tech)');
+      var n=prio==='cost'?'Implant Hàn Quốc':(prio==='fast'?'Implant Pháp (ETK Active)':'Implant Ý (C-Tech)');
       sub+=u*qty; items.push({l:n+' × '+qty+' trụ',p:u*qty});
     }
 
@@ -113,7 +113,7 @@
       if(pos==='4'){sub+=prices.sinus; items.push({l:'Nâng xoang hàm dự báo',p:prices.sinus});}
     }
 
-    var disc=sub*0.1;
+    var disc=sub*0.2;
     document.getElementById('qz-risk2').innerHTML=risk;
     document.getElementById('qz-items2').innerHTML=items.map(function(i){
       return '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;"><span style="color:var(--text-sub);flex:1;line-height:1.5;">'+i.l+'</span><span style="font-weight:800;color:var(--navy);white-space:nowrap;">'+fmt(i.p)+'</span></div>';
