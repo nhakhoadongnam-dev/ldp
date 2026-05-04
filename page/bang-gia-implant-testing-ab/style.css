@@ -159,9 +159,9 @@
 @media(max-width:768px){.ndn-lp .lp-bgiab-reviews-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:480px){.ndn-lp .lp-bgiab-reviews-grid{grid-template-columns:1fr;}}
 .ndn-lp .lp-bgiab-review-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
-.ndn-lp .lp-bgiab-review-thumb{position:relative;width:100%;padding-top:177%;background:#000;cursor:pointer;overflow:hidden;}
-.ndn-lp .lp-bgiab-review-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;}
-.ndn-lp .lp-bgiab-review-thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:none;display:none;}
+.ndn-lp .lp-bgiab-review-thumb{position:relative;width:100%;aspect-ratio:16/9;background:#000;cursor:pointer;overflow:hidden;}
+.ndn-lp .lp-bgiab-review-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;}
+.ndn-lp .lp-bgiab-review-thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:none;display:none;background:#000;}
 .ndn-lp .lp-bgiab-review-thumb.playing img, .ndn-lp .lp-bgiab-review-thumb.playing .lp-bgiab-play-btn{display:none;}
 .ndn-lp .lp-bgiab-review-thumb.playing iframe{display:block;}
 .ndn-lp .lp-bgiab-play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;background:rgba(201,168,76,0.92);display:flex;align-items:center;justify-content:center;font-size:22px;pointer-events:none;}

@@ -174,10 +174,17 @@ updateCountdown();setInterval(updateCountdown,1000);
 
 // VIDEO
 function playVideo(thumb){
+  var iframe = thumb.querySelector('iframe');
+  if (!iframe) return;
   document.querySelectorAll('.lp-bgiab-review-thumb.playing').forEach(function(t){
-    if(t===thumb)return;t.querySelector('iframe').src='';t.classList.remove('playing');
+    if(t===thumb)return;
+    var activeIframe = t.querySelector('iframe');
+    if (activeIframe) activeIframe.src='';
+    t.classList.remove('playing');
   });
-  thumb.querySelector('iframe').src='https://www.youtube.com/embed/'+thumb.getAttribute('data-vid')+'?autoplay=1&rel=0';
+  iframe.title = 'Video cảm nhận khách hàng Nha Khoa Đông Nam';
+  iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+  iframe.src = 'https://www.youtube-nocookie.com/embed/' + thumb.getAttribute('data-vid') + '?autoplay=1&rel=0&playsinline=1&modestbranding=1';
   thumb.classList.add('playing');
 }
 
