@@ -223,21 +223,7 @@
 .ndn-lp .lp-bgiab-rang-su-header div{font-size:12px;font-weight:700;color:#fff;}
 .ndn-lp .lp-bgiab-rang-su-header div:nth-child(2){text-align:center;}
 .ndn-lp .lp-bgiab-rang-su-header div:nth-child(3){text-align:right;}
-/* FLOATING */
-.ndn-lp .lp-bgiab-float-sidebar{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:200;display:flex;flex-direction:column;border-radius:12px 0 0 12px;overflow:hidden;box-shadow:-4px 0 24px rgba(0,0,0,0.22);}
-.ndn-lp .lp-bgiab-fsb-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;width:54px;padding:11px 6px;text-decoration:none;font-size:10px;font-weight:700;gap:5px;transition:filter .18s,transform .18s;position:relative;}
-.ndn-lp .lp-bgiab-fsb-btn:hover{filter:brightness(1.12);transform:translateX(-3px);}
-.ndn-lp .lp-bgiab-fsb-btn svg{width:20px;height:20px;display:block;margin:0 auto;}
-.ndn-lp .lp-bgiab-fsb-call{background:var(--gold);color:var(--navy-dark);}
-.ndn-lp .lp-bgiab-fsb-book{background:var(--navy);color:var(--white);}
-.ndn-lp .fsb-zalo{background:#0068FF;color:var(--white);}
-.ndn-lp .fsb-msg{background:#0084FF;color:var(--white);}
-.ndn-lp .lp-bgiab-fsb-btn::after{content:attr(data-tip);position:absolute;right:58px;top:50%;transform:translateY(-50%);background:var(--navy-dark);color:var(--white);font-size:11px;white-space:nowrap;padding:4px 10px;border-radius:6px;opacity:0;pointer-events:none;transition:opacity .18s;}
-.ndn-lp .lp-bgiab-fsb-btn:hover::after{opacity:1;}
-@media(max-width:480px){.ndn-lp .lp-bgiab-float-sidebar{top:auto;bottom:0;left:0;right:0;transform:none;flex-direction:row;border-radius:0;}.ndn-lp .lp-bgiab-fsb-btn{flex:1;width:auto;padding:9px 4px;}.ndn-lp .lp-bgiab-fsb-btn::after{display:none;}}
-
 .ndn-lp .lp-bgiab-footer{background:var(--navy-deep);padding:28px var(--section-px);text-align:center;border-top:3px solid var(--gold);}
 .ndn-lp .lp-bgiab-footer p{color:rgba(255,255,255,0.72);font-size:13px;line-height:1.8;margin:0 0 6px;}
 .ndn-lp .lp-bgiab-footer strong,.ndn-lp .lp-bgiab-footer a{color:var(--gold);}
 .ndn-lp .lp-bgiab-media-logo{font-size:13px;font-weight:800;color:var(--white);letter-spacing:0.2px;}
-.ndn-lp .lp-bgiab-trust-card-photo--fallback{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.10);color:var(--gold);font-size:42px;font-weight:800;}

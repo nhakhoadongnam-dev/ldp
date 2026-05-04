@@ -70,7 +70,7 @@ get_header();
     </div>
     <div class="lp-bgiab-countdown-wrap" style="max-width:500px;margin:0 auto;">
       <div class="lp-bgiab-cd-label">⏰ Ưu đãi có thời hạn</div>
-      <div class="lp-bgiab-cd-title">Ưu đãi <span>10%</span> khi đặt lịch Online — Chỉ <span>30 khách hàng</span> đầu tiên trước <span>31/05/2026</span></div>
+      <div class="lp-bgiab-cd-title">Ưu đãi <span>20%</span> khi đặt lịch Online — Chỉ <span>30 khách hàng</span> đầu tiên trước <span>31/05/2026</span></div>
       <div class="lp-bgiab-cd-boxes">
         <div class="lp-bgiab-cd-unit"><div class="lp-bgiab-cd-box" id="h-days">00</div><div class="lp-bgiab-cd-sub">ngày</div></div>
         <div class="lp-bgiab-cd-sep">:</div>
@@ -120,12 +120,12 @@ get_header();
       <table class="lp-bgiab-comp-table">
         <thead><tr><th style="text-align:left;">Dòng trụ</th><th>Giá trọn gói / trụ</th><th>Tích hợp xương</th><th>Đặc điểm nổi bật</th><th>Phù hợp cho</th></tr></thead>
         <tbody>
-          <tr><td>🇰🇷 Implant Hàn Quốc</td><td class="lp-bgiab-price-col">16.500.000 ₫</td><td>3–6 tháng</td><td>Bề mặt ổn định, ren tiêu chuẩn, độ bền cao</td><td>Mất răng đơn lẻ, xương hàm tốt</td></tr>
-          <tr class="recommended"><td>🇮🇹 Implant Ý — C-Tech <span style="background:var(--green);color:#fff;font-size:10px;padding:2px 7px;border-radius:10px;margin-left:4px;vertical-align:middle;">Đề xuất</span></td><td class="lp-bgiab-price-col">19.900.000 ₫</td><td>2–3 tháng</td><td><strong>Platform Switching</strong> — bảo tồn xương cổ trụ, chống tụt lợi</td><td>Cần thẩm mỹ cao, bền 20–30 năm</td></tr>
-          <tr><td>🇺🇸 Implant Mỹ</td><td class="lp-bgiab-price-col dark">23.500.000 ₫</td><td>2–4 tháng</td><td>Ren sâu, ổn định cơ học ngay khi cấy</td><td>Vùng răng hàm cần lực nhai mạnh</td></tr>
-          <tr><td>🇫🇷 Implant Pháp — ETK Active</td><td class="lp-bgiab-price-col dark">28.200.000 ₫</td><td>1–2 tháng</td><td>Bề mặt SA cao cấp, lên răng tức thì</td><td>Xương hàm xốp, muốn rút ngắn thời gian</td></tr>
-          <tr><td>🇸🇪 Implant Thụy Điển — Nobel Active</td><td class="lp-bgiab-price-col dark">32.900.000 ₫</td><td>1–2 tháng</td><td>Hình nón nén xương, ổn định tức thì</td><td>Mất toàn hàm, xương hàm yếu</td></tr>
-          <tr><td>🇨🇭 Implant Thụy Sĩ — Straumann</td><td class="lp-bgiab-price-col dark">34.000.000 ₫</td><td>3–6 tuần</td><td><strong>SLActive</strong> — lành thương siêu tốc</td><td>Người bận rộn, có bệnh lý nền</td></tr>
+          <tr><td>Implant Hàn Quốc</td><td class="lp-bgiab-price-col">16.500.000 ₫</td><td>3–6 tháng</td><td>Bề mặt ổn định, ren tiêu chuẩn, độ bền cao</td><td>Mất răng đơn lẻ, xương hàm tốt</td></tr>
+          <tr class="recommended"><td>Implant Ý — C-Tech <span style="background:var(--green);color:#fff;font-size:10px;padding:2px 7px;border-radius:10px;margin-left:4px;vertical-align:middle;">Đề xuất</span></td><td class="lp-bgiab-price-col">19.900.000 ₫</td><td>2–3 tháng</td><td><strong>Platform Switching</strong> — bảo tồn xương cổ trụ, chống tụt lợi</td><td>Cần thẩm mỹ cao, bền 20–30 năm</td></tr>
+          <tr><td>Implant Mỹ</td><td class="lp-bgiab-price-col dark">23.500.000 ₫</td><td>2–4 tháng</td><td>Ren sâu, ổn định cơ học ngay khi cấy</td><td>Vùng răng hàm cần lực nhai mạnh</td></tr>
+          <tr><td>Implant Pháp — ETK Active</td><td class="lp-bgiab-price-col dark">28.200.000 ₫</td><td>1–2 tháng</td><td>Bề mặt SA cao cấp, lên răng tức thì</td><td>Xương hàm xốp, muốn rút ngắn thời gian</td></tr>
+          <tr><td>Implant Thụy Điển — Nobel Active</td><td class="lp-bgiab-price-col dark">32.900.000 ₫</td><td>1–2 tháng</td><td>Hình nón nén xương, ổn định tức thì</td><td>Mất toàn hàm, xương hàm yếu</td></tr>
+          <tr><td>Implant Thụy Sĩ — Straumann</td><td class="lp-bgiab-price-col dark">34.000.000 ₫</td><td>3–6 tuần</td><td><strong>SLActive</strong> — lành thương siêu tốc</td><td>Người bận rộn, có bệnh lý nền</td></tr>
         </tbody>
       </table>
     </div>
@@ -136,7 +136,7 @@ get_header();
       <div class="lp-bgiab-reco-card">
         <div class="lp-bgiab-reco-badge" style="background:linear-gradient(160deg,#1A7A4A,#1e9a5a);"><div class="lp-bgiab-reco-icon">⭐</div><div class="lp-bgiab-reco-rank">ƯU TIÊN<br>SỐ 1</div></div>
         <div class="lp-bgiab-reco-body">
-          <div class="lp-bgiab-reco-name">🇮🇹 Implant Ý — C-Tech</div>
+          <div class="lp-bgiab-reco-name">Implant Ý — C-Tech</div>
           <div style="margin:4px 0 8px;"><span style="background:var(--green);color:#fff;font-size:11px;padding:3px 10px;border-radius:10px;display:inline-block;">Cân bằng hoàn hảo</span></div>
           <div class="lp-bgiab-reco-desc">Chuẩn Châu Âu, công nghệ <strong>Platform Switching</strong> bảo tồn xương cổ trụ — bền đẹp 20–30 năm. Chi phí cân bằng, không quá cao như Thụy Sĩ.</div>
         </div>
@@ -144,7 +144,7 @@ get_header();
       <div class="lp-bgiab-reco-card">
         <div class="lp-bgiab-reco-badge" style="background:linear-gradient(160deg,var(--navy),var(--navy-mid));"><div class="lp-bgiab-reco-icon">💰</div><div class="lp-bgiab-reco-rank">ƯU TIÊN<br>SỐ 2</div></div>
         <div class="lp-bgiab-reco-body">
-          <div class="lp-bgiab-reco-name">🇰🇷 Implant Hàn Quốc</div>
+          <div class="lp-bgiab-reco-name">Implant Hàn Quốc</div>
           <div style="margin:4px 0 8px;"><span style="background:var(--navy);color:#fff;font-size:11px;padding:3px 10px;border-radius:10px;display:inline-block;">Tối ưu ngân sách</span></div>
           <div class="lp-bgiab-reco-desc">Lựa chọn quốc dân — bền bỉ, an toàn, chi phí vừa phải. Phù hợp mất răng đơn lẻ, xương hàm tốt, tài chính cần cân đối.</div>
         </div>
@@ -152,7 +152,7 @@ get_header();
       <div class="lp-bgiab-reco-card">
         <div class="lp-bgiab-reco-badge" style="background:linear-gradient(160deg,#7D4E00,#b87a20);"><div class="lp-bgiab-reco-icon">⚡</div><div class="lp-bgiab-reco-rank">PHỤC HÌNH<br>NHANH CHÓNG</div></div>
         <div class="lp-bgiab-reco-body">
-          <div class="lp-bgiab-reco-name">🇫🇷 Implant Pháp — ETK Active</div>
+          <div class="lp-bgiab-reco-name">Implant Pháp — ETK Active</div>
           <div style="margin:4px 0 8px;"><span style="background:#7D4E00;color:#fff;font-size:11px;padding:3px 10px;border-radius:10px;display:inline-block;">Lành thương siêu tốc</span></div>
           <div class="lp-bgiab-reco-desc">Chỉ cho ca đặc biệt: cần răng trong thời gian ngắn nhất, xương hàm xốp, hoặc có bệnh lý nền cần lành thương nhanh.</div>
         </div>
@@ -178,7 +178,7 @@ get_header();
         <tr><td><strong>All-on-6 Cố định</strong></td><td>Implant Ý + Hàm Hybrid + Răng sứ</td><td>190.800.000 ₫</td></tr>
       </tbody>
     </table>
-    <span class="lp-bgiab-uudai-inline">🎁 Ưu đãi ngay 10% khi đặt lịch Online</span>
+    <span class="lp-bgiab-uudai-inline">🎁 Ưu đãi ngay 20% khi đặt lịch Online</span>
     <div style="text-align:center;"><a href="#dang-ky" class="lp-bgiab-uudai-cta">📅 ĐẶT LỊCH NGAY</a></div>
   </div>
 </section>
@@ -442,7 +442,7 @@ get_header();
               <span id="qz-total2" style="font-size:18px;font-weight:800;color:var(--text);"></span>
             </div>
             <div style="display:flex;justify-content:space-between;align-items:baseline;color:var(--red);font-style:italic;">
-              <span style="font-size:13px;">Ưu đãi 10% khi đặt lịch Online:</span>
+              <span style="font-size:13px;">Ưu đãi 20% khi đặt lịch Online:</span>
               <span id="qz-disc2" style="font-size:14px;font-weight:700;"></span>
             </div>
             <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px dashed var(--gray-mid);padding-top:10px;">
@@ -518,10 +518,10 @@ get_header();
   </div>
 </section>
 
-<!-- ══ TẠI SAO CHỌN ĐÔNG NAM ══ -->
+<!-- ══ TẠI SAO CHỌN NHA KHOA ĐÔNG NAM ══ -->
 <section class="lp-bgiab-trust-section" id="trust">
   <div class="lp-bgiab-container">
-    <div class="lp-bgiab-section-tag" style="background:rgba(255,255,255,0.15);color:var(--gold);">TẠI SAO CHỌN ĐÔNG NAM</div>
+    <div class="lp-bgiab-section-tag" style="background:rgba(255,255,255,0.15);color:var(--gold);">TẠI SAO CHỌN NHA KHOA ĐÔNG NAM</div>
     <h2 class="lp-bgiab-section-title" style="margin-bottom:10px;font-style:italic;font-weight:400;font-size:clamp(17px,3vw,26px);color:var(--white);">"Chọn nơi đủ lâu để tin — Đủ giỏi để làm — Đủ trách nhiệm để theo bạn lâu dài"</h2>
     <p style="color:rgba(255,255,255,0.55);font-size:13px;margin-bottom:32px;"></p>
     <div class="lp-bgiab-trust-grid">
@@ -530,7 +530,7 @@ get_header();
         <div class="lp-bgiab-trust-card-inner"><div class="lp-bgiab-trust-card-title">21+ Năm Kinh Nghiệm</div><div class="lp-bgiab-trust-card-text">Từ 2005 đến nay · Một trong những nha khoa lâu đời nhất TP.HCM</div></div>
       </div>
       <div class="lp-bgiab-trust-card">
-        <div class="lp-bgiab-trust-card-photo lp-bgiab-trust-card-photo--fallback">BS</div>
+        <div class="lp-bgiab-yt-embed"><iframe src="https://www.youtube-nocookie.com/embed/vs3sIyE0kv4?rel=0&modestbranding=1&playsinline=1" title="Video BS CKII Đặng Quốc Dũng" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
         <div class="lp-bgiab-trust-card-inner"><div class="lp-bgiab-trust-card-title">BS CKII Đặng Quốc Dũng</div><div class="lp-bgiab-trust-card-text">Chuyên sâu Implant · Kinh nghiệm 25 năm lâm sàng dày dạn · Xử lý ca khó phức tạp</div></div>
       </div>
       <div class="lp-bgiab-trust-card">
@@ -556,7 +556,7 @@ get_header();
     </div>
     <div class="lp-bgiab-countdown-wrap" style="max-width:500px;margin:0 auto 28px;">
       <div class="lp-bgiab-cd-label">⏰ Ưu đãi có thời hạn</div>
-      <div class="lp-bgiab-cd-title">Ưu đãi <span>10%</span> khi đặt lịch Online — Chỉ <span>30 khách hàng</span> đầu tiên trước <span>31/05/2026</span></div>
+      <div class="lp-bgiab-cd-title">Ưu đãi <span>20%</span> khi đặt lịch Online — Chỉ <span>30 khách hàng</span> đầu tiên trước <span>31/05/2026</span></div>
       <div class="lp-bgiab-cd-boxes">
         <div class="lp-bgiab-cd-unit"><div class="lp-bgiab-cd-box" id="f-days">00</div><div class="lp-bgiab-cd-sub">ngày</div></div>
         <div class="lp-bgiab-cd-sep">:</div>
@@ -584,12 +584,6 @@ get_header();
     <p>Hotline: <a href="tel:0972411411">0972.411.411</a> &middot; T&#7893;ng &dstrok;&agrave;i: <a href="tel:19007141">1900.7141</a></p>
   </div>
 </footer>
-
-<!-- FLOATING -->
-<div class="lp-bgiab-float-sidebar">
-  <a href="tel:0972411411" class="lp-bgiab-fsb-btn lp-bgiab-fsb-call" data-tip="Gọi ngay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg><span>Gọi</span></a>
-  <a href="#dang-ky" class="lp-bgiab-fsb-btn lp-bgiab-fsb-book" data-tip="Đặt lịch"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg><span>Lịch</span></a>
-</div>
 
 </div><!-- /.ndn-lp -->
 
