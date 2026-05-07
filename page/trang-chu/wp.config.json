@@ -1,12 +1,19 @@
 {
   "slug": "trang-chu",
+  "cf7Form": {
+    "id": "111633",
+    "title": "Trang chủ"
+  },
   "templates": {
     "standalone": {
-      "file": "page-trang-chu.php",
       "templateNameBase": "Trang Chủ Landing",
-      "description": "Standalone landing page — không dùng header/footer của theme.",
-      "trailingSlashRedirect": false
+      "trailingSlashRedirect": true,
+      "cf7ForceLoad": true
+    },
+    "theme": {
+      "templateNameBase": "Trang Chủ Landing (Theme)",
+      "enqueueHandlePrefix": "ndn-landing-trang-chu",
+      "cf7ForceLoad": true
     }
-  },
-  "notes": "Trang chủ — Brand page. Chỉ có Mode A (standalone)."
+  }
 }
