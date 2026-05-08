@@ -524,6 +524,7 @@ get_header();
     function onGestureEnd() {
       if (!pointerDown) return;
       pointerDown = false;
+      viewport.classList.remove('is-dragging');
       if (!isDragging) return;
 
       var threshold = 28;
@@ -534,7 +535,6 @@ get_header();
       isDragging = false;
       deltaX = 0;
       pointerId = null;
-      viewport.classList.remove('is-dragging');
     }
 
     dotsWrap.addEventListener('click', function(event) {
