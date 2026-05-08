@@ -1,0 +1,21 @@
+{
+  "slug": "bang-gia-implant-testing-ab-ver1",
+  "cf7Form": {
+    "id": "e3e8349",
+    "title": "CT- T52026 - name-at - phone"
+  },
+  "templates": {
+    "standalone": {
+      "templateNameBase": "Bảng Giá Implant Testing AB ver1 Landing",
+      "trailingSlashRedirect": true,
+      "cf7ForceLoad": true
+    },
+    "theme": {
+      "templateNameBase": "Bảng Giá Implant Testing AB ver1 Landing (Theme)",
+      "enqueueHandlePrefix": "ndn-landing-bang-gia-implant-abv1",
+      "cf7ForceLoad": true,
+      "stripFloatingCta": false,
+      "stripSections": []
+    }
+  }
+}
