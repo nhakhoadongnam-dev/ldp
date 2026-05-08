@@ -2231,7 +2231,7 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
 .ndn-lp .lp-bgi-video-item:hover {
   transform: translateY(-4px);
 }
-.ndn-lp .lp-bgi-video-item iframe {
+.ndn-lp .lp-bgi-video-track-wrap.is-dragging .lp-bgi-video-item iframe {
   pointer-events: none;
 }
 .ndn-lp .lp-bgi-video-dots {
