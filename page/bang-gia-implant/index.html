@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bảng Giá Trồng Răng Implant Trọn Gói 2026 - Nha Khoa Đông Nam</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -403,49 +402,49 @@
         <div class="lp-bgi-video-track-wrap">
           <div class="lp-bgi-video-track">
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/WBPU55A7D0E"
-                title="Chia sẻ 1"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <button type="button" class="lp-bgi-video-facade"
+                      data-video-id="WBPU55A7D0E"
+                      data-video-title="Chia sẻ 1"
+                      aria-label="Phát video: Chia sẻ 1">
+                <img src="https://i.ytimg.com/vi/WBPU55A7D0E/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
+                <span class="lp-bgi-video-play" aria-hidden="true"></span>
+              </button>
             </div>
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/eblVhYpRay8"
-                title="Chia sẻ 2"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <button type="button" class="lp-bgi-video-facade"
+                      data-video-id="eblVhYpRay8"
+                      data-video-title="Chia sẻ 2"
+                      aria-label="Phát video: Chia sẻ 2">
+                <img src="https://i.ytimg.com/vi/eblVhYpRay8/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
+                <span class="lp-bgi-video-play" aria-hidden="true"></span>
+              </button>
             </div>
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/07HeOz_5S4s"
-                title="Chia sẻ 3"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <button type="button" class="lp-bgi-video-facade"
+                      data-video-id="07HeOz_5S4s"
+                      data-video-title="Chia sẻ 3"
+                      aria-label="Phát video: Chia sẻ 3">
+                <img src="https://i.ytimg.com/vi/07HeOz_5S4s/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
+                <span class="lp-bgi-video-play" aria-hidden="true"></span>
+              </button>
             </div>
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/vatpzUlPl4c"
-                title="Chia sẻ 4"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <button type="button" class="lp-bgi-video-facade"
+                      data-video-id="vatpzUlPl4c"
+                      data-video-title="Chia sẻ 4"
+                      aria-label="Phát video: Chia sẻ 4">
+                <img src="https://i.ytimg.com/vi/vatpzUlPl4c/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
+                <span class="lp-bgi-video-play" aria-hidden="true"></span>
+              </button>
             </div>
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/a3GTXsOv3aM"
-                title="Chia sẻ 5"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <button type="button" class="lp-bgi-video-facade"
+                      data-video-id="a3GTXsOv3aM"
+                      data-video-title="Chia sẻ 5"
+                      aria-label="Phát video: Chia sẻ 5">
+                <img src="https://i.ytimg.com/vi/a3GTXsOv3aM/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
+                <span class="lp-bgi-video-play" aria-hidden="true"></span>
+              </button>
             </div>
           </div>
         </div>
@@ -453,6 +452,14 @@
       <div class="lp-bgi-video-dots"></div>
     </div>
   </section>
+
+  <div class="lp-bgi-video-modal" id="lp-bgi-video-modal" hidden>
+    <div class="lp-bgi-video-modal-backdrop" data-modal-close></div>
+    <button type="button" class="lp-bgi-video-modal-close" data-modal-close aria-label="Đóng video">&times;</button>
+    <div class="lp-bgi-video-modal-dialog" role="dialog" aria-modal="true" aria-label="Video chia sẻ thực tế">
+      <div class="lp-bgi-video-modal-frame" data-modal-frame></div>
+    </div>
+  </div>
 
   <script>
   (function() {
@@ -470,6 +477,7 @@
     var resizeTimer = null;
     var pointerDown = false;
     var isDragging = false;
+    var wasDragging = false;
     var startX = 0;
     var startY = 0;
     var deltaX = 0;
@@ -547,7 +555,6 @@
       deltaX = 0;
       pointerId = id;
       dragBaseOffset = getCurrentOffset();
-      viewport.classList.add('is-dragging');
     }
 
     function onGestureMove(clientX, clientY) {
@@ -556,6 +563,7 @@
       var moveY = clientY - startY;
       if (!isDragging && Math.abs(moveX) > 8 && Math.abs(moveX) > Math.abs(moveY)) {
         isDragging = true;
+        viewport.classList.add('is-dragging');
       }
       if (isDragging) {
         deltaX = moveX;
@@ -571,6 +579,7 @@
       if (!pointerDown) return;
       pointerDown = false;
       viewport.classList.remove('is-dragging');
+      wasDragging = isDragging;
       if (!isDragging) return;
 
       var threshold = 28;
@@ -583,6 +592,107 @@
       pointerId = null;
     }
 
+    var modal = document.getElementById('lp-bgi-video-modal');
+    var modalFrame = modal && modal.querySelector('[data-modal-frame]');
+    var lastFacade = null;
+    var savedBodyOverflow = '';
+
+    function openVideoModal(facade) {
+      if (!modal || !modalFrame) return;
+      var id = facade.getAttribute('data-video-id');
+      if (!id) return;
+      while (modalFrame.firstChild) modalFrame.removeChild(modalFrame.firstChild);
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0&playsinline=1&enablejsapi=1';
+      iframe.title = facade.getAttribute('data-video-title') || '';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      modalFrame.appendChild(iframe);
+      var toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'lp-bgi-video-toggle is-playing';
+      toggle.setAttribute('aria-label', 'Tạm dừng video');
+      toggle.innerHTML = '<span class="lp-bgi-video-toggle-icon" aria-hidden="true"></span>';
+      toggle.addEventListener('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        toggleVideoPlayback(iframe, toggle);
+      });
+      modalFrame.appendChild(toggle);
+      lastFacade = facade;
+      modal.hidden = false;
+      savedBodyOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      var closeBtn = modal.querySelector('.lp-bgi-video-modal-close');
+      if (closeBtn) { try { closeBtn.focus(); } catch (e) {} }
+    }
+
+    function closeVideoModal() {
+      if (!modal || !modalFrame) return;
+      if (modal.hidden) return;
+      modal.hidden = true;
+      while (modalFrame.firstChild) modalFrame.removeChild(modalFrame.firstChild);
+      document.body.style.overflow = savedBodyOverflow;
+      if (lastFacade) {
+        try { lastFacade.focus(); } catch (e) {}
+        lastFacade = null;
+      }
+    }
+
+    function sendYoutubeCommand(iframe, command) {
+      if (!iframe || !iframe.contentWindow) return;
+      iframe.contentWindow.postMessage(JSON.stringify({
+        event: 'command',
+        func: command,
+        args: []
+      }), '*');
+    }
+
+    function toggleVideoPlayback(iframe, toggle) {
+      var isPlaying = toggle.classList.contains('is-playing');
+      sendYoutubeCommand(iframe, isPlaying ? 'pauseVideo' : 'playVideo');
+      toggle.classList.toggle('is-playing', !isPlaying);
+      toggle.classList.toggle('is-paused', isPlaying);
+      toggle.classList.add('is-feedback');
+      toggle.setAttribute('aria-label', isPlaying ? 'Phát video' : 'Tạm dừng video');
+      window.clearTimeout(toggle._feedbackTimer);
+      toggle._feedbackTimer = window.setTimeout(function() {
+        toggle.classList.remove('is-feedback');
+      }, 700);
+    }
+
+    if (modal) {
+      modal.addEventListener('click', function(event) {
+        if (event.target.closest('[data-modal-close]')) closeVideoModal();
+      });
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && !modal.hidden) closeVideoModal();
+      });
+    }
+
+    section.addEventListener('click', function(event) {
+      var facade = event.target.closest('.lp-bgi-video-facade');
+      if (!facade) return;
+      event.preventDefault();
+      if (wasDragging) {
+        wasDragging = false;
+        return;
+      }
+      openVideoModal(facade);
+    });
+
+    Array.prototype.forEach.call(section.querySelectorAll('.lp-bgi-video-facade img'), function(img) {
+      img.addEventListener('error', function onErr() {
+        if (img.src.indexOf('maxresdefault') !== -1) {
+          img.src = img.src.replace('maxresdefault', 'sddefault');
+        } else if (img.src.indexOf('sddefault') !== -1) {
+          img.src = img.src.replace('sddefault', 'hqdefault');
+        } else {
+          img.removeEventListener('error', onErr);
+        }
+      });
+    });
+
     dotsWrap.addEventListener('click', function(event) {
       var btn = event.target.closest('button[data-page]');
       if (!btn) return;
@@ -594,21 +704,27 @@
       event.preventDefault();
     });
 
-    viewport.addEventListener('pointerdown', function(event) {
-      if (event.pointerType === 'mouse' && event.button !== 0) return;
-      onGestureStart(event.clientX, event.clientY, event.pointerId);
-      if (viewport.setPointerCapture) viewport.setPointerCapture(event.pointerId);
-    });
-
-    viewport.addEventListener('pointermove', function(event) {
+    function onDocPointerMove(event) {
       if (!pointerDown || (pointerId !== null && event.pointerId !== pointerId)) return;
       onGestureMove(event.clientX, event.clientY);
       if (isDragging) event.preventDefault();
-    });
+    }
 
-    viewport.addEventListener('pointerup', onGestureEnd);
-    viewport.addEventListener('pointercancel', onGestureEnd);
-    viewport.addEventListener('pointerleave', onGestureEnd);
+    function onDocPointerUp(event) {
+      if (pointerId !== null && event.pointerId !== pointerId) return;
+      document.removeEventListener('pointermove', onDocPointerMove);
+      document.removeEventListener('pointerup', onDocPointerUp);
+      document.removeEventListener('pointercancel', onDocPointerUp);
+      onGestureEnd();
+    }
+
+    viewport.addEventListener('pointerdown', function(event) {
+      if (event.pointerType === 'mouse' && event.button !== 0) return;
+      onGestureStart(event.clientX, event.clientY, event.pointerId);
+      document.addEventListener('pointermove', onDocPointerMove);
+      document.addEventListener('pointerup', onDocPointerUp);
+      document.addEventListener('pointercancel', onDocPointerUp);
+    });
 
     window.addEventListener('resize', function() {
       window.clearTimeout(resizeTimer);
