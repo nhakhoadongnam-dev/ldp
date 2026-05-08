@@ -1,9 +1,9 @@
 <?php
 /**
- * Template Name: Bảng Giá Implant Landing (Theme) v5
+ * Template Name: Bảng Giá Implant Landing v7
  * Auto-generated from page/bang-gia-implant/ by wp-sync.
  * DO NOT EDIT MANUALLY — run `npm run wp:sync`.
- * Mode: Theme (content only, uses Flatsome header/footer)
+ * Mode: Standalone (full HTML shell, delegate SEO/GTM to Yoast + Site Kit)
  */
 defined('ABSPATH') || exit;
 
@@ -13,42 +13,24 @@ $lp_base = home_url('/page/bang-gia-implant');
 add_filter('wpcf7_load_js',  '__return_true');
 add_filter('wpcf7_load_css', '__return_true');
 
-// Landing JS (footer) — enqueue qua wp_enqueue_scripts priority 99.
-add_action('wp_enqueue_scripts', function () use ($lp_base) {
-    wp_enqueue_script(
-        'ndn-landing-bang-gia-implant',
-        $lp_base . '/script.js',
-        [],
-        null,
-        true
-    );
-}, 99);
-
-// Landing CSS — inject trực tiếp cuối wp_head() để guaranteed load sau Flatsome/plugins.
-add_action('wp_head', function () use ($lp_base) {
-    echo '<link rel="stylesheet" href="' . esc_url( $lp_base . '/style.css' ) . '">' . "\n";
-    echo '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap">' . "\n";
-}, 999);
-
-// Inject Schema.org JSON-LD từ page/bang-gia-implant/schema.json nếu tồn tại
-add_action('wp_head', function () {
-    $schema_file = ABSPATH . 'page/bang-gia-implant/schema.json';
-    if ( file_exists($schema_file) ) {
-        echo "\n<script type=\"application/ld+json\">\n";
-        echo file_get_contents($schema_file);
-        echo "\n</script>\n";
-    }
-}, 50);
-
-get_header();
 ?>
-
-<?php // Elementor cần the_content() có mặt trong DOM rendered. ?>
+<!DOCTYPE html><html <?php language_attributes(); ?>><head>
+  <meta charset="<?php bloginfo('charset'); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <?php wp_head(); ?>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo esc_url($lp_base); ?>/style.css">
+</head>
+<body>
+<div class="ndn-lp">
+<?php // Elementor scans the rendered DOM for shortcodes (e.g. [contact-form-7]).
+      // the_content() must be present so Elementor can detect & enqueue CF7 assets. ?>
 <div style="display:none!important" aria-hidden="true">
   <?php if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
 </div>
 
-<div class="ndn-lp">
 
   <!-- ── HEADER  -->
   <header class="lp-bgi-header">
@@ -395,7 +377,6 @@ get_header();
     </div>
   </section>
 
-
   <!-- ── BEFORE AFTER ── -->
   <section class="lp-bgi-carousel lp-section" id="ket-qua-dieu-tri">
     <div class="lp-container">
@@ -404,7 +385,7 @@ get_header();
         <p class="lp-bgi-carousel-intro">Các ca cấy ghép Implant thực tế được thực hiện bởi đội ngũ bác sĩ chuyên sâu tại phòng khám</p>
       </div>
       <div class="lp-bgi-carousel-wrapper">
-        <button class="lp-bgi-carousel-btn lp-bgi-carousel-prev" aria-label="Ảnh trước">&#8249;</button>
+        <button class="lp-bgi-carousel-btn lp-bgi-carousel-prev" aria-label="Ảnh trước">‹</button>
         <div class="lp-bgi-carousel-viewport">
           <div class="lp-bgi-carousel-track">
             <div class="lp-bgi-carousel-slide">
@@ -424,7 +405,7 @@ get_header();
             </div>
           </div>
         </div>
-        <button class="lp-bgi-carousel-btn lp-bgi-carousel-next" aria-label="Ảnh tiếp theo">&#8250;</button>
+        <button class="lp-bgi-carousel-btn lp-bgi-carousel-next" aria-label="Ảnh tiếp theo">›</button>
       </div>
     </div>
   </section>
@@ -441,49 +422,34 @@ get_header();
         <div class="lp-bgi-video-track-wrap">
           <div class="lp-bgi-video-track">
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/WBPU55A7D0E"
-                title="Chia sẻ 1"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <button type="button" class="lp-bgi-video-facade" data-video-id="WBPU55A7D0E" data-video-title="Chia sẻ 1" aria-label="Phát video: Chia sẻ 1">
+                <img src="https://i.ytimg.com/vi/WBPU55A7D0E/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
+                <span class="lp-bgi-video-play" aria-hidden="true"></span>
+              </button>
             </div>
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/eblVhYpRay8"
-                title="Chia sẻ 2"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <button type="button" class="lp-bgi-video-facade" data-video-id="eblVhYpRay8" data-video-title="Chia sẻ 2" aria-label="Phát video: Chia sẻ 2">
+                <img src="https://i.ytimg.com/vi/eblVhYpRay8/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
+                <span class="lp-bgi-video-play" aria-hidden="true"></span>
+              </button>
             </div>
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/07HeOz_5S4s"
-                title="Chia sẻ 3"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <button type="button" class="lp-bgi-video-facade" data-video-id="07HeOz_5S4s" data-video-title="Chia sẻ 3" aria-label="Phát video: Chia sẻ 3">
+                <img src="https://i.ytimg.com/vi/07HeOz_5S4s/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
+                <span class="lp-bgi-video-play" aria-hidden="true"></span>
+              </button>
             </div>
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/vatpzUlPl4c"
-                title="Chia sẻ 4"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <button type="button" class="lp-bgi-video-facade" data-video-id="vatpzUlPl4c" data-video-title="Chia sẻ 4" aria-label="Phát video: Chia sẻ 4">
+                <img src="https://i.ytimg.com/vi/vatpzUlPl4c/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
+                <span class="lp-bgi-video-play" aria-hidden="true"></span>
+              </button>
             </div>
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/a3GTXsOv3aM"
-                title="Chia sẻ 5"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <button type="button" class="lp-bgi-video-facade" data-video-id="a3GTXsOv3aM" data-video-title="Chia sẻ 5" aria-label="Phát video: Chia sẻ 5">
+                <img src="https://i.ytimg.com/vi/a3GTXsOv3aM/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
+                <span class="lp-bgi-video-play" aria-hidden="true"></span>
+              </button>
             </div>
           </div>
         </div>
@@ -491,6 +457,14 @@ get_header();
       <div class="lp-bgi-video-dots"></div>
     </div>
   </section>
+
+  <div class="lp-bgi-video-modal" id="lp-bgi-video-modal" hidden="">
+    <div class="lp-bgi-video-modal-backdrop" data-modal-close=""></div>
+    <button type="button" class="lp-bgi-video-modal-close" data-modal-close="" aria-label="Đóng video">×</button>
+    <div class="lp-bgi-video-modal-dialog" role="dialog" aria-modal="true" aria-label="Video chia sẻ thực tế">
+      <div class="lp-bgi-video-modal-frame" data-modal-frame=""></div>
+    </div>
+  </div>
 
   <script>
   (function() {
@@ -508,6 +482,7 @@ get_header();
     var resizeTimer = null;
     var pointerDown = false;
     var isDragging = false;
+    var wasDragging = false;
     var startX = 0;
     var startY = 0;
     var deltaX = 0;
@@ -585,7 +560,6 @@ get_header();
       deltaX = 0;
       pointerId = id;
       dragBaseOffset = getCurrentOffset();
-      viewport.classList.add('is-dragging');
     }
 
     function onGestureMove(clientX, clientY) {
@@ -594,6 +568,7 @@ get_header();
       var moveY = clientY - startY;
       if (!isDragging && Math.abs(moveX) > 8 && Math.abs(moveX) > Math.abs(moveY)) {
         isDragging = true;
+        viewport.classList.add('is-dragging');
       }
       if (isDragging) {
         deltaX = moveX;
@@ -608,6 +583,8 @@ get_header();
     function onGestureEnd() {
       if (!pointerDown) return;
       pointerDown = false;
+      viewport.classList.remove('is-dragging');
+      wasDragging = isDragging;
       if (!isDragging) return;
 
       var threshold = 28;
@@ -618,8 +595,108 @@ get_header();
       isDragging = false;
       deltaX = 0;
       pointerId = null;
-      viewport.classList.remove('is-dragging');
     }
+
+    var modal = document.getElementById('lp-bgi-video-modal');
+    var modalFrame = modal && modal.querySelector('[data-modal-frame]');
+    var lastFacade = null;
+    var savedBodyOverflow = '';
+
+    function openVideoModal(facade) {
+      if (!modal || !modalFrame) return;
+      var id = facade.getAttribute('data-video-id');
+      if (!id) return;
+      while (modalFrame.firstChild) modalFrame.removeChild(modalFrame.firstChild);
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0&playsinline=1&enablejsapi=1';
+      iframe.title = facade.getAttribute('data-video-title') || '';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      modalFrame.appendChild(iframe);
+      var toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'lp-bgi-video-toggle is-playing';
+      toggle.setAttribute('aria-label', 'Tạm dừng video');
+      toggle.innerHTML = '<span class="lp-bgi-video-toggle-icon" aria-hidden="true"></span>';
+      toggle.addEventListener('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        toggleVideoPlayback(iframe, toggle);
+      });
+      modalFrame.appendChild(toggle);
+      lastFacade = facade;
+      modal.hidden = false;
+      savedBodyOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      var closeBtn = modal.querySelector('.lp-bgi-video-modal-close');
+      if (closeBtn) { try { closeBtn.focus(); } catch (e) {} }
+    }
+
+    function closeVideoModal() {
+      if (!modal || !modalFrame) return;
+      if (modal.hidden) return;
+      modal.hidden = true;
+      while (modalFrame.firstChild) modalFrame.removeChild(modalFrame.firstChild);
+      document.body.style.overflow = savedBodyOverflow;
+      if (lastFacade) {
+        try { lastFacade.focus(); } catch (e) {}
+        lastFacade = null;
+      }
+    }
+
+    function sendYoutubeCommand(iframe, command) {
+      if (!iframe || !iframe.contentWindow) return;
+      iframe.contentWindow.postMessage(JSON.stringify({
+        event: 'command',
+        func: command,
+        args: []
+      }), '*');
+    }
+
+    function toggleVideoPlayback(iframe, toggle) {
+      var isPlaying = toggle.classList.contains('is-playing');
+      sendYoutubeCommand(iframe, isPlaying ? 'pauseVideo' : 'playVideo');
+      toggle.classList.toggle('is-playing', !isPlaying);
+      toggle.classList.toggle('is-paused', isPlaying);
+      toggle.classList.add('is-feedback');
+      toggle.setAttribute('aria-label', isPlaying ? 'Phát video' : 'Tạm dừng video');
+      window.clearTimeout(toggle._feedbackTimer);
+      toggle._feedbackTimer = window.setTimeout(function() {
+        toggle.classList.remove('is-feedback');
+      }, 700);
+    }
+
+    if (modal) {
+      modal.addEventListener('click', function(event) {
+        if (event.target.closest('[data-modal-close]')) closeVideoModal();
+      });
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && !modal.hidden) closeVideoModal();
+      });
+    }
+
+    section.addEventListener('click', function(event) {
+      var facade = event.target.closest('.lp-bgi-video-facade');
+      if (!facade) return;
+      event.preventDefault();
+      if (wasDragging) {
+        wasDragging = false;
+        return;
+      }
+      openVideoModal(facade);
+    });
+
+    Array.prototype.forEach.call(section.querySelectorAll('.lp-bgi-video-facade img'), function(img) {
+      img.addEventListener('error', function onErr() {
+        if (img.src.indexOf('maxresdefault') !== -1) {
+          img.src = img.src.replace('maxresdefault', 'sddefault');
+        } else if (img.src.indexOf('sddefault') !== -1) {
+          img.src = img.src.replace('sddefault', 'hqdefault');
+        } else {
+          img.removeEventListener('error', onErr);
+        }
+      });
+    });
 
     dotsWrap.addEventListener('click', function(event) {
       var btn = event.target.closest('button[data-page]');
@@ -632,21 +709,27 @@ get_header();
       event.preventDefault();
     });
 
-    viewport.addEventListener('pointerdown', function(event) {
-      if (event.pointerType === 'mouse' && event.button !== 0) return;
-      onGestureStart(event.clientX, event.clientY, event.pointerId);
-      if (viewport.setPointerCapture) viewport.setPointerCapture(event.pointerId);
-    });
-
-    viewport.addEventListener('pointermove', function(event) {
+    function onDocPointerMove(event) {
       if (!pointerDown || (pointerId !== null && event.pointerId !== pointerId)) return;
       onGestureMove(event.clientX, event.clientY);
       if (isDragging) event.preventDefault();
-    });
+    }
 
-    viewport.addEventListener('pointerup', onGestureEnd);
-    viewport.addEventListener('pointercancel', onGestureEnd);
-    viewport.addEventListener('pointerleave', onGestureEnd);
+    function onDocPointerUp(event) {
+      if (pointerId !== null && event.pointerId !== pointerId) return;
+      document.removeEventListener('pointermove', onDocPointerMove);
+      document.removeEventListener('pointerup', onDocPointerUp);
+      document.removeEventListener('pointercancel', onDocPointerUp);
+      onGestureEnd();
+    }
+
+    viewport.addEventListener('pointerdown', function(event) {
+      if (event.pointerType === 'mouse' && event.button !== 0) return;
+      onGestureStart(event.clientX, event.clientY, event.pointerId);
+      document.addEventListener('pointermove', onDocPointerMove);
+      document.addEventListener('pointerup', onDocPointerUp);
+      document.addEventListener('pointercancel', onDocPointerUp);
+    });
 
     window.addEventListener('resize', function() {
       window.clearTimeout(resizeTimer);
@@ -855,7 +938,6 @@ get_header();
       viewport.addEventListener('pointerdown', function(event) {
         if (event.pointerType === 'mouse' && event.button !== 0) return;
         onGestureStart(event.clientX, event.clientY, event.pointerId);
-        if (viewport.setPointerCapture) viewport.setPointerCapture(event.pointerId);
       });
 
       viewport.addEventListener('pointermove', function(event) {
@@ -892,7 +974,7 @@ get_header();
     <div class="lp-container">
       <h2>Câu Hỏi Thường Gặp</h2>
       <div class="lp-bgi-faq-list">
-        <details class="lp-bgi-faq-item" open>
+        <details class="lp-bgi-faq-item" open="">
           <summary>Giá rẻ 6–9 triệu có đáng tin không?</summary>
           <div class="lp-bgi-faq-answer"><p>Đây thường là giá chỉ tính trụ Implant, chưa bao gồm khớp nối Abutment, mão răng sứ và chi phí ghép xương. Tổng cộng có thể đội lên gấp 2–3 lần. Nha Khoa Đông Nam cam kết báo giá trọn gói ngay từ đầu.</p></div>
         </details>
@@ -939,31 +1021,31 @@ get_header();
       <div class="lp-bgi-commit-grid" aria-label="Cam kết của Nha Khoa Đông Nam">
         <div class="lp-bgi-commit-card">
           <div class="lp-bgi-commit-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
           </div>
           <p>Vật liệu chính hãng có nguồn gốc</p>
         </div>
         <div class="lp-bgi-commit-card">
           <div class="lp-bgi-commit-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg>
           </div>
           <p>Bác sĩ chuyên sâu Implant</p>
         </div>
         <div class="lp-bgi-commit-card">
           <div class="lp-bgi-commit-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v4M16 4v4M3 12h18"/><path d="M8 16h4"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M8 4v4M16 4v4M3 12h18"></path><path d="M8 16h4"></path></svg>
           </div>
           <p>Báo giá trọn gói, không phát sinh</p>
         </div>
         <div class="lp-bgi-commit-card">
           <div class="lp-bgi-commit-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
           </div>
           <p>Cam kết đồng hành trọn đời</p>
         </div>
         <div class="lp-bgi-commit-card">
           <div class="lp-bgi-commit-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
           </div>
           <p>Phòng khám vô trùng đạt chuẩn</p>
         </div>
@@ -982,10 +1064,10 @@ get_header();
           <div class="lp-bgi-countdown" data-deadline="2026-05-31T23:59:59+07:00" aria-label="Đồng hồ đếm ngược ưu đãi 20%">
             <p class="lp-bgi-countdown-label">Ưu đãi 20% kết thúc sau</p>
             <div class="lp-bgi-countdown-grid">
-              <div class="lp-bgi-countdown-item"><strong data-countdown-days>27</strong><span>Ngày</span></div>
-              <div class="lp-bgi-countdown-item"><strong data-countdown-hours>00</strong><span>Giờ</span></div>
-              <div class="lp-bgi-countdown-item"><strong data-countdown-minutes>00</strong><span>Phút</span></div>
-              <div class="lp-bgi-countdown-item"><strong data-countdown-seconds>00</strong><span>Giây</span></div>
+              <div class="lp-bgi-countdown-item"><strong data-countdown-days="">27</strong><span>Ngày</span></div>
+              <div class="lp-bgi-countdown-item"><strong data-countdown-hours="">00</strong><span>Giờ</span></div>
+              <div class="lp-bgi-countdown-item"><strong data-countdown-minutes="">00</strong><span>Phút</span></div>
+              <div class="lp-bgi-countdown-item"><strong data-countdown-seconds="">00</strong><span>Giây</span></div>
             </div>
             <p class="lp-bgi-countdown-note">Hạn chót đăng ký online: 31/05/2026</p>
           </div>
@@ -1069,4 +1151,5 @@ get_header();
 
 </div><!-- /.ndn-lp -->
 
-<?php get_footer(); ?>
+<?php wp_footer(); ?>
+</body></html>
