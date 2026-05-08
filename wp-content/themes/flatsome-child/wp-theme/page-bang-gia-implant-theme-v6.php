@@ -771,7 +771,6 @@ get_header();
       viewport.addEventListener('pointerdown', function(event) {
         if (event.pointerType === 'mouse' && event.button !== 0) return;
         onGestureStart(event.clientX, event.clientY, event.pointerId);
-        if (viewport.setPointerCapture) viewport.setPointerCapture(event.pointerId);
       });
 
       viewport.addEventListener('pointermove', function(event) {
