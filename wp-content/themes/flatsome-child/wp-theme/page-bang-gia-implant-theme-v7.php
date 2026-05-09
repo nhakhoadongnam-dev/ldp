@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Bảng Giá Implant Landing (Theme) v6
+ * Template Name: Bảng Giá Implant Landing (Theme) v7
  * Auto-generated from page/bang-gia-implant/ by wp-sync.
  * DO NOT EDIT MANUALLY — run `npm run wp:sync`.
  * Mode: Theme (content only, uses Flatsome header/footer)
@@ -56,7 +56,7 @@ get_header();
       <div class="lp-bgi-hero-shell">
         <p class="lp-bgi-hero-brand">🔥 Duy nhất tháng này</p>
         <h1 class="lp-bgi-hero-title">Phục Hồi Răng Mất Hoàn Hảo <span>Ăn Nhai Như Răng Thật</span></h1>
-        <p class="lp-bgi-update">Bảng giá trồng răng Implant mới nhất 2026 &amp; Chương trình <strong>Ưu đãi 20%</strong> cho các dòng trụ Implant cao cấp.</p>
+        <p class="lp-bgi-update">Bảng giá trồng răng Implant mới nhất 2026 &amp; Chương trình <strong>Ưu đãi 20%</strong> cho TẤT CẢ các dòng trụ.</p>
         <ul class="lp-bgi-hero-points" aria-label="Điểm nổi bật của bảng giá Implant">
           <li>Phục hồi 100% ăn nhai</li>
           <li>Trụ chính hãng thế giới</li>
@@ -92,6 +92,25 @@ get_header();
           <p class="lp-bgi-featured-discount">Giảm trực tiếp 3.300.000 ₫</p>
           <a class="lp-bgi-featured-btn" href="#dang-ky">Đăng ký suất ưu đãi ngay</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHAT IS IMPLANT ── -->
+  <section class="lp-bgi-explainer lp-section" id="implant-la-gi">
+    <div class="lp-container">
+      <h2>Implant là gì? Tại sao nên chọn phương pháp này?</h2>
+      <p><strong>Trồng răng Implant</strong> là phương pháp phục hồi răng đã mất bằng cách cấy ghép một trụ titanium vào xương hàm, sau đó gắn mão sứ lên trên. Đây được coi là giải pháp tốt nhất hiện nay để thay thế răng đã mất vì mang lại nhiều ưu điểm vượt trội.</p>
+      <p>Quy trình thực hiện bao gồm việc đặt <strong>trụ titanium</strong> vào xương hàm, sau một thời gian tích hợp xương, bác sĩ sẽ đặt <strong>Abutment</strong> (khớp nối) và cuối cùng là gắn <strong>mão sứ</strong> lên trên để hoàn thiện răng.</p>
+      <div class="lp-bgi-warning">
+        <div class="lp-bgi-warning-icon">⚠️</div>
+        <div>
+          <h4>Lưu ý quan trọng về giá rẻ trên thị trường</h4>
+          <p>Nhiều nơi quảng cáo giá Implant chỉ từ 6–9 triệu nhưng đây thường CHỈ là giá trụ chưa bao gồm: khớp nối Abutment, mão răng sứ và ghép xương. Tổng cộng có thể đội lên gấp 2–3 lần. Nha Khoa Đông Nam cam kết báo giá TRỌN GÓI ngay từ đầu.</p>
+        </div>
+      </div>
+      <div class="lp-bgi-structure">
+        <img class="lp-bgi-structure-image" src="https://nhakhoadongnam.com/wp-content/uploads/2026/05/cau-tao-implant.jpg" alt="Cấu tạo của răng Implant" loading="lazy" decoding="async">
       </div>
     </div>
   </section>
@@ -142,7 +161,7 @@ get_header();
             <tr>
               <td data-label="Loại Implant">Implant Mỹ</td>
               <td class="lp-bgi-price-cell" data-label="Giá trọn gói (VNĐ/răng)">23.500.000</td>
-              <td class="lp-bgi-price-cell lp-bgi-price-cell--deal" data-label="Giá ưu đãi 20% (VNĐ/răng)"></td>
+              <td class="lp-bgi-price-cell lp-bgi-price-cell--deal" data-label="Giá ưu đãi 20% (VNĐ/răng)">18.800.000</td>
               <td data-label="Ghi chú">Đồng hành trọn đời</td>
             </tr>
             <tr class="lp-bgi-row-highlight">
@@ -160,20 +179,11 @@ get_header();
             <tr class="lp-bgi-row-highlight lp-bgi-row-highlight--premium">
               <td data-label="Loại Implant">Implant Straumann SLAactive <span class="lp-bgi-table-name-break">(Thụy Sỹ) <span class="lp-bgi-row-badge">Cao cấp</span></span></td>
               <td class="lp-bgi-price-cell" data-label="Giá trọn gói (VNĐ/răng)">34.000.000</td>
-              <td class="lp-bgi-price-cell lp-bgi-price-cell--deal" data-label="Giá ưu đãi 20% (VNĐ/răng)"></td>
+              <td class="lp-bgi-price-cell lp-bgi-price-cell--deal" data-label="Giá ưu đãi 20% (VNĐ/răng)">27.200.000</td>
               <td data-label="Ghi chú">Đồng hành trọn đời</td>
             </tr>
           </tbody>
         </table>
-      </div>
-
-      <!-- ── WARNING (moved from implant-la-gi) ── -->
-      <div class="lp-bgi-warning">
-        <div class="lp-bgi-warning-icon">⚠️</div>
-        <div>
-          <h4>Lưu ý quan trọng về giá rẻ trên thị trường</h4>
-          <p>Nhiều nơi quảng cáo giá Implant chỉ từ 6–9 triệu nhưng đây thường CHỈ là giá trụ chưa bao gồm: khớp nối Abutment, mão răng sứ và ghép xương. Tổng cộng có thể đội lên gấp 2–3 lần. Nha Khoa Đông Nam cam kết báo giá TRỌN GÓI ngay từ đầu.</p>
-        </div>
       </div>
 
       <!-- ── OSSEOINTEGRATION GUARANTEE ── -->
@@ -261,6 +271,80 @@ get_header();
     </div>
   </section>
 
+  <!-- ── CROWN TYPES ── -->
+  <section class="lp-bgi-crown lp-section" id="mao-su">
+    <div class="lp-container">
+      <div class="lp-bgi-price-subhead lp-bgi-price-subhead--crown">
+        <h3>Bảng giá mão răng sứ trên Implant</h3>
+      </div>
+      <p class="lp-bgi-crown-copy">Nha Khoa Đông Nam <strong>tặng răng sứ kim loại 1.000.000 VNĐ</strong> trên mỗi trụ Implant. Trường hợp quý khách muốn nâng cấp lên dòng sứ cao cấp hơn sẽ <strong>khấu trừ thẳng 1.000.000 VNĐ</strong> vào chi phí chênh lệch.</p>
+      <div class="lp-bgi-table-wrap">
+        <table class="lp-bgi-table lp-bgi-table--three-col">
+          <colgroup>
+            <col class="lp-bgi-col-main">
+            <col class="lp-bgi-col-meta">
+            <col class="lp-bgi-col-price">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Loại răng sứ</th>
+              <th>Bảo hành</th>
+              <th>Giá VNĐ/răng</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="Loại răng sứ">Răng sứ kim loại Ceramco III</td><td data-label="Bảo hành"><strong>BH 3 năm</strong></td><td class="lp-bgi-price-cell" data-label="Giá VNĐ/răng">1.000.000</td></tr>
+            <tr><td data-label="Loại răng sứ">Răng sứ Titan <span class="lp-bgi-chip lp-bgi-chip--saving">Tiết kiệm</span></td><td data-label="Bảo hành"><strong>BH 5 năm</strong></td><td class="lp-bgi-price-cell" data-label="Giá VNĐ/răng">2.000.000</td></tr>
+            <tr><td data-label="Loại răng sứ">Răng toàn sứ Emax</td><td data-label="Bảo hành"><strong>BH 5 năm</strong></td><td class="lp-bgi-price-cell" data-label="Giá VNĐ/răng">4.000.000</td></tr>
+            <tr><td data-label="Loại răng sứ">Răng toàn sứ Zirconia <span class="lp-bgi-chip lp-bgi-chip--standard">Phổ thông</span></td><td data-label="Bảo hành"><strong>BH 10 năm</strong></td><td class="lp-bgi-price-cell" data-label="Giá VNĐ/răng">6.000.000</td></tr>
+            <tr><td data-label="Loại răng sứ">Răng toàn sứ Cercon HT</td><td data-label="Bảo hành"><strong>BH 15 năm</strong></td><td class="lp-bgi-price-cell" data-label="Giá VNĐ/răng">7.000.000</td></tr>
+            <tr><td data-label="Loại răng sứ">Răng toàn sứ Zolid <span class="lp-bgi-chip lp-bgi-chip--esthetic">Thẩm mỹ</span></td><td data-label="Bảo hành"><strong>BH 15 năm</strong></td><td class="lp-bgi-price-cell" data-label="Giá VNĐ/răng">7.000.000</td></tr>
+            <tr><td data-label="Loại răng sứ">Răng toàn sứ Multilayer Zolid <span class="lp-bgi-chip lp-bgi-chip--premium">Cao cấp</span></td><td data-label="Bảo hành"><strong>BH 15 năm</strong></td><td class="lp-bgi-price-cell" data-label="Giá VNĐ/răng">8.000.000</td></tr>
+            <tr><td data-label="Loại răng sứ">Răng toàn sứ Lava 3M Plus <span class="lp-bgi-chip lp-bgi-chip--premium">Cao cấp</span></td><td data-label="Bảo hành"><strong>BH 20 năm</strong></td><td class="lp-bgi-price-cell" data-label="Giá VNĐ/răng">8.500.000</td></tr>
+            <tr><td data-label="Loại răng sứ">Răng toàn sứ Orodent <span class="lp-bgi-chip lp-bgi-chip--ultra">Siêu cao cấp</span></td><td data-label="Bảo hành"><strong>BH 20 năm</strong></td><td class="lp-bgi-price-cell" data-label="Giá VNĐ/răng">10.000.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BONE GRAFTING ── -->
+  <section class="lp-bgi-bone lp-section" id="ghep-xuong">
+    <div class="lp-container">
+      <div class="lp-bgi-price-subhead lp-bgi-price-subhead--bone">
+        <h3>Bảng giá ghép xương / Nâng xoang</h3>
+      </div>
+      <div class="lp-bgi-table-wrap">
+        <table class="lp-bgi-table lp-bgi-table--three-col">
+          <colgroup>
+            <col class="lp-bgi-col-main">
+            <col class="lp-bgi-col-meta">
+            <col class="lp-bgi-col-price">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Các can thiệp xương đi kèm (nếu cần)</th>
+              <th>Đơn vị</th>
+              <th>Giá</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="Can thiệp">Cấy ghép xương</td><td data-label="Đơn vị">1 ống</td><td class="lp-bgi-price-cell" data-label="Giá">8.000.000 đ</td></tr>
+            <tr><td data-label="Can thiệp">Cấy màng xương</td><td data-label="Đơn vị">1 đơn vị</td><td class="lp-bgi-price-cell" data-label="Giá">2.000.000 đ</td></tr>
+            <tr><td data-label="Can thiệp">Cắt gọt xương</td><td data-label="Đơn vị">1 ca</td><td class="lp-bgi-price-cell" data-label="Giá">15.000.000 đ</td></tr>
+            <tr><td data-label="Can thiệp">Tạo hình xương + nướu</td><td data-label="Đơn vị">1 ca</td><td class="lp-bgi-price-cell" data-label="Giá">10.000.000 đ</td></tr>
+            <tr><td data-label="Can thiệp">Nâng xoang</td><td data-label="Đơn vị">1 bên</td><td class="lp-bgi-price-cell" data-label="Giá">10.000.000 đ</td></tr>
+            <tr><td data-label="Can thiệp">Khớp nối Abutment</td><td data-label="Đơn vị">1 cái</td><td class="lp-bgi-price-cell" data-label="Giá">5.000.000 đ</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="lp-bgi-bone-note">
+        <h4>Khi nào cần ghép xương hoặc nâng xoang?</h4>
+        <p>Sau khi mất răng lâu năm, xương hàm có thể bị tiêu đi. Nếu xương không đủ dày/cao, bác sĩ cần thực hiện ghép xương hoặc nâng xoang trước khi cấy Implant để đảm bảo trụ tích hợp tốt và bền lâu.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ── TIPS ── -->
   <section class="lp-bgi-tips lp-section" id="bi-quyet">
     <div class="lp-container">
@@ -311,7 +395,6 @@ get_header();
     </div>
   </section>
 
-
   <!-- ── BEFORE AFTER ── -->
   <section class="lp-bgi-carousel lp-section" id="ket-qua-dieu-tri">
     <div class="lp-container">
@@ -357,49 +440,49 @@ get_header();
         <div class="lp-bgi-video-track-wrap">
           <div class="lp-bgi-video-track">
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/WBPU55A7D0E"
-                title="Chia sẻ 1"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <button type="button" class="lp-bgi-video-facade"
+                      data-video-id="WBPU55A7D0E"
+                      data-video-title="Chia sẻ 1"
+                      aria-label="Phát video: Chia sẻ 1">
+                <img src="https://i.ytimg.com/vi/WBPU55A7D0E/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
+                <span class="lp-bgi-video-play" aria-hidden="true"></span>
+              </button>
             </div>
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/eblVhYpRay8"
-                title="Chia sẻ 2"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <button type="button" class="lp-bgi-video-facade"
+                      data-video-id="eblVhYpRay8"
+                      data-video-title="Chia sẻ 2"
+                      aria-label="Phát video: Chia sẻ 2">
+                <img src="https://i.ytimg.com/vi/eblVhYpRay8/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
+                <span class="lp-bgi-video-play" aria-hidden="true"></span>
+              </button>
             </div>
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/07HeOz_5S4s"
-                title="Chia sẻ 3"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <button type="button" class="lp-bgi-video-facade"
+                      data-video-id="07HeOz_5S4s"
+                      data-video-title="Chia sẻ 3"
+                      aria-label="Phát video: Chia sẻ 3">
+                <img src="https://i.ytimg.com/vi/07HeOz_5S4s/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
+                <span class="lp-bgi-video-play" aria-hidden="true"></span>
+              </button>
             </div>
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/vatpzUlPl4c"
-                title="Chia sẻ 4"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <button type="button" class="lp-bgi-video-facade"
+                      data-video-id="vatpzUlPl4c"
+                      data-video-title="Chia sẻ 4"
+                      aria-label="Phát video: Chia sẻ 4">
+                <img src="https://i.ytimg.com/vi/vatpzUlPl4c/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
+                <span class="lp-bgi-video-play" aria-hidden="true"></span>
+              </button>
             </div>
             <div class="lp-bgi-video-item">
-              <iframe
-                src="https://www.youtube.com/embed/a3GTXsOv3aM"
-                title="Chia sẻ 5"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <button type="button" class="lp-bgi-video-facade"
+                      data-video-id="a3GTXsOv3aM"
+                      data-video-title="Chia sẻ 5"
+                      aria-label="Phát video: Chia sẻ 5">
+                <img src="https://i.ytimg.com/vi/a3GTXsOv3aM/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
+                <span class="lp-bgi-video-play" aria-hidden="true"></span>
+              </button>
             </div>
           </div>
         </div>
@@ -407,6 +490,14 @@ get_header();
       <div class="lp-bgi-video-dots"></div>
     </div>
   </section>
+
+  <div class="lp-bgi-video-modal" id="lp-bgi-video-modal" hidden>
+    <div class="lp-bgi-video-modal-backdrop" data-modal-close></div>
+    <button type="button" class="lp-bgi-video-modal-close" data-modal-close aria-label="Đóng video">&times;</button>
+    <div class="lp-bgi-video-modal-dialog" role="dialog" aria-modal="true" aria-label="Video chia sẻ thực tế">
+      <div class="lp-bgi-video-modal-frame" data-modal-frame></div>
+    </div>
+  </div>
 
   <script>
   (function() {
@@ -424,6 +515,7 @@ get_header();
     var resizeTimer = null;
     var pointerDown = false;
     var isDragging = false;
+    var wasDragging = false;
     var startX = 0;
     var startY = 0;
     var deltaX = 0;
@@ -501,7 +593,6 @@ get_header();
       deltaX = 0;
       pointerId = id;
       dragBaseOffset = getCurrentOffset();
-      viewport.classList.add('is-dragging');
     }
 
     function onGestureMove(clientX, clientY) {
@@ -510,6 +601,7 @@ get_header();
       var moveY = clientY - startY;
       if (!isDragging && Math.abs(moveX) > 8 && Math.abs(moveX) > Math.abs(moveY)) {
         isDragging = true;
+        viewport.classList.add('is-dragging');
       }
       if (isDragging) {
         deltaX = moveX;
@@ -525,6 +617,7 @@ get_header();
       if (!pointerDown) return;
       pointerDown = false;
       viewport.classList.remove('is-dragging');
+      wasDragging = isDragging;
       if (!isDragging) return;
 
       var threshold = 28;
@@ -537,6 +630,107 @@ get_header();
       pointerId = null;
     }
 
+    var modal = document.getElementById('lp-bgi-video-modal');
+    var modalFrame = modal && modal.querySelector('[data-modal-frame]');
+    var lastFacade = null;
+    var savedBodyOverflow = '';
+
+    function openVideoModal(facade) {
+      if (!modal || !modalFrame) return;
+      var id = facade.getAttribute('data-video-id');
+      if (!id) return;
+      while (modalFrame.firstChild) modalFrame.removeChild(modalFrame.firstChild);
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0&playsinline=1&enablejsapi=1';
+      iframe.title = facade.getAttribute('data-video-title') || '';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      modalFrame.appendChild(iframe);
+      var toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'lp-bgi-video-toggle is-playing';
+      toggle.setAttribute('aria-label', 'Tạm dừng video');
+      toggle.innerHTML = '<span class="lp-bgi-video-toggle-icon" aria-hidden="true"></span>';
+      toggle.addEventListener('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        toggleVideoPlayback(iframe, toggle);
+      });
+      modalFrame.appendChild(toggle);
+      lastFacade = facade;
+      modal.hidden = false;
+      savedBodyOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      var closeBtn = modal.querySelector('.lp-bgi-video-modal-close');
+      if (closeBtn) { try { closeBtn.focus(); } catch (e) {} }
+    }
+
+    function closeVideoModal() {
+      if (!modal || !modalFrame) return;
+      if (modal.hidden) return;
+      modal.hidden = true;
+      while (modalFrame.firstChild) modalFrame.removeChild(modalFrame.firstChild);
+      document.body.style.overflow = savedBodyOverflow;
+      if (lastFacade) {
+        try { lastFacade.focus(); } catch (e) {}
+        lastFacade = null;
+      }
+    }
+
+    function sendYoutubeCommand(iframe, command) {
+      if (!iframe || !iframe.contentWindow) return;
+      iframe.contentWindow.postMessage(JSON.stringify({
+        event: 'command',
+        func: command,
+        args: []
+      }), '*');
+    }
+
+    function toggleVideoPlayback(iframe, toggle) {
+      var isPlaying = toggle.classList.contains('is-playing');
+      sendYoutubeCommand(iframe, isPlaying ? 'pauseVideo' : 'playVideo');
+      toggle.classList.toggle('is-playing', !isPlaying);
+      toggle.classList.toggle('is-paused', isPlaying);
+      toggle.classList.add('is-feedback');
+      toggle.setAttribute('aria-label', isPlaying ? 'Phát video' : 'Tạm dừng video');
+      window.clearTimeout(toggle._feedbackTimer);
+      toggle._feedbackTimer = window.setTimeout(function() {
+        toggle.classList.remove('is-feedback');
+      }, 700);
+    }
+
+    if (modal) {
+      modal.addEventListener('click', function(event) {
+        if (event.target.closest('[data-modal-close]')) closeVideoModal();
+      });
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && !modal.hidden) closeVideoModal();
+      });
+    }
+
+    section.addEventListener('click', function(event) {
+      var facade = event.target.closest('.lp-bgi-video-facade');
+      if (!facade) return;
+      event.preventDefault();
+      if (wasDragging) {
+        wasDragging = false;
+        return;
+      }
+      openVideoModal(facade);
+    });
+
+    Array.prototype.forEach.call(section.querySelectorAll('.lp-bgi-video-facade img'), function(img) {
+      img.addEventListener('error', function onErr() {
+        if (img.src.indexOf('maxresdefault') !== -1) {
+          img.src = img.src.replace('maxresdefault', 'sddefault');
+        } else if (img.src.indexOf('sddefault') !== -1) {
+          img.src = img.src.replace('sddefault', 'hqdefault');
+        } else {
+          img.removeEventListener('error', onErr);
+        }
+      });
+    });
+
     dotsWrap.addEventListener('click', function(event) {
       var btn = event.target.closest('button[data-page]');
       if (!btn) return;
@@ -548,21 +742,27 @@ get_header();
       event.preventDefault();
     });
 
-    viewport.addEventListener('pointerdown', function(event) {
-      if (event.pointerType === 'mouse' && event.button !== 0) return;
-      onGestureStart(event.clientX, event.clientY, event.pointerId);
-      if (viewport.setPointerCapture) viewport.setPointerCapture(event.pointerId);
-    });
-
-    viewport.addEventListener('pointermove', function(event) {
+    function onDocPointerMove(event) {
       if (!pointerDown || (pointerId !== null && event.pointerId !== pointerId)) return;
       onGestureMove(event.clientX, event.clientY);
       if (isDragging) event.preventDefault();
-    });
+    }
 
-    viewport.addEventListener('pointerup', onGestureEnd);
-    viewport.addEventListener('pointercancel', onGestureEnd);
-    viewport.addEventListener('pointerleave', onGestureEnd);
+    function onDocPointerUp(event) {
+      if (pointerId !== null && event.pointerId !== pointerId) return;
+      document.removeEventListener('pointermove', onDocPointerMove);
+      document.removeEventListener('pointerup', onDocPointerUp);
+      document.removeEventListener('pointercancel', onDocPointerUp);
+      onGestureEnd();
+    }
+
+    viewport.addEventListener('pointerdown', function(event) {
+      if (event.pointerType === 'mouse' && event.button !== 0) return;
+      onGestureStart(event.clientX, event.clientY, event.pointerId);
+      document.addEventListener('pointermove', onDocPointerMove);
+      document.addEventListener('pointerup', onDocPointerUp);
+      document.addEventListener('pointercancel', onDocPointerUp);
+    });
 
     window.addEventListener('resize', function() {
       window.clearTimeout(resizeTimer);
