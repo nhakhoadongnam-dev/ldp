@@ -84,7 +84,7 @@ add_filter('wpcf7_load_css', '__return_true');
         <div style="display:flex;flex-direction:column;gap:9px;margin-bottom:16px;">
           <div style="display:flex;align-items:flex-start;gap:9px;font-size:13.5px;color:rgba(255,255,255,0.88);">
             <span style="color:var(--gold);font-weight:900;flex-shrink:0;margin-top:1px;">✓</span>
-            <span>Đã bao gồm trụ Implant chính hãng (QR code check) + Abutment</span>
+            <span>Đã bao gồm trụ Implant chính hãng (QR code check) + Abutment (trị giá 5.000.000đ)</span>
           </div>
           <div style="display:flex;align-items:flex-start;gap:9px;font-size:13.5px;color:rgba(255,255,255,0.88);">
             <span style="color:var(--gold);font-weight:900;flex-shrink:0;margin-top:1px;">✓</span>
@@ -189,7 +189,7 @@ add_filter('wpcf7_load_css', '__return_true');
       <div class="pnb-title">📌 GIÁ TRỌN GÓI / 1 TRỤ</div>
       <div class="pnb-grid">
         <div class="pnb-item"><div class="pnb-check"><svg viewBox="0 0 12 12" fill="white"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"></path></svg></div><span>Trụ chính hãng (hộp QR code / số lô)</span></div>
-        <div class="pnb-item"><div class="pnb-check"><svg viewBox="0 0 12 12" fill="white"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"></path></svg></div><span>Khớp nối Abutment</span></div>
+        <div class="pnb-item"><div class="pnb-check"><svg viewBox="0 0 12 12" fill="white"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"></path></svg></div><span>Khớp nối Abutment (trị giá 5.000.000đ)</span></div>
         <div class="pnb-item"><div class="pnb-check"><svg viewBox="0 0 12 12" fill="white"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"></path></svg></div><span>Tặng răng sứ (Mỹ) trị giá 1.000.000₫</span></div>
         <div class="pnb-item"><div class="pnb-check"><svg viewBox="0 0 12 12" fill="white"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"></path></svg></div><span>Chi phí xét nghiệm (nếu có)</span></div>
         <div class="pnb-item"><div class="pnb-check"><svg viewBox="0 0 12 12" fill="white"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"></path></svg></div><span>Kinh nghiệm chuyên sâu từ BS CKII</span></div>
@@ -214,44 +214,44 @@ add_filter('wpcf7_load_css', '__return_true');
         <tbody>
           <tr class="uudai-20-row">
             <td><span class="lp-flag lp-flag-kr" aria-label="Han Quoc" role="img"><svg viewBox="0 0 36 24" aria-hidden="true"><rect width="36" height="24" fill="#fff"></rect><circle cx="18" cy="12" r="5.2" fill="#c60c30"></circle><path d="M18 6.8a5.2 5.2 0 0 1 0 10.4a5.2 5.2 0 0 0 0-10.4z" fill="#003478"></path><path d="M7 5l5 2M8 3l5 2M6 7l5 2M24 17l5 2M25 15l5 2M23 19l5 2M25 5l5-2M24 7l5-2M23 9l5-2M7 19l5-2M8 21l5-2M6 17l5-2" stroke="#111" stroke-width="1.1"></path></svg></span> Implant Hàn Quốc <span class="uudai-20-badge">-20%</span></td>
-            <td><span class="price-original">16.500.000 ₫</span><br><span class="price-new-20">13.200.000 ₫</span></td>
-            <td>3–6 tháng</td>
-            <td>Bề mặt ổn định, ren tiêu chuẩn, độ bền cao</td>
-            <td>Mất răng đơn lẻ, xương hàm tốt</td>
+            <td data-label="Giá / trụ"><span class="price-original">16.500.000 ₫</span><br><span class="price-new-20">13.200.000 ₫</span></td>
+            <td data-label="Tích hợp xương">3–6 tháng</td>
+            <td data-label="Đặc điểm">Bề mặt ổn định, ren tiêu chuẩn, độ bền cao</td>
+            <td data-label="Phù hợp">Mất răng đơn lẻ, xương hàm tốt</td>
           </tr>
           <tr class="recommended uudai-20-row">
             <td><span class="lp-flag lp-flag-it" aria-label="Y" role="img"><svg viewBox="0 0 36 24" aria-hidden="true"><rect width="12" height="24" fill="#009246"></rect><rect x="12" width="12" height="24" fill="#fff"></rect><rect x="24" width="12" height="24" fill="#ce2b37"></rect></svg></span> Implant Ý — C-Tech <span style="background:var(--green);color:#fff;font-size:10px;padding:2px 7px;border-radius:10px;margin-left:4px;vertical-align:middle;white-space:nowrap;display:inline-block;">Đề xuất</span> <span class="uudai-20-badge">-20%</span></td>
-            <td><span class="price-original">19.900.000 ₫</span><br><span class="price-new-20">15.920.000 ₫</span></td>
-            <td>2–3 tháng</td>
-            <td><strong>Platform Switching</strong> — bảo tồn xương cổ trụ, chống tụt lợi</td>
-            <td>Cần thẩm mỹ cao, bền 20–30 năm</td>
+            <td data-label="Giá / trụ"><span class="price-original">19.900.000 ₫</span><br><span class="price-new-20">15.920.000 ₫</span></td>
+            <td data-label="Tích hợp xương">2–3 tháng</td>
+            <td data-label="Đặc điểm"><strong>Platform Switching</strong> — bảo tồn xương cổ trụ, chống tụt lợi</td>
+            <td data-label="Phù hợp">Cần thẩm mỹ cao, bền 20–30 năm</td>
           </tr>
           <tr style="background:#fff;">
             <td><span class="lp-flag lp-flag-us" aria-label="My" role="img"><svg viewBox="0 0 36 24" aria-hidden="true"><rect width="36" height="24" fill="#b22234"></rect><path d="M0 3.7h36M0 7.4h36M0 11.1h36M0 14.8h36M0 18.5h36M0 22.2h36" stroke="#fff" stroke-width="1.8"></path><rect width="15.5" height="12.8" fill="#3c3b6e"></rect><g fill="#fff"><circle cx="3" cy="3" r=".7"></circle><circle cx="7" cy="3" r=".7"></circle><circle cx="11" cy="3" r=".7"></circle><circle cx="5" cy="6" r=".7"></circle><circle cx="9" cy="6" r=".7"></circle><circle cx="13" cy="6" r=".7"></circle><circle cx="3" cy="9" r=".7"></circle><circle cx="7" cy="9" r=".7"></circle><circle cx="11" cy="9" r=".7"></circle></g></svg></span> Implant Mỹ</td>
-            <td class="price-col dark">23.500.000 ₫</td>
-            <td>2–4 tháng</td>
-            <td>Ren sâu, ổn định cơ học ngay khi cấy</td>
-            <td>Vùng răng hàm cần lực nhai mạnh</td>
+            <td class="price-col dark" data-label="Giá / trụ">23.500.000 ₫</td>
+            <td data-label="Tích hợp xương">2–4 tháng</td>
+            <td data-label="Đặc điểm">Ren sâu, ổn định cơ học ngay khi cấy</td>
+            <td data-label="Phù hợp">Vùng răng hàm cần lực nhai mạnh</td>
           </tr>
           <tr class="uudai-20-row">
             <td><span class="lp-flag lp-flag-fr" aria-label="Phap" role="img"><svg viewBox="0 0 36 24" aria-hidden="true"><rect width="12" height="24" fill="#002395"></rect><rect x="12" width="12" height="24" fill="#fff"></rect><rect x="24" width="12" height="24" fill="#ed2939"></rect></svg></span> Implant Pháp — ETK Active <span class="uudai-20-badge">-20%</span></td>
-            <td><span class="price-original">28.200.000 ₫</span><br><span class="price-new-20">22.560.000 ₫</span></td>
-            <td>1–2 tháng</td>
-            <td>Bề mặt SA cao cấp, lên răng tức thì</td>
-            <td>Xương hàm xốp, muốn rút ngắn thời gian</td>
+            <td data-label="Giá / trụ"><span class="price-original">28.200.000 ₫</span><br><span class="price-new-20">22.560.000 ₫</span></td>
+            <td data-label="Tích hợp xương">1–2 tháng</td>
+            <td data-label="Đặc điểm">Bề mặt SA cao cấp, lên răng tức thì</td>
+            <td data-label="Phù hợp">Xương hàm xốp, muốn rút ngắn thời gian</td>
           </tr>
           <tr class="uudai-20-row">
             <td><span class="lp-flag lp-flag-se" aria-label="Thuy Dien" role="img"><svg viewBox="0 0 36 24" aria-hidden="true"><rect width="36" height="24" fill="#006aa7"></rect><rect x="10" width="4" height="24" fill="#fecc00"></rect><rect y="10" width="36" height="4" fill="#fecc00"></rect></svg></span> Implant Thụy Điển — Nobel Active <span class="uudai-20-badge">-20%</span></td>
-            <td><span class="price-original">32.900.000 ₫</span><br><span class="price-new-20">26.320.000 ₫</span></td>
-            <td>1–2 tháng</td>
-            <td>Hình nón nén xương, ổn định tức thì</td>
-            <td>Mất toàn hàm, xương hàm yếu</td>
+            <td data-label="Giá / trụ"><span class="price-original">32.900.000 ₫</span><br><span class="price-new-20">26.320.000 ₫</span></td>
+            <td data-label="Tích hợp xương">1–2 tháng</td>
+            <td data-label="Đặc điểm">Hình nón nén xương, ổn định tức thì</td>
+            <td data-label="Phù hợp">Mất toàn hàm, xương hàm yếu</td>
           </tr>
           <tr style="background:#fff;">
             <td><span class="lp-flag lp-flag-ch" aria-label="Thuy Si" role="img"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="#d52b1e"></rect><path d="M10 5h4v5h5v4h-5v5h-4v-5H5v-4h5z" fill="#fff"></path></svg></span> Implant Thụy Sĩ — Straumann</td>
-            <td class="price-col dark">34.000.000 ₫</td>
-            <td>3–6 tuần</td>
-            <td><strong>SLActive</strong> — lành thương siêu tốc</td>
+            <td class="price-col dark" data-label="Giá / trụ">34.000.000 ₫</td>
+            <td data-label="Tích hợp xương">3–6 tuần</td>
+            <td data-label="Đặc điểm"><strong>SLActive</strong> — lành thương siêu tốc</td>
             <td>Người bận rộn, có bệnh lý nền</td>
           </tr>
         </tbody>
@@ -298,7 +298,7 @@ add_filter('wpcf7_load_css', '__return_true');
       </div>
     </div>
     <div style="background:var(--navy-light);border-left:4px solid var(--navy);border-radius:0 var(--radius) var(--radius) 0;padding:16px 20px;">
-      <p style="font-size:14px;color:var(--navy);line-height:1.7;margin:0;"><strong>⚕️ Lưu ý từ bác sĩ:</strong> Kết quả còn phụ thuộc vào tình trạng xương hàm thực tế và kỹ thuật bác sĩ. Quý khách nên <strong>thăm khám sớm</strong> để có kế hoạch điều trị chính xác — <a href="#dang-ky" style="color:var(--navy);font-weight:700;text-decoration:underline;">đặt lịch miễn phí tại đây</a>.</p>
+      <p style="font-size:14px;color:#fff;line-height:1.7;margin:0;"><strong>⚕️ Lưu ý từ bác sĩ:</strong> Kết quả còn phụ thuộc vào tình trạng xương hàm thực tế và kỹ thuật bác sĩ. Quý khách nên <strong>thăm khám sớm</strong> để có kế hoạch điều trị chính xác — <a href="#dang-ky" style="color:#fff;font-weight:700;text-decoration:underline;">đặt lịch miễn phí tại đây</a>.</p>
     </div>
   </div>
 </section>
@@ -411,10 +411,11 @@ add_filter('wpcf7_load_css', '__return_true');
           <div class="qz-s" data-step="5" style="display:none;">
             <div id="qz-qty-view">
               <div style="font-size:12px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;">5. Số lượng răng cần trồng?</div>
-              <div style="display:flex;align-items:center;justify-content:center;gap:24px;padding:22px;background:var(--off-white);border-radius:12px;border:1px solid var(--gray-mid);">
-                <button type="button" onclick="qzAdj2(-1)" style="width:48px;height:48px;border-radius:50%;border:2px solid var(--navy);background:#fff;font-size:24px;font-weight:800;color:var(--navy);cursor:pointer;line-height:1;">−</button>
-                <input type="number" id="qz-qty2" value="1" min="1" max="14" readonly="" style="width:56px;text-align:center;font-size:36px;font-weight:900;color:var(--navy);background:transparent;border:none;outline:none;font-family:var(--font-heading);">
-                <button type="button" onclick="qzAdj2(1)" style="width:48px;height:48px;border-radius:50%;border:2px solid var(--navy);background:#fff;font-size:24px;font-weight:800;color:var(--navy);cursor:pointer;line-height:1;">+</button>
+              <div style="display:flex;align-items:center;justify-content:center;gap:20px;padding:24px 16px;background:var(--off-white);border-radius:12px;border:1px solid var(--gray-mid);">
+                <button type="button" onclick="qzAdj2(-1)" style="width:64px;height:64px;flex-shrink:0;border-radius:50%;border:2px solid var(--navy);background:#fff;font-size:30px;font-weight:800;color:var(--navy);cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;">−</button>
+                <div id="qz-qty2-display" style="min-width:80px;text-align:center;font-size:clamp(44px,12vw,64px);font-weight:900;color:var(--navy);font-family:var(--font-heading);line-height:1;">1</div>
+                <input type="hidden" id="qz-qty2" value="1">
+                <button type="button" onclick="qzAdj2(1)" style="width:64px;height:64px;flex-shrink:0;border-radius:50%;border:2px solid var(--navy);background:#fff;font-size:30px;font-weight:800;color:var(--navy);cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;">+</button>
               </div>
               <p style="text-align:center;font-size:12px;color:var(--text-sub);margin-top:8px;">răng cần trồng Implant</p>
             </div>
@@ -446,7 +447,7 @@ add_filter('wpcf7_load_css', '__return_true');
             </div>
           </div>
           <div style="background:#FFF0F0;border:1px solid #FADBD8;border-radius:10px;padding:12px 14px;margin-bottom:16px;">
-            <p style="font-size:12px;color:var(--red);line-height:1.65;margin:0;"><strong>LOẠI TRỪ TRÁCH NHIỆM:</strong> Kết quả chỉ mang tính chất dự báo. Kết luận điều trị chính xác bắt buộc phải dựa trên phim CT 3D và thăm khám trực tiếp tại Nha Khoa Đông Nam.</p>
+            <p style="font-size:12px;color:var(--red);line-height:1.65;margin:0;">Kết quả chỉ mang tính chất dự báo. Kết luận điều trị chính xác bắt buộc phải dựa trên phim CT 3D và thăm khám trực tiếp tại Nha Khoa Đông Nam.</p>
           </div>
           <a href="#dang-ky" style="display:block;background:var(--navy);color:var(--gold);font-weight:800;font-size:14px;padding:16px;border-radius:12px;text-align:center;text-decoration:none;margin-bottom:10px;animation:zoomPulse 2s ease-in-out infinite;text-transform:uppercase;letter-spacing:0.5px;">Miễn phí chụp phim CT 3D ngay hôm nay</a>
           <button onclick="qzReset2()" style="width:100%;background:none;border:1.5px solid var(--gray-mid);border-radius:10px;padding:10px;font-family:var(--font-body);font-size:13px;color:var(--text-sub);cursor:pointer;font-weight:600;">↺ Thực hiện lại</button>
@@ -586,7 +587,7 @@ add_filter('wpcf7_load_css', '__return_true');
     <p class="lp-section-sub">Không phải "bảo hành" mà là đội ngũ Đông Nam đồng hành cùng bạn suốt hành trình</p>
     <div class="commitment-grid">
       <div class="commitment-card"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><div style="font-size:28px;">🔄</div><div class="commitment-title" style="margin:0;">Cấy lại miễn phí</div></div><div class="commitment-text">Trụ không tích hợp xương → Đông Nam cấy lại hoàn toàn <strong>MIỄN PHÍ</strong> hoặc có thể nâng cấp loại trụ tốt hơn.</div></div>
-      <div class="commitment-card" style="border-top-color:#E53935;background:#FFF5F5;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><div style="font-size:28px;">💰</div><div class="commitment-title" style="margin:0;color:#C0392B;">Hoàn tiền 100%</div></div><div class="commitment-text"><strong style="color:#C0392B;">MỚI:</strong> Nếu không thể cấy lại hoặc phục hình răng — Đông Nam hoàn tiền 100% toàn bộ chi phí đã thanh toán. Cam kết bằng văn bản.</div></div>
+      <div class="commitment-card" style="border-top-color:#E53935;background:#FFF5F5;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><div style="font-size:28px;">💰</div><div class="commitment-title" style="margin:0;color:#C0392B;">Hoàn tiền 100%</div></div><div class="commitment-text">Nếu không thể cấy lại hoặc phục hình răng — Đông Nam hoàn tiền 100% toàn bộ chi phí đã thanh toán. Cam kết bằng văn bản.</div></div>
       <div class="commitment-card"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><div style="font-size:28px;">🏥</div><div class="commitment-title" style="margin:0;">21 năm vẫn ở đây</div></div><div class="commitment-text">Hơn 21 năm hoạt động — 2 cơ sở ổn định tại TP.HCM. Khi bạn cần đến năm 5, năm 10, chúng tôi vẫn ở đây.</div></div>
     </div>
   </div>
@@ -695,7 +696,7 @@ add_filter('wpcf7_load_css', '__return_true');
     </div>
 
     <div class="hotline-display">
-      <span class="number">📞 0972.411.411 &nbsp;|&nbsp; ☎ 1900.7141</span>
+      <span class="number">📞 0972 411 411</span>
       <span class="hours">Thứ 2–7: 8h00–19h00 &nbsp;·&nbsp; Chủ nhật: 8h00–16h00</span>
       <div style="margin-top:10px;font-size:13px;color:rgba(255,255,255,0.55);">CS1: 411 Nguyễn Kiệm, P. Đức Nhuận, TP.HCM &nbsp;|&nbsp; CS2: 614 Lê Hồng Phong, P. Vườn Lài, TP.HCM</div>
     </div>
@@ -709,6 +710,115 @@ add_filter('wpcf7_load_css', '__return_true');
     <p style="color:rgba(255,255,255,0.6);font-size:12.5px;line-height:1.7;">Giấy phép hoạt động số <strong style="color:rgba(255,255,255,0.85);">03708/SYT-GPHĐ</strong> và <strong style="color:rgba(255,255,255,0.85);">01672/HCM-GPHĐ</strong></p>
   </div>
 </footer>
+
+
+<aside class="lp-sticky-cta" aria-label="Liên hệ nhanh">
+  <div class="lp-sticky-cta-promo">
+    <svg class="lp-sticky-cta-promo-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
+      <text x="12" y="17" font-size="8" font-weight="700" text-anchor="middle" fill="currentColor">17</text>
+    </svg>
+    <span><strong>Đặt lịch</strong> – Ưu đãi <strong>20%</strong> ngay hôm nay</span>
+  </div>
+  <div class="lp-sticky-cta-row">
+    <a href="tel:0972411411" class="lp-sticky-cta-btn lp-sticky-cta-btn--call" aria-label="Gọi 0972 411 411">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.27-.27.35-.66.24-1.01C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
+      <span>Gọi</span>
+    </a>
+    <a href="#dang-ky" class="lp-sticky-cta-btn lp-sticky-cta-btn--book" aria-label="Đặt lịch online">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+      <span>Lịch</span>
+    </a>
+    <a href="https://zalo.me/nhakhoadongnam" target="_blank" rel="noopener" class="lp-sticky-cta-btn lp-sticky-cta-btn--zalo" aria-label="Chat Zalo">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 2.79 1.5 5.27 3.84 6.86l-.83 3.14c-.08.3.24.55.51.4l3.7-2.06c.9.27 1.85.42 2.78.42 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/><circle cx="8" cy="11" r="1.3" fill="#fff"/><circle cx="12" cy="11" r="1.3" fill="#fff"/><circle cx="16" cy="11" r="1.3" fill="#fff"/></svg>
+      <span>Zalo</span>
+    </a>
+    <a href="https://www.facebook.com/nhakhoadongnam01" target="_blank" rel="noopener" class="lp-sticky-cta-btn lp-sticky-cta-btn--msg" aria-label="Nhắn tin Messenger">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.13 2 11.2c0 2.91 1.46 5.49 3.74 7.18V22l3.42-1.88c.91.25 1.87.39 2.84.39 5.52 0 10-4.13 10-9.21S17.52 2 12 2zm1.05 12.41l-2.55-2.72-4.97 2.72 5.46-5.8 2.61 2.72 4.91-2.72-5.46 5.8z"/></svg>
+      <span>Msg</span>
+    </a>
+  </div>
+</aside>
+
+<style>
+/* --- sticky-cta-bar --- */
+.ndn-lp .lp-sticky-cta {
+  position: fixed;
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+}
+.ndn-lp .lp-sticky-cta-promo-icon { flex-shrink: 0; }
+.ndn-lp .lp-sticky-cta-promo strong { font-weight: 700; }
+.ndn-lp .lp-sticky-cta-row { display: flex; }
+.ndn-lp .lp-sticky-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1;
+  transition: filter 0.18s, transform 0.12s;
+  -webkit-tap-highlight-color: transparent;
+}
+.ndn-lp .lp-sticky-cta-btn:hover { filter: brightness(1.08); }
+.ndn-lp .lp-sticky-cta-btn:active { transform: scale(0.96); }
+.ndn-lp .lp-sticky-cta-btn svg { fill: currentColor; }
+.ndn-lp .lp-sticky-cta-btn--call { background: #b8924a; }
+.ndn-lp .lp-sticky-cta-btn--book { background: #1a2a44; }
+.ndn-lp .lp-sticky-cta-btn--zalo { background: #0084ff; }
+.ndn-lp .lp-sticky-cta-btn--msg  { background: #1eb8ff; }
+@media (min-width: 769px) {
+  .ndn-lp .lp-sticky-cta {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+    box-shadow: -2px 2px 14px rgba(0, 0, 0, 0.18);
+  }
+  .ndn-lp .lp-sticky-cta-promo { display: none; }
+  .ndn-lp .lp-sticky-cta-row { flex-direction: column; }
+  .ndn-lp .lp-sticky-cta-btn {
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 8px;
+    min-width: 60px;
+    font-size: 11px;
+  }
+  .ndn-lp .lp-sticky-cta-btn svg { width: 20px; height: 20px; }
+}
+@media (max-width: 768px) {
+  .ndn-lp { padding-bottom: 110px; }
+  .ndn-lp .lp-sticky-cta {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  }
+  .ndn-lp .lp-sticky-cta-promo {
+    background: linear-gradient(180deg, #c9a347 0%, #b08838 100%);
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    padding: 9px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .ndn-lp .lp-sticky-cta-btn {
+    flex: 1;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+  .ndn-lp .lp-sticky-cta-btn svg { width: 22px; height: 22px; }
+}
+</style>
 
 </div><!-- /.ndn-lp -->
 <script src="<?php echo esc_url($lp_base); ?>/script.js" defer=""></script>
