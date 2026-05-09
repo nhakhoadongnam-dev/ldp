@@ -208,9 +208,9 @@ get_header();
               <span class="lp-btn-icon">📋</span>
               Nhận báo giá ngay
             </a>
-            <a href="tel:19007141" class="lp-btn lp-btn-outline">
+            <a href="tel:0972411411" class="lp-btn lp-btn-outline">
               <span class="lp-btn-icon">📞</span>
-              Gọi ngay 1900 7141
+              Gọi ngay
             </a>
           </div>
         </div>
@@ -251,7 +251,7 @@ get_header();
             <span class="lp-btn-icon">📅</span>
             Đặt lịch ngay
           </a>
-          <a href="tel:19007141" class="lp-btn lp-btn-outline">
+          <a href="tel:0972411411" class="lp-btn lp-btn-outline">
             <span class="lp-btn-icon">📞</span>
             Gọi ngay
           </a>
@@ -344,81 +344,25 @@ get_header();
   </section>
 
   <!-- ── VIDEO TESTIMONIALS v2 ── -->
-  <section class="lp-video lp-v2 lp-section" id="video-v2">
-    <div class="lp-container">
-      <div class="lp-video-head lp-section-head--center">
+  <section class="ndn-bgi-direct-youtube" id="ndn-bgi-direct-youtube">
+    <div class="ndn-bgi-direct-youtube__inner">
+      <div class="ndn-bgi-direct-youtube__head">
         <h2>Video <em>chia sẻ thực tế</em></h2>
-        <p class="lp-video-intro">Các khách hàng chia sẻ trải nghiệm điều trị Implant thực tế tại Nha Khoa Đông Nam</p>
+        <p class="ndn-bgi-direct-youtube__intro">Các khách hàng chia sẻ trải nghiệm điều trị Implant thực tế tại Nha Khoa Đông Nam</p>
       </div>
 
-      <div class="lp-v2-slider">
-        <button type="button" class="lp-v2-arrow lp-v2-arrow--prev" aria-label="Video trước">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-
-        <div class="lp-v2-wrap">
-          <div class="lp-v2-track">
-
-            <div class="lp-v2-item">
-              <button type="button" class="lp-v2-facade"
-                      data-video-id="WBPU55A7D0E"
-                      data-video-title="Chia sẻ 1"
-                      aria-label="Phát video: Chia sẻ 1">
-                <img src="https://i.ytimg.com/vi/WBPU55A7D0E/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
-                <span class="lp-v2-play" aria-hidden="true"></span>
-              </button>
-            </div>
-
-            <div class="lp-v2-item">
-              <button type="button" class="lp-v2-facade"
-                      data-video-id="eblVhYpRay8"
-                      data-video-title="Chia sẻ 2"
-                      aria-label="Phát video: Chia sẻ 2">
-                <img src="https://i.ytimg.com/vi/eblVhYpRay8/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
-                <span class="lp-v2-play" aria-hidden="true"></span>
-              </button>
-            </div>
-
-            <div class="lp-v2-item">
-              <button type="button" class="lp-v2-facade"
-                      data-video-id="07HeOz_5S4s"
-                      data-video-title="Chia sẻ 3"
-                      aria-label="Phát video: Chia sẻ 3">
-                <img src="https://i.ytimg.com/vi/07HeOz_5S4s/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
-                <span class="lp-v2-play" aria-hidden="true"></span>
-              </button>
-            </div>
-
-            <div class="lp-v2-item">
-              <button type="button" class="lp-v2-facade"
-                      data-video-id="vatpzUlPl4c"
-                      data-video-title="Chia sẻ 4"
-                      aria-label="Phát video: Chia sẻ 4">
-                <img src="https://i.ytimg.com/vi/vatpzUlPl4c/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
-                <span class="lp-v2-play" aria-hidden="true"></span>
-              </button>
-            </div>
-
-            <div class="lp-v2-item">
-              <button type="button" class="lp-v2-facade"
-                      data-video-id="a3GTXsOv3aM"
-                      data-video-title="Chia sẻ 5"
-                      aria-label="Phát video: Chia sẻ 5">
-                <img src="https://i.ytimg.com/vi/a3GTXsOv3aM/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
-                <span class="lp-v2-play" aria-hidden="true"></span>
-              </button>
-            </div>
-
+      <div class="ndn-bgi-direct-youtube__carousel">
+        <button type="button" class="ndn-bgi-direct-youtube__arrow ndn-bgi-direct-youtube__arrow--prev" aria-label="Video trước" data-ndn-bgi-video-prev>&#8249;</button>
+        <div class="ndn-bgi-direct-youtube__viewport">
+          <div class="ndn-bgi-direct-youtube__track">
+            <div class="ndn-bgi-direct-youtube__card"><iframe class="ndn-bgi-direct-youtube__embed" src="https://www.youtube.com/embed/WBPU55A7D0E?rel=0&amp;playsinline=1&amp;controls=1" title="Chia sẻ 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="ndn-bgi-direct-youtube__card"><iframe class="ndn-bgi-direct-youtube__embed" src="https://www.youtube.com/embed/eblVhYpRay8?rel=0&amp;playsinline=1&amp;controls=1" title="Chia sẻ 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="ndn-bgi-direct-youtube__card"><iframe class="ndn-bgi-direct-youtube__embed" src="https://www.youtube.com/embed/07HeOz_5S4s?rel=0&amp;playsinline=1&amp;controls=1" title="Chia sẻ 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="ndn-bgi-direct-youtube__card"><iframe class="ndn-bgi-direct-youtube__embed" src="https://www.youtube.com/embed/vatpzUlPl4c?rel=0&amp;playsinline=1&amp;controls=1" title="Chia sẻ 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="ndn-bgi-direct-youtube__card"><iframe class="ndn-bgi-direct-youtube__embed" src="https://www.youtube.com/embed/a3GTXsOv3aM?rel=0&amp;playsinline=1&amp;controls=1" title="Chia sẻ 5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
           </div>
         </div>
-
-        <button type="button" class="lp-v2-arrow lp-v2-arrow--next" aria-label="Video tiếp theo">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
+        <button type="button" class="ndn-bgi-direct-youtube__arrow ndn-bgi-direct-youtube__arrow--next" aria-label="Video tiếp theo" data-ndn-bgi-video-next>&#8250;</button>
       </div>
 
     </div>
@@ -426,178 +370,82 @@ get_header();
 
   <script>
   (function() {
-    var section = document.getElementById('video-v2');
+    var section = document.getElementById('ndn-bgi-direct-youtube');
     if (!section) return;
-
-    var track = section.querySelector('.lp-v2-track');
-    var items = section.querySelectorAll('.lp-v2-item');
-    var viewport = section.querySelector('.lp-v2-wrap');
-    var btnPrev = section.querySelector('.lp-v2-arrow--prev');
-    var btnNext = section.querySelector('.lp-v2-arrow--next');
-    if (!track || !viewport || !items.length) return;
-
-    var currentPage = 0;
-    var pageCount = 1;
-    var resizeTimer = null;
-
-    function getSlidesPerView() {
-      return window.innerWidth <= 980 ? 1 : 3;
+    if (section.getAttribute('data-ndn-bgi-video-ready') === '1') return;
+    section.setAttribute('data-ndn-bgi-video-ready', '1');
+    var track = section.querySelector('.ndn-bgi-direct-youtube__track');
+    var prev = section.querySelector('[data-ndn-bgi-video-prev]');
+    var next = section.querySelector('[data-ndn-bgi-video-next]');
+    if (!track || !prev || !next) return;
+    var cards = track.querySelectorAll('.ndn-bgi-direct-youtube__card');
+    var mobileIndex = 0;
+    function isMobile() { return window.matchMedia('(max-width: 780px)').matches; }
+    if (isMobile()) {
+      for (var m = 0; m < cards.length; m++) cards[m].hidden = false;
+      return;
     }
-
-    function getStepWidth() {
-      if (items.length < 2) return items[0].getBoundingClientRect().width;
-      var a = items[0].getBoundingClientRect();
-      var b = items[1].getBoundingClientRect();
-      return b.left - a.left;
-    }
-
-    function updateArrows() {
-      if (btnPrev) btnPrev.disabled = currentPage === 0;
-      if (btnNext) btnNext.disabled = currentPage >= pageCount - 1;
-    }
-
-    function update(keepPage) {
-      var perView = getSlidesPerView();
-      var nextPageCount = Math.max(1, Math.ceil(items.length / perView));
-      if (!keepPage || currentPage > nextPageCount - 1) currentPage = Math.min(currentPage, nextPageCount - 1);
-      pageCount = nextPageCount;
-      var step = getStepWidth();
-      var maxOffset = Math.max(0, track.scrollWidth - viewport.clientWidth);
-      var targetOffset = Math.min(currentPage * perView * step, maxOffset);
-      track.style.transform = 'translate3d(-' + targetOffset + 'px, 0, 0)';
-      updateArrows();
-    }
-
-    function goTo(page) {
-      var next = Math.max(0, Math.min(page, pageCount - 1));
-      if (next === currentPage) return;
-      stopAllInline();
-      currentPage = next;
-      update(true);
-    }
-
-    function playInline(item, facade) {
-      stopAllInline();
-      var id = facade.getAttribute('data-video-id');
-      var title = facade.getAttribute('data-video-title') || '';
-      if (!id) return;
-      var player = document.createElement('div');
-      player.className = 'lp-v2-player';
-      var iframe = document.createElement('iframe');
-      iframe.src = 'https://www.youtube.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0&playsinline=1&controls=0&modestbranding=1';
-      iframe.title = title;
-      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-      iframe.setAttribute('allowfullscreen', '');
-      player.appendChild(iframe);
-      item.appendChild(player);
-      item.classList.add('is-playing');
-      facade.hidden = true;
-
-      var closeBtn = document.createElement('button');
-      closeBtn.type = 'button';
-      closeBtn.className = 'lp-v2-stop-fixed';
-      closeBtn.setAttribute('aria-label', 'Tạm dừng');
-      closeBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="2" y="2" width="5" height="14" rx="1.5" fill="currentColor"/><rect x="11" y="2" width="5" height="14" rx="1.5" fill="currentColor"/></svg>';
-
-      function positionBtn() {
-        var r = item.getBoundingClientRect();
-        var btnSize = 64;
-        closeBtn.style.top = (r.top + r.height / 2 - btnSize / 2) + 'px';
-        closeBtn.style.left = (r.left + r.width / 2 - btnSize / 2) + 'px';
+    function updateMobileCards() {
+      if (!isMobile()) {
+        for (var i = 0; i < cards.length; i++) cards[i].hidden = false;
+        return;
       }
-
-      function onStop(e) { e.preventDefault(); e.stopPropagation(); stopInline(item); }
-      closeBtn.addEventListener('click', onStop);
-      closeBtn.addEventListener('touchend', onStop, { passive: false });
-
-      document.body.appendChild(closeBtn);
-      positionBtn();
-      window.addEventListener('scroll', positionBtn, true);
-      window.addEventListener('resize', positionBtn);
-      item._v2Close = { btn: closeBtn, pos: positionBtn };
+      for (var j = 0; j < cards.length; j++) cards[j].hidden = false;
+      prev.disabled = true;
+      next.disabled = true;
     }
-
-    function stopInline(item) {
-      var player = item.querySelector('.lp-v2-player');
-      var facade = item.querySelector('.lp-v2-facade');
-      if (player) item.removeChild(player);
-      if (facade) facade.hidden = false;
-      item.classList.remove('is-playing');
-      if (item._v2Close) {
-        window.removeEventListener('scroll', item._v2Close.pos, true);
-        window.removeEventListener('resize', item._v2Close.pos);
-        if (item._v2Close.btn.parentNode) item._v2Close.btn.parentNode.removeChild(item._v2Close.btn);
-        item._v2Close = null;
-      }
+    function getStep() {
+      var card = track.querySelector('.ndn-bgi-direct-youtube__card');
+      if (!card) return track.clientWidth;
+      var gap = parseFloat(window.getComputedStyle(track).columnGap || '0') || 0;
+      return card.getBoundingClientRect().width + gap;
     }
-
-    function stopAllInline() {
-      var active = section.querySelectorAll('.lp-v2-item.is-playing');
-      for (var i = 0; i < active.length; i++) stopInline(active[i]);
+    function updateButtons() {
+      if (isMobile()) { updateMobileCards(); return; }
+      var maxScroll = track.scrollWidth - track.clientWidth - 2;
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft >= maxScroll;
     }
-
-    section.addEventListener('click', function(e) {
-      var facade = e.target.closest('.lp-v2-facade');
-      if (!facade) return;
-      e.preventDefault();
-      var item = facade.closest('.lp-v2-item');
-      if (item) playInline(item, facade);
+    prev.addEventListener('click', function() {
+      if (isMobile()) { mobileIndex = Math.max(0, mobileIndex - 1); updateMobileCards(); return; }
+      track.scrollBy({ left: -getStep(), behavior: 'smooth' });
     });
-
-    if (btnPrev) btnPrev.addEventListener('click', function() { goTo(currentPage - 1); });
-    if (btnNext) btnNext.addEventListener('click', function() { goTo(currentPage + 1); });
-
-    Array.prototype.forEach.call(section.querySelectorAll('.lp-v2-facade img'), function(img) {
-      img.addEventListener('error', function onErr() {
-        if (img.src.indexOf('maxresdefault') !== -1) img.src = img.src.replace('maxresdefault', 'sddefault');
-        else if (img.src.indexOf('sddefault') !== -1) img.src = img.src.replace('sddefault', 'hqdefault');
-        else img.removeEventListener('error', onErr);
-      });
+    next.addEventListener('click', function() {
+      if (isMobile()) { mobileIndex = Math.min(cards.length - 1, mobileIndex + 1); updateMobileCards(); return; }
+      track.scrollBy({ left: getStep(), behavior: 'smooth' });
     });
-
-    window.addEventListener('resize', function() {
-      window.clearTimeout(resizeTimer);
-      resizeTimer = window.setTimeout(function() { update(true); }, 120);
-    });
-
-    update(false);
+    track.addEventListener('scroll', updateButtons, { passive: true });
+    window.addEventListener('resize', updateButtons);
+    updateButtons();
   })();
   </script>
 
   <style>
-  .ndn-lp .lp-v2 { background: var(--cream); border-top: 1px solid var(--border); }
-  .ndn-lp .lp-v2 h2 { font-size: clamp(22px, 3.2vw, 34px); line-height: 1.2; color: var(--navy-deep); margin-bottom: 10px; }
-  .ndn-lp .lp-v2 h2 em { color: var(--navy-light); }
-  .ndn-lp .lp-v2 .lp-video-head { margin-bottom: 40px; }
-  .ndn-lp .lp-v2-slider { position: relative; padding: 0 56px; }
-  .ndn-lp .lp-v2-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--border); background: var(--white); color: var(--navy); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s; }
-  .ndn-lp .lp-v2-arrow--prev { left: 0; }
-  .ndn-lp .lp-v2-arrow--next { right: 0; }
-  .ndn-lp .lp-v2-arrow:hover:not(:disabled) { background: var(--navy); border-color: var(--navy); color: var(--white); }
-  .ndn-lp .lp-v2-arrow:active:not(:disabled) { transform: translateY(-50%) scale(0.92); }
-  .ndn-lp .lp-v2-arrow:disabled { opacity: 0.28; cursor: default; }
-  .ndn-lp .lp-v2-wrap { overflow: hidden; }
-  .ndn-lp .lp-v2-track { display: flex; gap: 24px; transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1); will-change: transform; }
-  .ndn-lp .lp-v2-item { flex: 0 0 calc((100% - 48px) / 3); min-width: calc((100% - 48px) / 3); aspect-ratio: 9 / 16; border-radius: 12px; overflow: hidden; background: var(--navy-deep); position: relative; transition: transform 0.2s; }
-  .ndn-lp .lp-v2-item:hover { transform: translateY(-3px); }
-  .ndn-lp .lp-v2-item.is-playing { transform: none; }
-  .ndn-lp .lp-v2-facade { display: block; position: relative; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; background: var(--navy-deep); cursor: pointer; overflow: hidden; -webkit-tap-highlight-color: transparent; }
-  .ndn-lp .lp-v2-facade[hidden] { display: none; }
-  .ndn-lp .lp-v2-facade img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
-  .ndn-lp .lp-v2-play { position: absolute; top: 50%; left: 50%; width: 60px; height: 60px; transform: translate(-50%, -50%); background: rgba(0,0,0,0.52); border-radius: 50%; pointer-events: none; transition: background 0.2s, transform 0.2s; }
-  .ndn-lp .lp-v2-play::before { content: ""; position: absolute; top: 50%; left: 56%; transform: translate(-50%, -50%); border: 11px solid transparent; border-left-color: var(--white); border-right-width: 0; }
-  .ndn-lp .lp-v2-facade:hover .lp-v2-play, .ndn-lp .lp-v2-facade:focus-visible .lp-v2-play { background: rgba(229,9,20,0.9); transform: translate(-50%, -50%) scale(1.1); }
-  .ndn-lp .lp-v2-player { position: absolute; inset: 0; z-index: 2; background: #000; }
-  .ndn-lp .lp-v2-player iframe { display: block; width: 100%; height: 100%; border: 0; pointer-events: none; }
-  .lp-v2-stop-fixed { position: fixed; z-index: 9999; width: 64px; height: 64px; border-radius: 50%; border: 0; background: rgba(0,0,0,0.6); color: #fff; padding: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; transition: background 0.18s, transform 0.15s; opacity: 0; animation: lpV2FadeIn 0.4s ease-out 0.6s forwards; }
-  .lp-v2-stop-fixed:active { background: rgba(0,0,0,0.85); transform: scale(0.92); }
-  .lp-v2-stop-fixed svg { width: 24px; height: 24px; }
-  @keyframes lpV2FadeIn { to { opacity: 1; } }
-  @media (max-width: 980px) {
-    .ndn-lp .lp-v2-slider { padding: 0 44px; }
-    .ndn-lp .lp-v2-arrow { width: 36px; height: 36px; }
-    .ndn-lp .lp-v2-track { gap: 12px; }
-    .ndn-lp .lp-v2-item { flex-basis: 100%; min-width: 100%; }
+  .ndn-lp .ndn-bgi-direct-youtube { background: var(--cream); border-top: 1px solid var(--border); padding: 80px 24px; }
+  .ndn-lp .ndn-bgi-direct-youtube__inner { max-width: 1100px; margin: 0 auto; }
+  .ndn-lp .ndn-bgi-direct-youtube h2 { font-size: clamp(22px, 3.2vw, 34px); line-height: 1.2; color: var(--navy-deep); margin-bottom: 10px; text-align: center; }
+  .ndn-lp .ndn-bgi-direct-youtube h2 em { color: var(--navy-light); }
+  .ndn-lp .ndn-bgi-direct-youtube__head { margin-bottom: 40px; }
+  .ndn-lp .ndn-bgi-direct-youtube__intro { color: var(--muted); font-size: 15px; line-height: 1.6; margin: 0 auto; max-width: 760px; text-align: center; }
+  .ndn-lp .ndn-bgi-direct-youtube__carousel { position: relative; display: block; padding: 0 32px; max-width: 988px; margin: 0 auto; }
+  .ndn-lp .ndn-bgi-direct-youtube__viewport { overflow: hidden; border-radius: var(--radius-md); }
+  .ndn-lp .ndn-bgi-direct-youtube__track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .ndn-lp .ndn-bgi-direct-youtube__track::-webkit-scrollbar { display: none; }
+  .ndn-lp .ndn-bgi-direct-youtube__card { flex: 0 0 calc((100% - 40px) / 3); min-width: calc((100% - 40px) / 3); max-width: calc((100% - 40px) / 3); aspect-ratio: 9 / 16; border-radius: var(--radius-md); overflow: hidden; background: var(--surface); box-shadow: var(--shadow-sm); scroll-snap-align: start; }
+  .ndn-lp .ndn-bgi-direct-youtube__embed { display: block; width: 100%; height: 100%; border: 0; background: #000; border-radius: inherit; pointer-events: auto; }
+  .ndn-lp .ndn-bgi-direct-youtube__arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 44px; height: 44px; border: none; border-radius: 50%; background: var(--navy); color: var(--white); font-size: 32px; line-height: 1; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .ndn-lp .ndn-bgi-direct-youtube__arrow--prev { left: 0; }
+  .ndn-lp .ndn-bgi-direct-youtube__arrow--next { right: 0; }
+  .ndn-lp .ndn-bgi-direct-youtube__arrow:disabled { opacity: 0.35; cursor: default; }
+  @media (max-width: 780px) {
+    .ndn-lp .ndn-bgi-direct-youtube { padding: 72px 12px; }
+    .ndn-lp .ndn-bgi-direct-youtube__carousel { padding: 0; max-width: none; }
+    .ndn-lp .ndn-bgi-direct-youtube__viewport, .ndn-lp .ndn-bgi-direct-youtube__track { overflow: visible; }
+    .ndn-lp .ndn-bgi-direct-youtube__track { display: grid; grid-template-columns: 1fr; gap: 18px; scroll-snap-type: none; -webkit-overflow-scrolling: auto; }
+    .ndn-lp .ndn-bgi-direct-youtube__card { flex-basis: 100%; min-width: 100%; max-width: 100%; aspect-ratio: 9 / 16; overflow: visible; scroll-snap-align: none; box-shadow: none; border-radius: 0; background: #000; }
+    .ndn-lp .ndn-bgi-direct-youtube__card[hidden] { display: block; }
+    .ndn-lp .ndn-bgi-direct-youtube__arrow { display: none; }
+    .ndn-lp .ndn-bgi-direct-youtube__embed { display: block; width: 100%; height: 100%; border: 0; background: #000; pointer-events: auto; position: static; z-index: auto; border-radius: 0; touch-action: manipulation; }
   }
   </style>
 
@@ -866,7 +714,7 @@ get_header();
         <hr class="lp-bgi-trust-rule">
         <blockquote class="lp-bgi-trust-quote">"Chọn nơi <strong>đủ lâu để tin</strong> – <strong>đủ giỏi để làm</strong> – <strong>đủ trách nhiệm</strong> để theo khách hàng lâu dài."</blockquote>
         <hr class="lp-bgi-trust-rule">
-        <p class="lp-bgi-trust-sub">Đặt lịch tư vấn không cam kết điều trị – chỉ để biết tình trạng thực sự của mình và nhận kế hoạch điều trị cụ thể.</p>
+        <p class="lp-bgi-trust-sub">Đặt lịch tư vấn để biết tình trạng thực sự của mình và nhận kế hoạch điều trị cụ thể.</p>
       </div>
     </div>
   </section>
