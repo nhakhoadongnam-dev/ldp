@@ -190,9 +190,9 @@ add_filter('wpcf7_load_css', '__return_true');
               <span class="lp-btn-icon">📋</span>
               Nhận báo giá ngay
             </a>
-            <a href="tel:19007141" class="lp-btn lp-btn-outline">
+            <a href="tel:0972411411" class="lp-btn lp-btn-outline">
               <span class="lp-btn-icon">📞</span>
-              Gọi ngay 1900 7141
+              Gọi ngay
             </a>
           </div>
         </div>
@@ -233,7 +233,7 @@ add_filter('wpcf7_load_css', '__return_true');
             <span class="lp-btn-icon">📅</span>
             Đặt lịch ngay
           </a>
-          <a href="tel:19007141" class="lp-btn lp-btn-outline">
+          <a href="tel:0972411411" class="lp-btn lp-btn-outline">
             <span class="lp-btn-icon">📞</span>
             Gọi ngay
           </a>
@@ -827,7 +827,7 @@ add_filter('wpcf7_load_css', '__return_true');
         <hr class="lp-bgi-trust-rule">
         <blockquote class="lp-bgi-trust-quote">"Chọn nơi <strong>đủ lâu để tin</strong> – <strong>đủ giỏi để làm</strong> – <strong>đủ trách nhiệm</strong> để theo khách hàng lâu dài."</blockquote>
         <hr class="lp-bgi-trust-rule">
-        <p class="lp-bgi-trust-sub">Đặt lịch tư vấn không cam kết điều trị – chỉ để biết tình trạng thực sự của mình và nhận kế hoạch điều trị cụ thể.</p>
+        <p class="lp-bgi-trust-sub">Đặt lịch tư vấn để biết tình trạng thực sự của mình và nhận kế hoạch điều trị cụ thể.</p>
       </div>
     </div>
   </section>
