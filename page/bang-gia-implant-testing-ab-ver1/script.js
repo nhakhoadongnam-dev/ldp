@@ -217,20 +217,60 @@ updateCountdown();setInterval(updateCountdown,1000);
   });
 })();
 
-// VIDEO CONTROL
-function playVideo(thumb){
-  document.querySelectorAll('.review-thumb.playing').forEach(function(t){
-    if(t===thumb)return;
-    var f=t.querySelector('iframe');
-    f.src='';
-    f.style.display='none';
-    t.classList.remove('playing');
+// VIDEO CONTROL - Stop other videos when playing a new one
+(function(){
+  // Track currently playing video
+  var currentPlaying = null;
+  
+  window.playVideo = function(thumb){
+    var vid = thumb.getAttribute('data-vid');
+    var iframe = thumb.querySelector('iframe');
+    
+    // If clicking the same playing video, let YouTube handle it natively
+    if(thumb.classList.contains('playing') && currentPlaying === vid){
+      return; // Let YouTube's native controls handle play/pause
+    }
+    
+    // Stop all other playing videos completely
+    document.querySelectorAll('.review-thumb.playing').forEach(function(t){
+      if(t === thumb) return;
+      var f = t.querySelector('iframe');
+      if(f) {
+        f.src = 'about:blank'; // Force stop
+        f.style.display = 'none';
+      }
+      t.classList.remove('playing');
+    });
+    
+    // Clear current playing tracker
+    if(currentPlaying && currentPlaying !== vid){
+      currentPlaying = null;
+    }
+    
+    // Play the clicked video
+    iframe.src = 'https://www.youtube.com/embed/' + vid + '?autoplay=1&rel=0&enablejsapi=1';
+    iframe.style.display = 'block';
+    thumb.classList.add('playing');
+    currentPlaying = vid;
+  };
+  
+  // Close video when clicking outside
+  document.addEventListener('click', function(e){
+    var clickedThumb = e.target.closest('.review-thumb');
+    if(!clickedThumb){
+      // Clicked outside any video - stop all
+      document.querySelectorAll('.review-thumb.playing').forEach(function(t){
+        var f = t.querySelector('iframe');
+        if(f) {
+          f.src = 'about:blank';
+          f.style.display = 'none';
+        }
+        t.classList.remove('playing');
+      });
+      currentPlaying = null;
+    }
   });
-  var iframe=thumb.querySelector('iframe');
-  iframe.src='https://www.youtube.com/embed/'+thumb.getAttribute('data-vid')+'?autoplay=1&rel=0';
-  iframe.style.display='block';
-  thumb.classList.add('playing');
-}
+})();
 
 // FORM SUBMIT
 function submitForm(e){
