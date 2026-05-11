@@ -337,11 +337,11 @@ add_filter('wpcf7_load_css', '__return_true');
         <button type="button" class="ndn-bgi-direct-youtube__arrow ndn-bgi-direct-youtube__arrow--prev" aria-label="Video trước" data-ndn-bgi-video-prev>&#8249;</button>
         <div class="ndn-bgi-direct-youtube__viewport">
           <div class="ndn-bgi-direct-youtube__track">
-            <div class="ndn-bgi-direct-youtube__card"><iframe class="ndn-bgi-direct-youtube__embed" src="https://www.youtube.com/embed/WBPU55A7D0E?rel=0&amp;playsinline=1&amp;controls=1" title="Chia sẻ 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            <div class="ndn-bgi-direct-youtube__card"><iframe class="ndn-bgi-direct-youtube__embed" src="https://www.youtube.com/embed/eblVhYpRay8?rel=0&amp;playsinline=1&amp;controls=1" title="Chia sẻ 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            <div class="ndn-bgi-direct-youtube__card"><iframe class="ndn-bgi-direct-youtube__embed" src="https://www.youtube.com/embed/07HeOz_5S4s?rel=0&amp;playsinline=1&amp;controls=1" title="Chia sẻ 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            <div class="ndn-bgi-direct-youtube__card"><iframe class="ndn-bgi-direct-youtube__embed" src="https://www.youtube.com/embed/vatpzUlPl4c?rel=0&amp;playsinline=1&amp;controls=1" title="Chia sẻ 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            <div class="ndn-bgi-direct-youtube__card"><iframe class="ndn-bgi-direct-youtube__embed" src="https://www.youtube.com/embed/a3GTXsOv3aM?rel=0&amp;playsinline=1&amp;controls=1" title="Chia sẻ 5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="ndn-bgi-direct-youtube__card"><iframe class="ndn-bgi-direct-youtube__embed" src="https://www.youtube.com/embed/WBPU55A7D0E?rel=0&amp;playsinline=1&amp;controls=1&amp;enablejsapi=1" title="Chia sẻ 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="ndn-bgi-direct-youtube__card"><iframe class="ndn-bgi-direct-youtube__embed" src="https://www.youtube.com/embed/eblVhYpRay8?rel=0&amp;playsinline=1&amp;controls=1&amp;enablejsapi=1" title="Chia sẻ 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="ndn-bgi-direct-youtube__card"><iframe class="ndn-bgi-direct-youtube__embed" src="https://www.youtube.com/embed/b3qkNl5ge50?rel=0&amp;playsinline=1&amp;controls=1&amp;enablejsapi=1" title="Chia sẻ 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="ndn-bgi-direct-youtube__card"><iframe class="ndn-bgi-direct-youtube__embed" src="https://www.youtube.com/embed/vatpzUlPl4c?rel=0&amp;playsinline=1&amp;controls=1&amp;enablejsapi=1" title="Chia sẻ 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="ndn-bgi-direct-youtube__card"><iframe class="ndn-bgi-direct-youtube__embed" src="https://www.youtube.com/embed/a3GTXsOv3aM?rel=0&amp;playsinline=1&amp;controls=1&amp;enablejsapi=1" title="Chia sẻ 5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
           </div>
         </div>
         <button type="button" class="ndn-bgi-direct-youtube__arrow ndn-bgi-direct-youtube__arrow--next" aria-label="Video tiếp theo" data-ndn-bgi-video-next>&#8250;</button>
@@ -351,6 +351,39 @@ add_filter('wpcf7_load_css', '__return_true');
   </section>
 
   <script>
+  // Load YouTube IFrame API
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  
+  // Video players array and ready state
+  var bgiPlayers = [];
+  var bgiPlayersReady = false;
+  
+  function onYouTubeIframeAPIReady() {
+    var iframes = document.querySelectorAll('.ndn-bgi-direct-youtube__embed');
+    iframes.forEach(function(frame, index) {
+      var player = new YT.Player(frame, {
+        events: {
+          'onStateChange': function(event) {
+            // When a video starts playing (state = 1), pause all others
+            if (event.data === YT.PlayerState.PLAYING) {
+              bgiPlayers.forEach(function(p, i) {
+                if (i !== index && p && typeof p.pauseVideo === 'function') {
+                  try { p.pauseVideo(); } catch(e) {}
+                }
+              });
+            }
+          }
+        }
+      });
+      bgiPlayers[index] = player;
+    });
+    bgiPlayersReady = true;
+  }
+  
+  // Carousel navigation
   (function() {
     var section = document.getElementById('ndn-bgi-direct-youtube');
     if (!section) return;
