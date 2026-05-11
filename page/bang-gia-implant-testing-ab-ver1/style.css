@@ -162,6 +162,49 @@ html { scroll-behavior: smooth; }
 .ndn-lp .price-new-20{font-weight:900;color:#E53935;font-size:16px;white-space:nowrap;}
 .ndn-lp .uudai-20-badge{display:inline-block;background:#E53935;color:#fff;font-size:9px;font-weight:800;padding:2px 6px;border-radius:6px;margin-left:4px;vertical-align:middle;animation:badgeFlash 1.5s ease-in-out infinite;}
 
+/* COMPARISON TABLE — MOBILE CARD LAYOUT */
+@media(max-width:600px){
+  .ndn-lp .comp-table-wrap{overflow:hidden;box-shadow:none;margin:0 0 20px;}
+  .ndn-lp .comp-table,.ndn-lp .comp-table tbody{display:block;min-width:0;width:100%;}
+  .ndn-lp .comp-table thead{display:none;}
+  .ndn-lp .comp-table tbody tr{
+    display:block;border-radius:12px;margin-bottom:12px;
+    overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.09);
+    outline:none;border:1px solid rgba(0,0,0,0.08);
+  }
+  .ndn-lp .comp-table tbody tr.recommended{outline:none;border:2px solid var(--success);}
+  .ndn-lp .comp-table tbody tr.uudai-20-row{background:none !important;}
+  /* Card header: tên dòng trụ */
+  .ndn-lp .comp-table tbody td:first-child{
+    display:block;background:var(--navy) !important;color:#fff;
+    font-size:14px;font-weight:700;padding:12px 14px;
+    text-align:left;border-bottom:none;
+  }
+  .ndn-lp .comp-table tbody tr.recommended td:first-child{background:var(--green) !important;}
+  /* Các dòng data */
+  .ndn-lp .comp-table tbody td:not(:first-child){
+    display:flex;justify-content:space-between;align-items:center;
+    padding:9px 14px;font-size:13px;text-align:right;
+    border-bottom:1px solid var(--stone);background:#fff;
+  }
+  .ndn-lp .comp-table tbody tr.uudai-20-row td:not(:first-child){background:#FFFBF0;}
+  .ndn-lp .comp-table tbody td:last-child{border-bottom:none;}
+  /* Labels qua ::before */
+  .ndn-lp .comp-table tbody td:not(:first-child)::before{
+    content:attr(data-label);font-weight:700;color:var(--navy);
+    font-size:11px;text-transform:uppercase;letter-spacing:0.4px;
+    flex-shrink:0;white-space:nowrap;min-width:110px;
+  }
+  .ndn-lp .comp-table tbody td:not(:first-child) > *,
+  .ndn-lp .comp-table tbody td:not(:first-child) > span{
+    word-break:break-word;flex-shrink:1;min-width:0;
+  }
+  .ndn-lp .comp-table .price-new-20{font-size:15px;white-space:normal;}
+  .ndn-lp .comp-table .price-original{white-space:normal;}
+  .ndn-lp .comp-table tbody td.price-col{font-size:15px;white-space:normal;}
+  .ndn-lp .comp-table tbody td:not(:first-child){align-items:flex-start;gap:8px;}
+}
+
 /* RECO CARDS */
 .ndn-lp .reco-list{display:flex;flex-direction:column;gap:14px;}
 .ndn-lp .reco-card{display:flex;align-items:stretch;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-md);}

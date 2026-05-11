@@ -37,8 +37,9 @@
 
   window.qzAdj2=function(v){
     var i=document.getElementById('qz-qty2');
+    var d=document.getElementById('qz-qty2-display');
     var n=parseInt(i.value)+v;
-    if(n>=1&&n<=14)i.value=n;
+    if(n>=1&&n<=14){i.value=n;if(d)d.textContent=n;}
   };
 
   window.qzNext2=function(){
@@ -96,12 +97,12 @@
       risk='Dự báo: <strong style="color:var(--gold);">TRUNG BÌNH</strong> — Có tiêu xương nhẹ, cần ghép thêm xương bột và màng xương.';
       // Giá gốc, không giảm
       subPhuThu+=prices.bone+prices.membrane;
-      items.push({l:'Ghép xương &amp; màng nhân tạo',p:prices.bone+prices.membrane,tag:'(giá gốc)'});
+      items.push({l:'Ghép xương &amp; màng nhân tạo',p:prices.bone+prices.membrane,tag:''});
     } else {
       risk='Dự báo: <strong style="color:var(--red);">CAO</strong> — Tiêu xương đáng kể, cần xử lý ghép xương chuyên sâu.';
       subPhuThu+=prices.bone+prices.membrane;
-      items.push({l:'Ghép xương &amp; màng nhân tạo',p:prices.bone+prices.membrane,tag:'(giá gốc)'});
-      if(pos==='4'){subPhuThu+=prices.sinus; items.push({l:'Nâng xoang hàm dự báo',p:prices.sinus,tag:'(giá gốc)'});}
+      items.push({l:'Ghép xương &amp; màng nhân tạo',p:prices.bone+prices.membrane,tag:''});
+      if(pos==='4'){subPhuThu+=prices.sinus; items.push({l:'Nâng xoang hàm dự báo',p:prices.sinus,tag:''});}
     }
 
     var sub = subTru + subPhuThu;
@@ -119,7 +120,7 @@
     }).join('');
 
     // Dòng ghi chú ưu đãi
-    var noteHtml = '<div style="font-size:11px;color:#E53935;margin-top:8px;font-style:italic;">✓ Giá trụ đã bao gồm ưu đãi 20% · Chi phí ghép xương theo giá gốc (không giảm)</div>';
+    var noteHtml = '<div style="font-size:11px;color:#E53935;margin-top:8px;font-style:italic;">✓ Giá trụ đã bao gồm ưu đãi 20%</div>';
     document.getElementById('qz-items2').innerHTML += noteHtml;
 
     // Tổng gốc (trước giảm): cộng ngược lại giá gốc trụ
@@ -177,6 +178,7 @@
     document.querySelectorAll('.qz-opt').forEach(function(o){o.classList.remove('qz-on');});
     document.querySelectorAll('.qz-opt input').forEach(function(r){r.checked=false;});
     document.getElementById('qz-qty2').value=1;
+    var d2=document.getElementById('qz-qty2-display');if(d2)d2.textContent=1;
     ui();
   };
 
