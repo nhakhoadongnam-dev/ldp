@@ -14,11 +14,11 @@ let quizData = {
 };
 
 let quizResults = { totalCost: 0, finalCost: 0, riskLevel: '', goiDeXuat: '' };
-let stepHistory = ['step-1'];
+let stepHistory = ['lp-quiz-step-1'];
 
 function showStep(stepId, isBack = false) {
-  document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('active'));
-  document.getElementById(stepId).classList.add('active');
+  document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('quiz-is-active'));
+  document.getElementById(stepId).classList.add('quiz-is-active');
   if (!isBack && stepHistory[stepHistory.length - 1] !== stepId) {
     stepHistory.push(stepId);
   }
@@ -37,34 +37,34 @@ function selectQuiz(currentStep, field, value, price = 0) {
   if (currentStep === 1) {
     if (value === 'Mất toàn hàm') {
       quizData.isToanHam = true;
-      showStep('step-6A');
+      showStep('lp-quiz-step-6a');
     } else {
       quizData.isToanHam = false;
-      const optBoth = document.getElementById('opt-both-teeth');
+      const optBoth = document.getElementById('lp-quiz-opt-both-teeth');
       if (value === 'Mất nhiều răng') {
         optBoth.style.display = 'flex';
         quizData.soLuong = 2;
-        document.getElementById('quiz-qty').value = 2;
+        document.getElementById('lp-quiz-qty').value = 2;
       } else {
         optBoth.style.display = 'none';
         quizData.soLuong = 1;
-        document.getElementById('quiz-qty').value = 1;
+        document.getElementById('lp-quiz-qty').value = 1;
       }
-      showStep('step-2');
+      showStep('lp-quiz-step-2');
     }
-  } else if (currentStep === 2) showStep('step-3');
-  else if (currentStep === 3) showStep('step-4');
-  else if (currentStep === 4) showStep('step-5');
-  else if (currentStep === 5) showStep('step-6B');
+  } else if (currentStep === 2) showStep('lp-quiz-step-3');
+  else if (currentStep === 3) showStep('lp-quiz-step-4');
+  else if (currentStep === 4) showStep('lp-quiz-step-5');
+  else if (currentStep === 5) showStep('lp-quiz-step-6b');
   else if (currentStep === '6A') {
     quizData.giaiPhapToanHam = { name: value, price };
-    showStep('step-form');
+    showStep('lp-quiz-step-form');
   }
 }
 
 function changeQty(amount) {
   const min = quizData.tinhTrang === 'Mất nhiều răng' ? 2 : 1;
-  const input = document.getElementById('quiz-qty');
+  const input = document.getElementById('lp-quiz-qty');
   const val = parseInt(input.value) + amount;
   if (val >= min && val <= 14) {
     input.value = val;
@@ -72,15 +72,50 @@ function changeQty(amount) {
   }
 }
 
-function proceedToForm() { showStep('step-form'); }
+function proceedToForm() { showStep('lp-quiz-step-form'); }
+
+function resetQuiz() {
+  quizData = {
+    tinhTrang: '', thoiGian: '', nguyenNhan: '', viTri: '', uuTien: '',
+    isToanHam: false,
+    giaiPhapToanHam: { name: '', price: 0 },
+    soLuong: 1
+  };
+  quizResults = { totalCost: 0, finalCost: 0, riskLevel: '', goiDeXuat: '' };
+  stepHistory = ['lp-quiz-step-1'];
+
+  const qtyInput = document.getElementById('lp-quiz-qty');
+  if (qtyInput) qtyInput.value = 1;
+
+  const optBoth = document.getElementById('lp-quiz-opt-both-teeth');
+  if (optBoth) optBoth.style.display = 'none';
+
+  const phoneInput = document.getElementById('lp-quiz-phone');
+  if (phoneInput) phoneInput.value = '';
+
+  const msgBox = document.getElementById('lp-quiz-msg');
+  if (msgBox) {
+    msgBox.className = 'msg-box';
+    msgBox.innerHTML = '';
+    msgBox.style.display = 'none';
+  }
+
+  const resultContainer = document.getElementById('lp-quiz-result-table-container');
+  if (resultContainer) resultContainer.innerHTML = '';
+
+  showStep('lp-quiz-step-1', true);
+
+  const quizSection = document.getElementById('quiz');
+  if (quizSection) quizSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
 function formatCurrency(number) {
   return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(number);
 }
 
 function submitQuiz() {
-  const phone = document.getElementById('quiz-phone').value.trim();
-  const msgBox = document.getElementById('quiz-msg');
+  const phone = document.getElementById('lp-quiz-phone').value.trim();
+  const msgBox = document.getElementById('lp-quiz-msg');
   msgBox.className = 'msg-box';
 
   if (!/^0[0-9]{9}$/.test(phone)) {
@@ -91,7 +126,7 @@ function submitQuiz() {
   }
 
   calculateAndRenderTable();
-  showStep('step-result');
+  showStep('lp-quiz-step-result');
 
   if (SCRIPT_URL) {
     const payload = {
@@ -219,7 +254,7 @@ function calculateAndRenderTable() {
     </ul>
   </div>`;
 
-  document.getElementById('result-table-container').innerHTML = html;
+  document.getElementById('lp-quiz-result-table-container').innerHTML = html;
 }
 
 // Smooth scroll
