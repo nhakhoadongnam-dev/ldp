@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dự Toán Implant & Chẩn Đoán Tiêu Xương — Nha Khoa Đông Nam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --navy:#1A3A5C;--navy-dark:#0F2438;--navy-mid:#2E6DA4;--navy-light:#D6E4F0;
+  --gold:#C9A84C;--gold-dark:#A68A3D;--gold-light:#FEF3D0;
+  --red:#C0392B;--red-light:#FADBD8;
+  --green:#1A7A4A;--green-light:#D5F5E3;
+  --brown:#8B4513; 
+  --white:#FFFFFF;--off-white:#F7F9FC;
+  --text:#1C2833;--text-sub:#5D6D7E;
+  --gray-mid:#E5E8E8; 
+  --radius:12px;
+  --shadow:0 10px 30px rgba(26,58,92,0.08);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Be Vietnam Pro',sans-serif;color:var(--text);background:var(--white);line-height:1.6;overflow-x:hidden;}
+
+/* UTILS */
+.container{max-width:1100px;margin:0 auto;padding:0 20px;}
+.section-padding{padding:80px 0;}
+.text-center{text-align:center;}
+.btn-primary{background:var(--gold);color:var(--navy-dark);font-weight:800;padding:16px 32px;border-radius:var(--radius);text-decoration:none;display:inline-block;transition:0.3s;box-shadow:0 8px 20px rgba(201,168,76,0.3);border:none;cursor:pointer;text-align:center;}
+.btn-primary:hover{transform:translateY(-3px);background:var(--gold-dark);}
+.section-title {font-family: 'Playfair Display', serif;font-size: 36px;color: var(--navy);margin-bottom: 10px;}
+
+/* 1. HERO - THE HOOK */
+.hero{background:linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);color:white;padding:100px 0 80px;position:relative;overflow:hidden;}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to top, var(--white), transparent);opacity:0.1;}
+.hero-content{max-width:800px;margin:0 auto;text-align:center;position:relative;z-index:2;}
+.hero-label{background:var(--gold);color:var(--navy-dark);font-size:13px;font-weight:800;padding:6px 16px;border-radius:30px;display:inline-block;margin-bottom:20px;text-transform:uppercase;letter-spacing:1px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px, 5vw, 56px);line-height:1.2;margin-bottom:20px;}
+.hero h1 span{color:var(--gold);}
+.hero-sub{font-size:18px;color:rgba(255,255,255,0.8);margin-bottom:35px;max-width: 600px;margin-left: auto;margin-right: auto;}
+
+/* 2. RISK REVERSAL BOX - CHẶN NỖI SỢ */
+.risk-reversal-bar{background:var(--white);margin-top:-40px;position:relative;z-index:10;border-radius:20px;box-shadow:var(--shadow);padding:30px;border-bottom:4px solid var(--gold);}
+.rr-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:20px;}
+.rr-item{display:flex;align-items:center;gap:15px;border-right:1px solid var(--gray-mid);}
+.rr-item:last-child{border-right:none;}
+.rr-icon{font-size:32px;flex-shrink:0;}
+.rr-text strong{display:block;color:var(--navy);font-size:15px;}
+.rr-text span{font-size:13px;color:var(--text-sub);}
+
+/* 3. EDUCATION - TIÊU XƯƠNG */
+.edu-section {background: var(--off-white); padding: 80px 0;}
+.edu-box {background: var(--white); border-radius: 24px; padding: 50px; box-shadow: var(--shadow); border-top: 5px solid var(--navy-mid);}
+.consequence-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 35px; }
+.cons-card { background: var(--white); border: 1px solid var(--red-light); padding: 30px 25px; border-radius: 16px; box-shadow: 0 10px 20px rgba(197, 48, 48, 0.05); transition: 0.3s; text-align: left; position: relative; overflow: hidden;}
+.cons-card::before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--red);}
+.cons-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(197, 48, 48, 0.1); border-color: var(--red); }
+.cons-icon { font-size: 36px; margin-bottom: 15px; }
+.cons-title { color: var(--red); font-weight: 800; font-size: 18px; margin-bottom: 10px; }
+.cons-desc { color: var(--text-sub); font-size: 14.5px; line-height: 1.6; }
+.scientific-note {display: flex; gap: 15px; background: var(--navy-light); padding: 20px; border-radius: 12px; margin-top: 30px; align-items: center;}
+
+/* 4. THE QUIZ TOOL - CẬP NHẬT V2 */
+.quiz-section{background:var(--white);padding:80px 0;}
+.quiz-container{max-width:800px;margin:0 auto;border:2px solid var(--navy-light);border-radius:24px;padding:40px;position:relative;background: var(--white);box-shadow: var(--shadow);}
+.quiz-header{text-align:center;margin-bottom:30px;}
+.quiz-step{display:none;}
+.quiz-step.active{display:block;animation:fadeIn 0.5s;}
+.quiz-options{display:grid;grid-template-columns:1fr;gap:12px;margin-top:20px;}
+.quiz-opt{border:1.5px solid var(--gray-mid);padding:18px;border-radius:12px;cursor:pointer;transition:0.2s;display:flex; flex-direction: column; align-items: flex-start; justify-content: center;font-weight:500;}
+.quiz-opt:hover{border-color:var(--navy);background:var(--navy-light);transform: translateX(5px);}
+.quiz-opt-top { display: flex; justify-content: space-between; width: 100%; align-items: center; font-weight: 600; font-size: 16px; }
+.quiz-opt-desc { font-size: 15px; color: var(--text-sub); margin-top: 6px; font-weight: 400; line-height: 1.4; }
+
+.qty-control { display: flex; align-items: center; gap: 20px; background: var(--white); border: 2px solid var(--navy-light); padding: 10px 20px; border-radius: 12px; width: fit-content; }
+.qty-btn { width: 36px; height: 36px; border-radius: 50%; border: none; background: var(--navy-light); color: var(--navy-dark); font-size: 20px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.2s; }
+.qty-btn:hover { background: var(--navy); color: white; }
+.qty-input { width: 40px; text-align: center; font-size: 20px; font-weight: 800; color: var(--navy-dark); border: none; outline: none; background: transparent; }
+
+.result-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 15px; }
+.result-table th, .result-table td { padding: 14px; border-bottom: 1px solid var(--gray-mid); text-align: left; }
+.result-table th { background: var(--navy-light); color: var(--navy-dark); font-weight: 700; border-bottom: none; }
+.result-table tr:hover { background: var(--off-white); }
+.total-row { background: var(--gold-light) !important; }
+.total-row td { border-bottom: none; }
+.final-total { color: var(--green); font-size: 24px; font-weight: 900; }
+.free-badge { background: #D5F5E3; color: #10b981; font-weight: 800; padding: 4px 10px; border-radius: 6px; display: inline-block; font-size: 13px; text-transform: uppercase;}
+
+.btn-back { background: transparent; border: none; color: var(--text-sub); font-weight: 600; font-size: 14px; text-decoration: underline; cursor: pointer; margin-top: 20px; display: inline-block; transition: 0.2s; }
+.btn-back:hover { color: var(--navy); }
+.risk-badge { display: inline-block; padding: 4px 10px; border-radius: 6px; font-weight: 800; font-size: 13px; }
+.risk-low { background: var(--green-light); color: var(--green); }
+.risk-med { background: #fde9cc; color: #d35400; }
+.risk-high { background: var(--red-light); color: var(--red); }
+
+/* BẢNG CAN THIỆP XƯƠNG */
+.bone-table-wrap { background: var(--white); border: 1px solid var(--gray-mid); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px;}
+.bone-table-content { padding: 20px; }
+.bone-table { width: 100%; border-collapse: collapse; }
+.bone-table th { background: var(--navy-mid); color: white; padding: 14px; text-align: left; font-weight: 600; font-size: 15px;}
+.bone-table td { padding: 14px; border-bottom: 1px solid var(--gray-mid); font-size: 15px;}
+.bone-table tr:last-child td { border-bottom: none; }
+.bone-price { color: #059669; font-weight: 800; text-align: right; }
+.bone-unit { color: var(--text-sub); text-align: center; }
+
+/* BẢNG GIÁ */
+.comp-table-wrap {overflow-x: auto;margin-bottom: 40px;border-radius: 16px;box-shadow: var(--shadow);border: 1px solid var(--navy-light);background: var(--white);}
+.comp-table {width: 100%;min-width: 600px;border-collapse: collapse;text-align: left;}
+.comp-table th {background: var(--navy);color: var(--white);padding: 16px 20px;font-weight: 700;font-size: 15px;white-space: nowrap;}
+.comp-table th:nth-child(1) {width: 45%;}
+.comp-table th:nth-child(2) {width: 30%;}
+.comp-table th:nth-child(3) {width: 25%;}
+.comp-table td {padding: 16px 20px;border-bottom: 1px solid var(--gray-mid);color: var(--text);vertical-align: middle;}
+.comp-table tbody tr:hover {background-color: var(--off-white);}
+.comp-table tr:last-child td {border-bottom: none;}
+.comp-table tr.recommended {background-color: var(--gold-light);}
+.comp-table tr.recommended:hover {background-color: #fcebbb;}
+.price-col {font-weight: 800;color: var(--red);white-space: nowrap;font-size: 16px;}
+.price-col.dark {color: var(--navy-dark);}
+
+.section-tag {display: inline-block;background: var(--navy-light);color: var(--navy-dark);font-size: 12px;font-weight: 800;padding: 6px 16px;border-radius: 30px;letter-spacing: 1px;text-transform: uppercase;}
+.reco-list {display: grid;grid-template-columns: repeat(3, 1fr);gap: 20px;}
+.reco-card {background: var(--white);border-radius: 16px;overflow: hidden;box-shadow: 0 5px 15px rgba(0,0,0,0.05);border: 1px solid var(--gray-mid);display: flex;flex-direction: column;transition: 0.3s;}
+.reco-card:hover {transform: translateY(-5px);box-shadow: 0 15px 30px rgba(26,58,92,0.1);}
+.reco-badge {display: flex;align-items: center;padding: 15px 20px;color: white;}
+.reco-icon {font-size: 28px;margin-right: 15px;}
+.reco-rank {font-size: 14px;font-weight: 800;line-height: 1.2;}
+.reco-body {padding: 20px;flex: 1;}
+.reco-name {font-size: 18px;font-weight: 700;color: var(--navy);}
+.reco-desc {font-size: 14px;color: var(--text-sub);line-height: 1.6;}
+
+/* PRICE OFFER - CẠNH TRANH */
+.offer-section{background:var(--white);padding:80px 0;}
+.offer-card{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-wrap:wrap;border: 1px solid var(--navy-light);}
+.offer-info{flex:1;padding:40px;min-width:300px;}
+.offer-price-box{background:var(--navy);color:white;padding:40px;width:350px;display:flex;flex-direction:column;justify-content:center;text-align:center;}
+.price-tag{font-size:52px;font-weight:900;color:var(--gold);line-height:1;}
+.price-unit{font-size:16px;color:rgba(255,255,255,0.7);margin-bottom:10px;}
+.offer-badge{background:var(--red);color:white;padding:5px 15px;border-radius:5px;font-weight:700;margin-bottom:15px;display:inline-block;}
+
+/* AUTHORITY - 21 NĂM & CA KHÓ (NEW LAYOUT) */
+.authority-section{background:var(--navy-dark);color:white;padding:80px 0;}
+.auth-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:center;}
+.auth-features-grid {display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px;}
+.auth-card {background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:25px 20px;border-radius:16px;transition:0.3s;}
+.auth-card:hover {background:rgba(255,255,255,0.1);transform:translateY(-3px);}
+.auth-card-icon {font-size:28px;margin-bottom:15px;}
+.auth-card-title {color:var(--gold);font-weight:700;font-size:16px;margin-bottom:10px;line-height:1.4;}
+.auth-card-desc {color:rgba(255,255,255,0.75);font-size:14px;line-height:1.5;}
+.auth-img{border-radius:20px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,0.4);border:2px solid var(--gold); height: 100%;}
+
+/* MSG BOX */
+.msg-box {display: none; padding: 15px; border-radius: 10px; margin-bottom: 20px; font-weight: 600; text-align: center; animation: fadeIn 0.3s;}
+.msg-error {background-color: var(--red-light); color: var(--red);}
+.msg-success {background-color: var(--green-light); color: var(--green);}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .reco-list, .consequence-grid, .auth-features-grid {grid-template-columns: 1fr;}
+}
+@media(max-width:768px){
+  .rr-grid{grid-template-columns:1fr;}
+  .rr-item{border-right:none;border-bottom:1px solid var(--gray-mid);padding-bottom:15px;}
+  .edu-box {padding: 30px 20px;}
+  .offer-card{flex-direction:column;}
+  .offer-price-box{width:100%;}
+  .auth-grid{grid-template-columns:1fr; gap: 30px;}
+  .hero h1{font-size: 32px;}
+  .quiz-container{padding: 25px 15px;}
+  .bone-table th, .bone-table td { padding: 10px; font-size: 14px; }
+}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container hero-content">
+    <div class="hero-label">Chuyên gia Implant 25 năm kinh nghiệm</div>
+    <h1>Bảng Giá Implant 2026 & <br><span>Đánh Giá Tiêu Xương Sơ Bộ Từ Nha Khoa Đông Nam</span></h1>
+    <p class="hero-sub">Đừng chỉ xem bảng giá chung. Hãy dùng công cụ độc quyền của Nha Khoa Đông Nam để kiểm tra tình trạng xương hàm của bạn.</p>
+    <div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap;">
+      <a href="#quiz" class="btn-primary">🎯 BẮT ĐẦU KIỂM TRA NGAY (60s)</a>
+      <a href="#bang-gia" style="color:white;text-decoration:underline;padding:16px;">Xem bảng giá nhanh</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="risk-reversal-bar">
+    <div class="rr-grid">
+      <div class="rr-item">
+        <span class="rr-icon">📜</span>
+        <div class="rr-text">
+          <strong>Bảo chứng bằng văn bản</strong>
+          <span>Cam kết hoàn tiền 100% nếu đào thải trụ</span>
+        </div>
+      </div>
+      <div class="rr-item">
+        <span class="rr-icon">🤝</span>
+        <div class="rr-text">
+          <strong>Đồng hành trọn đời</strong>
+          <span>Tái khám, kiểm tra trụ MIỄN PHÍ</span>
+        </div>
+      </div>
+      <div class="rr-item">
+        <span class="rr-icon">🏥</span>
+        <div class="rr-text">
+          <strong>Vững mạnh 21 năm</strong>
+          <span>Hơn 21 năm hoạt động, 2 cơ sở ổn định tại TP.HCM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEW SECTION: EDUCATION ABOUT BONE LOSS -->
+<section id="tieu-xuong" class="edu-section">
+  <div class="container">
+    <div class="edu-box text-center">
+      <div style="max-width: 800px; margin-inline: auto;">
+        <h2 class="section-title">Mất Răng Bao Lâu Thì Bị Tiêu Xương?</h2>
+        <p style="font-size: 16px; color: var(--text-sub); margin-bottom: 25px;">Sau khi mất răng 3 tháng, quá trình tiêu xương bắt đầu. Trong năm đầu tiên, <strong>25%</strong> thể tích xương sẽ tiêu biến và con số này có thể lên tới <strong>60%</strong> sau 3 năm.</p>
+        <div style="display:inline-block; background: var(--red-light); color: var(--red); padding: 8px 24px; border-radius: 30px; font-weight: 800; font-size: 14px;">⚠️ HẬU QUẢ NGHIÊM TRỌNG KHI TIÊU XƯƠNG</div>
+      </div>
+
+      <div class="consequence-grid">
+        <div class="cons-card">
+          <div class="cons-icon">👵</div>
+          <div class="cons-title">Lão hóa sớm</div>
+          <div class="cons-desc">Xương hàm tiêu biến dẫn đến tình trạng tụt nướu, móp má, da mặt chảy xệ khiến khuôn mặt già đi trước tuổi.</div>
+        </div>
+        <div class="cons-card">
+          <div class="cons-icon">🦷</div>
+          <div class="cons-title">Hỏng khớp cắn</div>
+          <div class="cons-desc">Răng kế cận đổ ngã, xô lệch vào khoảng trống mất răng, làm suy giảm nghiêm trọng chức năng ăn nhai.</div>
+        </div>
+        <div class="cons-card">
+          <div class="cons-icon">💸</div>
+          <div class="cons-title">Tốn kém gấp bội</div>
+          <div class="cons-desc">Xương hàm mỏng  giảm tỷ lệ thành công khi cấy ghép, đòi hỏi phải thực hiện thêm các thủ thuật phức tạp (ghép xương, nâng xoang), gây tốn kém và mất nhiều thời gian phục hồi.</div>
+        </div>
+      </div>
+
+      <div style="margin-top: 45px;">
+        <a href="#quiz" class="btn-primary" style="font-size: 18px;">KIỂM TRA NGAY TÌNH TRẠNG XƯƠNG HÀM 👇</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE QUIZ TOOL -->
+<section id="quiz" class="quiz-section">
+  <div class="container">
+    <div class="quiz-container">
+      <div class="quiz-header">
+        <h2 style="font-family:'Playfair Display',serif;font-size:28px;color:var(--navy);">Kiểm tra tiêu xương & Dự toán chi phí</h2>
+        <p style="font-size:14px; color:var(--text-sub); margin-top:12px; font-style:italic;">🔬 Cơ sở tính toán Khoa học sử dụng thang đo Cawood & Howell (1988) và tiêu chuẩn của ICOI (Hội Implant Quốc tế).</p>
+      </div>
+
+      <div id="quiz-steps">
+        <div class="quiz-step active" id="step-1">
+          <p style="font-size:18px;font-weight:700;margin-bottom:20px;color:var(--navy);">1. Tình trạng mất răng hiện tại của bạn?</p>
+          <div class="quiz-options">
+            <div class="quiz-opt" onclick="selectQuiz(1, 'tinhTrang', 'Mất 1 răng đơn lẻ')">
+              <div class="quiz-opt-top"><span>Mất 1 răng đơn lẻ</span><span style="color:var(--gold);">➔</span></div>
+              <div class="quiz-opt-desc">Khu trú tại 1 vị trí, không ảnh hưởng các răng lân cận.</div>
+            </div>
+            <div class="quiz-opt" onclick="selectQuiz(1, 'tinhTrang', 'Mất nhiều răng')">
+              <div class="quiz-opt-top"><span>Mất nhiều răng (Đơn lẻ hoặc liền kề)</span><span style="color:var(--gold);">➔</span></div>
+              <div class="quiz-opt-desc">Suy giảm chức năng ăn nhai, có nguy cơ xô lệch các răng còn lại.</div>
+            </div>
+            <div class="quiz-opt" onclick="selectQuiz(1, 'tinhTrang', 'Mất toàn hàm')">
+              <div class="quiz-opt-top"><span>Mất toàn hàm (1 hoặc 2 hàm)</span><span style="color:var(--gold);">➔</span></div>
+              <div class="quiz-opt-desc">Cần phục hình toàn bộ hàm bằng phương pháp All-on-4 hoặc All-on-6.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-step" id="step-2">
+          <p style="font-size:18px;font-weight:700;margin-bottom:20px;color:var(--navy);">2. Bạn đã mất răng trong bao lâu?</p>
+          <div class="quiz-options">
+            <div class="quiz-opt" onclick="selectQuiz(2, 'thoiGian', 'Dưới 6 tháng')">
+              <div class="quiz-opt-top"><span>Dưới 6 tháng</span><span style="color:var(--gold);">➔</span></div>
+              <div class="quiz-opt-desc">Xương ổ răng thường chưa bị tiêu biến nhiều.</div>
+            </div>
+            <div class="quiz-opt" onclick="selectQuiz(2, 'thoiGian', 'Từ 6 tháng - 2 năm')">
+              <div class="quiz-opt-top"><span>Từ 6 tháng - 2 năm</span><span style="color:var(--gold);">➔</span></div>
+              <div class="quiz-opt-desc">Xương bắt đầu có dấu hiệu tiêu ngót.</div>
+            </div>
+            <div class="quiz-opt" onclick="selectQuiz(2, 'thoiGian', 'Trên 2 năm')">
+              <div class="quiz-opt-top"><span>Trên 2 năm</span><span style="color:var(--gold);">➔</span></div>
+              <div class="quiz-opt-desc">Rủi ro tiêu xương cao, hẹp sống hàm.</div>
+            </div>
+          </div>
+          <div class="text-center"><button class="btn-back" onclick="goBack()">❮ Quay lại</button></div>
+        </div>
+
+        <div class="quiz-step" id="step-3">
+          <p style="font-size:18px;font-weight:700;margin-bottom:20px;color:var(--navy);">3. Vị trí răng bị mất nằm ở đâu?</p>
+          <div class="quiz-options">
+            <div class="quiz-opt" onclick="selectQuiz(3, 'viTri', 'Răng cửa')">
+              <div class="quiz-opt-top"><span>Răng cửa</span><span style="color:var(--gold);">➔</span></div>
+              <div class="quiz-opt-desc">Vùng thẩm mỹ, xương mặt ngoài thường mỏng.</div>
+            </div>
+            <div class="quiz-opt" onclick="selectQuiz(3, 'viTri', 'Răng hàm trên')">
+              <div class="quiz-opt-top"><span>Răng hàm trên</span><span style="color:var(--gold);">➔</span></div>
+              <div class="quiz-opt-desc">Gần xoang hàm, rủi ro tiêu xương làm sa trễ xoang.</div>
+            </div>
+            <div class="quiz-opt" onclick="selectQuiz(3, 'viTri', 'Răng hàm dưới')">
+              <div class="quiz-opt-top"><span>Răng hàm dưới</span><span style="color:var(--gold);">➔</span></div>
+              <div class="quiz-opt-desc">Xương đặc hơn nhưng cần tránh dây thần kinh hàm.</div>
+            </div>
+            <div class="quiz-opt" onclick="selectQuiz(3, 'viTri', 'Cả răng cửa và răng hàm')" id="opt-both-teeth" style="display:none;">
+              <div class="quiz-opt-top"><span>Cả vùng răng cửa & răng hàm</span><span style="color:var(--gold);">➔</span></div>
+              <div class="quiz-opt-desc">Mức độ phức tạp cao, cần kế hoạch phối hợp.</div>
+            </div>
+          </div>
+          <div class="text-center"><button class="btn-back" onclick="goBack()">❮ Quay lại</button></div>
+        </div>
+
+        <div class="quiz-step" id="step-4">
+          <p style="font-size:18px;font-weight:700;margin-bottom:20px;color:var(--navy);">4. Nguyên nhân chính gây mất răng?</p>
+          <div class="quiz-options">
+            <div class="quiz-opt" onclick="selectQuiz(4, 'nguyenNhan', 'Sâu răng / Chấn thương')">
+              <div class="quiz-opt-top"><span>Sâu răng / Chấn thương</span><span style="color:var(--gold);">➔</span></div>
+              <div class="quiz-opt-desc">Nền xương xung quanh thường còn chắc khỏe, thuận lợi cho Implant.</div>
+            </div>
+            <div class="quiz-opt" onclick="selectQuiz(4, 'nguyenNhan', 'Viêm nha chu / Lung lay')">
+              <div class="quiz-opt-top"><span>Viêm nha chu / Răng tự rụng</span><span style="color:var(--gold);">➔</span></div>
+              <div class="quiz-opt-desc">Vi khuẩn đã phá hủy mô liên kết và nền xương trước khi rụng răng.</div>
+            </div>
+            <div class="quiz-opt" onclick="selectQuiz(4, 'nguyenNhan', 'Mất răng bẩm sinh')">
+              <div class="quiz-opt-top"><span>Mất răng bẩm sinh / Lý do khác</span><span style="color:var(--gold);">➔</span></div>
+              <div class="quiz-opt-desc">Vùng xương không được kích thích nhai lâu ngày dẫn đến mỏng dần.</div>
+            </div>
+          </div>
+          <div class="text-center"><button class="btn-back" onclick="goBack()">❮ Quay lại</button></div>
+        </div>
+
+        <div class="quiz-step" id="step-5">
+          <p style="font-size:18px;font-weight:700;margin-bottom:20px;color:var(--navy);">5. Mong muốn ưu tiên nhất của bạn?</p>
+          <div class="quiz-options">
+            <div class="quiz-opt" onclick="selectQuiz(5, 'uuTien', 'Tối ưu chi phí')">
+              <div class="quiz-opt-top"><span>Tối ưu chi phí</span><span style="color:var(--gold);">➔</span></div>
+              <div class="quiz-opt-desc">Gợi ý dòng trụ Hàn Quốc với hiệu quả kinh tế cao nhất.</div>
+            </div>
+            <div class="quiz-opt" onclick="selectQuiz(5, 'uuTien', 'Thẩm mỹ & Bền bỉ')">
+              <div class="quiz-opt-top"><span>Thẩm mỹ & Bền bỉ</span><span style="color:var(--gold);">➔</span></div>
+              <div class="quiz-opt-desc">Gợi ý dòng trụ Ý (C-Tech) giúp bảo tồn xương cổ trụ lâu dài.</div>
+            </div>
+            <div class="quiz-opt" onclick="selectQuiz(5, 'uuTien', 'Cần lên răng nhanh')">
+              <div class="quiz-opt-top"><span>Cần có răng nhanh</span><span style="color:var(--gold);">➔</span></div>
+              <div class="quiz-opt-desc">Đề xuất trụ Pháp (ETK Active) tích hợp xương nhanh gấp 3 lần.</div>
+            </div>
+          </div>
+          <div class="text-center"><button class="btn-back" onclick="goBack()">❮ Quay lại</button></div>
+        </div>
+
+        <div class="quiz-step" id="step-6A">
+          <p style="font-size:18px;font-weight:700;margin-bottom:20px;color:var(--navy);">Chọn giải pháp toàn hàm:</p>
+          <div class="quiz-options">
+            <div class="quiz-opt" onclick="selectQuiz('6A', 'giaiPhapToanHam', 'All-on-4 Cải tiến (Tháo lắp)', 120000000)">
+              <div class="quiz-opt-top"><span>All-on-4 Cải tiến (Tháo lắp)</span><span style="color:var(--red); font-weight:800;">120 Tr</span></div>
+            </div>
+            <div class="quiz-opt" onclick="selectQuiz('6A', 'giaiPhapToanHam', 'All-on-4 Cố định (Hybrid)', 151000000)">
+              <div class="quiz-opt-top"><span>All-on-4 Cố định (Hybrid)</span><span style="color:var(--red); font-weight:800;">151 Tr</span></div>
+            </div>
+            <div class="quiz-opt" onclick="selectQuiz('6A', 'giaiPhapToanHam', 'All-on-6 Cố định (Hybrid)', 190800000)">
+              <div class="quiz-opt-top"><span>All-on-6 Cố định (Hybrid)</span><span style="color:var(--red); font-weight:800;">190.8 Tr</span></div>
+            </div>
+          </div>
+          <div class="text-center"><button class="btn-back" onclick="goBack()">❮ Quay lại</button></div>
+        </div>
+
+        <div class="quiz-step" id="step-6B">
+          <p style="font-size:18px;font-weight:700;margin-bottom:20px;color:var(--navy);">Số lượng răng cần trồng?</p>
+          <div class="qty-control" style="margin: 0 auto 30px;">
+            <button class="qty-btn" onclick="changeQty(-1)">-</button>
+            <input type="text" id="quiz-qty" class="qty-input" value="1" readonly>
+            <button class="qty-btn" onclick="changeQty(1)">+</button>
+          </div>
+          <div class="text-center">
+            <button class="btn-primary" onclick="proceedToForm()">TIẾP TỤC ➔</button>
+          </div>
+          <div class="text-center"><button class="btn-back" onclick="goBack()">❮ Quay lại</button></div>
+        </div>
+
+        <div class="quiz-step" id="step-form">
+          <div class="text-center" style="padding:10px;">
+            <div style="font-size:48px;margin-bottom:15px;">📊</div>
+            <h3 style="margin-bottom:15px;color:var(--navy);font-size:24px;">Đang phân tích dữ liệu lâm sàng...</h3>
+            <p style="font-size:15px; color:var(--text-sub); margin-bottom:20px;">Vui lòng để lại số điện thoại để thuật toán xử lý và gửi bản "Dự toán chi phí & Chẩn đoán sơ bộ" cho bạn ngay lập tức.</p>
+            
+            <div id="quiz-msg" class="msg-box"></div>
+
+            <div id="quiz-form-wrap">
+               <input type="tel" id="quiz-phone" placeholder="Nhập SĐT nhận kết quả chi tiết" style="width:100%;padding:16px;border-radius:10px;border:1px solid var(--gray-mid);margin-bottom:15px;font-size:16px;outline:none;">
+               <button class="btn-primary" style="width:100%;" onclick="submitQuiz()">XEM KẾT QUẢ DỰ TOÁN</button>
+            </div>
+            <div class="text-center"><button class="btn-back" onclick="goBack()">❮ Quay lại</button></div>
+          </div>
+        </div>
+
+        <div class="quiz-step" id="step-result">
+          <div class="text-center" style="margin-bottom:20px;">
+             <div style="font-size:40px; margin-bottom:10px;">🎉</div>
+             <h3 style="color:var(--green); font-size:24px;">Kết Quả Dự Đoán Sơ Bộ</h3>
+          </div>
+          <div id="result-table-container"></div>
+          <div class="text-center" style="margin-top:25px;">
+             <a href="#dang-ky" class="btn-primary" style="width: 100%; text-transform: uppercase;">Đăng ký chụp phim CT 3D miễn phí ngay</a>
+             <br>
+             <button onclick="location.reload()" class="btn-back" style="margin-top: 15px; text-transform: uppercase; font-size: 13px;">↺ Thực hiện lại bài Test</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <!-- MOVED CAWOOD HOWELL DEFINITION HERE -->
+    <div class="scientific-note" style="max-width: 800px; margin: 40px auto 0;">
+      <div style="font-size: 40px;">🔬</div>
+      <div>
+        <strong style="color: var(--navy); font-size: 16px; display: block;">Thang đo Cawood & Howell là gì?</strong>
+        <span style="font-size: 14px; color: var(--text-sub);">Cawood & Howell (1988) là hệ thống phân loại tiêu chuẩn Y khoa Quốc tế được sử dụng rộng rãi nhất để đánh giá hình thái và mức độ tiêu xương hàm sau khi mất răng.</span>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- BẢNG CAN THIỆP XƯƠNG -->
+<section id="can-thiep-xuong" style="background: var(--off-white); padding-bottom: 80px;">
+  <div class="container">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; color: var(--navy); margin-bottom: 5px;">Chi Phí Can Thiệp Xương (Nếu Có)</h2>
+    <p style="font-size: 16px; color: var(--text-sub); margin-bottom: 25px;">Dành cho các trường hợp được dự đoán có rủi ro tiêu xương. Bác sĩ sẽ chẩn đoán chính xác lại qua phim CT 3D Miễn Phí.</p>
+    
+    <div class="bone-table-wrap">
+      <div class="bone-table-content">
+        <table class="bone-table">
+          <thead>
+            <tr>
+              <th style="border-top-left-radius: 8px;">Các can thiệp xương đi kèm</th>
+              <th style="text-align: center;">Đơn vị</th>
+              <th style="text-align: right; border-top-right-radius: 8px;">Giá niêm yết</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight: 600;">Cấy ghép xương</td>
+              <td class="bone-unit">1 ống</td>
+              <td class="bone-price">8.000.000 đ</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600;">Cấy màng xương</td>
+              <td class="bone-unit">1 đơn vị</td>
+              <td class="bone-price">2.000.000 đ</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600;">Nâng xoang</td>
+              <td class="bone-unit">1 bên</td>
+              <td class="bone-price">10.000.000 đ</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BẢNG GIÁ CHI TIẾT -->
+<section class="section-padding" id="bang-gia" style="background:var(--white); padding-bottom: 40px;">
+  <div class="container">
+    <h2 class="section-title">🦷 Bảng Giá Trụ Implant Trọn Gói 2026</h2>
+    <p style="font-size:16px;color:var(--text-sub);margin-bottom:30px;">Chi phí chưa bao gồm các can thiệp xương phát sinh (nếu có).</p>
+    
+    <div class="comp-table-wrap">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th style="text-align:left; border-top-left-radius: 15px;">Dòng trụ</th>
+            <th>Giá trọn gói / trụ</th>
+            <th style="border-top-right-radius: 15px;">Tích hợp xương</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🇰🇷 Implant Hàn Quốc</td>
+            <td class="price-col">16.500.000 ₫</td>
+            <td>3–6 tháng</td>
+          </tr>
+          <tr class="recommended">
+            <td>🇮🇹 Implant Ý (C-Tech) <span style="background:var(--green);color:#fff;font-size:10px;padding:3px 8px;border-radius:10px;margin-left:5px;vertical-align:middle;white-space:nowrap;display:inline-block;font-weight: 700;">Đề xuất</span></td>
+            <td class="price-col">19.900.000 ₫</td>
+            <td>2–3 tháng</td>
+          </tr>
+          <tr>
+            <td>🇺🇸 Implant Mỹ</td>
+            <td class="price-col dark">23.500.000 ₫</td>
+            <td>2–4 tháng</td>
+          </tr>
+          <tr>
+            <td>🇫🇷 Implant Pháp (ETK Active)</td>
+            <td class="price-col dark">28.200.000 ₫</td>
+            <td>1–2 tháng</td>
+          </tr>
+          <tr>
+            <td>🇸🇪 Implant Thụy Điển (Nobel Active)</td>
+            <td class="price-col dark">32.900.000 ₫</td>
+            <td>1–2 tháng</td>
+          </tr>
+          <tr>
+            <td>🇨🇭 Implant Thụy Sĩ (Straumann)</td>
+            <td class="price-col dark">34.000.000 ₫</td>
+            <td>3–6 tuần</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-tag">LỜI KHUYÊN TỪ BÁC SĨ ĐÔNG NAM</div>
+    <p style="font-size:16px;color:var(--text-sub);margin-top:10px;margin-bottom:25px;">Dựa trên hàng ngàn ca lâm sàng, chúng tôi tạm chia làm 3 nhóm sau giúp quý khách dễ ra quyết định:</p>
+    
+    <div class="reco-list" style="margin-bottom:30px;">
+      <div class="reco-card">
+        <div class="reco-badge" style="background:linear-gradient(160deg,#1A7A4A,#1e9a5a);">
+          <div class="reco-icon">⭐</div>
+          <div class="reco-rank">ƯU TIÊN<br>SỐ 1</div>
+        </div>
+        <div class="reco-body">
+          <div class="reco-name">🇮🇹 Implant Ý (C-Tech)</div>
+          <div style="margin:8px 0 12px;"><span style="background:var(--green-light);color:var(--green);font-size:11px;font-weight: 700;padding:4px 10px;border-radius:10px;display:inline-block;">Cân bằng hoàn hảo</span></div>
+          <div class="reco-desc">Chất lượng chuẩn Châu Âu với mức giá hợp lý. Ứng dụng công nghệ Platform Switching giúp bảo tồn tối đa xương vùng cổ Implant, duy trì độ bền vững và thẩm mỹ lâu dài.</div>
+        </div>
+      </div>
+      <div class="reco-card">
+        <div class="reco-badge" style="background:linear-gradient(160deg,var(--navy),var(--navy-mid));">
+          <div class="reco-icon">💰</div>
+          <div class="reco-rank">ƯU TIÊN<br>SỐ 2</div>
+        </div>
+        <div class="reco-body">
+          <div class="reco-name">🇰🇷 Implant Hàn Quốc</div>
+          <div style="margin:8px 0 12px;"><span style="background:var(--navy-light);color:var(--navy);font-size:11px;font-weight: 700;padding:4px 10px;border-radius:10px;display:inline-block;">Tối ưu ngân sách</span></div>
+          <div class="reco-desc">Giải pháp an toàn, bền bỉ với mức chi phí dễ tiếp cận nhất. Phù hợp cho các trường hợp mất răng đơn lẻ, tình trạng xương hàm còn tốt và khách hàng muốn tối ưu tài chính.</div>
+        </div>
+      </div>
+      <div class="reco-card">
+        <div class="reco-badge" style="background:linear-gradient(160deg,#7D4E00,#b87a20);">
+          <div class="reco-icon">⚡</div>
+          <div class="reco-rank">PHỤC HÌNH<br>NHANH CHÓNG</div>
+        </div>
+        <div class="reco-body">
+          <div class="reco-name">🇫🇷 Implant Pháp (ETK Active)</div>
+          <div style="margin:8px 0 12px;"><span style="background:#fde9cc;color:#7D4E00;font-size:11px;font-weight: 700;padding:4px 10px;border-radius:10px;display:inline-block;">Rút ngắn thời gian điều trị</span></div>
+          <div class="reco-desc">Chuyên chỉ định cho các ca phức tạp hoặc cần có răng nhanh. Thiết kế đặc biệt giúp đẩy nhanh tốc độ tích hợp xương, lý tưởng cho tình trạng xương hàm xốp hoặc người có quỹ thời gian hạn hẹp.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section id="offer" class="offer-section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:40px;">
+      <h2 style="font-family:'Playfair Display',serif;font-size:32px;color:var(--navy);">Ưu Đãi Đặc Biệt Trong Tháng</h2>
+      <p style="color:var(--text-sub);">Hỗ trợ tối đa để khách hàng sớm phục hồi răng, tránh rủi ro tiêu xương nặng thêm</p>
+    </div>
+    
+    <div class="offer-card">
+      <div class="offer-info">
+        <div class="offer-badge">Ưu đãi 20%</div>
+        <h3 style="font-size:24px;margin-bottom:15px;color:var(--navy);">Implant Trọn Gói - Không Phát Sinh</h3>
+        <ul style="list-style: none; color:var(--text);">
+          <li style="margin-bottom:10px;">✅ Đã bao gồm trụ Implant chính hãng (QR code check) + Abutment</li>
+          <li style="margin-bottom:10px;">✅ Tặng răng sứ Mỹ trên Implant trị giá 1.000.000đ</li>
+          <li style="margin-bottom:10px;">✅ Miễn phí chụp phim CT 3D chẩn đoán mật độ xương</li>
+          <li style="margin-bottom:10px;">✅ Miễn phí khám & tư vấn cùng BS CKII - Chuyên gia ca khó</li>
+        </ul>
+        <div style="margin-top:20px;padding:15px;background:var(--red-light);border-radius:10px;color:var(--red);font-weight:700;font-size:14px;">
+          ⚠️ Lưu ý: Ưu đãi chỉ áp dụng cho 30 khách hàng đăng ký online sớm nhất trong tháng.
+        </div>
+      </div>
+      <div class="offer-price-box">
+        <div class="price-unit">Chỉ từ</div>
+        <div class="price-tag">13,2Tr</div>
+        <div style="font-size:18px;margin:10px 0 25px;">Trọn gói/1 răng</div>
+        <a href="#dang-ky" class="btn-primary" style="background:var(--white);color:var(--navy);">NHẬN ƯU ĐÃI NGAY</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHORITY - 21 NĂM & CA KHÓ (NEW CARD GRID LAYOUT) -->
+<section class="authority-section">
+  <div class="container auth-grid">
+    <div class="auth-content">
+      <h2 style="font-family:'Playfair Display',serif;font-size:36px;margin-bottom:10px;color:var(--gold); line-height: 1.3;">Hơn 21 Năm Khẳng Định Vị Thế<br><span style="color:var(--white);">Chuyên Gia Implant Ca Khó</span></h2>
+      <p style="color: rgba(255,255,255,0.8); font-size: 16px;">Sự lựa chọn hàng đầu cho các ca tiêu xương nghiêm trọng, mất răng lâu năm.</p>
+      
+      <div class="auth-features-grid">
+        <div class="auth-card">
+          <div class="auth-card-icon">👨‍⚕️</div>
+          <div class="auth-card-title">Đội ngũ bác sĩ chuyên môn sâu</div>
+          <div class="auth-card-desc">Giàu kinh nghiệm trong xử lý các ca tiêu xương nghiêm trọng, nâng xoang, ghép xương phức tạp và phục hồi Implant toàn hàm.</div>
+        </div>
+        
+        <div class="auth-card">
+          <div class="auth-card-icon">🏛️</div>
+          <div class="auth-card-title">Nền tảng hơn 21 năm phát triển</div>
+          <div class="auth-card-desc">Bề dày kinh nghiệm cùng quy trình điều trị được chuẩn hóa là nền tảng cho cam kết đồng hành lâu dài cùng khách hàng.</div>
+        </div>
+        
+        <div class="auth-card">
+          <div class="auth-card-icon">🏥</div>
+          <div class="auth-card-title">Hệ thống phẫu thuật vô trùng</div>
+          <div class="auth-card-desc">Đảm bảo tiêu chuẩn an toàn nghiêm ngặt, hỗ trợ tối ưu quá trình tích hợp Implant và nâng cao hiệu quả điều trị lâu dài.</div>
+        </div>
+        
+        <div class="auth-card">
+          <div class="auth-card-icon">💙</div>
+          <div class="auth-card-title">Chăm sóc hậu điều trị tận tâm</div>
+          <div class="auth-card-desc">Khách hàng được theo dõi định kỳ, kiểm tra và bảo dưỡng Implant theo kế hoạch riêng, an tâm duy trì kết quả bền vững.</div>
+        </div>
+      </div>
+
+      <div style="margin-top:35px;">
+        <a href="#dang-ky" class="btn-primary" style="background:var(--white);color:var(--navy-dark);">ĐẶT LỊCH THĂM KHÁM MIỄN PHÍ</a>
+      </div>
+    </div>
+    <div class="auth-img">
+      <img src="https://nhakhoadongnam.com/wp-content/uploads/2026/03/2-1.jpg" alt="Bác sĩ Đông Nam" style="width:100%; height:100%; object-fit:cover; display:block; background: var(--navy-mid);" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjMwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzJFNkRBNCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiNmZmYiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Iw6xuaCDhuqNuaCBCw6FjIHPEqTwvdGV4dD48L3N2Zz4='">
+    </div>
+  </div>
+</section>
+
+<!-- STATS SECTION -->
+<section class="stats-section" style="padding: 60px 0 20px;">
+  <div class="container">
+    <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px; text-align: center;">
+      <div style="flex: 1; min-width: 250px;">
+        <div style="font-size: 56px; font-weight: 900; color: var(--navy); font-family: 'Playfair Display', serif; line-height: 1; margin-bottom: 10px;">21<span style="color:var(--gold);">+</span></div>
+        <div style="font-weight: 700; color: var(--text-sub); text-transform: uppercase; font-size: 14px; letter-spacing: 1px;">Năm kinh nghiệm</div>
+      </div>
+      <div style="flex: 1; min-width: 250px;">
+        <div style="font-size: 56px; font-weight: 900; color: var(--navy); font-family: 'Playfair Display', serif; line-height: 1; margin-bottom: 10px;">10.500<span style="color:var(--gold);">+</span></div>
+        <div style="font-weight: 700; color: var(--text-sub); text-transform: uppercase; font-size: 14px; letter-spacing: 1px;">Ca trồng răng thành công</div>
+      </div>
+      <div style="flex: 1; min-width: 250px;">
+        <div style="font-size: 56px; font-weight: 900; color: var(--navy); font-family: 'Playfair Display', serif; line-height: 1; margin-bottom: 10px;">100<span style="color:var(--gold);">%</span></div>
+        <div style="font-weight: 700; color: var(--text-sub); text-transform: uppercase; font-size: 14px; letter-spacing: 1px;">Trụ Implant chính hãng</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="dang-ky" class="section-padding" style="background: var(--off-white);">
+  <div class="container text-center" style="max-width:600px;">
+    <h2 style="font-family:'Playfair Display',serif;font-size:32px;margin-bottom:15px;color:var(--navy);">Đăng Ký Khám & Chụp CT 3D Miễn Phí</h2>
+    <p style="margin-bottom:30px;color:var(--text-sub);">Để xác định chính xác bạn đang ở phân độ tiêu xương nào và nhận kế hoạch điều trị chuẩn xác nhất từ Bác sĩ chuyên khoa.</p>
+    
+    <div style="text-align:left;background:var(--white);padding:40px;border-radius:20px;box-shadow:var(--shadow);border:1px solid var(--navy-light);">
+      <div style="margin-bottom:15px;">
+        <label style="display:block;margin-bottom:8px;font-weight:600;color:var(--navy);">Họ và tên</label>
+        <input type="text" placeholder="Nguyễn Văn A" style="width:100%;padding:14px;border-radius:8px;border:1px solid var(--gray-mid);outline:none;font-family:inherit;">
+      </div>
+      <div style="margin-bottom:25px;">
+        <label style="display:block;margin-bottom:8px;font-weight:600;color:var(--navy);">Số điện thoại</label>
+        <input type="tel" placeholder="090x xxx xxx" style="width:100%;padding:14px;border-radius:8px;border:1px solid var(--gray-mid);outline:none;font-family:inherit;">
+      </div>
+      <button class="btn-primary" style="width:100%;font-size:18px;">ĐĂNG KÝ NGAY THÁNG NÀY</button>
+      <p style="font-size:13px;text-align:center;margin-top:15px;color:var(--text-sub);">🔒 Cam kết bảo mật thông tin khách hàng tuyệt đối</p>
+    </div>
+  </div>
+</section>
+
+<script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyN91a_bDX9reGu1IqbxfokiTdpG1YnKSUaR5rnXwQpDMzZO4kbQCl2UvCavfsQC93j/exec'; 
+
+let userId = localStorage.getItem('implant_quiz_user_id');
+if (!userId) {
+    userId = 'USER-' + Math.random().toString(36).substr(2, 9).toUpperCase();
+    localStorage.setItem('implant_quiz_user_id', userId);
+}
+
+// Biến lưu trạng thái Quiz V2
+let quizData = { tinhTrang: "", thoiGian: "", nguyenNhan: "", viTri: "", uuTien: "", isToanHam: false, giaiPhapToanHam: { name: "", price: 0 }, soLuong: 1 };
+// Khôi phục biến lưu kết quả để đẩy về Google Sheets
+let quizResults = { totalCost: 0, finalCost: 0, riskLevel: '', goiDeXuat: '' }; 
+let stepHistory = ['step-1'];
+
+function showStep(stepId, isBack = false) {
+  document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('active'));
+  document.getElementById(stepId).classList.add('active');
+  if(!isBack && stepHistory[stepHistory.length - 1] !== stepId) stepHistory.push(stepId);
+}
+
+function goBack() {
+  if(stepHistory.length > 1) { stepHistory.pop(); showStep(stepHistory[stepHistory.length - 1], true); }
+}
+
+function selectQuiz(currentStep, field, value, price = 0) {
+  quizData[field] = value;
+  if (currentStep === 1) {
+      if(value === 'Mất toàn hàm') { quizData.isToanHam = true; showStep('step-6A'); }
+      else { 
+          quizData.isToanHam = false;
+          if (value === 'Mất nhiều răng') { 
+              document.getElementById('opt-both-teeth').style.display = 'flex';
+              quizData.soLuong = 2; document.getElementById('quiz-qty').value = 2;
+          } else { 
+              document.getElementById('opt-both-teeth').style.display = 'none';
+              quizData.soLuong = 1; document.getElementById('quiz-qty').value = 1;
+          }
+          showStep('step-2'); 
+      }
+  }
+  else if (currentStep === 2) showStep('step-3');
+  else if (currentStep === 3) showStep('step-4');
+  else if (currentStep === 4) showStep('step-5');
+  else if (currentStep === 5) showStep('step-6B');
+  else if (currentStep === '6A') { quizData.giaiPhapToanHam = { name: value, price: price }; showStep('step-form'); }
+}
+
+function changeQty(amount) {
+  let min = (quizData.tinhTrang === 'Mất nhiều răng') ? 2 : 1;
+  let val = parseInt(document.getElementById('quiz-qty').value) + amount;
+  if(val >= min && val <= 14) { document.getElementById('quiz-qty').value = val; quizData.soLuong = val; }
+}
+
+function proceedToForm() { showStep('step-form'); }
+
+function formatCurrency(number) { return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(number); }
+
+function submitQuiz() {
+  const phone = document.getElementById('quiz-phone').value.trim();
+  const msgBox = document.getElementById('quiz-msg');
+  msgBox.className = 'msg-box';
+
+  if(!/^0[0-9]{9}$/.test(phone)) { 
+      msgBox.classList.add('msg-error');
+      msgBox.innerHTML = "⚠️ Vui lòng nhập đúng số điện thoại (10 số, bắt đầu bằng 0).";
+      msgBox.style.display = 'block';
+      return; 
+  }
+  
+  // 1. Tính toán & Hiển thị kết quả
+  calculateAndRenderTable();
+  showStep('step-result');
+
+  // 2. Gửi dữ liệu về Google Sheets
+  if (SCRIPT_URL && SCRIPT_URL !== '') {
+      const payload = {
+          userId: userId,
+          phone: phone,
+          tinhTrang: quizData.tinhTrang,
+          thoiGianMatRang: quizData.thoiGian,
+          nguyenNhan: quizData.nguyenNhan,
+          viTri: quizData.viTri,
+          uuTien: quizData.uuTien,
+          soLuongRang: quizData.isToanHam ? 'Toàn hàm' : quizData.soLuong + ' răng',
+          goiDeXuat: quizResults.goiDeXuat,
+          duBaoXuong: quizResults.riskLevel,
+          tongChiPhi: quizResults.totalCost,
+          chiPhiSauUuDai: quizResults.finalCost,
+          nguon: window.location.href
+      };
+
+      fetch(SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+      })
+      .then(res => console.log('✅ Đã đẩy dữ liệu thành công!'))
+      .catch(err => console.error("Lỗi gửi dữ liệu:", err));
+  } else {
+      console.log("⚠️ Không tìm thấy SCRIPT_URL.");
+  }
+}
+
+function calculateAndRenderTable() {
+  let html = '';
+  let totalCost = 0;
+  let score = 0;
+
+  // --- TÍNH ĐIỂM DỰA TRÊN SPEC MỚI ---
+  if(quizData.thoiGian === 'Dưới 6 tháng') score += 1;
+  else if(quizData.thoiGian === 'Từ 6 tháng - 2 năm') score += 3;
+  else score += 6;
+
+  if(quizData.nguyenNhan === 'Sâu răng / Chấn thương') score += 1;
+  else if(quizData.nguyenNhan === 'Viêm nha chu / Lung lay') score += 6;
+  else score += 3;
+
+  if(quizData.viTri === 'Răng cửa') score += 3;
+  else if(quizData.viTri === 'Răng hàm trên') score += 5;
+  else if(quizData.viTri === 'Răng hàm dưới') score += 1;
+  else score += 5;
+
+  if((quizData.viTri === 'Răng hàm trên' || quizData.viTri === 'Cả răng cửa và răng hàm') && quizData.thoiGian !== 'Dưới 6 tháng') {
+      score += 2;
+  }
+
+  // --- PHÂN LOẠI RỦI RO ---
+  let riskLevel = "KHÔNG XÁC ĐỊNH";
+  let riskClass = ""; 
+  let riskMsg = "";
+  
+  if (!quizData.isToanHam) {
+      if(score <= 7) { 
+          riskLevel = "THẤP"; riskClass = "risk-low"; 
+          riskMsg = "Xương ổn định, thuận lợi cấy ghép trực tiếp.";
+      } else if(score <= 13) { 
+          riskLevel = "TRUNG BÌNH"; riskClass = "risk-med"; 
+          riskMsg = "Có tiêu xương nhẹ, thường cần ghép thêm xương bột hỗ trợ.";
+      } else { 
+          riskLevel = "CAO"; riskClass = "risk-high"; 
+          riskMsg = "Tiêu xương đáng kể, nguy cơ phải ghép xương hoặc nâng xoang.";
+      }
+
+      html += `<div style="background:var(--white); border-left:4px solid var(--navy); padding:15px; border-radius:0 10px 10px 0; margin-bottom:20px; text-align:left;">
+        <div style="font-size:13px; font-weight:800; color:var(--brown); margin-bottom:5px; text-transform:uppercase;">Dự báo phân độ Cawood & Howell:</div>
+        <div>Khả năng tiêu xương: <span class="risk-badge ${riskClass}">${riskLevel}</span></div>
+        <div style="font-size:14px; color:var(--text-sub); margin-top:5px;">${riskMsg}</div>
+      </div>`;
+  }
+  
+  quizResults.riskLevel = riskLevel;
+
+  // --- DỰ TOÁN CHI PHÍ ---
+  html += '<table class="result-table"><thead><tr><th>Hạng mục</th><th>Đơn giá</th><th>SL</th><th style="text-align:right;">Thành tiền</th></tr></thead><tbody>';
+  
+  if (quizData.isToanHam) {
+      html += `<tr><td><strong>${quizData.giaiPhapToanHam.name}</strong></td><td>${formatCurrency(quizData.giaiPhapToanHam.price)}</td><td style="text-align:center;">1</td><td style="text-align:right;">${formatCurrency(quizData.giaiPhapToanHam.price)}</td></tr>`;
+      totalCost = quizData.giaiPhapToanHam.price;
+      quizResults.goiDeXuat = quizData.giaiPhapToanHam.name;
+  } else {
+      let truPrice = (quizData.uuTien === 'Tối ưu chi phí') ? 16500000 : (quizData.uuTien === 'Thẩm mỹ & Bền bỉ' ? 19900000 : 28200000);
+      let truName = (quizData.uuTien === 'Tối ưu chi phí') ? "Implant Hàn Quốc" : (quizData.uuTien === 'Thẩm mỹ & Bền bỉ' ? "Implant Ý (C-Tech)" : "Implant Pháp (ETK)");
+      
+      let subTotal = truPrice * quizData.soLuong;
+      html += `<tr><td><strong>${truName}</strong></td><td>${formatCurrency(truPrice)}</td><td style="text-align:center;">${quizData.soLuong}</td><td style="text-align:right;">${formatCurrency(subTotal)}</td></tr>`;
+      
+      totalCost = subTotal;
+      quizResults.goiDeXuat = truName + ' x ' + quizData.soLuong;
+  }
+
+  html += `<tr><td><strong>Chụp phim CT 3D & Xét nghiệm</strong></td><td>1.500.000 đ</td><td style="text-align:center;">1</td><td style="text-align:right;"><span class="free-badge">Miễn phí</span></td></tr>`;
+  
+  let discount = (quizData.isToanHam) ? 0 : totalCost * 0.2;
+  let final = totalCost - discount;
+
+  quizResults.totalCost = totalCost;
+  quizResults.finalCost = final;
+
+  if(!quizData.isToanHam) {
+    html += `<tr style="background:#fef2f2; color:var(--red);"><td colspan="3" style="text-align:right;">Ưu đãi đăng ký online (-20% trụ):</td><td style="text-align:right;">- ${formatCurrency(discount)}</td></tr>`;
+  }
+  
+  html += `<tr class="total-row"><td colspan="3" style="text-align:right; font-weight:700;">TỔNG DỰ TOÁN:</td><td class="final-total" style="text-align:right;">${formatCurrency(final)}</td></tr></tbody></table>`;
+
+  // --- LƯU Ý PHẦN KẾT QUẢ MỚI ---
+  html += `<div style="margin-top:20px; padding:15px; border-radius:12px; background:#fff5f5; border:1px solid #feb2b2; text-align:left;">
+    <p style="color:var(--red); font-weight:800; font-size:14px; margin-bottom:8px;">⚠️ LƯU Ý QUAN TRỌNG:</p>
+    <ul style="font-size:13px; color:#c53030; padding-left:20px;">
+      <li>Bệnh tiểu đường và Hút thuốc lá có thể làm tăng cao nguy cơ tiêu xương.</li>
+      <li>Kết quả này dựa trên tính toán sơ bộ. Bác sĩ cần đánh giá trên phim chụp CT 3D thực tế tại Nha Khoa Đông Nam để đưa ra kết luận mức độ tiêu xương chính xác nhất.</li>
+    </ul>
+  </div>`;
+
+  document.getElementById('result-table-container').innerHTML = html;
+}
+
+// Cuộn trang mượt mà
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if(targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>
