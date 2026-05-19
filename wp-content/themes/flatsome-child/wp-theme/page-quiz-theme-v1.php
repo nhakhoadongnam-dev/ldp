@@ -1,13 +1,13 @@
 <?php
 /**
  * Template Name: Dự Toán Implant Landing (Theme) v1
- * Auto-generated from page/Quiz/ by wp-sync.
+ * Auto-generated from page/quiz/ by wp-sync.
  * DO NOT EDIT MANUALLY — run `npm run wp:sync`.
  * Mode: Theme (content only, uses Flatsome header/footer)
  */
 defined('ABSPATH') || exit;
 
-$lp_base = home_url('/page/Quiz');
+$lp_base = home_url('/page/quiz');
 
 // Ép CF7 load script/CSS — custom template không tự detect shortcode sớm.
 add_filter('wpcf7_load_js',  '__return_true');
@@ -17,7 +17,7 @@ add_filter('wpcf7_load_css', '__return_true');
 add_action('wp_enqueue_scripts', function () use ($lp_base) {
     wp_enqueue_script(
         'ndn-landing-quiz',
-        $lp_base . '/Quiz.js',
+        $lp_base . '/script.js',
         [],
         null,
         true
@@ -26,8 +26,8 @@ add_action('wp_enqueue_scripts', function () use ($lp_base) {
 
 // Landing CSS — inject trực tiếp cuối wp_head() để guaranteed load sau Flatsome/plugins.
 add_action('wp_head', function () use ($lp_base) {
-    echo '<link rel="stylesheet" href="' . esc_url( $lp_base . '/Quiz.css' ) . '">' . "\n";
-    echo '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap">' . "\n";
+    echo '<link rel="stylesheet" href="' . esc_url( $lp_base . '/style.css' ) . '">' . "\n";
+    echo '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap">' . "\n";
     echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">' . "\n";
 }, 999);
 
@@ -46,19 +46,19 @@ get_header();
 
 <!-- HERO -->
 <header class="hero">
-  <div class="container hero-content">
+  <div class="ndn-container hero-content">
     <div class="hero-label">Chuyên gia Implant 25 năm kinh nghiệm</div>
     <h1>Bảng Giá Implant 2026 &amp; <br><span>Đánh Giá Tiêu Xương Sơ Bộ Từ Nha Khoa Đông Nam</span></h1>
     <p class="hero-sub">Đừng chỉ xem bảng giá chung. Hãy dùng công cụ độc quyền của Nha Khoa Đông Nam để kiểm tra tình trạng xương hàm của bạn.</p>
     <div class="hero-cta">
-      <a href="#quiz" class="btn-primary">🎯 BẮT ĐẦU KIỂM TRA NGAY (60s)</a>
+      <a href="#quiz" class="quiz-btn-primary">🎯 BẮT ĐẦU KIỂM TRA NGAY (60s)</a>
       <a href="#bang-gia" class="hero-link">Xem bảng giá nhanh</a>
     </div>
   </div>
 </header>
 
 <!-- RISK REVERSAL BAR -->
-<div class="container">
+<div class="ndn-container">
   <div class="risk-reversal-bar">
     <div class="rr-grid">
       <div class="rr-item">
@@ -88,10 +88,10 @@ get_header();
 
 <!-- EDUCATION - TIÊU XƯƠNG -->
 <section id="tieu-xuong" class="edu-section">
-  <div class="container">
-    <div class="edu-box text-center">
+  <div class="ndn-container">
+    <div class="edu-box quiz-text-center">
       <div class="edu-intro">
-        <h2 class="section-title">Mất Răng Bao Lâu Thì Bị Tiêu Xương?</h2>
+        <h2 class="quiz-section-title">Mất Răng Bao Lâu Thì Bị Tiêu Xương?</h2>
         <p class="edu-desc">Sau khi mất răng 3 tháng, quá trình tiêu xương bắt đầu. Trong năm đầu tiên, <strong>25%</strong> thể tích xương sẽ tiêu biến và con số này có thể lên tới <strong>60%</strong> sau 3 năm.</p>
         <div class="warning-badge">⚠️ HẬU QUẢ NGHIÊM TRỌNG KHI TIÊU XƯƠNG</div>
       </div>
@@ -115,7 +115,7 @@ get_header();
       </div>
 
       <div class="edu-cta">
-        <a href="#quiz" class="btn-primary btn-lg">KIỂM TRA NGAY TÌNH TRẠNG XƯƠNG HÀM 👇</a>
+        <a href="#quiz" class="quiz-btn-primary quiz-btn-lg">KIỂM TRA NGAY TÌNH TRẠNG XƯƠNG HÀM 👇</a>
       </div>
     </div>
   </div>
@@ -123,17 +123,17 @@ get_header();
 
 <!-- QUIZ TOOL -->
 <section id="quiz" class="quiz-section">
-  <div class="container">
+  <div class="ndn-container">
     <div class="quiz-container">
       <div class="quiz-header">
         <h2 class="quiz-title">Kiểm tra tiêu xương &amp; Dự toán chi phí</h2>
         <p class="quiz-subtitle">🔬 Cơ sở tính toán Khoa học sử dụng thang đo Cawood &amp; Howell (1988) và tiêu chuẩn của ICOI (Hội Implant Quốc tế).</p>
       </div>
 
-      <div id="quiz-steps">
+      <div id="lp-quiz-steps">
 
         <!-- Step 1 -->
-        <div class="quiz-step active" id="step-1">
+        <div class="quiz-step quiz-is-active" id="lp-quiz-step-1">
           <p class="quiz-q">1. Tình trạng mất răng hiện tại của bạn?</p>
           <div class="quiz-options">
             <div class="quiz-opt" onclick="selectQuiz(1, 'tinhTrang', 'Mất 1 răng đơn lẻ')">
@@ -152,7 +152,7 @@ get_header();
         </div>
 
         <!-- Step 2 -->
-        <div class="quiz-step" id="step-2">
+        <div class="quiz-step" id="lp-quiz-step-2">
           <p class="quiz-q">2. Bạn đã mất răng trong bao lâu?</p>
           <div class="quiz-options">
             <div class="quiz-opt" onclick="selectQuiz(2, 'thoiGian', 'Dưới 6 tháng')">
@@ -168,11 +168,11 @@ get_header();
               <div class="quiz-opt-desc">Rủi ro tiêu xương cao, hẹp sống hàm.</div>
             </div>
           </div>
-          <div class="text-center"><button class="btn-back" onclick="goBack()">❮ Quay lại</button></div>
+          <div class="quiz-text-center"><button class="quiz-btn-back" onclick="goBack()">❮ Quay lại</button></div>
         </div>
 
         <!-- Step 3 -->
-        <div class="quiz-step" id="step-3">
+        <div class="quiz-step" id="lp-quiz-step-3">
           <p class="quiz-q">3. Vị trí răng bị mất nằm ở đâu?</p>
           <div class="quiz-options">
             <div class="quiz-opt" onclick="selectQuiz(3, 'viTri', 'Răng cửa')">
@@ -187,16 +187,16 @@ get_header();
               <div class="quiz-opt-top"><span>Răng hàm dưới</span><span class="quiz-arrow">➔</span></div>
               <div class="quiz-opt-desc">Xương đặc hơn nhưng cần tránh dây thần kinh hàm.</div>
             </div>
-            <div class="quiz-opt" id="opt-both-teeth" style="display:none" onclick="selectQuiz(3, 'viTri', 'Cả răng cửa và răng hàm')">
+            <div class="quiz-opt" id="lp-quiz-opt-both-teeth" style="display:none" onclick="selectQuiz(3, 'viTri', 'Cả răng cửa và răng hàm')">
               <div class="quiz-opt-top"><span>Cả vùng răng cửa &amp; răng hàm</span><span class="quiz-arrow">➔</span></div>
               <div class="quiz-opt-desc">Mức độ phức tạp cao, cần kế hoạch phối hợp.</div>
             </div>
           </div>
-          <div class="text-center"><button class="btn-back" onclick="goBack()">❮ Quay lại</button></div>
+          <div class="quiz-text-center"><button class="quiz-btn-back" onclick="goBack()">❮ Quay lại</button></div>
         </div>
 
         <!-- Step 4 -->
-        <div class="quiz-step" id="step-4">
+        <div class="quiz-step" id="lp-quiz-step-4">
           <p class="quiz-q">4. Nguyên nhân chính gây mất răng?</p>
           <div class="quiz-options">
             <div class="quiz-opt" onclick="selectQuiz(4, 'nguyenNhan', 'Sâu răng / Chấn thương')">
@@ -212,11 +212,11 @@ get_header();
               <div class="quiz-opt-desc">Vùng xương không được kích thích nhai lâu ngày dẫn đến mỏng dần.</div>
             </div>
           </div>
-          <div class="text-center"><button class="btn-back" onclick="goBack()">❮ Quay lại</button></div>
+          <div class="quiz-text-center"><button class="quiz-btn-back" onclick="goBack()">❮ Quay lại</button></div>
         </div>
 
         <!-- Step 5 -->
-        <div class="quiz-step" id="step-5">
+        <div class="quiz-step" id="lp-quiz-step-5">
           <p class="quiz-q">5. Mong muốn ưu tiên nhất của bạn?</p>
           <div class="quiz-options">
             <div class="quiz-opt" onclick="selectQuiz(5, 'uuTien', 'Tối ưu chi phí')">
@@ -232,11 +232,11 @@ get_header();
               <div class="quiz-opt-desc">Đề xuất trụ Pháp (ETK Active) tích hợp xương nhanh gấp 3 lần.</div>
             </div>
           </div>
-          <div class="text-center"><button class="btn-back" onclick="goBack()">❮ Quay lại</button></div>
+          <div class="quiz-text-center"><button class="quiz-btn-back" onclick="goBack()">❮ Quay lại</button></div>
         </div>
 
         <!-- Step 6A - Toàn hàm -->
-        <div class="quiz-step" id="step-6A">
+        <div class="quiz-step" id="lp-quiz-step-6a">
           <p class="quiz-q">Chọn giải pháp toàn hàm:</p>
           <div class="quiz-options">
             <div class="quiz-opt" onclick="selectQuiz('6A', 'giaiPhapToanHam', 'All-on-4 Cải tiến (Tháo lắp)', 120000000)">
@@ -249,54 +249,54 @@ get_header();
               <div class="quiz-opt-top"><span>All-on-6 Cố định (Hybrid)</span><span class="quiz-price-tag">190.8 Tr</span></div>
             </div>
           </div>
-          <div class="text-center"><button class="btn-back" onclick="goBack()">❮ Quay lại</button></div>
+          <div class="quiz-text-center"><button class="quiz-btn-back" onclick="goBack()">❮ Quay lại</button></div>
         </div>
 
         <!-- Step 6B - Số lượng -->
-        <div class="quiz-step" id="step-6B">
+        <div class="quiz-step" id="lp-quiz-step-6b">
           <p class="quiz-q">Số lượng răng cần trồng?</p>
           <div class="qty-control">
             <button class="qty-btn" onclick="changeQty(-1)">-</button>
-            <input type="text" id="quiz-qty" class="qty-input" value="1" readonly>
+            <input type="text" id="lp-quiz-qty" class="qty-input" value="1" readonly>
             <button class="qty-btn" onclick="changeQty(1)">+</button>
           </div>
-          <div class="text-center">
-            <button class="btn-primary" onclick="proceedToForm()">TIẾP TỤC ➔</button>
+          <div class="quiz-text-center">
+            <button class="quiz-btn-primary" onclick="proceedToForm()">TIẾP TỤC ➔</button>
           </div>
-          <div class="text-center"><button class="btn-back" onclick="goBack()">❮ Quay lại</button></div>
+          <div class="quiz-text-center"><button class="quiz-btn-back" onclick="goBack()">❮ Quay lại</button></div>
         </div>
 
         <!-- Step Form -->
-        <div class="quiz-step" id="step-form">
-          <div class="quiz-form-body text-center">
+        <div class="quiz-step" id="lp-quiz-step-form">
+          <div class="quiz-form-body quiz-text-center">
             <div class="quiz-form-icon">📊</div>
             <h3 class="quiz-form-title">Đang phân tích dữ liệu lâm sàng...</h3>
             <p class="quiz-form-desc">Vui lòng để lại số điện thoại để thuật toán xử lý và gửi bản "Dự toán chi phí &amp; Chẩn đoán sơ bộ" cho bạn ngay lập tức.</p>
 
-            <div id="quiz-msg" class="msg-box"></div>
+            <div id="lp-quiz-msg" class="msg-box"></div>
 
-            <div id="quiz-form-wrap">
-              <input type="tel" id="quiz-phone" class="form-input" placeholder="Nhập SĐT nhận kết quả chi tiết">
-              <button class="btn-primary btn-block" onclick="submitQuiz()">XEM KẾT QUẢ DỰ TOÁN</button>
+            <div id="lp-quiz-form-wrap">
+              <input type="tel" id="lp-quiz-phone" class="form-input" placeholder="Nhập SĐT nhận kết quả chi tiết">
+              <button class="quiz-btn-primary quiz-btn-block" onclick="submitQuiz()">XEM KẾT QUẢ DỰ TOÁN</button>
             </div>
-            <div class="text-center"><button class="btn-back" onclick="goBack()">❮ Quay lại</button></div>
+            <div class="quiz-text-center"><button class="quiz-btn-back" onclick="goBack()">❮ Quay lại</button></div>
           </div>
         </div>
 
         <!-- Step Result -->
-        <div class="quiz-step" id="step-result">
-          <div class="result-header text-center">
+        <div class="quiz-step" id="lp-quiz-step-result">
+          <div class="result-header quiz-text-center">
             <div class="result-icon">🎉</div>
             <h3 class="result-title">Kết Quả Dự Đoán Sơ Bộ</h3>
           </div>
-          <div id="result-table-container"></div>
-          <div class="result-actions text-center">
-            <a href="#dang-ky" class="btn-primary btn-block">Đăng ký chụp phim CT 3D miễn phí ngay</a>
-            <button onclick="location.reload()" class="btn-back btn-reset">↺ Thực hiện lại bài Test</button>
+          <div id="lp-quiz-result-table-container"></div>
+          <div class="result-actions quiz-text-center">
+            <a href="#dang-ky" class="quiz-btn-primary quiz-btn-block">Đăng ký chụp phim CT 3D miễn phí ngay</a>
+            <button type="button" onclick="resetQuiz()" class="quiz-btn-back quiz-btn-reset">↺ Thực hiện lại bài Test</button>
           </div>
         </div>
 
-      </div><!-- #quiz-steps -->
+      </div><!-- #lp-quiz-steps -->
     </div><!-- .quiz-container -->
 
     <!-- Cawood Howell Note -->
@@ -315,33 +315,38 @@ get_header();
 
 <!-- BẢNG CAN THIỆP XƯƠNG -->
 <section id="can-thiep-xuong" class="bone-section">
-  <div class="container">
-    <h2 class="section-title">Chi Phí Can Thiệp Xương (Nếu Có)</h2>
+  <div class="ndn-container">
+    <h2 class="quiz-section-title">Chi Phí Can Thiệp Xương (Nếu Có)</h2>
     <p class="section-intro">Dành cho các trường hợp được dự đoán có rủi ro tiêu xương. Bác sĩ sẽ chẩn đoán chính xác lại qua phim CT 3D Miễn Phí.</p>
 
     <div class="bone-table-wrap">
       <div class="bone-table-content">
         <table class="bone-table">
+          <colgroup>
+            <col style="width: 52%">
+            <col style="width: 20%">
+            <col style="width: 28%">
+          </colgroup>
           <thead>
             <tr>
               <th>Các can thiệp xương đi kèm</th>
-              <th class="text-center">Đơn vị</th>
-              <th class="text-right">Giá niêm yết</th>
+              <th class="bone-unit-head">Đơn vị</th>
+              <th class="bone-price-head">Giá niêm yết</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="fw-600">Cấy ghép xương</td>
+              <td class="quiz-fw-600">Cấy ghép xương</td>
               <td class="bone-unit">1 ống</td>
               <td class="bone-price">8.000.000 đ</td>
             </tr>
             <tr>
-              <td class="fw-600">Cấy màng xương</td>
+              <td class="quiz-fw-600">Cấy màng xương</td>
               <td class="bone-unit">1 đơn vị</td>
               <td class="bone-price">2.000.000 đ</td>
             </tr>
             <tr>
-              <td class="fw-600">Nâng xoang</td>
+              <td class="quiz-fw-600">Nâng xoang</td>
               <td class="bone-unit">1 bên</td>
               <td class="bone-price">10.000.000 đ</td>
             </tr>
@@ -354,8 +359,8 @@ get_header();
 
 <!-- BẢNG GIÁ -->
 <section id="bang-gia" class="price-section">
-  <div class="container">
-    <h2 class="section-title">🦷 Bảng Giá Trụ Implant Trọn Gói 2026</h2>
+  <div class="ndn-container">
+    <h2 class="quiz-section-title">🦷 Bảng Giá Trụ Implant Trọn Gói 2026</h2>
     <p class="section-intro">Chi phí chưa bao gồm các can thiệp xương phát sinh (nếu có).</p>
 
     <div class="comp-table-wrap">
@@ -373,29 +378,29 @@ get_header();
             <td class="price-col">16.500.000 ₫</td>
             <td>3–6 tháng</td>
           </tr>
-          <tr class="recommended">
+          <tr class="quiz-recommended">
             <td><span class="fi fi-it"></span>Implant Ý (C-Tech) <span class="recommended-badge">Đề xuất</span></td>
             <td class="price-col">19.900.000 ₫</td>
             <td>2–3 tháng</td>
           </tr>
           <tr>
             <td><span class="fi fi-us"></span>Implant Mỹ</td>
-            <td class="price-col dark">23.500.000 ₫</td>
+            <td class="price-col quiz-price-dark">23.500.000 ₫</td>
             <td>2–4 tháng</td>
           </tr>
           <tr>
             <td><span class="fi fi-fr"></span>Implant Pháp (ETK Active)</td>
-            <td class="price-col dark">28.200.000 ₫</td>
+            <td class="price-col quiz-price-dark">28.200.000 ₫</td>
             <td>1–2 tháng</td>
           </tr>
           <tr>
             <td><span class="fi fi-se"></span>Implant Thụy Điển (Nobel Active)</td>
-            <td class="price-col dark">32.900.000 ₫</td>
+            <td class="price-col quiz-price-dark">32.900.000 ₫</td>
             <td>1–2 tháng</td>
           </tr>
           <tr>
             <td><span class="fi fi-ch"></span>Implant Thụy Sĩ (Straumann)</td>
-            <td class="price-col dark">34.000.000 ₫</td>
+            <td class="price-col quiz-price-dark">34.000.000 ₫</td>
             <td>3–6 tuần</td>
           </tr>
         </tbody>
@@ -445,9 +450,9 @@ get_header();
 
 <!-- OFFER -->
 <section id="offer" class="offer-section">
-  <div class="container">
-    <div class="offer-header text-center">
-      <h2 class="section-title">Ưu Đãi Đặc Biệt Trong Tháng</h2>
+  <div class="ndn-container">
+    <div class="offer-header quiz-text-center">
+      <h2 class="quiz-section-title">Ưu Đãi Đặc Biệt Trong Tháng</h2>
       <p class="section-intro">Hỗ trợ tối đa để khách hàng sớm phục hồi răng, tránh rủi ro tiêu xương nặng thêm</p>
     </div>
 
@@ -469,7 +474,7 @@ get_header();
         <div class="price-unit">Chỉ từ</div>
         <div class="price-tag">13,2Tr</div>
         <div class="price-period">Trọn gói/1 răng</div>
-        <a href="#dang-ky" class="btn-primary btn-light">NHẬN ƯU ĐÃI NGAY</a>
+        <a href="#dang-ky" class="quiz-btn-primary quiz-btn-light">NHẬN ƯU ĐÃI NGAY</a>
       </div>
     </div>
   </div>
@@ -477,7 +482,7 @@ get_header();
 
 <!-- AUTHORITY -->
 <section class="authority-section">
-  <div class="container auth-grid">
+  <div class="ndn-container auth-grid">
     <div class="auth-content">
       <h2 class="auth-heading">Hơn 21 Năm Khẳng Định Vị Thế<br><span class="auth-heading-sub">Chuyên Gia Implant Ca Khó</span></h2>
       <p class="auth-sub">Sự lựa chọn hàng đầu cho các ca tiêu xương nghiêm trọng, mất răng lâu năm.</p>
@@ -506,7 +511,7 @@ get_header();
       </div>
 
       <div class="auth-cta">
-        <a href="#dang-ky" class="btn-primary btn-light">ĐẶT LỊCH THĂM KHÁM MIỄN PHÍ</a>
+        <a href="#dang-ky" class="quiz-btn-primary quiz-btn-light">ĐẶT LỊCH THĂM KHÁM MIỄN PHÍ</a>
       </div>
     </div>
     <div class="auth-img">
@@ -518,7 +523,7 @@ get_header();
 
 <!-- STATS -->
 <section class="stats-section">
-  <div class="container">
+  <div class="ndn-container">
     <div class="stats-grid">
       <div class="stat-item">
         <div class="stat-number">21<span class="stat-plus">+</span></div>
@@ -540,9 +545,9 @@ get_header();
 
 <!-- CONTACT FORM -->
 <section id="dang-ky" class="contact-section">
-  <div class="container">
-    <div class="contact-wrapper text-center">
-      <h2 class="section-title">Đăng Ký Khám &amp; Chụp CT 3D Miễn Phí</h2>
+  <div class="ndn-container">
+    <div class="contact-wrapper quiz-text-center">
+      <h2 class="quiz-section-title">Đăng Ký Khám &amp; Chụp CT 3D Miễn Phí</h2>
       <p class="section-intro">Để xác định chính xác bạn đang ở phân độ tiêu xương nào và nhận kế hoạch điều trị chuẩn xác nhất từ Bác sĩ chuyên khoa.</p>
       <div class="form-card">
         <?php echo do_shortcode('[contact-form-7 id="e3e8349" title="CT- T52026 - name-at - phone"]'); ?>
