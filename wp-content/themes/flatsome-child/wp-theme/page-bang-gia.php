@@ -347,17 +347,10 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
           <td class="price-col"></td>
         </tr>
         <tr>
-          <td><span class="svc-name">Răng toàn sứ Emax </span></td>
-          <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức</span></td>
-          <td style="text-align:center"><span class="badge-bh">BH 5 năm</span></td>
-          <td class="price-col"><span class="price-val">4.000.000 ₫</span></td>
-          <td class="price-col"></td>
-        </tr>
-        <tr>
           <td><span class="svc-name">Răng toàn sứ Zirconia <span class="badge-common">Phổ thông</span></span></td>
           <td><span class="svc-unit"><span class="fi fi-de fis" style="width:16px;height:16px;vertical-align:middle;border-radius:2px;margin-right:4px"></span>Đức</span></td>
           <td style="text-align:center"><span class="badge-bh">BH 10 năm</span></td>
-          <td class="price-col"><span class="price-val">6.000.000 ₫</span></td>
+          <td class="price-col"><span class="price-val">5.000.000 ₫</span></td>
           <td class="price-col"></td>
         </tr>
         <tr>
